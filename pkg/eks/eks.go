@@ -62,6 +62,13 @@ func (c *ClusterProvider) DeleteControlPlane() error {
 func (c *ClusterProvider) createControlPlane(errs chan error) error {
 	logger.Info("creating control plane %q", c.Spec.ClusterName)
 
+	if c.cfg.CtrlPlaneCfn {
+		if err := c.createStackControlPlane(errs); err != nil {
+			return err
+		}
+		return nil
+	}
+
 	clusterChan := make(chan eks.Cluster)
 	taskErrs := make(chan error)
 
