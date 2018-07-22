@@ -6,6 +6,15 @@ import (
 	"github.com/awslabs/goformation/cloudformation"
 )
 
+const (
+	cfnOutputClusterCertificateAuthorityData = "ClusterCertificateAuthorityData"
+	cfnOutputClusterEndpoint                 = "ClusterEndpoint"
+	cfnOutputClusterARN                      = "ClusterARN"
+
+	iamAmazonEKSServicePolicyARN = "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
+	iamAmazonEKSClusterPolicyARN = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
+)
+
 // func newParameter(t *cloudformation.Template, name, valueType, defaultValue string) interface{} {
 // 	p := map[string]string{"Type": valueType}
 // 	if defaultValue != "" {
@@ -38,6 +47,9 @@ type resourceRefsForVPC struct {
 	securityGroups []interface{}
 }
 
+type resourceRefsForControlPlane struct {
+}
+
 func newClusterResourceSet() *clusterResourceSet {
 	return &clusterResourceSet{
 		template: cloudformation.NewTemplate(),
@@ -47,6 +59,15 @@ func newClusterResourceSet() *clusterResourceSet {
 func (c *clusterResourceSet) newResource(name string, resource interface{}) interface{} {
 	c.template.Resources[name] = resource
 	return makeRef(name)
+}
+
+func (c *clusterResourceSet) newOutput(name string, value interface{}) {
+	o := map[string]interface{}{"Value": value}
+	c.template.Outputs[name] = o
+}
+
+func (c *clusterResourceSet) newOutputFromAtt(name, att string) {
+	c.newOutput(name, map[string]string{"Fn::GetAtt": att})
 }
 
 func (c *clusterResourceSet) addResourcesForVPC(globalCIDR *net.IPNet, subnets map[string]*net.IPNet) {
@@ -70,7 +91,7 @@ func (c *clusterResourceSet) addResourcesForVPC(globalCIDR *net.IPNet, subnets m
 	c.newResource("Route", &cloudformation.UntypedAWSEC2Route{
 		RouteTableId:         refRT,
 		DestinationCidrBlock: "0.0.0.0/0",
-		GatewayId:            makeRef("InternetGateway"),
+		GatewayId:            refIG,
 	})
 
 	for az, subnet := range subnets {
@@ -93,4 +114,38 @@ func (c *clusterResourceSet) addResourcesForVPC(globalCIDR *net.IPNet, subnets m
 	refs.securityGroups = []interface{}{refSG}
 
 	c.vpcRefs = refs
+}
+
+func (c *clusterResourceSet) addResourcesForControlPlane(name, version string) {
+	asrpd := map[string]interface{}{
+		"Version": "2012-10-17",
+		"Statement": []interface{}{
+			map[string]interface{}{
+				"Effect": "Allow",
+				"Principal": map[string][]string{
+					"Service": []string{"eks.amazonaws.com"},
+				},
+				"Action": []string{"sts:AssumeRole"},
+			},
+		},
+	}
+	c.newResource("ControlPlane", &cloudformation.UntypedAWSEKSCluster{
+		Name: name,
+		RoleArn: c.newResource("ServiceRole", &cloudformation.AWSIAMRole{
+			AssumeRolePolicyDocument: asrpd,
+			ManagedPolicyArns: []string{
+				iamAmazonEKSServicePolicyARN,
+				iamAmazonEKSClusterPolicyARN,
+			},
+		}),
+		Version: version,
+		ResourcesVpcConfig: &cloudformation.UntypedAWSEKSCluster_ResourcesVpcConfig{
+			SubnetIds:        c.vpcRefs.subnets,
+			SecurityGroupIds: c.vpcRefs.securityGroups,
+		},
+	})
+
+	c.newOutputFromAtt(cfnOutputClusterCertificateAuthorityData, "ControlPlane.CertificateAuthorityData")
+	c.newOutputFromAtt(cfnOutputClusterEndpoint, "ControlPlane.Endpoint")
+	c.newOutputFromAtt(cfnOutputClusterARN, "ControlPlane.Arn")
 }
