@@ -32,10 +32,10 @@ func addResourcesForVPC(t *cloudformation.Template, stackName string, globalCIDR
 		CidrBlock:          globalCIDR.String(),
 		EnableDnsSupport:   true,
 		EnableDnsHostnames: true,
-		Tags: []cloudformation.Tag{{
-			Key:   "Name",
-			Value: stackName + ".VPC",
-		}},
+		// Tags: []cloudformation.Tag{{
+		// 	Key:   "Name",
+		// 	Value: stackName + ".VPC",
+		// }},
 	}
 	refVPC := newRef("VPC")
 
@@ -48,10 +48,10 @@ func addResourcesForVPC(t *cloudformation.Template, stackName string, globalCIDR
 
 	t.Resources["RouteTable"] = &cloudformation.UntypedAWSEC2RouteTable{
 		VpcId: refVPC,
-		Tags: []cloudformation.Tag{
-			{Key: "Name", Value: "Public Subnets"},
-			{Key: "Network", Value: "Public"},
-		},
+		// Tags: []cloudformation.Tag{
+		// 	{Key: "Name", Value: "Public Subnets"},
+		// 	{Key: "Network", Value: "Public"},
+		// },
 	}
 	refRT := newRef("RouteTable")
 
@@ -67,10 +67,10 @@ func addResourcesForVPC(t *cloudformation.Template, stackName string, globalCIDR
 			AvailabilityZone: az,
 			CidrBlock:        subnet.String(),
 			VpcId:            refVPC,
-			Tags: []cloudformation.Tag{{
-				Key:   "Name",
-				Value: stackName + "." + name,
-			}},
+			// Tags: []cloudformation.Tag{{
+			// 	Key:   "Name",
+			// 	Value: stackName + "." + name,
+			// }},
 		}
 		t.Resources["RouteTableAssociation_"+az] = &cloudformation.UntypedAWSEC2SubnetRouteTableAssociation{
 			SubnetId:     newRef(name),
