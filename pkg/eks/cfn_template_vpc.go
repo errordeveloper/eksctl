@@ -12,7 +12,7 @@ import (
 // 		p["Default"] = defaultValue
 // 	}
 // 	t.Parameters[name] = p
-// 	return newRef(name)
+// 	return makeRef(name)
 // }
 
 // func newStringParameter(t *cloudformation.Template, name, defaultValue string) interface{} {
@@ -23,75 +23,74 @@ import (
 // 	return map[string]string{"Sub": sub}
 // }
 
-func newRef(refName string) interface{} {
+func makeRef(refName string) interface{} {
 	return map[string]string{"Ref": refName}
 }
 
-func newResource(t *cloudformation.Template, name string, resource interface{}) interface{} {
-	t.Resources[name] = resource
-	return newRef(name)
+type clusterResourceSet struct {
+	template *cloudformation.Template
+	vpcRefs  *resourceRefsForVPC
 }
 
 type resourceRefsForVPC struct {
-	VPC            interface{}
-	Subnets        []interface{}
-	SecurityGroups []interface{}
+	vpc            interface{}
+	subnets        []interface{}
+	securityGroups []interface{}
 }
 
-func addResourcesForVPC(t *cloudformation.Template, stackName string, globalCIDR *net.IPNet, subnets map[string]*net.IPNet) *resourceRefsForVPC {
+func newClusterResourceSet() *clusterResourceSet {
+	return &clusterResourceSet{
+		template: cloudformation.NewTemplate(),
+	}
+}
+
+func (c *clusterResourceSet) newResource(name string, resource interface{}) interface{} {
+	c.template.Resources[name] = resource
+	return makeRef(name)
+}
+
+func (c *clusterResourceSet) addResourcesForVPC(globalCIDR *net.IPNet, subnets map[string]*net.IPNet) {
 	refs := &resourceRefsForVPC{}
-	refs.VPC = newResource(t, "VPC", &cloudformation.UntypedAWSEC2VPC{
+	refs.vpc = c.newResource("VPC", &cloudformation.UntypedAWSEC2VPC{
 		CidrBlock:          globalCIDR.String(),
 		EnableDnsSupport:   true,
 		EnableDnsHostnames: true,
-		// Tags: []cloudformation.Tag{{
-		// 	Key:   "Name",
-		// 	Value: stackName + ".VPC",
-		// }},
 	})
 
-	refIG := newResource(t, "InternetGateway", &cloudformation.AWSEC2InternetGateway{})
-	newResource(t, "VPCGatewayAttachment", &cloudformation.UntypedAWSEC2VPCGatewayAttachment{
+	refIG := c.newResource("InternetGateway", &cloudformation.AWSEC2InternetGateway{})
+	c.newResource("VPCGatewayAttachment", &cloudformation.UntypedAWSEC2VPCGatewayAttachment{
 		InternetGatewayId: refIG,
-		VpcId:             refs.VPC,
+		VpcId:             refs.vpc,
 	})
 
-	refRT := newResource(t, "RouteTable", &cloudformation.UntypedAWSEC2RouteTable{
-		VpcId: refs.VPC,
-		// Tags: []cloudformation.Tag{
-		// 	{Key: "Name", Value: "Public Subnets"},
-		// 	{Key: "Network", Value: "Public"},
-		// },
+	refRT := c.newResource("RouteTable", &cloudformation.UntypedAWSEC2RouteTable{
+		VpcId: refs.vpc,
 	})
 
-	newResource(t, "Route", &cloudformation.UntypedAWSEC2Route{
+	c.newResource("Route", &cloudformation.UntypedAWSEC2Route{
 		RouteTableId:         refRT,
 		DestinationCidrBlock: "0.0.0.0/0",
-		GatewayId:            newRef("InternetGateway"),
+		GatewayId:            makeRef("InternetGateway"),
 	})
 
 	for az, subnet := range subnets {
-		refSubnet := newResource(t, "Subnet_"+az, &cloudformation.UntypedAWSEC2Subnet{
+		refSubnet := c.newResource("Subnet_"+az, &cloudformation.UntypedAWSEC2Subnet{
 			AvailabilityZone: az,
 			CidrBlock:        subnet.String(),
-			VpcId:            refs.VPC,
-			// Tags: []cloudformation.Tag{{
-			// 	Key:   "Name",
-			// 	Value: stackName + "." + name,
-			// }},
+			VpcId:            refs.vpc,
 		})
-		newResource(t, "RouteTableAssociation_"+az, &cloudformation.UntypedAWSEC2SubnetRouteTableAssociation{
+		c.newResource("RouteTableAssociation_"+az, &cloudformation.UntypedAWSEC2SubnetRouteTableAssociation{
 			SubnetId:     refSubnet,
 			RouteTableId: refRT,
 		})
-		refs.Subnets = append(refs.Subnets, refSubnet)
+		refs.subnets = append(refs.subnets, refSubnet)
 	}
 
-	refSG := newResource(t, "ControlPlaneSecurityGroup", &cloudformation.UntypedAWSEC2SecurityGroup{
+	refSG := c.newResource("ControlPlaneSecurityGroup", &cloudformation.UntypedAWSEC2SecurityGroup{
 		GroupDescription: "Cluster communication with worker nodes",
-		VpcId:            refs.VPC,
+		VpcId:            refs.vpc,
 	})
-	refs.SecurityGroups = []interface{}{refSG}
+	refs.securityGroups = []interface{}{refSG}
 
-	return refs
+	c.vpcRefs = refs
 }
