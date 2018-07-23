@@ -66,7 +66,7 @@ type UntypedAWSServerlessApi struct {
 	// DefinitionUri AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	DefinitionUri *AWSServerlessApi_DefinitionUri `json:"DefinitionUri,omitempty"`
+	DefinitionUri *UntypedAWSServerlessApi_DefinitionUri `json:"DefinitionUri,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false

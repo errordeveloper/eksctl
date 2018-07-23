@@ -8,20 +8,20 @@ import (
 	"github.com/mitchellh/mapstructure"
 )
 
-// AWSServerlessApi_DefinitionUri is a helper struct that can hold either a String or S3Location value
-type AWSServerlessApi_DefinitionUri struct {
-	String *string
+// UntypedAWSServerlessApi_DefinitionUri is a helper struct that can hold either a String or S3Location value
+type UntypedAWSServerlessApi_DefinitionUri struct {
+	String *interface{}
 
-	S3Location *AWSServerlessApi_S3Location
+	S3Location *UntypedAWSServerlessApi_S3Location
 }
 
-func (r AWSServerlessApi_DefinitionUri) value() interface{} {
+func (r UntypedAWSServerlessApi_DefinitionUri) value() interface{} {
 
 	if r.String != nil {
 		return r.String
 	}
 
-	if r.S3Location != nil && !reflect.DeepEqual(r.S3Location, &AWSServerlessApi_S3Location{}) {
+	if r.S3Location != nil && !reflect.DeepEqual(r.S3Location, &UntypedAWSServerlessApi_S3Location{}) {
 		return r.S3Location
 	}
 
@@ -33,12 +33,12 @@ func (r AWSServerlessApi_DefinitionUri) value() interface{} {
 
 }
 
-func (r *AWSServerlessApi_DefinitionUri) MarshalJSON() ([]byte, error) {
+func (r *UntypedAWSServerlessApi_DefinitionUri) MarshalJSON() ([]byte, error) {
 	return json.Marshal(r.value())
 }
 
 // Hook into the marshaller
-func (r *AWSServerlessApi_DefinitionUri) UnmarshalJSON(b []byte) error {
+func (r *UntypedAWSServerlessApi_DefinitionUri) UnmarshalJSON(b []byte) error {
 
 	// Unmarshal into interface{} to check it's type
 	var typecheck interface{}
@@ -47,9 +47,6 @@ func (r *AWSServerlessApi_DefinitionUri) UnmarshalJSON(b []byte) error {
 	}
 
 	switch val := typecheck.(type) {
-
-	case string:
-		r.String = &val
 
 	case map[string]interface{}:
 

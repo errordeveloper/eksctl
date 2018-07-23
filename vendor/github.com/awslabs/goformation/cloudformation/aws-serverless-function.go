@@ -96,7 +96,7 @@ type UntypedAWSServerlessFunction struct {
 	// CodeUri AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	CodeUri *AWSServerlessFunction_CodeUri `json:"CodeUri,omitempty"`
+	CodeUri *UntypedAWSServerlessFunction_CodeUri `json:"CodeUri,omitempty"`
 
 	// DeadLetterQueue AWS CloudFormation Property
 	// Required: false
@@ -141,7 +141,7 @@ type UntypedAWSServerlessFunction struct {
 	// Policies AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	Policies *AWSServerlessFunction_Policies `json:"Policies,omitempty"`
+	Policies *UntypedAWSServerlessFunction_Policies `json:"Policies,omitempty"`
 
 	// Role AWS CloudFormation Property
 	// Required: false

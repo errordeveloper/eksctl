@@ -8,18 +8,18 @@ import (
 	"github.com/mitchellh/mapstructure"
 )
 
-// AWSServerlessFunction_Policies is a helper struct that can hold either a String, String, IAMPolicyDocument, or IAMPolicyDocument value
-type AWSServerlessFunction_Policies struct {
-	String *string
+// UntypedAWSServerlessFunction_Policies is a helper struct that can hold either a String, String, IAMPolicyDocument, or IAMPolicyDocument value
+type UntypedAWSServerlessFunction_Policies struct {
+	String *interface{}
 
-	StringArray *[]string
+	StringArray *[]interface{}
 
-	IAMPolicyDocument *AWSServerlessFunction_IAMPolicyDocument
+	IAMPolicyDocument *UntypedAWSServerlessFunction_IAMPolicyDocument
 
-	IAMPolicyDocumentArray *[]AWSServerlessFunction_IAMPolicyDocument
+	IAMPolicyDocumentArray *[]UntypedAWSServerlessFunction_IAMPolicyDocument
 }
 
-func (r AWSServerlessFunction_Policies) value() interface{} {
+func (r UntypedAWSServerlessFunction_Policies) value() interface{} {
 
 	if r.String != nil {
 		return r.String
@@ -29,7 +29,7 @@ func (r AWSServerlessFunction_Policies) value() interface{} {
 		return r.StringArray
 	}
 
-	if r.IAMPolicyDocument != nil && !reflect.DeepEqual(r.IAMPolicyDocument, &AWSServerlessFunction_IAMPolicyDocument{}) {
+	if r.IAMPolicyDocument != nil && !reflect.DeepEqual(r.IAMPolicyDocument, &UntypedAWSServerlessFunction_IAMPolicyDocument{}) {
 		return r.IAMPolicyDocument
 	}
 
@@ -45,12 +45,12 @@ func (r AWSServerlessFunction_Policies) value() interface{} {
 
 }
 
-func (r *AWSServerlessFunction_Policies) MarshalJSON() ([]byte, error) {
+func (r *UntypedAWSServerlessFunction_Policies) MarshalJSON() ([]byte, error) {
 	return json.Marshal(r.value())
 }
 
 // Hook into the marshaller
-func (r *AWSServerlessFunction_Policies) UnmarshalJSON(b []byte) error {
+func (r *UntypedAWSServerlessFunction_Policies) UnmarshalJSON(b []byte) error {
 
 	// Unmarshal into interface{} to check it's type
 	var typecheck interface{}
@@ -59,12 +59,6 @@ func (r *AWSServerlessFunction_Policies) UnmarshalJSON(b []byte) error {
 	}
 
 	switch val := typecheck.(type) {
-
-	case string:
-		r.String = &val
-
-	case []string:
-		r.StringArray = &val
 
 	case map[string]interface{}:
 
