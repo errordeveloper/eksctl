@@ -72,3 +72,8 @@ required = [
 [[constraint]]
   name = "github.com/onsi/ginkgo"
   version = "1.5.0"
+
+[[constraint]]
+   name = "github.com/awslabs/goformation"
+   source = "https://github.com/errordeveloper/goformation"
+   revision = "1f0b621ef83df4390add5f4ad7234337362a6b78"
