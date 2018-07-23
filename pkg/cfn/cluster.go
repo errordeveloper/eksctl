@@ -1,4 +1,4 @@
-package eks
+package cfn
 
 import (
 	"net"
@@ -15,30 +15,10 @@ const (
 	iamAmazonEKSClusterPolicyARN = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
 )
 
-// func newParameter(t *cloudformation.Template, name, valueType, defaultValue string) interface{} {
-// 	p := map[string]string{"Type": valueType}
-// 	if defaultValue != "" {
-// 		p["Default"] = defaultValue
-// 	}
-// 	t.Parameters[name] = p
-// 	return makeRef(name)
-// }
-
-// func newStringParameter(t *cloudformation.Template, name, defaultValue string) interface{} {
-// 	return newParameter(t, name, "String", defaultValue)
-// }
-
-// func newSub(sub string) interface{} {
-// 	return map[string]string{"Sub": sub}
-// }
-
-func makeRef(refName string) interface{} {
-	return map[string]string{"Ref": refName}
-}
-
 type clusterResourceSet struct {
-	template *cloudformation.Template
-	vpcRefs  *resourceRefsForVPC
+	resourceSet      *resourceSet
+	vpcRefs          *resourceRefsForVPC
+	controlPlaneRefs *resourceRefsForControlPlane
 }
 
 type resourceRefsForVPC struct {
@@ -52,22 +32,20 @@ type resourceRefsForControlPlane struct {
 
 func newClusterResourceSet() *clusterResourceSet {
 	return &clusterResourceSet{
-		template: cloudformation.NewTemplate(),
+		resourceSet: newResourceSet(),
 	}
 }
 
-func (c *clusterResourceSet) newResource(name string, resource interface{}) interface{} {
-	c.template.Resources[name] = resource
-	return makeRef(name)
+func (r *clusterResourceSet) newResource(name string, resource interface{}) interface{} {
+	return r.resourceSet.newResource(name, resource)
 }
 
-func (c *clusterResourceSet) newOutput(name string, value interface{}) {
-	o := map[string]interface{}{"Value": value}
-	c.template.Outputs[name] = o
+func (r *clusterResourceSet) newOutput(name string, value interface{}) {
+	r.resourceSet.newOutput(name, value)
 }
 
-func (c *clusterResourceSet) newOutputFromAtt(name, att string) {
-	c.newOutput(name, map[string]string{"Fn::GetAtt": att})
+func (r *clusterResourceSet) newOutputFromAtt(name, att string) {
+	r.resourceSet.newOutputFromAtt(name, att)
 }
 
 func (c *clusterResourceSet) addResourcesForVPC(globalCIDR *net.IPNet, subnets map[string]*net.IPNet) {
