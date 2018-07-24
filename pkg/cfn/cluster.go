@@ -7,9 +7,12 @@ import (
 )
 
 const (
-	cfnOutputClusterCertificateAuthorityData = "ClusterCertificateAuthorityData"
-	cfnOutputClusterEndpoint                 = "ClusterEndpoint"
-	cfnOutputClusterARN                      = "ClusterARN"
+	cfnOutputClusterCertificateAuthorityData  = "Cluster.CertificateAuthorityData"
+	cfnOutputClusterEndpoint                  = "Cluster.Endpoint"
+	cfnOutputClusterARN                       = "Cluster.ARN"
+	cfnOutputClusterVPC                       = "Cluster.VPC"
+	cfnOutputClusterSubnets                   = "Cluster.Subnets"
+	cfnOutputClusterControlPlaneSecurityGroup = "Cluster.ControlPlaneSecurityGroup"
 
 	iamAmazonEKSServicePolicyARN = "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
 	iamAmazonEKSClusterPolicyARN = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
@@ -36,16 +39,20 @@ func newClusterResourceSet() *clusterResourceSet {
 	}
 }
 
-func (r *clusterResourceSet) newResource(name string, resource interface{}) interface{} {
-	return r.resourceSet.newResource(name, resource)
+func (c *clusterResourceSet) newResource(name string, resource interface{}) interface{} {
+	return c.resourceSet.newResource(name, resource)
 }
 
-func (r *clusterResourceSet) newOutput(name string, value interface{}) {
-	r.resourceSet.newOutput(name, value)
+func (c *clusterResourceSet) newOutput(name string, value interface{}) {
+	c.resourceSet.newOutput(name, value, true)
 }
 
-func (r *clusterResourceSet) newOutputFromAtt(name, att string) {
-	r.resourceSet.newOutputFromAtt(name, att)
+func (c *clusterResourceSet) newJoinedOutput(name string, value []interface{}) {
+	c.resourceSet.newJoinedOutput(name, value, true)
+}
+
+func (c *clusterResourceSet) newOutputFromAtt(name, att string) {
+	c.resourceSet.newOutputFromAtt(name, att, true)
 }
 
 func (c *clusterResourceSet) addResourcesForVPC(globalCIDR *net.IPNet, subnets map[string]*net.IPNet) {
@@ -92,25 +99,17 @@ func (c *clusterResourceSet) addResourcesForVPC(globalCIDR *net.IPNet, subnets m
 	refs.securityGroups = []interface{}{refSG}
 
 	c.vpcRefs = refs
+
+	c.newOutput(cfnOutputClusterVPC, refs.vpc)
+	c.newJoinedOutput(cfnOutputClusterControlPlaneSecurityGroup, refs.securityGroups)
+	c.newJoinedOutput(cfnOutputClusterSubnets, refs.subnets)
 }
 
 func (c *clusterResourceSet) addResourcesForControlPlane(name, version string) {
-	asrpd := map[string]interface{}{
-		"Version": "2012-10-17",
-		"Statement": []interface{}{
-			map[string]interface{}{
-				"Effect": "Allow",
-				"Principal": map[string][]string{
-					"Service": []string{"eks.amazonaws.com"},
-				},
-				"Action": []string{"sts:AssumeRole"},
-			},
-		},
-	}
 	c.newResource("ControlPlane", &cloudformation.UntypedAWSEKSCluster{
 		Name: name,
 		RoleArn: c.newResource("ServiceRole", &cloudformation.AWSIAMRole{
-			AssumeRolePolicyDocument: asrpd,
+			AssumeRolePolicyDocument: makeAssumeRolePolicyDocument("eks.amazonaws.com"),
 			ManagedPolicyArns: []string{
 				iamAmazonEKSServicePolicyARN,
 				iamAmazonEKSClusterPolicyARN,
