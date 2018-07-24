@@ -25,13 +25,13 @@ type resourceSet struct {
 	template *cloudformation.Template
 }
 
-func makeRef(refName string) interface{} {
-	return map[string]string{"Ref": refName}
+func makeRef(refName string) *cloudformation.StringIntrinsic {
+	return cloudformation.NewStringRef(refName)
 }
 
 var refStackName = makeRef("AWS::StackName")
 
-func (r *resourceSet) newResource(name string, resource interface{}) interface{} {
+func (r *resourceSet) newResource(name string, resource interface{}) *cloudformation.StringIntrinsic {
 	r.template.Resources[name] = resource
 	return makeRef(name)
 }
@@ -44,13 +44,13 @@ func (r *resourceSet) newOutput(name string, value interface{}, export bool) {
 	o := map[string]interface{}{"Value": value}
 	if export {
 		o["Export"] = map[string]map[string]string{
-			"Name": {"Fn::Sub": "${AWS::StackName}/" + name},
+			"Name": {"Fn::Sub": "${AWS::StackName}::" + name},
 		}
 	}
 	r.template.Outputs[name] = o
 }
 
-func (r *resourceSet) newJoinedOutput(name string, value []interface{}, export bool) {
+func (r *resourceSet) newJoinedOutput(name string, value []*cloudformation.StringIntrinsic, export bool) {
 	r.newOutput(name, map[string][]interface{}{"Fn::Join": []interface{}{",", value}}, export)
 }
 

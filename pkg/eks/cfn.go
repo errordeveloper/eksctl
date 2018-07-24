@@ -495,7 +495,7 @@ func (c *ClusterProvider) createStackCluster(errs chan error) error {
 	stackChan := make(chan Stack)
 	taskErrs := make(chan error)
 
-	if err := c.CreateStack(name, templateBody, nil, false, stackChan, taskErrs); err != nil {
+	if err := c.CreateStack(name, templateBody, nil, true, stackChan, taskErrs); err != nil {
 		return err
 	}
 

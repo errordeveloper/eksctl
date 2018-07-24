@@ -12,9 +12,9 @@ const (
 )
 
 var (
-	defaultPolicyARNs = []string{
-		iamPolicyAmazonEKSWorkerNodePolicyARN,
-		iamPolicyAmazonEKSCNIPolicyARN,
+	defaultPolicyARNs = []*cloudformation.StringIntrinsic{
+		cloudformation.NewString(iamPolicyAmazonEKSWorkerNodePolicyARN),
+		cloudformation.NewString(iamPolicyAmazonEKSCNIPolicyARN),
 	}
 
 	maxPodsPerNode = map[string]int{
@@ -87,7 +87,7 @@ func newNodeGroupResourceSet() *nodeGroupResourceSet {
 	}
 }
 
-func (n *nodeGroupResourceSet) newResource(name string, resource interface{}) interface{} {
+func (n *nodeGroupResourceSet) newResource(name string, resource interface{}) *cloudformation.StringIntrinsic {
 	return n.resourceSet.newResource(name, resource)
 }
 
@@ -96,18 +96,18 @@ func (n *nodeGroupResourceSet) newOutputFromAtt(name, att string, export bool) {
 }
 
 func (n *nodeGroupResourceSet) addResourcesForNodeGroup() {
-	n.newResource("NodeInstanceProfile", &cloudformation.UntypedAWSIAMInstanceProfile{
-		Path: "/",
-		Roles: []interface{}{
+	n.newResource("NodeInstanceProfile", &cloudformation.AWSIAMInstanceProfile{
+		Path: cloudformation.NewString("/"),
+		Roles: []*cloudformation.StringIntrinsic{
 			n.newResource("NodeInstanceRole", &cloudformation.AWSIAMRole{
-				Path: "/",
+				Path: cloudformation.NewString("/"),
 				AssumeRolePolicyDocument: makeAssumeRolePolicyDocument("ec2.amazonaws.com"),
 				ManagedPolicyArns:        defaultPolicyARNs, // TODO parametrise
 			}),
 		},
 	})
 
-	n.newResource("NodeSecurityGroup", &cloudformation.UntypedAWSEC2SecurityGroup{
+	n.newResource("NodeSecurityGroup", &cloudformation.AWSEC2SecurityGroup{
 		VpcId: n.vpc.vpc,
 	})
 
