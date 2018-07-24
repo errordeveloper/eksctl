@@ -13,12 +13,12 @@ type AWSApiGatewayApiKey struct {
 	// CustomerId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-customerid
-	CustomerId string `json:"CustomerId,omitempty"`
+	CustomerId *StringIntrinsic `json:"CustomerId,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-description
-	Description string `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 
 	// Enabled AWS CloudFormation Property
 	// Required: false
@@ -33,45 +33,12 @@ type AWSApiGatewayApiKey struct {
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// StageKeys AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-stagekeys
 	StageKeys []AWSApiGatewayApiKey_StageKey `json:"StageKeys,omitempty"`
-}
-
-type UntypedAWSApiGatewayApiKey struct {
-
-	// CustomerId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-customerid
-	CustomerId interface{} `json:"CustomerId,omitempty"`
-
-	// Description AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-description
-	Description interface{} `json:"Description,omitempty"`
-
-	// Enabled AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-enabled
-	Enabled interface{} `json:"Enabled,omitempty"`
-
-	// GenerateDistinctId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-generatedistinctid
-	GenerateDistinctId interface{} `json:"GenerateDistinctId,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// StageKeys AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-apikey.html#cfn-apigateway-apikey-stagekeys
-	StageKeys []UntypedAWSApiGatewayApiKey_StageKey `json:"StageKeys,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

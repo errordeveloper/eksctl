@@ -7,7 +7,7 @@ type AWSAutoScalingLaunchConfiguration_BlockDeviceMapping struct {
 	// DeviceName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-devicename
-	DeviceName string `json:"DeviceName,omitempty"`
+	DeviceName *StringIntrinsic `json:"DeviceName,omitempty"`
 
 	// Ebs AWS CloudFormation Property
 	// Required: false
@@ -22,30 +22,7 @@ type AWSAutoScalingLaunchConfiguration_BlockDeviceMapping struct {
 	// VirtualName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-virtualname
-	VirtualName string `json:"VirtualName,omitempty"`
-}
-
-type UntypedAWSAutoScalingLaunchConfiguration_BlockDeviceMapping struct {
-
-	// DeviceName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-devicename
-	DeviceName interface{} `json:"DeviceName,omitempty"`
-
-	// Ebs AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-ebs
-	Ebs *UntypedAWSAutoScalingLaunchConfiguration_BlockDevice `json:"Ebs,omitempty"`
-
-	// NoDevice AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-nodevice
-	NoDevice interface{} `json:"NoDevice,omitempty"`
-
-	// VirtualName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig-blockdev-mapping.html#cfn-as-launchconfig-blockdev-mapping-virtualname
-	VirtualName interface{} `json:"VirtualName,omitempty"`
+	VirtualName *StringIntrinsic `json:"VirtualName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -76,4 +76,4 @@ required = [
 [[constraint]]
    name = "github.com/awslabs/goformation"
    source = "https://github.com/errordeveloper/goformation"
-   revision = "969680f12ffb63104adc8ddf4b56899a08bcb32e"
+   revision = "1358de5008ca15a213cc432549977e09cd4d2beb"

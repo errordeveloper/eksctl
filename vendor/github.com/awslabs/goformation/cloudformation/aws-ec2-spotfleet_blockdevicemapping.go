@@ -7,7 +7,7 @@ type AWSEC2SpotFleet_BlockDeviceMapping struct {
 	// DeviceName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-devicename
-	DeviceName string `json:"DeviceName,omitempty"`
+	DeviceName *StringIntrinsic `json:"DeviceName,omitempty"`
 
 	// Ebs AWS CloudFormation Property
 	// Required: false
@@ -17,35 +17,12 @@ type AWSEC2SpotFleet_BlockDeviceMapping struct {
 	// NoDevice AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-nodevice
-	NoDevice string `json:"NoDevice,omitempty"`
+	NoDevice *StringIntrinsic `json:"NoDevice,omitempty"`
 
 	// VirtualName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-virtualname
-	VirtualName string `json:"VirtualName,omitempty"`
-}
-
-type UntypedAWSEC2SpotFleet_BlockDeviceMapping struct {
-
-	// DeviceName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-devicename
-	DeviceName interface{} `json:"DeviceName,omitempty"`
-
-	// Ebs AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-ebs
-	Ebs *UntypedAWSEC2SpotFleet_EbsBlockDevice `json:"Ebs,omitempty"`
-
-	// NoDevice AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-nodevice
-	NoDevice interface{} `json:"NoDevice,omitempty"`
-
-	// VirtualName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-spotfleet-spotfleetrequestconfigdata-launchspecifications-blockdevicemappings.html#cfn-ec2-spotfleet-blockdevicemapping-virtualname
-	VirtualName interface{} `json:"VirtualName,omitempty"`
+	VirtualName *StringIntrinsic `json:"VirtualName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

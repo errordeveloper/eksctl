@@ -7,15 +7,7 @@ type AWSConfigDeliveryChannel_ConfigSnapshotDeliveryProperties struct {
 	// DeliveryFrequency AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-deliverychannel-configsnapshotdeliveryproperties.html#cfn-config-deliverychannel-configsnapshotdeliveryproperties-deliveryfrequency
-	DeliveryFrequency string `json:"DeliveryFrequency,omitempty"`
-}
-
-type UntypedAWSConfigDeliveryChannel_ConfigSnapshotDeliveryProperties struct {
-
-	// DeliveryFrequency AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-deliverychannel-configsnapshotdeliveryproperties.html#cfn-config-deliverychannel-configsnapshotdeliveryproperties-deliveryfrequency
-	DeliveryFrequency interface{} `json:"DeliveryFrequency,omitempty"`
+	DeliveryFrequency *StringIntrinsic `json:"DeliveryFrequency,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

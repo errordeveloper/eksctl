@@ -12,20 +12,7 @@ type AWSGlueTrigger_Predicate struct {
 	// Logical AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-predicate.html#cfn-glue-trigger-predicate-logical
-	Logical string `json:"Logical,omitempty"`
-}
-
-type UntypedAWSGlueTrigger_Predicate struct {
-
-	// Conditions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-predicate.html#cfn-glue-trigger-predicate-conditions
-	Conditions []UntypedAWSGlueTrigger_Condition `json:"Conditions,omitempty"`
-
-	// Logical AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-predicate.html#cfn-glue-trigger-predicate-logical
-	Logical interface{} `json:"Logical,omitempty"`
+	Logical *StringIntrinsic `json:"Logical,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

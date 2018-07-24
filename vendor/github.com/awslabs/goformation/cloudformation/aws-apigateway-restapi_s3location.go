@@ -7,45 +7,22 @@ type AWSApiGatewayRestApi_S3Location struct {
 	// Bucket AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-bucket
-	Bucket string `json:"Bucket,omitempty"`
+	Bucket *StringIntrinsic `json:"Bucket,omitempty"`
 
 	// ETag AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-etag
-	ETag string `json:"ETag,omitempty"`
+	ETag *StringIntrinsic `json:"ETag,omitempty"`
 
 	// Key AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-key
-	Key string `json:"Key,omitempty"`
+	Key *StringIntrinsic `json:"Key,omitempty"`
 
 	// Version AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-version
-	Version string `json:"Version,omitempty"`
-}
-
-type UntypedAWSApiGatewayRestApi_S3Location struct {
-
-	// Bucket AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-bucket
-	Bucket interface{} `json:"Bucket,omitempty"`
-
-	// ETag AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-etag
-	ETag interface{} `json:"ETag,omitempty"`
-
-	// Key AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-key
-	Key interface{} `json:"Key,omitempty"`
-
-	// Version AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-restapi-s3location.html#cfn-apigateway-restapi-s3location-version
-	Version interface{} `json:"Version,omitempty"`
+	Version *StringIntrinsic `json:"Version,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

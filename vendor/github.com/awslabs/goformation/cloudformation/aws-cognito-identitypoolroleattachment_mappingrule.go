@@ -7,45 +7,22 @@ type AWSCognitoIdentityPoolRoleAttachment_MappingRule struct {
 	// Claim AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-claim
-	Claim string `json:"Claim,omitempty"`
+	Claim *StringIntrinsic `json:"Claim,omitempty"`
 
 	// MatchType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-matchtype
-	MatchType string `json:"MatchType,omitempty"`
+	MatchType *StringIntrinsic `json:"MatchType,omitempty"`
 
 	// RoleARN AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-rolearn
-	RoleARN string `json:"RoleARN,omitempty"`
+	RoleARN *StringIntrinsic `json:"RoleARN,omitempty"`
 
 	// Value AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-value
-	Value string `json:"Value,omitempty"`
-}
-
-type UntypedAWSCognitoIdentityPoolRoleAttachment_MappingRule struct {
-
-	// Claim AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-claim
-	Claim interface{} `json:"Claim,omitempty"`
-
-	// MatchType AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-matchtype
-	MatchType interface{} `json:"MatchType,omitempty"`
-
-	// RoleARN AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-rolearn
-	RoleARN interface{} `json:"RoleARN,omitempty"`
-
-	// Value AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-mappingrule.html#cfn-cognito-identitypoolroleattachment-mappingrule-value
-	Value interface{} `json:"Value,omitempty"`
+	Value *StringIntrinsic `json:"Value,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

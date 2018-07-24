@@ -7,7 +7,7 @@ type AWSWAFSizeConstraintSet_SizeConstraint struct {
 	// ComparisonOperator AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sizeconstraintset-sizeconstraint.html#cfn-waf-sizeconstraintset-sizeconstraint-comparisonoperator
-	ComparisonOperator string `json:"ComparisonOperator,omitempty"`
+	ComparisonOperator *StringIntrinsic `json:"ComparisonOperator,omitempty"`
 
 	// FieldToMatch AWS CloudFormation Property
 	// Required: true
@@ -22,30 +22,7 @@ type AWSWAFSizeConstraintSet_SizeConstraint struct {
 	// TextTransformation AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sizeconstraintset-sizeconstraint.html#cfn-waf-sizeconstraintset-sizeconstraint-texttransformation
-	TextTransformation string `json:"TextTransformation,omitempty"`
-}
-
-type UntypedAWSWAFSizeConstraintSet_SizeConstraint struct {
-
-	// ComparisonOperator AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sizeconstraintset-sizeconstraint.html#cfn-waf-sizeconstraintset-sizeconstraint-comparisonoperator
-	ComparisonOperator interface{} `json:"ComparisonOperator,omitempty"`
-
-	// FieldToMatch AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sizeconstraintset-sizeconstraint.html#cfn-waf-sizeconstraintset-sizeconstraint-fieldtomatch
-	FieldToMatch *UntypedAWSWAFSizeConstraintSet_FieldToMatch `json:"FieldToMatch,omitempty"`
-
-	// Size AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sizeconstraintset-sizeconstraint.html#cfn-waf-sizeconstraintset-sizeconstraint-size
-	Size interface{} `json:"Size,omitempty"`
-
-	// TextTransformation AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-sizeconstraintset-sizeconstraint.html#cfn-waf-sizeconstraintset-sizeconstraint-texttransformation
-	TextTransformation interface{} `json:"TextTransformation,omitempty"`
+	TextTransformation *StringIntrinsic `json:"TextTransformation,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

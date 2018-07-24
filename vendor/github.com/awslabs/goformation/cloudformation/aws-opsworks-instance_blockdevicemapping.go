@@ -7,7 +7,7 @@ type AWSOpsWorksInstance_BlockDeviceMapping struct {
 	// DeviceName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-devicename
-	DeviceName string `json:"DeviceName,omitempty"`
+	DeviceName *StringIntrinsic `json:"DeviceName,omitempty"`
 
 	// Ebs AWS CloudFormation Property
 	// Required: false
@@ -17,35 +17,12 @@ type AWSOpsWorksInstance_BlockDeviceMapping struct {
 	// NoDevice AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-nodevice
-	NoDevice string `json:"NoDevice,omitempty"`
+	NoDevice *StringIntrinsic `json:"NoDevice,omitempty"`
 
 	// VirtualName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-virtualname
-	VirtualName string `json:"VirtualName,omitempty"`
-}
-
-type UntypedAWSOpsWorksInstance_BlockDeviceMapping struct {
-
-	// DeviceName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-devicename
-	DeviceName interface{} `json:"DeviceName,omitempty"`
-
-	// Ebs AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-ebs
-	Ebs *UntypedAWSOpsWorksInstance_EbsBlockDevice `json:"Ebs,omitempty"`
-
-	// NoDevice AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-nodevice
-	NoDevice interface{} `json:"NoDevice,omitempty"`
-
-	// VirtualName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-instance-blockdevicemapping.html#cfn-opsworks-instance-blockdevicemapping-virtualname
-	VirtualName interface{} `json:"VirtualName,omitempty"`
+	VirtualName *StringIntrinsic `json:"VirtualName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

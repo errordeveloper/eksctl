@@ -13,12 +13,12 @@ type AWSConfigConfigRule struct {
 	// ConfigRuleName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-configrulename
-	ConfigRuleName string `json:"ConfigRuleName,omitempty"`
+	ConfigRuleName *StringIntrinsic `json:"ConfigRuleName,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-description
-	Description string `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 
 	// InputParameters AWS CloudFormation Property
 	// Required: false
@@ -28,7 +28,7 @@ type AWSConfigConfigRule struct {
 	// MaximumExecutionFrequency AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-maximumexecutionfrequency
-	MaximumExecutionFrequency string `json:"MaximumExecutionFrequency,omitempty"`
+	MaximumExecutionFrequency *StringIntrinsic `json:"MaximumExecutionFrequency,omitempty"`
 
 	// Scope AWS CloudFormation Property
 	// Required: false
@@ -39,39 +39,6 @@ type AWSConfigConfigRule struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-source
 	Source *AWSConfigConfigRule_Source `json:"Source,omitempty"`
-}
-
-type UntypedAWSConfigConfigRule struct {
-
-	// ConfigRuleName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-configrulename
-	ConfigRuleName interface{} `json:"ConfigRuleName,omitempty"`
-
-	// Description AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-description
-	Description interface{} `json:"Description,omitempty"`
-
-	// InputParameters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-inputparameters
-	InputParameters interface{} `json:"InputParameters,omitempty"`
-
-	// MaximumExecutionFrequency AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-maximumexecutionfrequency
-	MaximumExecutionFrequency interface{} `json:"MaximumExecutionFrequency,omitempty"`
-
-	// Scope AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-scope
-	Scope *UntypedAWSConfigConfigRule_Scope `json:"Scope,omitempty"`
-
-	// Source AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configrule.html#cfn-config-configrule-source
-	Source *UntypedAWSConfigConfigRule_Source `json:"Source,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

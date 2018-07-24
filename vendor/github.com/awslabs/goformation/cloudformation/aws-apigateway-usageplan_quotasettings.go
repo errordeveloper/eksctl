@@ -17,25 +17,7 @@ type AWSApiGatewayUsagePlan_QuotaSettings struct {
 	// Period AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-period
-	Period string `json:"Period,omitempty"`
-}
-
-type UntypedAWSApiGatewayUsagePlan_QuotaSettings struct {
-
-	// Limit AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-limit
-	Limit interface{} `json:"Limit,omitempty"`
-
-	// Offset AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-offset
-	Offset interface{} `json:"Offset,omitempty"`
-
-	// Period AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigateway-usageplan-quotasettings.html#cfn-apigateway-usageplan-quotasettings-period
-	Period interface{} `json:"Period,omitempty"`
+	Period *StringIntrinsic `json:"Period,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -7,7 +7,7 @@ type AWSCloudFrontDistribution_DistributionConfig struct {
 	// Aliases AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-aliases
-	Aliases []string `json:"Aliases,omitempty"`
+	Aliases []*StringIntrinsic `json:"Aliases,omitempty"`
 
 	// CacheBehaviors AWS CloudFormation Property
 	// Required: false
@@ -17,7 +17,7 @@ type AWSCloudFrontDistribution_DistributionConfig struct {
 	// Comment AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-comment
-	Comment string `json:"Comment,omitempty"`
+	Comment *StringIntrinsic `json:"Comment,omitempty"`
 
 	// CustomErrorResponses AWS CloudFormation Property
 	// Required: false
@@ -32,7 +32,7 @@ type AWSCloudFrontDistribution_DistributionConfig struct {
 	// DefaultRootObject AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-defaultrootobject
-	DefaultRootObject string `json:"DefaultRootObject,omitempty"`
+	DefaultRootObject *StringIntrinsic `json:"DefaultRootObject,omitempty"`
 
 	// Enabled AWS CloudFormation Property
 	// Required: true
@@ -42,7 +42,7 @@ type AWSCloudFrontDistribution_DistributionConfig struct {
 	// HttpVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-httpversion
-	HttpVersion string `json:"HttpVersion,omitempty"`
+	HttpVersion *StringIntrinsic `json:"HttpVersion,omitempty"`
 
 	// IPV6Enabled AWS CloudFormation Property
 	// Required: false
@@ -62,7 +62,7 @@ type AWSCloudFrontDistribution_DistributionConfig struct {
 	// PriceClass AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-priceclass
-	PriceClass string `json:"PriceClass,omitempty"`
+	PriceClass *StringIntrinsic `json:"PriceClass,omitempty"`
 
 	// Restrictions AWS CloudFormation Property
 	// Required: false
@@ -77,85 +77,7 @@ type AWSCloudFrontDistribution_DistributionConfig struct {
 	// WebACLId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-webaclid
-	WebACLId string `json:"WebACLId,omitempty"`
-}
-
-type UntypedAWSCloudFrontDistribution_DistributionConfig struct {
-
-	// Aliases AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-aliases
-	Aliases []interface{} `json:"Aliases,omitempty"`
-
-	// CacheBehaviors AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-cachebehaviors
-	CacheBehaviors []UntypedAWSCloudFrontDistribution_CacheBehavior `json:"CacheBehaviors,omitempty"`
-
-	// Comment AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-comment
-	Comment interface{} `json:"Comment,omitempty"`
-
-	// CustomErrorResponses AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-customerrorresponses
-	CustomErrorResponses []UntypedAWSCloudFrontDistribution_CustomErrorResponse `json:"CustomErrorResponses,omitempty"`
-
-	// DefaultCacheBehavior AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-defaultcachebehavior
-	DefaultCacheBehavior *UntypedAWSCloudFrontDistribution_DefaultCacheBehavior `json:"DefaultCacheBehavior,omitempty"`
-
-	// DefaultRootObject AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-defaultrootobject
-	DefaultRootObject interface{} `json:"DefaultRootObject,omitempty"`
-
-	// Enabled AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-enabled
-	Enabled interface{} `json:"Enabled,omitempty"`
-
-	// HttpVersion AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-httpversion
-	HttpVersion interface{} `json:"HttpVersion,omitempty"`
-
-	// IPV6Enabled AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-ipv6enabled
-	IPV6Enabled interface{} `json:"IPV6Enabled,omitempty"`
-
-	// Logging AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-logging
-	Logging *UntypedAWSCloudFrontDistribution_Logging `json:"Logging,omitempty"`
-
-	// Origins AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-origins
-	Origins []UntypedAWSCloudFrontDistribution_Origin `json:"Origins,omitempty"`
-
-	// PriceClass AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-priceclass
-	PriceClass interface{} `json:"PriceClass,omitempty"`
-
-	// Restrictions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-restrictions
-	Restrictions *UntypedAWSCloudFrontDistribution_Restrictions `json:"Restrictions,omitempty"`
-
-	// ViewerCertificate AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-viewercertificate
-	ViewerCertificate *UntypedAWSCloudFrontDistribution_ViewerCertificate `json:"ViewerCertificate,omitempty"`
-
-	// WebACLId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-distributionconfig.html#cfn-cloudfront-distribution-distributionconfig-webaclid
-	WebACLId interface{} `json:"WebACLId,omitempty"`
+	WebACLId *StringIntrinsic `json:"WebACLId,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

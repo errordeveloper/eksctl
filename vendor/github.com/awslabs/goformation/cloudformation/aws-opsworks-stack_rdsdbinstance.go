@@ -7,35 +7,17 @@ type AWSOpsWorksStack_RdsDbInstance struct {
 	// DbPassword AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbpassword
-	DbPassword string `json:"DbPassword,omitempty"`
+	DbPassword *StringIntrinsic `json:"DbPassword,omitempty"`
 
 	// DbUser AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbuser
-	DbUser string `json:"DbUser,omitempty"`
+	DbUser *StringIntrinsic `json:"DbUser,omitempty"`
 
 	// RdsDbInstanceArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn
-	RdsDbInstanceArn string `json:"RdsDbInstanceArn,omitempty"`
-}
-
-type UntypedAWSOpsWorksStack_RdsDbInstance struct {
-
-	// DbPassword AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbpassword
-	DbPassword interface{} `json:"DbPassword,omitempty"`
-
-	// DbUser AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-dbuser
-	DbUser interface{} `json:"DbUser,omitempty"`
-
-	// RdsDbInstanceArn AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-stack-rdsdbinstance.html#cfn-opsworks-stack-rdsdbinstance-rdsdbinstancearn
-	RdsDbInstanceArn interface{} `json:"RdsDbInstanceArn,omitempty"`
+	RdsDbInstanceArn *StringIntrinsic `json:"RdsDbInstanceArn,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

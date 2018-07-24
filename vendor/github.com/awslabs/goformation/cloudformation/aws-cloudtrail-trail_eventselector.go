@@ -17,25 +17,7 @@ type AWSCloudTrailTrail_EventSelector struct {
 	// ReadWriteType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-readwritetype
-	ReadWriteType string `json:"ReadWriteType,omitempty"`
-}
-
-type UntypedAWSCloudTrailTrail_EventSelector struct {
-
-	// DataResources AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-dataresources
-	DataResources []UntypedAWSCloudTrailTrail_DataResource `json:"DataResources,omitempty"`
-
-	// IncludeManagementEvents AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-includemanagementevents
-	IncludeManagementEvents interface{} `json:"IncludeManagementEvents,omitempty"`
-
-	// ReadWriteType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudtrail-trail-eventselector.html#cfn-cloudtrail-trail-eventselector-readwritetype
-	ReadWriteType interface{} `json:"ReadWriteType,omitempty"`
+	ReadWriteType *StringIntrinsic `json:"ReadWriteType,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

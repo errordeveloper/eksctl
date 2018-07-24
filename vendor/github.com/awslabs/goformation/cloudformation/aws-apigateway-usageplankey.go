@@ -13,35 +13,17 @@ type AWSApiGatewayUsagePlanKey struct {
 	// KeyId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-keyid
-	KeyId string `json:"KeyId,omitempty"`
+	KeyId *StringIntrinsic `json:"KeyId,omitempty"`
 
 	// KeyType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-keytype
-	KeyType string `json:"KeyType,omitempty"`
+	KeyType *StringIntrinsic `json:"KeyType,omitempty"`
 
 	// UsagePlanId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-usageplanid
-	UsagePlanId string `json:"UsagePlanId,omitempty"`
-}
-
-type UntypedAWSApiGatewayUsagePlanKey struct {
-
-	// KeyId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-keyid
-	KeyId interface{} `json:"KeyId,omitempty"`
-
-	// KeyType AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-keytype
-	KeyType interface{} `json:"KeyType,omitempty"`
-
-	// UsagePlanId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplankey.html#cfn-apigateway-usageplankey-usageplanid
-	UsagePlanId interface{} `json:"UsagePlanId,omitempty"`
+	UsagePlanId *StringIntrinsic `json:"UsagePlanId,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

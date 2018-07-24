@@ -13,17 +13,17 @@ type AWSNeptuneDBParameterGroup struct {
 	// Description AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbparametergroup.html#cfn-neptune-dbparametergroup-description
-	Description string `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 
 	// Family AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbparametergroup.html#cfn-neptune-dbparametergroup-family
-	Family string `json:"Family,omitempty"`
+	Family *StringIntrinsic `json:"Family,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbparametergroup.html#cfn-neptune-dbparametergroup-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// Parameters AWS CloudFormation Property
 	// Required: true
@@ -34,34 +34,6 @@ type AWSNeptuneDBParameterGroup struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbparametergroup.html#cfn-neptune-dbparametergroup-tags
 	Tags []Tag `json:"Tags,omitempty"`
-}
-
-type UntypedAWSNeptuneDBParameterGroup struct {
-
-	// Description AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbparametergroup.html#cfn-neptune-dbparametergroup-description
-	Description interface{} `json:"Description,omitempty"`
-
-	// Family AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbparametergroup.html#cfn-neptune-dbparametergroup-family
-	Family interface{} `json:"Family,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbparametergroup.html#cfn-neptune-dbparametergroup-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// Parameters AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbparametergroup.html#cfn-neptune-dbparametergroup-parameters
-	Parameters interface{} `json:"Parameters,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-neptune-dbparametergroup.html#cfn-neptune-dbparametergroup-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

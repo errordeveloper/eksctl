@@ -13,35 +13,17 @@ type AWSSageMakerEndpoint struct {
 	// EndpointConfigName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpoint.html#cfn-sagemaker-endpoint-endpointconfigname
-	EndpointConfigName string `json:"EndpointConfigName,omitempty"`
+	EndpointConfigName *StringIntrinsic `json:"EndpointConfigName,omitempty"`
 
 	// EndpointName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpoint.html#cfn-sagemaker-endpoint-endpointname
-	EndpointName string `json:"EndpointName,omitempty"`
+	EndpointName *StringIntrinsic `json:"EndpointName,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpoint.html#cfn-sagemaker-endpoint-tags
 	Tags []Tag `json:"Tags,omitempty"`
-}
-
-type UntypedAWSSageMakerEndpoint struct {
-
-	// EndpointConfigName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpoint.html#cfn-sagemaker-endpoint-endpointconfigname
-	EndpointConfigName interface{} `json:"EndpointConfigName,omitempty"`
-
-	// EndpointName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpoint.html#cfn-sagemaker-endpoint-endpointname
-	EndpointName interface{} `json:"EndpointName,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-endpoint.html#cfn-sagemaker-endpoint-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -13,45 +13,22 @@ type AWSDMSReplicationSubnetGroup struct {
 	// ReplicationSubnetGroupDescription AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-replicationsubnetgroupdescription
-	ReplicationSubnetGroupDescription string `json:"ReplicationSubnetGroupDescription,omitempty"`
+	ReplicationSubnetGroupDescription *StringIntrinsic `json:"ReplicationSubnetGroupDescription,omitempty"`
 
 	// ReplicationSubnetGroupIdentifier AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-replicationsubnetgroupidentifier
-	ReplicationSubnetGroupIdentifier string `json:"ReplicationSubnetGroupIdentifier,omitempty"`
+	ReplicationSubnetGroupIdentifier *StringIntrinsic `json:"ReplicationSubnetGroupIdentifier,omitempty"`
 
 	// SubnetIds AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-subnetids
-	SubnetIds []string `json:"SubnetIds,omitempty"`
+	SubnetIds []*StringIntrinsic `json:"SubnetIds,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-tags
 	Tags []Tag `json:"Tags,omitempty"`
-}
-
-type UntypedAWSDMSReplicationSubnetGroup struct {
-
-	// ReplicationSubnetGroupDescription AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-replicationsubnetgroupdescription
-	ReplicationSubnetGroupDescription interface{} `json:"ReplicationSubnetGroupDescription,omitempty"`
-
-	// ReplicationSubnetGroupIdentifier AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-replicationsubnetgroupidentifier
-	ReplicationSubnetGroupIdentifier interface{} `json:"ReplicationSubnetGroupIdentifier,omitempty"`
-
-	// SubnetIds AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-subnetids
-	SubnetIds []interface{} `json:"SubnetIds,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationsubnetgroup.html#cfn-dms-replicationsubnetgroup-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

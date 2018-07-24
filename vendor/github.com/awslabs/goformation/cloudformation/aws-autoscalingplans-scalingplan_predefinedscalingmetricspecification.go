@@ -7,25 +7,12 @@ type AWSAutoScalingPlansScalingPlan_PredefinedScalingMetricSpecification struct 
 	// PredefinedScalingMetricType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification.html#cfn-autoscalingplans-scalingplan-predefinedscalingmetricspecification-predefinedscalingmetrictype
-	PredefinedScalingMetricType string `json:"PredefinedScalingMetricType,omitempty"`
+	PredefinedScalingMetricType *StringIntrinsic `json:"PredefinedScalingMetricType,omitempty"`
 
 	// ResourceLabel AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification.html#cfn-autoscalingplans-scalingplan-predefinedscalingmetricspecification-resourcelabel
-	ResourceLabel string `json:"ResourceLabel,omitempty"`
-}
-
-type UntypedAWSAutoScalingPlansScalingPlan_PredefinedScalingMetricSpecification struct {
-
-	// PredefinedScalingMetricType AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification.html#cfn-autoscalingplans-scalingplan-predefinedscalingmetricspecification-predefinedscalingmetrictype
-	PredefinedScalingMetricType interface{} `json:"PredefinedScalingMetricType,omitempty"`
-
-	// ResourceLabel AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-predefinedscalingmetricspecification.html#cfn-autoscalingplans-scalingplan-predefinedscalingmetricspecification-resourcelabel
-	ResourceLabel interface{} `json:"ResourceLabel,omitempty"`
+	ResourceLabel *StringIntrinsic `json:"ResourceLabel,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

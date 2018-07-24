@@ -28,17 +28,17 @@ type AWSDMSReplicationInstance struct {
 	// AvailabilityZone AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-availabilityzone
-	AvailabilityZone string `json:"AvailabilityZone,omitempty"`
+	AvailabilityZone *StringIntrinsic `json:"AvailabilityZone,omitempty"`
 
 	// EngineVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-engineversion
-	EngineVersion string `json:"EngineVersion,omitempty"`
+	EngineVersion *StringIntrinsic `json:"EngineVersion,omitempty"`
 
 	// KmsKeyId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-kmskeyid
-	KmsKeyId string `json:"KmsKeyId,omitempty"`
+	KmsKeyId *StringIntrinsic `json:"KmsKeyId,omitempty"`
 
 	// MultiAZ AWS CloudFormation Property
 	// Required: false
@@ -48,7 +48,7 @@ type AWSDMSReplicationInstance struct {
 	// PreferredMaintenanceWindow AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-preferredmaintenancewindow
-	PreferredMaintenanceWindow string `json:"PreferredMaintenanceWindow,omitempty"`
+	PreferredMaintenanceWindow *StringIntrinsic `json:"PreferredMaintenanceWindow,omitempty"`
 
 	// PubliclyAccessible AWS CloudFormation Property
 	// Required: false
@@ -58,17 +58,17 @@ type AWSDMSReplicationInstance struct {
 	// ReplicationInstanceClass AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-replicationinstanceclass
-	ReplicationInstanceClass string `json:"ReplicationInstanceClass,omitempty"`
+	ReplicationInstanceClass *StringIntrinsic `json:"ReplicationInstanceClass,omitempty"`
 
 	// ReplicationInstanceIdentifier AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-replicationinstanceidentifier
-	ReplicationInstanceIdentifier string `json:"ReplicationInstanceIdentifier,omitempty"`
+	ReplicationInstanceIdentifier *StringIntrinsic `json:"ReplicationInstanceIdentifier,omitempty"`
 
 	// ReplicationSubnetGroupIdentifier AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-replicationsubnetgroupidentifier
-	ReplicationSubnetGroupIdentifier string `json:"ReplicationSubnetGroupIdentifier,omitempty"`
+	ReplicationSubnetGroupIdentifier *StringIntrinsic `json:"ReplicationSubnetGroupIdentifier,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -78,80 +78,7 @@ type AWSDMSReplicationInstance struct {
 	// VpcSecurityGroupIds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-vpcsecuritygroupids
-	VpcSecurityGroupIds []string `json:"VpcSecurityGroupIds,omitempty"`
-}
-
-type UntypedAWSDMSReplicationInstance struct {
-
-	// AllocatedStorage AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-allocatedstorage
-	AllocatedStorage interface{} `json:"AllocatedStorage,omitempty"`
-
-	// AllowMajorVersionUpgrade AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-allowmajorversionupgrade
-	AllowMajorVersionUpgrade interface{} `json:"AllowMajorVersionUpgrade,omitempty"`
-
-	// AutoMinorVersionUpgrade AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-autominorversionupgrade
-	AutoMinorVersionUpgrade interface{} `json:"AutoMinorVersionUpgrade,omitempty"`
-
-	// AvailabilityZone AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-availabilityzone
-	AvailabilityZone interface{} `json:"AvailabilityZone,omitempty"`
-
-	// EngineVersion AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-engineversion
-	EngineVersion interface{} `json:"EngineVersion,omitempty"`
-
-	// KmsKeyId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-kmskeyid
-	KmsKeyId interface{} `json:"KmsKeyId,omitempty"`
-
-	// MultiAZ AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-multiaz
-	MultiAZ interface{} `json:"MultiAZ,omitempty"`
-
-	// PreferredMaintenanceWindow AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-preferredmaintenancewindow
-	PreferredMaintenanceWindow interface{} `json:"PreferredMaintenanceWindow,omitempty"`
-
-	// PubliclyAccessible AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-publiclyaccessible
-	PubliclyAccessible interface{} `json:"PubliclyAccessible,omitempty"`
-
-	// ReplicationInstanceClass AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-replicationinstanceclass
-	ReplicationInstanceClass interface{} `json:"ReplicationInstanceClass,omitempty"`
-
-	// ReplicationInstanceIdentifier AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-replicationinstanceidentifier
-	ReplicationInstanceIdentifier interface{} `json:"ReplicationInstanceIdentifier,omitempty"`
-
-	// ReplicationSubnetGroupIdentifier AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-replicationsubnetgroupidentifier
-	ReplicationSubnetGroupIdentifier interface{} `json:"ReplicationSubnetGroupIdentifier,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// VpcSecurityGroupIds AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-vpcsecuritygroupids
-	VpcSecurityGroupIds []interface{} `json:"VpcSecurityGroupIds,omitempty"`
+	VpcSecurityGroupIds []*StringIntrinsic `json:"VpcSecurityGroupIds,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

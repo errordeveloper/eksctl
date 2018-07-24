@@ -10,14 +10,6 @@ type AWSCognitoIdentityPoolRoleAttachment_RulesConfigurationType struct {
 	Rules []AWSCognitoIdentityPoolRoleAttachment_MappingRule `json:"Rules,omitempty"`
 }
 
-type UntypedAWSCognitoIdentityPoolRoleAttachment_RulesConfigurationType struct {
-
-	// Rules AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rulesconfigurationtype.html#cfn-cognito-identitypoolroleattachment-rulesconfigurationtype-rules
-	Rules []UntypedAWSCognitoIdentityPoolRoleAttachment_MappingRule `json:"Rules,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSCognitoIdentityPoolRoleAttachment_RulesConfigurationType) AWSCloudFormationType() string {
 	return "AWS::Cognito::IdentityPoolRoleAttachment.RulesConfigurationType"

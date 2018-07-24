@@ -10,14 +10,6 @@ type AWSElasticLoadBalancingLoadBalancer_ConnectionSettings struct {
 	IdleTimeout int `json:"IdleTimeout,omitempty"`
 }
 
-type UntypedAWSElasticLoadBalancingLoadBalancer_ConnectionSettings struct {
-
-	// IdleTimeout AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-connectionsettings.html#cfn-elb-connectionsettings-idletimeout
-	IdleTimeout interface{} `json:"IdleTimeout,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSElasticLoadBalancingLoadBalancer_ConnectionSettings) AWSCloudFormationType() string {
 	return "AWS::ElasticLoadBalancing::LoadBalancer.ConnectionSettings"

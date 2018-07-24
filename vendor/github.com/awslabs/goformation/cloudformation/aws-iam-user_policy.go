@@ -12,20 +12,7 @@ type AWSIAMUser_Policy struct {
 	// PolicyName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policyname
-	PolicyName string `json:"PolicyName,omitempty"`
-}
-
-type UntypedAWSIAMUser_Policy struct {
-
-	// PolicyDocument AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policydocument
-	PolicyDocument interface{} `json:"PolicyDocument,omitempty"`
-
-	// PolicyName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-policy.html#cfn-iam-policies-policyname
-	PolicyName interface{} `json:"PolicyName,omitempty"`
+	PolicyName *StringIntrinsic `json:"PolicyName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -7,25 +7,12 @@ type AWSKinesisAnalyticsApplicationOutput_KinesisFirehoseOutput struct {
 	// ResourceARN AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-resourcearn
-	ResourceARN string `json:"ResourceARN,omitempty"`
+	ResourceARN *StringIntrinsic `json:"ResourceARN,omitempty"`
 
 	// RoleARN AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-rolearn
-	RoleARN string `json:"RoleARN,omitempty"`
-}
-
-type UntypedAWSKinesisAnalyticsApplicationOutput_KinesisFirehoseOutput struct {
-
-	// ResourceARN AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-resourcearn
-	ResourceARN interface{} `json:"ResourceARN,omitempty"`
-
-	// RoleARN AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationoutput-kinesisfirehoseoutput.html#cfn-kinesisanalytics-applicationoutput-kinesisfirehoseoutput-rolearn
-	RoleARN interface{} `json:"RoleARN,omitempty"`
+	RoleARN *StringIntrinsic `json:"RoleARN,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

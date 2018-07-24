@@ -18,40 +18,17 @@ type AWSWAFRegionalWebACL struct {
 	// MetricName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html#cfn-wafregional-webacl-metricname
-	MetricName string `json:"MetricName,omitempty"`
+	MetricName *StringIntrinsic `json:"MetricName,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html#cfn-wafregional-webacl-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// Rules AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html#cfn-wafregional-webacl-rules
 	Rules []AWSWAFRegionalWebACL_Rule `json:"Rules,omitempty"`
-}
-
-type UntypedAWSWAFRegionalWebACL struct {
-
-	// DefaultAction AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html#cfn-wafregional-webacl-defaultaction
-	DefaultAction *UntypedAWSWAFRegionalWebACL_Action `json:"DefaultAction,omitempty"`
-
-	// MetricName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html#cfn-wafregional-webacl-metricname
-	MetricName interface{} `json:"MetricName,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html#cfn-wafregional-webacl-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// Rules AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-webacl.html#cfn-wafregional-webacl-rules
-	Rules []UntypedAWSWAFRegionalWebACL_Rule `json:"Rules,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

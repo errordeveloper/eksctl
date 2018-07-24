@@ -13,35 +13,17 @@ type AWSElastiCacheSubnetGroup struct {
 	// CacheSubnetGroupName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html#cfn-elasticache-subnetgroup-cachesubnetgroupname
-	CacheSubnetGroupName string `json:"CacheSubnetGroupName,omitempty"`
+	CacheSubnetGroupName *StringIntrinsic `json:"CacheSubnetGroupName,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html#cfn-elasticache-subnetgroup-description
-	Description string `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 
 	// SubnetIds AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html#cfn-elasticache-subnetgroup-subnetids
-	SubnetIds []string `json:"SubnetIds,omitempty"`
-}
-
-type UntypedAWSElastiCacheSubnetGroup struct {
-
-	// CacheSubnetGroupName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html#cfn-elasticache-subnetgroup-cachesubnetgroupname
-	CacheSubnetGroupName interface{} `json:"CacheSubnetGroupName,omitempty"`
-
-	// Description AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html#cfn-elasticache-subnetgroup-description
-	Description interface{} `json:"Description,omitempty"`
-
-	// SubnetIds AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-subnetgroup.html#cfn-elasticache-subnetgroup-subnetids
-	SubnetIds []interface{} `json:"SubnetIds,omitempty"`
+	SubnetIds []*StringIntrinsic `json:"SubnetIds,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

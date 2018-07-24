@@ -7,7 +7,7 @@ type AWSDynamoDBTable_GlobalSecondaryIndex struct {
 	// IndexName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-gsi.html#cfn-dynamodb-gsi-indexname
-	IndexName string `json:"IndexName,omitempty"`
+	IndexName *StringIntrinsic `json:"IndexName,omitempty"`
 
 	// KeySchema AWS CloudFormation Property
 	// Required: true
@@ -23,29 +23,6 @@ type AWSDynamoDBTable_GlobalSecondaryIndex struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-gsi.html#cfn-dynamodb-gsi-provisionedthroughput
 	ProvisionedThroughput *AWSDynamoDBTable_ProvisionedThroughput `json:"ProvisionedThroughput,omitempty"`
-}
-
-type UntypedAWSDynamoDBTable_GlobalSecondaryIndex struct {
-
-	// IndexName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-gsi.html#cfn-dynamodb-gsi-indexname
-	IndexName interface{} `json:"IndexName,omitempty"`
-
-	// KeySchema AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-gsi.html#cfn-dynamodb-gsi-keyschema
-	KeySchema []UntypedAWSDynamoDBTable_KeySchema `json:"KeySchema,omitempty"`
-
-	// Projection AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-gsi.html#cfn-dynamodb-gsi-projection
-	Projection *UntypedAWSDynamoDBTable_Projection `json:"Projection,omitempty"`
-
-	// ProvisionedThroughput AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-gsi.html#cfn-dynamodb-gsi-provisionedthroughput
-	ProvisionedThroughput *UntypedAWSDynamoDBTable_ProvisionedThroughput `json:"ProvisionedThroughput,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

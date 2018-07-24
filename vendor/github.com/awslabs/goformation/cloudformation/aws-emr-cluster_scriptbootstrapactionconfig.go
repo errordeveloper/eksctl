@@ -7,25 +7,12 @@ type AWSEMRCluster_ScriptBootstrapActionConfig struct {
 	// Args AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scriptbootstrapactionconfig.html#cfn-elasticmapreduce-cluster-scriptbootstrapactionconfig-args
-	Args []string `json:"Args,omitempty"`
+	Args []*StringIntrinsic `json:"Args,omitempty"`
 
 	// Path AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scriptbootstrapactionconfig.html#cfn-elasticmapreduce-cluster-scriptbootstrapactionconfig-path
-	Path string `json:"Path,omitempty"`
-}
-
-type UntypedAWSEMRCluster_ScriptBootstrapActionConfig struct {
-
-	// Args AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scriptbootstrapactionconfig.html#cfn-elasticmapreduce-cluster-scriptbootstrapactionconfig-args
-	Args []interface{} `json:"Args,omitempty"`
-
-	// Path AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-scriptbootstrapactionconfig.html#cfn-elasticmapreduce-cluster-scriptbootstrapactionconfig-path
-	Path interface{} `json:"Path,omitempty"`
+	Path *StringIntrinsic `json:"Path,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -18,7 +18,7 @@ type AWSElastiCacheReplicationGroup struct {
 	// AuthToken AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-authtoken
-	AuthToken string `json:"AuthToken,omitempty"`
+	AuthToken *StringIntrinsic `json:"AuthToken,omitempty"`
 
 	// AutoMinorVersionUpgrade AWS CloudFormation Property
 	// Required: false
@@ -33,32 +33,32 @@ type AWSElastiCacheReplicationGroup struct {
 	// CacheNodeType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-cachenodetype
-	CacheNodeType string `json:"CacheNodeType,omitempty"`
+	CacheNodeType *StringIntrinsic `json:"CacheNodeType,omitempty"`
 
 	// CacheParameterGroupName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-cacheparametergroupname
-	CacheParameterGroupName string `json:"CacheParameterGroupName,omitempty"`
+	CacheParameterGroupName *StringIntrinsic `json:"CacheParameterGroupName,omitempty"`
 
 	// CacheSecurityGroupNames AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-cachesecuritygroupnames
-	CacheSecurityGroupNames []string `json:"CacheSecurityGroupNames,omitempty"`
+	CacheSecurityGroupNames []*StringIntrinsic `json:"CacheSecurityGroupNames,omitempty"`
 
 	// CacheSubnetGroupName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-cachesubnetgroupname
-	CacheSubnetGroupName string `json:"CacheSubnetGroupName,omitempty"`
+	CacheSubnetGroupName *StringIntrinsic `json:"CacheSubnetGroupName,omitempty"`
 
 	// Engine AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-engine
-	Engine string `json:"Engine,omitempty"`
+	Engine *StringIntrinsic `json:"Engine,omitempty"`
 
 	// EngineVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-engineversion
-	EngineVersion string `json:"EngineVersion,omitempty"`
+	EngineVersion *StringIntrinsic `json:"EngineVersion,omitempty"`
 
 	// NodeGroupConfiguration AWS CloudFormation Property
 	// Required: false
@@ -68,7 +68,7 @@ type AWSElastiCacheReplicationGroup struct {
 	// NotificationTopicArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-notificationtopicarn
-	NotificationTopicArn string `json:"NotificationTopicArn,omitempty"`
+	NotificationTopicArn *StringIntrinsic `json:"NotificationTopicArn,omitempty"`
 
 	// NumCacheClusters AWS CloudFormation Property
 	// Required: false
@@ -88,17 +88,17 @@ type AWSElastiCacheReplicationGroup struct {
 	// PreferredCacheClusterAZs AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-preferredcacheclusterazs
-	PreferredCacheClusterAZs []string `json:"PreferredCacheClusterAZs,omitempty"`
+	PreferredCacheClusterAZs []*StringIntrinsic `json:"PreferredCacheClusterAZs,omitempty"`
 
 	// PreferredMaintenanceWindow AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-preferredmaintenancewindow
-	PreferredMaintenanceWindow string `json:"PreferredMaintenanceWindow,omitempty"`
+	PreferredMaintenanceWindow *StringIntrinsic `json:"PreferredMaintenanceWindow,omitempty"`
 
 	// PrimaryClusterId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-primaryclusterid
-	PrimaryClusterId string `json:"PrimaryClusterId,omitempty"`
+	PrimaryClusterId *StringIntrinsic `json:"PrimaryClusterId,omitempty"`
 
 	// ReplicasPerNodeGroup AWS CloudFormation Property
 	// Required: false
@@ -108,27 +108,27 @@ type AWSElastiCacheReplicationGroup struct {
 	// ReplicationGroupDescription AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-replicationgroupdescription
-	ReplicationGroupDescription string `json:"ReplicationGroupDescription,omitempty"`
+	ReplicationGroupDescription *StringIntrinsic `json:"ReplicationGroupDescription,omitempty"`
 
 	// ReplicationGroupId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-replicationgroupid
-	ReplicationGroupId string `json:"ReplicationGroupId,omitempty"`
+	ReplicationGroupId *StringIntrinsic `json:"ReplicationGroupId,omitempty"`
 
 	// SecurityGroupIds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-securitygroupids
-	SecurityGroupIds []string `json:"SecurityGroupIds,omitempty"`
+	SecurityGroupIds []*StringIntrinsic `json:"SecurityGroupIds,omitempty"`
 
 	// SnapshotArns AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshotarns
-	SnapshotArns []string `json:"SnapshotArns,omitempty"`
+	SnapshotArns []*StringIntrinsic `json:"SnapshotArns,omitempty"`
 
 	// SnapshotName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshotname
-	SnapshotName string `json:"SnapshotName,omitempty"`
+	SnapshotName *StringIntrinsic `json:"SnapshotName,omitempty"`
 
 	// SnapshotRetentionLimit AWS CloudFormation Property
 	// Required: false
@@ -138,12 +138,12 @@ type AWSElastiCacheReplicationGroup struct {
 	// SnapshotWindow AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshotwindow
-	SnapshotWindow string `json:"SnapshotWindow,omitempty"`
+	SnapshotWindow *StringIntrinsic `json:"SnapshotWindow,omitempty"`
 
 	// SnapshottingClusterId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshottingclusterid
-	SnapshottingClusterId string `json:"SnapshottingClusterId,omitempty"`
+	SnapshottingClusterId *StringIntrinsic `json:"SnapshottingClusterId,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -154,154 +154,6 @@ type AWSElastiCacheReplicationGroup struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-transitencryptionenabled
 	TransitEncryptionEnabled bool `json:"TransitEncryptionEnabled,omitempty"`
-}
-
-type UntypedAWSElastiCacheReplicationGroup struct {
-
-	// AtRestEncryptionEnabled AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-atrestencryptionenabled
-	AtRestEncryptionEnabled interface{} `json:"AtRestEncryptionEnabled,omitempty"`
-
-	// AuthToken AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-authtoken
-	AuthToken interface{} `json:"AuthToken,omitempty"`
-
-	// AutoMinorVersionUpgrade AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-autominorversionupgrade
-	AutoMinorVersionUpgrade interface{} `json:"AutoMinorVersionUpgrade,omitempty"`
-
-	// AutomaticFailoverEnabled AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-automaticfailoverenabled
-	AutomaticFailoverEnabled interface{} `json:"AutomaticFailoverEnabled,omitempty"`
-
-	// CacheNodeType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-cachenodetype
-	CacheNodeType interface{} `json:"CacheNodeType,omitempty"`
-
-	// CacheParameterGroupName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-cacheparametergroupname
-	CacheParameterGroupName interface{} `json:"CacheParameterGroupName,omitempty"`
-
-	// CacheSecurityGroupNames AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-cachesecuritygroupnames
-	CacheSecurityGroupNames []interface{} `json:"CacheSecurityGroupNames,omitempty"`
-
-	// CacheSubnetGroupName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-cachesubnetgroupname
-	CacheSubnetGroupName interface{} `json:"CacheSubnetGroupName,omitempty"`
-
-	// Engine AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-engine
-	Engine interface{} `json:"Engine,omitempty"`
-
-	// EngineVersion AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-engineversion
-	EngineVersion interface{} `json:"EngineVersion,omitempty"`
-
-	// NodeGroupConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-nodegroupconfiguration
-	NodeGroupConfiguration []UntypedAWSElastiCacheReplicationGroup_NodeGroupConfiguration `json:"NodeGroupConfiguration,omitempty"`
-
-	// NotificationTopicArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-notificationtopicarn
-	NotificationTopicArn interface{} `json:"NotificationTopicArn,omitempty"`
-
-	// NumCacheClusters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-numcacheclusters
-	NumCacheClusters interface{} `json:"NumCacheClusters,omitempty"`
-
-	// NumNodeGroups AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-numnodegroups
-	NumNodeGroups interface{} `json:"NumNodeGroups,omitempty"`
-
-	// Port AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-port
-	Port interface{} `json:"Port,omitempty"`
-
-	// PreferredCacheClusterAZs AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-preferredcacheclusterazs
-	PreferredCacheClusterAZs []interface{} `json:"PreferredCacheClusterAZs,omitempty"`
-
-	// PreferredMaintenanceWindow AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-preferredmaintenancewindow
-	PreferredMaintenanceWindow interface{} `json:"PreferredMaintenanceWindow,omitempty"`
-
-	// PrimaryClusterId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-primaryclusterid
-	PrimaryClusterId interface{} `json:"PrimaryClusterId,omitempty"`
-
-	// ReplicasPerNodeGroup AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-replicaspernodegroup
-	ReplicasPerNodeGroup interface{} `json:"ReplicasPerNodeGroup,omitempty"`
-
-	// ReplicationGroupDescription AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-replicationgroupdescription
-	ReplicationGroupDescription interface{} `json:"ReplicationGroupDescription,omitempty"`
-
-	// ReplicationGroupId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-replicationgroupid
-	ReplicationGroupId interface{} `json:"ReplicationGroupId,omitempty"`
-
-	// SecurityGroupIds AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-securitygroupids
-	SecurityGroupIds []interface{} `json:"SecurityGroupIds,omitempty"`
-
-	// SnapshotArns AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshotarns
-	SnapshotArns []interface{} `json:"SnapshotArns,omitempty"`
-
-	// SnapshotName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshotname
-	SnapshotName interface{} `json:"SnapshotName,omitempty"`
-
-	// SnapshotRetentionLimit AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshotretentionlimit
-	SnapshotRetentionLimit interface{} `json:"SnapshotRetentionLimit,omitempty"`
-
-	// SnapshotWindow AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshotwindow
-	SnapshotWindow interface{} `json:"SnapshotWindow,omitempty"`
-
-	// SnapshottingClusterId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshottingclusterid
-	SnapshottingClusterId interface{} `json:"SnapshottingClusterId,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// TransitEncryptionEnabled AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-transitencryptionenabled
-	TransitEncryptionEnabled interface{} `json:"TransitEncryptionEnabled,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

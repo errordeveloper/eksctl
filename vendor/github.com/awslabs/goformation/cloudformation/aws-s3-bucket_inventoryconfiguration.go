@@ -17,65 +17,27 @@ type AWSS3Bucket_InventoryConfiguration struct {
 	// Id AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-id
-	Id string `json:"Id,omitempty"`
+	Id *StringIntrinsic `json:"Id,omitempty"`
 
 	// IncludedObjectVersions AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-includedobjectversions
-	IncludedObjectVersions string `json:"IncludedObjectVersions,omitempty"`
+	IncludedObjectVersions *StringIntrinsic `json:"IncludedObjectVersions,omitempty"`
 
 	// OptionalFields AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-optionalfields
-	OptionalFields []string `json:"OptionalFields,omitempty"`
+	OptionalFields []*StringIntrinsic `json:"OptionalFields,omitempty"`
 
 	// Prefix AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-prefix
-	Prefix string `json:"Prefix,omitempty"`
+	Prefix *StringIntrinsic `json:"Prefix,omitempty"`
 
 	// ScheduleFrequency AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-schedulefrequency
-	ScheduleFrequency string `json:"ScheduleFrequency,omitempty"`
-}
-
-type UntypedAWSS3Bucket_InventoryConfiguration struct {
-
-	// Destination AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-destination
-	Destination *UntypedAWSS3Bucket_Destination `json:"Destination,omitempty"`
-
-	// Enabled AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-enabled
-	Enabled interface{} `json:"Enabled,omitempty"`
-
-	// Id AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-id
-	Id interface{} `json:"Id,omitempty"`
-
-	// IncludedObjectVersions AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-includedobjectversions
-	IncludedObjectVersions interface{} `json:"IncludedObjectVersions,omitempty"`
-
-	// OptionalFields AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-optionalfields
-	OptionalFields []interface{} `json:"OptionalFields,omitempty"`
-
-	// Prefix AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-prefix
-	Prefix interface{} `json:"Prefix,omitempty"`
-
-	// ScheduleFrequency AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-inventoryconfiguration.html#cfn-s3-bucket-inventoryconfiguration-schedulefrequency
-	ScheduleFrequency interface{} `json:"ScheduleFrequency,omitempty"`
+	ScheduleFrequency *StringIntrinsic `json:"ScheduleFrequency,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

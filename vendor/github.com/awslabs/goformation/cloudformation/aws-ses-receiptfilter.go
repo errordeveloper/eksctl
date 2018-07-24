@@ -16,14 +16,6 @@ type AWSSESReceiptFilter struct {
 	Filter *AWSSESReceiptFilter_Filter `json:"Filter,omitempty"`
 }
 
-type UntypedAWSSESReceiptFilter struct {
-
-	// Filter AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptfilter.html#cfn-ses-receiptfilter-filter
-	Filter *UntypedAWSSESReceiptFilter_Filter `json:"Filter,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSSESReceiptFilter) AWSCloudFormationType() string {
 	return "AWS::SES::ReceiptFilter"

@@ -12,20 +12,7 @@ type AWSEC2Instance_SsmAssociation struct {
 	// DocumentName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-ssmassociations.html#cfn-ec2-instance-ssmassociations-documentname
-	DocumentName string `json:"DocumentName,omitempty"`
-}
-
-type UntypedAWSEC2Instance_SsmAssociation struct {
-
-	// AssociationParameters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-ssmassociations.html#cfn-ec2-instance-ssmassociations-associationparameters
-	AssociationParameters []UntypedAWSEC2Instance_AssociationParameter `json:"AssociationParameters,omitempty"`
-
-	// DocumentName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance-ssmassociations.html#cfn-ec2-instance-ssmassociations-documentname
-	DocumentName interface{} `json:"DocumentName,omitempty"`
+	DocumentName *StringIntrinsic `json:"DocumentName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

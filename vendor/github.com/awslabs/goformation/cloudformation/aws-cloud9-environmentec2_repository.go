@@ -7,25 +7,12 @@ type AWSCloud9EnvironmentEC2_Repository struct {
 	// PathComponent AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloud9-environmentec2-repository.html#cfn-cloud9-environmentec2-repository-pathcomponent
-	PathComponent string `json:"PathComponent,omitempty"`
+	PathComponent *StringIntrinsic `json:"PathComponent,omitempty"`
 
 	// RepositoryUrl AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloud9-environmentec2-repository.html#cfn-cloud9-environmentec2-repository-repositoryurl
-	RepositoryUrl string `json:"RepositoryUrl,omitempty"`
-}
-
-type UntypedAWSCloud9EnvironmentEC2_Repository struct {
-
-	// PathComponent AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloud9-environmentec2-repository.html#cfn-cloud9-environmentec2-repository-pathcomponent
-	PathComponent interface{} `json:"PathComponent,omitempty"`
-
-	// RepositoryUrl AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloud9-environmentec2-repository.html#cfn-cloud9-environmentec2-repository-repositoryurl
-	RepositoryUrl interface{} `json:"RepositoryUrl,omitempty"`
+	RepositoryUrl *StringIntrinsic `json:"RepositoryUrl,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

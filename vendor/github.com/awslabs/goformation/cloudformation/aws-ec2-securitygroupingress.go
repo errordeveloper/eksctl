@@ -13,17 +13,17 @@ type AWSEC2SecurityGroupIngress struct {
 	// CidrIp AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-cidrip
-	CidrIp string `json:"CidrIp,omitempty"`
+	CidrIp *StringIntrinsic `json:"CidrIp,omitempty"`
 
 	// CidrIpv6 AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-cidripv6
-	CidrIpv6 string `json:"CidrIpv6,omitempty"`
+	CidrIpv6 *StringIntrinsic `json:"CidrIpv6,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-description
-	Description string `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 
 	// FromPort AWS CloudFormation Property
 	// Required: false
@@ -33,95 +33,37 @@ type AWSEC2SecurityGroupIngress struct {
 	// GroupId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-groupid
-	GroupId string `json:"GroupId,omitempty"`
+	GroupId *StringIntrinsic `json:"GroupId,omitempty"`
 
 	// GroupName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-groupname
-	GroupName string `json:"GroupName,omitempty"`
+	GroupName *StringIntrinsic `json:"GroupName,omitempty"`
 
 	// IpProtocol AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-ipprotocol
-	IpProtocol string `json:"IpProtocol,omitempty"`
+	IpProtocol *StringIntrinsic `json:"IpProtocol,omitempty"`
 
 	// SourceSecurityGroupId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-sourcesecuritygroupid
-	SourceSecurityGroupId string `json:"SourceSecurityGroupId,omitempty"`
+	SourceSecurityGroupId *StringIntrinsic `json:"SourceSecurityGroupId,omitempty"`
 
 	// SourceSecurityGroupName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-sourcesecuritygroupname
-	SourceSecurityGroupName string `json:"SourceSecurityGroupName,omitempty"`
+	SourceSecurityGroupName *StringIntrinsic `json:"SourceSecurityGroupName,omitempty"`
 
 	// SourceSecurityGroupOwnerId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-sourcesecuritygroupownerid
-	SourceSecurityGroupOwnerId string `json:"SourceSecurityGroupOwnerId,omitempty"`
+	SourceSecurityGroupOwnerId *StringIntrinsic `json:"SourceSecurityGroupOwnerId,omitempty"`
 
 	// ToPort AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-toport
 	ToPort int `json:"ToPort,omitempty"`
-}
-
-type UntypedAWSEC2SecurityGroupIngress struct {
-
-	// CidrIp AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-cidrip
-	CidrIp interface{} `json:"CidrIp,omitempty"`
-
-	// CidrIpv6 AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-cidripv6
-	CidrIpv6 interface{} `json:"CidrIpv6,omitempty"`
-
-	// Description AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-description
-	Description interface{} `json:"Description,omitempty"`
-
-	// FromPort AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-fromport
-	FromPort interface{} `json:"FromPort,omitempty"`
-
-	// GroupId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-groupid
-	GroupId interface{} `json:"GroupId,omitempty"`
-
-	// GroupName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-groupname
-	GroupName interface{} `json:"GroupName,omitempty"`
-
-	// IpProtocol AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-ipprotocol
-	IpProtocol interface{} `json:"IpProtocol,omitempty"`
-
-	// SourceSecurityGroupId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-sourcesecuritygroupid
-	SourceSecurityGroupId interface{} `json:"SourceSecurityGroupId,omitempty"`
-
-	// SourceSecurityGroupName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-sourcesecuritygroupname
-	SourceSecurityGroupName interface{} `json:"SourceSecurityGroupName,omitempty"`
-
-	// SourceSecurityGroupOwnerId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-sourcesecuritygroupownerid
-	SourceSecurityGroupOwnerId interface{} `json:"SourceSecurityGroupOwnerId,omitempty"`
-
-	// ToPort AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group-ingress.html#cfn-ec2-security-group-ingress-toport
-	ToPort interface{} `json:"ToPort,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

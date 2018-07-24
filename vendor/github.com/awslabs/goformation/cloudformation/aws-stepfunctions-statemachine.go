@@ -13,35 +13,17 @@ type AWSStepFunctionsStateMachine struct {
 	// DefinitionString AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-definitionstring
-	DefinitionString string `json:"DefinitionString,omitempty"`
+	DefinitionString *StringIntrinsic `json:"DefinitionString,omitempty"`
 
 	// RoleArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-rolearn
-	RoleArn string `json:"RoleArn,omitempty"`
+	RoleArn *StringIntrinsic `json:"RoleArn,omitempty"`
 
 	// StateMachineName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-statemachinename
-	StateMachineName string `json:"StateMachineName,omitempty"`
-}
-
-type UntypedAWSStepFunctionsStateMachine struct {
-
-	// DefinitionString AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-definitionstring
-	DefinitionString interface{} `json:"DefinitionString,omitempty"`
-
-	// RoleArn AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-rolearn
-	RoleArn interface{} `json:"RoleArn,omitempty"`
-
-	// StateMachineName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-stepfunctions-statemachine.html#cfn-stepfunctions-statemachine-statemachinename
-	StateMachineName interface{} `json:"StateMachineName,omitempty"`
+	StateMachineName *StringIntrinsic `json:"StateMachineName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

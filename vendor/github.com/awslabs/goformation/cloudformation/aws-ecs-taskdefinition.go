@@ -18,27 +18,27 @@ type AWSECSTaskDefinition struct {
 	// Cpu AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-cpu
-	Cpu string `json:"Cpu,omitempty"`
+	Cpu *StringIntrinsic `json:"Cpu,omitempty"`
 
 	// ExecutionRoleArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-executionrolearn
-	ExecutionRoleArn string `json:"ExecutionRoleArn,omitempty"`
+	ExecutionRoleArn *StringIntrinsic `json:"ExecutionRoleArn,omitempty"`
 
 	// Family AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-family
-	Family string `json:"Family,omitempty"`
+	Family *StringIntrinsic `json:"Family,omitempty"`
 
 	// Memory AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-memory
-	Memory string `json:"Memory,omitempty"`
+	Memory *StringIntrinsic `json:"Memory,omitempty"`
 
 	// NetworkMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-networkmode
-	NetworkMode string `json:"NetworkMode,omitempty"`
+	NetworkMode *StringIntrinsic `json:"NetworkMode,omitempty"`
 
 	// PlacementConstraints AWS CloudFormation Property
 	// Required: false
@@ -48,70 +48,17 @@ type AWSECSTaskDefinition struct {
 	// RequiresCompatibilities AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-requirescompatibilities
-	RequiresCompatibilities []string `json:"RequiresCompatibilities,omitempty"`
+	RequiresCompatibilities []*StringIntrinsic `json:"RequiresCompatibilities,omitempty"`
 
 	// TaskRoleArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-taskrolearn
-	TaskRoleArn string `json:"TaskRoleArn,omitempty"`
+	TaskRoleArn *StringIntrinsic `json:"TaskRoleArn,omitempty"`
 
 	// Volumes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-volumes
 	Volumes []AWSECSTaskDefinition_Volume `json:"Volumes,omitempty"`
-}
-
-type UntypedAWSECSTaskDefinition struct {
-
-	// ContainerDefinitions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-containerdefinitions
-	ContainerDefinitions []UntypedAWSECSTaskDefinition_ContainerDefinition `json:"ContainerDefinitions,omitempty"`
-
-	// Cpu AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-cpu
-	Cpu interface{} `json:"Cpu,omitempty"`
-
-	// ExecutionRoleArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-executionrolearn
-	ExecutionRoleArn interface{} `json:"ExecutionRoleArn,omitempty"`
-
-	// Family AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-family
-	Family interface{} `json:"Family,omitempty"`
-
-	// Memory AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-memory
-	Memory interface{} `json:"Memory,omitempty"`
-
-	// NetworkMode AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-networkmode
-	NetworkMode interface{} `json:"NetworkMode,omitempty"`
-
-	// PlacementConstraints AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-placementconstraints
-	PlacementConstraints []UntypedAWSECSTaskDefinition_TaskDefinitionPlacementConstraint `json:"PlacementConstraints,omitempty"`
-
-	// RequiresCompatibilities AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-requirescompatibilities
-	RequiresCompatibilities []interface{} `json:"RequiresCompatibilities,omitempty"`
-
-	// TaskRoleArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-taskrolearn
-	TaskRoleArn interface{} `json:"TaskRoleArn,omitempty"`
-
-	// Volumes AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskdefinition.html#cfn-ecs-taskdefinition-volumes
-	Volumes []UntypedAWSECSTaskDefinition_Volume `json:"Volumes,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

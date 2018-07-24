@@ -23,7 +23,7 @@ type AWSElasticLoadBalancingLoadBalancer struct {
 	// AvailabilityZones AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-availabilityzones
-	AvailabilityZones []string `json:"AvailabilityZones,omitempty"`
+	AvailabilityZones []*StringIntrinsic `json:"AvailabilityZones,omitempty"`
 
 	// ConnectionDrainingPolicy AWS CloudFormation Property
 	// Required: false
@@ -48,7 +48,7 @@ type AWSElasticLoadBalancingLoadBalancer struct {
 	// Instances AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-instances
-	Instances []string `json:"Instances,omitempty"`
+	Instances []*StringIntrinsic `json:"Instances,omitempty"`
 
 	// LBCookieStickinessPolicy AWS CloudFormation Property
 	// Required: false
@@ -63,7 +63,7 @@ type AWSElasticLoadBalancingLoadBalancer struct {
 	// LoadBalancerName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-elbname
-	LoadBalancerName string `json:"LoadBalancerName,omitempty"`
+	LoadBalancerName *StringIntrinsic `json:"LoadBalancerName,omitempty"`
 
 	// Policies AWS CloudFormation Property
 	// Required: false
@@ -73,105 +73,22 @@ type AWSElasticLoadBalancingLoadBalancer struct {
 	// Scheme AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-scheme
-	Scheme string `json:"Scheme,omitempty"`
+	Scheme *StringIntrinsic `json:"Scheme,omitempty"`
 
 	// SecurityGroups AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-securitygroups
-	SecurityGroups []string `json:"SecurityGroups,omitempty"`
+	SecurityGroups []*StringIntrinsic `json:"SecurityGroups,omitempty"`
 
 	// Subnets AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-subnets
-	Subnets []string `json:"Subnets,omitempty"`
+	Subnets []*StringIntrinsic `json:"Subnets,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-elasticloadbalancing-loadbalancer-tags
 	Tags []Tag `json:"Tags,omitempty"`
-}
-
-type UntypedAWSElasticLoadBalancingLoadBalancer struct {
-
-	// AccessLoggingPolicy AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-accessloggingpolicy
-	AccessLoggingPolicy *UntypedAWSElasticLoadBalancingLoadBalancer_AccessLoggingPolicy `json:"AccessLoggingPolicy,omitempty"`
-
-	// AppCookieStickinessPolicy AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-appcookiestickinesspolicy
-	AppCookieStickinessPolicy []UntypedAWSElasticLoadBalancingLoadBalancer_AppCookieStickinessPolicy `json:"AppCookieStickinessPolicy,omitempty"`
-
-	// AvailabilityZones AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-availabilityzones
-	AvailabilityZones []interface{} `json:"AvailabilityZones,omitempty"`
-
-	// ConnectionDrainingPolicy AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-connectiondrainingpolicy
-	ConnectionDrainingPolicy *UntypedAWSElasticLoadBalancingLoadBalancer_ConnectionDrainingPolicy `json:"ConnectionDrainingPolicy,omitempty"`
-
-	// ConnectionSettings AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-connectionsettings
-	ConnectionSettings *UntypedAWSElasticLoadBalancingLoadBalancer_ConnectionSettings `json:"ConnectionSettings,omitempty"`
-
-	// CrossZone AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-crosszone
-	CrossZone interface{} `json:"CrossZone,omitempty"`
-
-	// HealthCheck AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-healthcheck
-	HealthCheck *UntypedAWSElasticLoadBalancingLoadBalancer_HealthCheck `json:"HealthCheck,omitempty"`
-
-	// Instances AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-instances
-	Instances []interface{} `json:"Instances,omitempty"`
-
-	// LBCookieStickinessPolicy AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-lbcookiestickinesspolicy
-	LBCookieStickinessPolicy []UntypedAWSElasticLoadBalancingLoadBalancer_LBCookieStickinessPolicy `json:"LBCookieStickinessPolicy,omitempty"`
-
-	// Listeners AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-listeners
-	Listeners []UntypedAWSElasticLoadBalancingLoadBalancer_Listeners `json:"Listeners,omitempty"`
-
-	// LoadBalancerName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-elbname
-	LoadBalancerName interface{} `json:"LoadBalancerName,omitempty"`
-
-	// Policies AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-policies
-	Policies []UntypedAWSElasticLoadBalancingLoadBalancer_Policies `json:"Policies,omitempty"`
-
-	// Scheme AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-scheme
-	Scheme interface{} `json:"Scheme,omitempty"`
-
-	// SecurityGroups AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-securitygroups
-	SecurityGroups []interface{} `json:"SecurityGroups,omitempty"`
-
-	// Subnets AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-ec2-elb-subnets
-	Subnets []interface{} `json:"Subnets,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb.html#cfn-elasticloadbalancing-loadbalancer-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

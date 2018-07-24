@@ -7,15 +7,7 @@ type AWSLambdaFunction_DeadLetterConfig struct {
 	// TargetArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-deadletterconfig.html#cfn-lambda-function-deadletterconfig-targetarn
-	TargetArn string `json:"TargetArn,omitempty"`
-}
-
-type UntypedAWSLambdaFunction_DeadLetterConfig struct {
-
-	// TargetArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-deadletterconfig.html#cfn-lambda-function-deadletterconfig-targetarn
-	TargetArn interface{} `json:"TargetArn,omitempty"`
+	TargetArn *StringIntrinsic `json:"TargetArn,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

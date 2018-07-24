@@ -7,25 +7,12 @@ type AWSDirectoryServiceMicrosoftAD_VpcSettings struct {
 	// SubnetIds AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-microsoftad-vpcsettings.html#cfn-directoryservice-microsoftad-vpcsettings-subnetids
-	SubnetIds []string `json:"SubnetIds,omitempty"`
+	SubnetIds []*StringIntrinsic `json:"SubnetIds,omitempty"`
 
 	// VpcId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-microsoftad-vpcsettings.html#cfn-directoryservice-microsoftad-vpcsettings-vpcid
-	VpcId string `json:"VpcId,omitempty"`
-}
-
-type UntypedAWSDirectoryServiceMicrosoftAD_VpcSettings struct {
-
-	// SubnetIds AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-microsoftad-vpcsettings.html#cfn-directoryservice-microsoftad-vpcsettings-subnetids
-	SubnetIds []interface{} `json:"SubnetIds,omitempty"`
-
-	// VpcId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-directoryservice-microsoftad-vpcsettings.html#cfn-directoryservice-microsoftad-vpcsettings-vpcid
-	VpcId interface{} `json:"VpcId,omitempty"`
+	VpcId *StringIntrinsic `json:"VpcId,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -18,7 +18,7 @@ type AWSEC2CustomerGateway struct {
 	// IpAddress AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html#cfn-ec2-customergateway-ipaddress
-	IpAddress string `json:"IpAddress,omitempty"`
+	IpAddress *StringIntrinsic `json:"IpAddress,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -28,30 +28,7 @@ type AWSEC2CustomerGateway struct {
 	// Type AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html#cfn-ec2-customergateway-type
-	Type string `json:"Type,omitempty"`
-}
-
-type UntypedAWSEC2CustomerGateway struct {
-
-	// BgpAsn AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html#cfn-ec2-customergateway-bgpasn
-	BgpAsn interface{} `json:"BgpAsn,omitempty"`
-
-	// IpAddress AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html#cfn-ec2-customergateway-ipaddress
-	IpAddress interface{} `json:"IpAddress,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html#cfn-ec2-customergateway-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// Type AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-customer-gateway.html#cfn-ec2-customergateway-type
-	Type interface{} `json:"Type,omitempty"`
+	Type *StringIntrinsic `json:"Type,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

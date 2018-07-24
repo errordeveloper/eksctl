@@ -7,25 +7,12 @@ type AWSCodePipelineWebhook_WebhookFilterRule struct {
 	// JsonPath AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookfilterrule.html#cfn-codepipeline-webhook-webhookfilterrule-jsonpath
-	JsonPath string `json:"JsonPath,omitempty"`
+	JsonPath *StringIntrinsic `json:"JsonPath,omitempty"`
 
 	// MatchEquals AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookfilterrule.html#cfn-codepipeline-webhook-webhookfilterrule-matchequals
-	MatchEquals string `json:"MatchEquals,omitempty"`
-}
-
-type UntypedAWSCodePipelineWebhook_WebhookFilterRule struct {
-
-	// JsonPath AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookfilterrule.html#cfn-codepipeline-webhook-webhookfilterrule-jsonpath
-	JsonPath interface{} `json:"JsonPath,omitempty"`
-
-	// MatchEquals AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-webhook-webhookfilterrule.html#cfn-codepipeline-webhook-webhookfilterrule-matchequals
-	MatchEquals interface{} `json:"MatchEquals,omitempty"`
+	MatchEquals *StringIntrinsic `json:"MatchEquals,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

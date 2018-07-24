@@ -15,19 +15,6 @@ type AWSKinesisAnalyticsApplicationReferenceDataSource_MappingParameters struct 
 	JSONMappingParameters *AWSKinesisAnalyticsApplicationReferenceDataSource_JSONMappingParameters `json:"JSONMappingParameters,omitempty"`
 }
 
-type UntypedAWSKinesisAnalyticsApplicationReferenceDataSource_MappingParameters struct {
-
-	// CSVMappingParameters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.html#cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-csvmappingparameters
-	CSVMappingParameters *UntypedAWSKinesisAnalyticsApplicationReferenceDataSource_CSVMappingParameters `json:"CSVMappingParameters,omitempty"`
-
-	// JSONMappingParameters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-mappingparameters.html#cfn-kinesisanalytics-applicationreferencedatasource-mappingparameters-jsonmappingparameters
-	JSONMappingParameters *UntypedAWSKinesisAnalyticsApplicationReferenceDataSource_JSONMappingParameters `json:"JSONMappingParameters,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSKinesisAnalyticsApplicationReferenceDataSource_MappingParameters) AWSCloudFormationType() string {
 	return "AWS::KinesisAnalytics::ApplicationReferenceDataSource.MappingParameters"

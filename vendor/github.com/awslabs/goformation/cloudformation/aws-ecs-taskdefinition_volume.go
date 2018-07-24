@@ -12,20 +12,7 @@ type AWSECSTaskDefinition_Volume struct {
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumes.html#cfn-ecs-taskdefinition-volumes-name
-	Name string `json:"Name,omitempty"`
-}
-
-type UntypedAWSECSTaskDefinition_Volume struct {
-
-	// Host AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumes.html#cfn-ecs-taskdefinition-volumes-host
-	Host *UntypedAWSECSTaskDefinition_HostVolumeProperties `json:"Host,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-volumes.html#cfn-ecs-taskdefinition-volumes-name
-	Name interface{} `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

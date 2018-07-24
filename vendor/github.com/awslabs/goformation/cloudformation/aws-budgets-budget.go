@@ -21,19 +21,6 @@ type AWSBudgetsBudget struct {
 	NotificationsWithSubscribers []AWSBudgetsBudget_NotificationWithSubscribers `json:"NotificationsWithSubscribers,omitempty"`
 }
 
-type UntypedAWSBudgetsBudget struct {
-
-	// Budget AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budget.html#cfn-budgets-budget-budget
-	Budget *UntypedAWSBudgetsBudget_BudgetData `json:"Budget,omitempty"`
-
-	// NotificationsWithSubscribers AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-budgets-budget.html#cfn-budgets-budget-notificationswithsubscribers
-	NotificationsWithSubscribers []UntypedAWSBudgetsBudget_NotificationWithSubscribers `json:"NotificationsWithSubscribers,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSBudgetsBudget) AWSCloudFormationType() string {
 	return "AWS::Budgets::Budget"

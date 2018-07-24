@@ -12,20 +12,7 @@ type AWSServerlessFunction_EventSource struct {
 	// Type AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#event-source-object
-	Type string `json:"Type,omitempty"`
-}
-
-type UntypedAWSServerlessFunction_EventSource struct {
-
-	// Properties AWS CloudFormation Property
-	// Required: true
-	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#event-source-types
-	Properties *UntypedAWSServerlessFunction_Properties `json:"Properties,omitempty"`
-
-	// Type AWS CloudFormation Property
-	// Required: true
-	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#event-source-object
-	Type interface{} `json:"Type,omitempty"`
+	Type *StringIntrinsic `json:"Type,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

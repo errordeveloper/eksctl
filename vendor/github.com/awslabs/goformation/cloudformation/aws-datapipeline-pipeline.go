@@ -18,12 +18,12 @@ type AWSDataPipelinePipeline struct {
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html#cfn-datapipeline-pipeline-description
-	Description string `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html#cfn-datapipeline-pipeline-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// ParameterObjects AWS CloudFormation Property
 	// Required: true
@@ -44,44 +44,6 @@ type AWSDataPipelinePipeline struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html#cfn-datapipeline-pipeline-pipelinetags
 	PipelineTags []AWSDataPipelinePipeline_PipelineTag `json:"PipelineTags,omitempty"`
-}
-
-type UntypedAWSDataPipelinePipeline struct {
-
-	// Activate AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html#cfn-datapipeline-pipeline-activate
-	Activate interface{} `json:"Activate,omitempty"`
-
-	// Description AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html#cfn-datapipeline-pipeline-description
-	Description interface{} `json:"Description,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html#cfn-datapipeline-pipeline-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// ParameterObjects AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html#cfn-datapipeline-pipeline-parameterobjects
-	ParameterObjects []UntypedAWSDataPipelinePipeline_ParameterObject `json:"ParameterObjects,omitempty"`
-
-	// ParameterValues AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html#cfn-datapipeline-pipeline-parametervalues
-	ParameterValues []UntypedAWSDataPipelinePipeline_ParameterValue `json:"ParameterValues,omitempty"`
-
-	// PipelineObjects AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html#cfn-datapipeline-pipeline-pipelineobjects
-	PipelineObjects []UntypedAWSDataPipelinePipeline_PipelineObject `json:"PipelineObjects,omitempty"`
-
-	// PipelineTags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datapipeline-pipeline.html#cfn-datapipeline-pipeline-pipelinetags
-	PipelineTags []UntypedAWSDataPipelinePipeline_PipelineTag `json:"PipelineTags,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

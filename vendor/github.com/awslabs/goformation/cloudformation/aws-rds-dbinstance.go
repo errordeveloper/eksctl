@@ -13,7 +13,7 @@ type AWSRDSDBInstance struct {
 	// AllocatedStorage AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-allocatedstorage
-	AllocatedStorage string `json:"AllocatedStorage,omitempty"`
+	AllocatedStorage *StringIntrinsic `json:"AllocatedStorage,omitempty"`
 
 	// AllowMajorVersionUpgrade AWS CloudFormation Property
 	// Required: false
@@ -28,17 +28,17 @@ type AWSRDSDBInstance struct {
 	// AvailabilityZone AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-availabilityzone
-	AvailabilityZone string `json:"AvailabilityZone,omitempty"`
+	AvailabilityZone *StringIntrinsic `json:"AvailabilityZone,omitempty"`
 
 	// BackupRetentionPeriod AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-backupretentionperiod
-	BackupRetentionPeriod string `json:"BackupRetentionPeriod,omitempty"`
+	BackupRetentionPeriod *StringIntrinsic `json:"BackupRetentionPeriod,omitempty"`
 
 	// CharacterSetName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-charactersetname
-	CharacterSetName string `json:"CharacterSetName,omitempty"`
+	CharacterSetName *StringIntrinsic `json:"CharacterSetName,omitempty"`
 
 	// CopyTagsToSnapshot AWS CloudFormation Property
 	// Required: false
@@ -48,62 +48,62 @@ type AWSRDSDBInstance struct {
 	// DBClusterIdentifier AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbclusteridentifier
-	DBClusterIdentifier string `json:"DBClusterIdentifier,omitempty"`
+	DBClusterIdentifier *StringIntrinsic `json:"DBClusterIdentifier,omitempty"`
 
 	// DBInstanceClass AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbinstanceclass
-	DBInstanceClass string `json:"DBInstanceClass,omitempty"`
+	DBInstanceClass *StringIntrinsic `json:"DBInstanceClass,omitempty"`
 
 	// DBInstanceIdentifier AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbinstanceidentifier
-	DBInstanceIdentifier string `json:"DBInstanceIdentifier,omitempty"`
+	DBInstanceIdentifier *StringIntrinsic `json:"DBInstanceIdentifier,omitempty"`
 
 	// DBName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbname
-	DBName string `json:"DBName,omitempty"`
+	DBName *StringIntrinsic `json:"DBName,omitempty"`
 
 	// DBParameterGroupName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbparametergroupname
-	DBParameterGroupName string `json:"DBParameterGroupName,omitempty"`
+	DBParameterGroupName *StringIntrinsic `json:"DBParameterGroupName,omitempty"`
 
 	// DBSecurityGroups AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbsecuritygroups
-	DBSecurityGroups []string `json:"DBSecurityGroups,omitempty"`
+	DBSecurityGroups []*StringIntrinsic `json:"DBSecurityGroups,omitempty"`
 
 	// DBSnapshotIdentifier AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbsnapshotidentifier
-	DBSnapshotIdentifier string `json:"DBSnapshotIdentifier,omitempty"`
+	DBSnapshotIdentifier *StringIntrinsic `json:"DBSnapshotIdentifier,omitempty"`
 
 	// DBSubnetGroupName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbsubnetgroupname
-	DBSubnetGroupName string `json:"DBSubnetGroupName,omitempty"`
+	DBSubnetGroupName *StringIntrinsic `json:"DBSubnetGroupName,omitempty"`
 
 	// Domain AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-domain
-	Domain string `json:"Domain,omitempty"`
+	Domain *StringIntrinsic `json:"Domain,omitempty"`
 
 	// DomainIAMRoleName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-domainiamrolename
-	DomainIAMRoleName string `json:"DomainIAMRoleName,omitempty"`
+	DomainIAMRoleName *StringIntrinsic `json:"DomainIAMRoleName,omitempty"`
 
 	// Engine AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-engine
-	Engine string `json:"Engine,omitempty"`
+	Engine *StringIntrinsic `json:"Engine,omitempty"`
 
 	// EngineVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-engineversion
-	EngineVersion string `json:"EngineVersion,omitempty"`
+	EngineVersion *StringIntrinsic `json:"EngineVersion,omitempty"`
 
 	// Iops AWS CloudFormation Property
 	// Required: false
@@ -113,22 +113,22 @@ type AWSRDSDBInstance struct {
 	// KmsKeyId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-kmskeyid
-	KmsKeyId string `json:"KmsKeyId,omitempty"`
+	KmsKeyId *StringIntrinsic `json:"KmsKeyId,omitempty"`
 
 	// LicenseModel AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-licensemodel
-	LicenseModel string `json:"LicenseModel,omitempty"`
+	LicenseModel *StringIntrinsic `json:"LicenseModel,omitempty"`
 
 	// MasterUserPassword AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-masteruserpassword
-	MasterUserPassword string `json:"MasterUserPassword,omitempty"`
+	MasterUserPassword *StringIntrinsic `json:"MasterUserPassword,omitempty"`
 
 	// MasterUsername AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-masterusername
-	MasterUsername string `json:"MasterUsername,omitempty"`
+	MasterUsername *StringIntrinsic `json:"MasterUsername,omitempty"`
 
 	// MonitoringInterval AWS CloudFormation Property
 	// Required: false
@@ -138,7 +138,7 @@ type AWSRDSDBInstance struct {
 	// MonitoringRoleArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-monitoringrolearn
-	MonitoringRoleArn string `json:"MonitoringRoleArn,omitempty"`
+	MonitoringRoleArn *StringIntrinsic `json:"MonitoringRoleArn,omitempty"`
 
 	// MultiAZ AWS CloudFormation Property
 	// Required: false
@@ -148,22 +148,22 @@ type AWSRDSDBInstance struct {
 	// OptionGroupName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-optiongroupname
-	OptionGroupName string `json:"OptionGroupName,omitempty"`
+	OptionGroupName *StringIntrinsic `json:"OptionGroupName,omitempty"`
 
 	// Port AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-port
-	Port string `json:"Port,omitempty"`
+	Port *StringIntrinsic `json:"Port,omitempty"`
 
 	// PreferredBackupWindow AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-preferredbackupwindow
-	PreferredBackupWindow string `json:"PreferredBackupWindow,omitempty"`
+	PreferredBackupWindow *StringIntrinsic `json:"PreferredBackupWindow,omitempty"`
 
 	// PreferredMaintenanceWindow AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-preferredmaintenancewindow
-	PreferredMaintenanceWindow string `json:"PreferredMaintenanceWindow,omitempty"`
+	PreferredMaintenanceWindow *StringIntrinsic `json:"PreferredMaintenanceWindow,omitempty"`
 
 	// PubliclyAccessible AWS CloudFormation Property
 	// Required: false
@@ -173,12 +173,12 @@ type AWSRDSDBInstance struct {
 	// SourceDBInstanceIdentifier AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-sourcedbinstanceidentifier
-	SourceDBInstanceIdentifier string `json:"SourceDBInstanceIdentifier,omitempty"`
+	SourceDBInstanceIdentifier *StringIntrinsic `json:"SourceDBInstanceIdentifier,omitempty"`
 
 	// SourceRegion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-sourceregion
-	SourceRegion string `json:"SourceRegion,omitempty"`
+	SourceRegion *StringIntrinsic `json:"SourceRegion,omitempty"`
 
 	// StorageEncrypted AWS CloudFormation Property
 	// Required: false
@@ -188,7 +188,7 @@ type AWSRDSDBInstance struct {
 	// StorageType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-storagetype
-	StorageType string `json:"StorageType,omitempty"`
+	StorageType *StringIntrinsic `json:"StorageType,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -198,210 +198,12 @@ type AWSRDSDBInstance struct {
 	// Timezone AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-timezone
-	Timezone string `json:"Timezone,omitempty"`
+	Timezone *StringIntrinsic `json:"Timezone,omitempty"`
 
 	// VPCSecurityGroups AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-vpcsecuritygroups
-	VPCSecurityGroups []string `json:"VPCSecurityGroups,omitempty"`
-}
-
-type UntypedAWSRDSDBInstance struct {
-
-	// AllocatedStorage AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-allocatedstorage
-	AllocatedStorage interface{} `json:"AllocatedStorage,omitempty"`
-
-	// AllowMajorVersionUpgrade AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-allowmajorversionupgrade
-	AllowMajorVersionUpgrade interface{} `json:"AllowMajorVersionUpgrade,omitempty"`
-
-	// AutoMinorVersionUpgrade AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-autominorversionupgrade
-	AutoMinorVersionUpgrade interface{} `json:"AutoMinorVersionUpgrade,omitempty"`
-
-	// AvailabilityZone AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-availabilityzone
-	AvailabilityZone interface{} `json:"AvailabilityZone,omitempty"`
-
-	// BackupRetentionPeriod AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-backupretentionperiod
-	BackupRetentionPeriod interface{} `json:"BackupRetentionPeriod,omitempty"`
-
-	// CharacterSetName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-charactersetname
-	CharacterSetName interface{} `json:"CharacterSetName,omitempty"`
-
-	// CopyTagsToSnapshot AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-copytagstosnapshot
-	CopyTagsToSnapshot interface{} `json:"CopyTagsToSnapshot,omitempty"`
-
-	// DBClusterIdentifier AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbclusteridentifier
-	DBClusterIdentifier interface{} `json:"DBClusterIdentifier,omitempty"`
-
-	// DBInstanceClass AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbinstanceclass
-	DBInstanceClass interface{} `json:"DBInstanceClass,omitempty"`
-
-	// DBInstanceIdentifier AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbinstanceidentifier
-	DBInstanceIdentifier interface{} `json:"DBInstanceIdentifier,omitempty"`
-
-	// DBName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbname
-	DBName interface{} `json:"DBName,omitempty"`
-
-	// DBParameterGroupName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbparametergroupname
-	DBParameterGroupName interface{} `json:"DBParameterGroupName,omitempty"`
-
-	// DBSecurityGroups AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbsecuritygroups
-	DBSecurityGroups []interface{} `json:"DBSecurityGroups,omitempty"`
-
-	// DBSnapshotIdentifier AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbsnapshotidentifier
-	DBSnapshotIdentifier interface{} `json:"DBSnapshotIdentifier,omitempty"`
-
-	// DBSubnetGroupName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-dbsubnetgroupname
-	DBSubnetGroupName interface{} `json:"DBSubnetGroupName,omitempty"`
-
-	// Domain AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-domain
-	Domain interface{} `json:"Domain,omitempty"`
-
-	// DomainIAMRoleName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-domainiamrolename
-	DomainIAMRoleName interface{} `json:"DomainIAMRoleName,omitempty"`
-
-	// Engine AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-engine
-	Engine interface{} `json:"Engine,omitempty"`
-
-	// EngineVersion AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-engineversion
-	EngineVersion interface{} `json:"EngineVersion,omitempty"`
-
-	// Iops AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-iops
-	Iops interface{} `json:"Iops,omitempty"`
-
-	// KmsKeyId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-kmskeyid
-	KmsKeyId interface{} `json:"KmsKeyId,omitempty"`
-
-	// LicenseModel AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-licensemodel
-	LicenseModel interface{} `json:"LicenseModel,omitempty"`
-
-	// MasterUserPassword AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-masteruserpassword
-	MasterUserPassword interface{} `json:"MasterUserPassword,omitempty"`
-
-	// MasterUsername AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-masterusername
-	MasterUsername interface{} `json:"MasterUsername,omitempty"`
-
-	// MonitoringInterval AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-monitoringinterval
-	MonitoringInterval interface{} `json:"MonitoringInterval,omitempty"`
-
-	// MonitoringRoleArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-monitoringrolearn
-	MonitoringRoleArn interface{} `json:"MonitoringRoleArn,omitempty"`
-
-	// MultiAZ AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-multiaz
-	MultiAZ interface{} `json:"MultiAZ,omitempty"`
-
-	// OptionGroupName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-optiongroupname
-	OptionGroupName interface{} `json:"OptionGroupName,omitempty"`
-
-	// Port AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-port
-	Port interface{} `json:"Port,omitempty"`
-
-	// PreferredBackupWindow AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-preferredbackupwindow
-	PreferredBackupWindow interface{} `json:"PreferredBackupWindow,omitempty"`
-
-	// PreferredMaintenanceWindow AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-preferredmaintenancewindow
-	PreferredMaintenanceWindow interface{} `json:"PreferredMaintenanceWindow,omitempty"`
-
-	// PubliclyAccessible AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-publiclyaccessible
-	PubliclyAccessible interface{} `json:"PubliclyAccessible,omitempty"`
-
-	// SourceDBInstanceIdentifier AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-sourcedbinstanceidentifier
-	SourceDBInstanceIdentifier interface{} `json:"SourceDBInstanceIdentifier,omitempty"`
-
-	// SourceRegion AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-sourceregion
-	SourceRegion interface{} `json:"SourceRegion,omitempty"`
-
-	// StorageEncrypted AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-storageencrypted
-	StorageEncrypted interface{} `json:"StorageEncrypted,omitempty"`
-
-	// StorageType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-storagetype
-	StorageType interface{} `json:"StorageType,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// Timezone AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-timezone
-	Timezone interface{} `json:"Timezone,omitempty"`
-
-	// VPCSecurityGroups AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-database-instance.html#cfn-rds-dbinstance-vpcsecuritygroups
-	VPCSecurityGroups []interface{} `json:"VPCSecurityGroups,omitempty"`
+	VPCSecurityGroups []*StringIntrinsic `json:"VPCSecurityGroups,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -13,12 +13,12 @@ type AWSDMSEndpoint struct {
 	// CertificateArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-certificatearn
-	CertificateArn string `json:"CertificateArn,omitempty"`
+	CertificateArn *StringIntrinsic `json:"CertificateArn,omitempty"`
 
 	// DatabaseName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-databasename
-	DatabaseName string `json:"DatabaseName,omitempty"`
+	DatabaseName *StringIntrinsic `json:"DatabaseName,omitempty"`
 
 	// DynamoDbSettings AWS CloudFormation Property
 	// Required: false
@@ -28,27 +28,27 @@ type AWSDMSEndpoint struct {
 	// EndpointIdentifier AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-endpointidentifier
-	EndpointIdentifier string `json:"EndpointIdentifier,omitempty"`
+	EndpointIdentifier *StringIntrinsic `json:"EndpointIdentifier,omitempty"`
 
 	// EndpointType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-endpointtype
-	EndpointType string `json:"EndpointType,omitempty"`
+	EndpointType *StringIntrinsic `json:"EndpointType,omitempty"`
 
 	// EngineName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-enginename
-	EngineName string `json:"EngineName,omitempty"`
+	EngineName *StringIntrinsic `json:"EngineName,omitempty"`
 
 	// ExtraConnectionAttributes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-extraconnectionattributes
-	ExtraConnectionAttributes string `json:"ExtraConnectionAttributes,omitempty"`
+	ExtraConnectionAttributes *StringIntrinsic `json:"ExtraConnectionAttributes,omitempty"`
 
 	// KmsKeyId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-kmskeyid
-	KmsKeyId string `json:"KmsKeyId,omitempty"`
+	KmsKeyId *StringIntrinsic `json:"KmsKeyId,omitempty"`
 
 	// MongoDbSettings AWS CloudFormation Property
 	// Required: false
@@ -58,7 +58,7 @@ type AWSDMSEndpoint struct {
 	// Password AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-password
-	Password string `json:"Password,omitempty"`
+	Password *StringIntrinsic `json:"Password,omitempty"`
 
 	// Port AWS CloudFormation Property
 	// Required: false
@@ -73,12 +73,12 @@ type AWSDMSEndpoint struct {
 	// ServerName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-servername
-	ServerName string `json:"ServerName,omitempty"`
+	ServerName *StringIntrinsic `json:"ServerName,omitempty"`
 
 	// SslMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-sslmode
-	SslMode string `json:"SslMode,omitempty"`
+	SslMode *StringIntrinsic `json:"SslMode,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -88,90 +88,7 @@ type AWSDMSEndpoint struct {
 	// Username AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-username
-	Username string `json:"Username,omitempty"`
-}
-
-type UntypedAWSDMSEndpoint struct {
-
-	// CertificateArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-certificatearn
-	CertificateArn interface{} `json:"CertificateArn,omitempty"`
-
-	// DatabaseName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-databasename
-	DatabaseName interface{} `json:"DatabaseName,omitempty"`
-
-	// DynamoDbSettings AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-dynamodbsettings
-	DynamoDbSettings *UntypedAWSDMSEndpoint_DynamoDbSettings `json:"DynamoDbSettings,omitempty"`
-
-	// EndpointIdentifier AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-endpointidentifier
-	EndpointIdentifier interface{} `json:"EndpointIdentifier,omitempty"`
-
-	// EndpointType AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-endpointtype
-	EndpointType interface{} `json:"EndpointType,omitempty"`
-
-	// EngineName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-enginename
-	EngineName interface{} `json:"EngineName,omitempty"`
-
-	// ExtraConnectionAttributes AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-extraconnectionattributes
-	ExtraConnectionAttributes interface{} `json:"ExtraConnectionAttributes,omitempty"`
-
-	// KmsKeyId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-kmskeyid
-	KmsKeyId interface{} `json:"KmsKeyId,omitempty"`
-
-	// MongoDbSettings AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-mongodbsettings
-	MongoDbSettings *UntypedAWSDMSEndpoint_MongoDbSettings `json:"MongoDbSettings,omitempty"`
-
-	// Password AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-password
-	Password interface{} `json:"Password,omitempty"`
-
-	// Port AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-port
-	Port interface{} `json:"Port,omitempty"`
-
-	// S3Settings AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-s3settings
-	S3Settings *UntypedAWSDMSEndpoint_S3Settings `json:"S3Settings,omitempty"`
-
-	// ServerName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-servername
-	ServerName interface{} `json:"ServerName,omitempty"`
-
-	// SslMode AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-sslmode
-	SslMode interface{} `json:"SslMode,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// Username AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-endpoint.html#cfn-dms-endpoint-username
-	Username interface{} `json:"Username,omitempty"`
+	Username *StringIntrinsic `json:"Username,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

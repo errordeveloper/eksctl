@@ -21,19 +21,6 @@ type AWSCloudFrontStreamingDistribution struct {
 	Tags []Tag `json:"Tags,omitempty"`
 }
 
-type UntypedAWSCloudFrontStreamingDistribution struct {
-
-	// StreamingDistributionConfig AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-streamingdistribution.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig
-	StreamingDistributionConfig *UntypedAWSCloudFrontStreamingDistribution_StreamingDistributionConfig `json:"StreamingDistributionConfig,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-streamingdistribution.html#cfn-cloudfront-streamingdistribution-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSCloudFrontStreamingDistribution) AWSCloudFormationType() string {
 	return "AWS::CloudFront::StreamingDistribution"

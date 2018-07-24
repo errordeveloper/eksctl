@@ -7,25 +7,12 @@ type AWSKinesisAnalyticsApplicationReferenceDataSource_CSVMappingParameters stru
 	// RecordColumnDelimiter AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters.html#cfn-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-recordcolumndelimiter
-	RecordColumnDelimiter string `json:"RecordColumnDelimiter,omitempty"`
+	RecordColumnDelimiter *StringIntrinsic `json:"RecordColumnDelimiter,omitempty"`
 
 	// RecordRowDelimiter AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters.html#cfn-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-recordrowdelimiter
-	RecordRowDelimiter string `json:"RecordRowDelimiter,omitempty"`
-}
-
-type UntypedAWSKinesisAnalyticsApplicationReferenceDataSource_CSVMappingParameters struct {
-
-	// RecordColumnDelimiter AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters.html#cfn-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-recordcolumndelimiter
-	RecordColumnDelimiter interface{} `json:"RecordColumnDelimiter,omitempty"`
-
-	// RecordRowDelimiter AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-csvmappingparameters.html#cfn-kinesisanalytics-applicationreferencedatasource-csvmappingparameters-recordrowdelimiter
-	RecordRowDelimiter interface{} `json:"RecordRowDelimiter,omitempty"`
+	RecordRowDelimiter *StringIntrinsic `json:"RecordRowDelimiter,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

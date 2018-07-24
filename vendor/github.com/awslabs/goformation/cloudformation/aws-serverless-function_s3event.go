@@ -7,7 +7,7 @@ type AWSServerlessFunction_S3Event struct {
 	// Bucket AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3
-	Bucket string `json:"Bucket,omitempty"`
+	Bucket *StringIntrinsic `json:"Bucket,omitempty"`
 
 	// Events AWS CloudFormation Property
 	// Required: true
@@ -18,24 +18,6 @@ type AWSServerlessFunction_S3Event struct {
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3
 	Filter *AWSServerlessFunction_S3NotificationFilter `json:"Filter,omitempty"`
-}
-
-type UntypedAWSServerlessFunction_S3Event struct {
-
-	// Bucket AWS CloudFormation Property
-	// Required: true
-	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3
-	Bucket interface{} `json:"Bucket,omitempty"`
-
-	// Events AWS CloudFormation Property
-	// Required: true
-	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3
-	Events *UntypedAWSServerlessFunction_Events `json:"Events,omitempty"`
-
-	// Filter AWS CloudFormation Property
-	// Required: false
-	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#s3
-	Filter *UntypedAWSServerlessFunction_S3NotificationFilter `json:"Filter,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

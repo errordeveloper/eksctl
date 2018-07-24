@@ -7,7 +7,7 @@ type AWSCognitoUserPool_SchemaAttribute struct {
 	// AttributeDataType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-attributedatatype
-	AttributeDataType string `json:"AttributeDataType,omitempty"`
+	AttributeDataType *StringIntrinsic `json:"AttributeDataType,omitempty"`
 
 	// DeveloperOnlyAttribute AWS CloudFormation Property
 	// Required: false
@@ -22,7 +22,7 @@ type AWSCognitoUserPool_SchemaAttribute struct {
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// NumberAttributeConstraints AWS CloudFormation Property
 	// Required: false
@@ -38,44 +38,6 @@ type AWSCognitoUserPool_SchemaAttribute struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-stringattributeconstraints
 	StringAttributeConstraints *AWSCognitoUserPool_StringAttributeConstraints `json:"StringAttributeConstraints,omitempty"`
-}
-
-type UntypedAWSCognitoUserPool_SchemaAttribute struct {
-
-	// AttributeDataType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-attributedatatype
-	AttributeDataType interface{} `json:"AttributeDataType,omitempty"`
-
-	// DeveloperOnlyAttribute AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-developeronlyattribute
-	DeveloperOnlyAttribute interface{} `json:"DeveloperOnlyAttribute,omitempty"`
-
-	// Mutable AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-mutable
-	Mutable interface{} `json:"Mutable,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// NumberAttributeConstraints AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-numberattributeconstraints
-	NumberAttributeConstraints *UntypedAWSCognitoUserPool_NumberAttributeConstraints `json:"NumberAttributeConstraints,omitempty"`
-
-	// Required AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-required
-	Required interface{} `json:"Required,omitempty"`
-
-	// StringAttributeConstraints AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-schemaattribute.html#cfn-cognito-userpool-schemaattribute-stringattributeconstraints
-	StringAttributeConstraints *UntypedAWSCognitoUserPool_StringAttributeConstraints `json:"StringAttributeConstraints,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

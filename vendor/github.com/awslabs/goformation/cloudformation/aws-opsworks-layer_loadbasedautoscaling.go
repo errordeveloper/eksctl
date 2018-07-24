@@ -20,24 +20,6 @@ type AWSOpsWorksLayer_LoadBasedAutoScaling struct {
 	UpScaling *AWSOpsWorksLayer_AutoScalingThresholds `json:"UpScaling,omitempty"`
 }
 
-type UntypedAWSOpsWorksLayer_LoadBasedAutoScaling struct {
-
-	// DownScaling AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-downscaling
-	DownScaling *UntypedAWSOpsWorksLayer_AutoScalingThresholds `json:"DownScaling,omitempty"`
-
-	// Enable AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-enable
-	Enable interface{} `json:"Enable,omitempty"`
-
-	// UpScaling AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-loadbasedautoscaling.html#cfn-opsworks-layer-loadbasedautoscaling-upscaling
-	UpScaling *UntypedAWSOpsWorksLayer_AutoScalingThresholds `json:"UpScaling,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSOpsWorksLayer_LoadBasedAutoScaling) AWSCloudFormationType() string {
 	return "AWS::OpsWorks::Layer.LoadBasedAutoScaling"

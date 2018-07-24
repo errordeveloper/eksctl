@@ -12,20 +12,7 @@ type AWSSESReceiptFilter_Filter struct {
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptfilter-filter.html#cfn-ses-receiptfilter-filter-name
-	Name string `json:"Name,omitempty"`
-}
-
-type UntypedAWSSESReceiptFilter_Filter struct {
-
-	// IpFilter AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptfilter-filter.html#cfn-ses-receiptfilter-filter-ipfilter
-	IpFilter *UntypedAWSSESReceiptFilter_IpFilter `json:"IpFilter,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptfilter-filter.html#cfn-ses-receiptfilter-filter-name
-	Name interface{} `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

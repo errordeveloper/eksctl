@@ -15,19 +15,6 @@ type AWSEMRCluster_EbsBlockDeviceConfig struct {
 	VolumesPerInstance int `json:"VolumesPerInstance,omitempty"`
 }
 
-type UntypedAWSEMRCluster_EbsBlockDeviceConfig struct {
-
-	// VolumeSpecification AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-ebsblockdeviceconfig.html#cfn-elasticmapreduce-cluster-ebsblockdeviceconfig-volumespecification
-	VolumeSpecification *UntypedAWSEMRCluster_VolumeSpecification `json:"VolumeSpecification,omitempty"`
-
-	// VolumesPerInstance AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-ebsblockdeviceconfig.html#cfn-elasticmapreduce-cluster-ebsblockdeviceconfig-volumesperinstance
-	VolumesPerInstance interface{} `json:"VolumesPerInstance,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSEMRCluster_EbsBlockDeviceConfig) AWSCloudFormationType() string {
 	return "AWS::EMR::Cluster.EbsBlockDeviceConfig"

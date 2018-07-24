@@ -13,27 +13,27 @@ type AWSGlueCrawler struct {
 	// Classifiers AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-classifiers
-	Classifiers []string `json:"Classifiers,omitempty"`
+	Classifiers []*StringIntrinsic `json:"Classifiers,omitempty"`
 
 	// DatabaseName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-databasename
-	DatabaseName string `json:"DatabaseName,omitempty"`
+	DatabaseName *StringIntrinsic `json:"DatabaseName,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-description
-	Description string `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// Role AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-role
-	Role string `json:"Role,omitempty"`
+	Role *StringIntrinsic `json:"Role,omitempty"`
 
 	// Schedule AWS CloudFormation Property
 	// Required: false
@@ -48,60 +48,12 @@ type AWSGlueCrawler struct {
 	// TablePrefix AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-tableprefix
-	TablePrefix string `json:"TablePrefix,omitempty"`
+	TablePrefix *StringIntrinsic `json:"TablePrefix,omitempty"`
 
 	// Targets AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-targets
 	Targets *AWSGlueCrawler_Targets `json:"Targets,omitempty"`
-}
-
-type UntypedAWSGlueCrawler struct {
-
-	// Classifiers AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-classifiers
-	Classifiers []interface{} `json:"Classifiers,omitempty"`
-
-	// DatabaseName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-databasename
-	DatabaseName interface{} `json:"DatabaseName,omitempty"`
-
-	// Description AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-description
-	Description interface{} `json:"Description,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// Role AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-role
-	Role interface{} `json:"Role,omitempty"`
-
-	// Schedule AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-schedule
-	Schedule *UntypedAWSGlueCrawler_Schedule `json:"Schedule,omitempty"`
-
-	// SchemaChangePolicy AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-schemachangepolicy
-	SchemaChangePolicy *UntypedAWSGlueCrawler_SchemaChangePolicy `json:"SchemaChangePolicy,omitempty"`
-
-	// TablePrefix AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-tableprefix
-	TablePrefix interface{} `json:"TablePrefix,omitempty"`
-
-	// Targets AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-crawler.html#cfn-glue-crawler-targets
-	Targets *UntypedAWSGlueCrawler_Targets `json:"Targets,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -7,25 +7,12 @@ type AWSAppSyncGraphQLApi_LogConfig struct {
 	// CloudWatchLogsRoleArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn
-	CloudWatchLogsRoleArn string `json:"CloudWatchLogsRoleArn,omitempty"`
+	CloudWatchLogsRoleArn *StringIntrinsic `json:"CloudWatchLogsRoleArn,omitempty"`
 
 	// FieldLogLevel AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-fieldloglevel
-	FieldLogLevel string `json:"FieldLogLevel,omitempty"`
-}
-
-type UntypedAWSAppSyncGraphQLApi_LogConfig struct {
-
-	// CloudWatchLogsRoleArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-cloudwatchlogsrolearn
-	CloudWatchLogsRoleArn interface{} `json:"CloudWatchLogsRoleArn,omitempty"`
-
-	// FieldLogLevel AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-logconfig.html#cfn-appsync-graphqlapi-logconfig-fieldloglevel
-	FieldLogLevel interface{} `json:"FieldLogLevel,omitempty"`
+	FieldLogLevel *StringIntrinsic `json:"FieldLogLevel,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

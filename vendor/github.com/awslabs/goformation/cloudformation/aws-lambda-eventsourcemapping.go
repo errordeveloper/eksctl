@@ -23,45 +23,17 @@ type AWSLambdaEventSourceMapping struct {
 	// EventSourceArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-eventsourcearn
-	EventSourceArn string `json:"EventSourceArn,omitempty"`
+	EventSourceArn *StringIntrinsic `json:"EventSourceArn,omitempty"`
 
 	// FunctionName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-functionname
-	FunctionName string `json:"FunctionName,omitempty"`
+	FunctionName *StringIntrinsic `json:"FunctionName,omitempty"`
 
 	// StartingPosition AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-startingposition
-	StartingPosition string `json:"StartingPosition,omitempty"`
-}
-
-type UntypedAWSLambdaEventSourceMapping struct {
-
-	// BatchSize AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-batchsize
-	BatchSize interface{} `json:"BatchSize,omitempty"`
-
-	// Enabled AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-enabled
-	Enabled interface{} `json:"Enabled,omitempty"`
-
-	// EventSourceArn AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-eventsourcearn
-	EventSourceArn interface{} `json:"EventSourceArn,omitempty"`
-
-	// FunctionName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-functionname
-	FunctionName interface{} `json:"FunctionName,omitempty"`
-
-	// StartingPosition AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-startingposition
-	StartingPosition interface{} `json:"StartingPosition,omitempty"`
+	StartingPosition *StringIntrinsic `json:"StartingPosition,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

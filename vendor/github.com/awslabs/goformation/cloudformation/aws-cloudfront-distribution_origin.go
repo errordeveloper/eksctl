@@ -12,12 +12,12 @@ type AWSCloudFrontDistribution_Origin struct {
 	// DomainName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-domainname
-	DomainName string `json:"DomainName,omitempty"`
+	DomainName *StringIntrinsic `json:"DomainName,omitempty"`
 
 	// Id AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-id
-	Id string `json:"Id,omitempty"`
+	Id *StringIntrinsic `json:"Id,omitempty"`
 
 	// OriginCustomHeaders AWS CloudFormation Property
 	// Required: false
@@ -27,45 +27,12 @@ type AWSCloudFrontDistribution_Origin struct {
 	// OriginPath AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-originpath
-	OriginPath string `json:"OriginPath,omitempty"`
+	OriginPath *StringIntrinsic `json:"OriginPath,omitempty"`
 
 	// S3OriginConfig AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-s3originconfig
 	S3OriginConfig *AWSCloudFrontDistribution_S3OriginConfig `json:"S3OriginConfig,omitempty"`
-}
-
-type UntypedAWSCloudFrontDistribution_Origin struct {
-
-	// CustomOriginConfig AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-customoriginconfig
-	CustomOriginConfig *UntypedAWSCloudFrontDistribution_CustomOriginConfig `json:"CustomOriginConfig,omitempty"`
-
-	// DomainName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-domainname
-	DomainName interface{} `json:"DomainName,omitempty"`
-
-	// Id AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-id
-	Id interface{} `json:"Id,omitempty"`
-
-	// OriginCustomHeaders AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-origincustomheaders
-	OriginCustomHeaders []UntypedAWSCloudFrontDistribution_OriginCustomHeader `json:"OriginCustomHeaders,omitempty"`
-
-	// OriginPath AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-originpath
-	OriginPath interface{} `json:"OriginPath,omitempty"`
-
-	// S3OriginConfig AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-origin.html#cfn-cloudfront-distribution-origin-s3originconfig
-	S3OriginConfig *UntypedAWSCloudFrontDistribution_S3OriginConfig `json:"S3OriginConfig,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

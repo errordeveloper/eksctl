@@ -7,35 +7,17 @@ type AWSGlueTrigger_Condition struct {
 	// JobName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-condition.html#cfn-glue-trigger-condition-jobname
-	JobName string `json:"JobName,omitempty"`
+	JobName *StringIntrinsic `json:"JobName,omitempty"`
 
 	// LogicalOperator AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-condition.html#cfn-glue-trigger-condition-logicaloperator
-	LogicalOperator string `json:"LogicalOperator,omitempty"`
+	LogicalOperator *StringIntrinsic `json:"LogicalOperator,omitempty"`
 
 	// State AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-condition.html#cfn-glue-trigger-condition-state
-	State string `json:"State,omitempty"`
-}
-
-type UntypedAWSGlueTrigger_Condition struct {
-
-	// JobName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-condition.html#cfn-glue-trigger-condition-jobname
-	JobName interface{} `json:"JobName,omitempty"`
-
-	// LogicalOperator AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-condition.html#cfn-glue-trigger-condition-logicaloperator
-	LogicalOperator interface{} `json:"LogicalOperator,omitempty"`
-
-	// State AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-condition.html#cfn-glue-trigger-condition-state
-	State interface{} `json:"State,omitempty"`
+	State *StringIntrinsic `json:"State,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

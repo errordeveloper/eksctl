@@ -13,7 +13,7 @@ type AWSEC2VPNConnection struct {
 	// CustomerGatewayId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-customergatewayid
-	CustomerGatewayId string `json:"CustomerGatewayId,omitempty"`
+	CustomerGatewayId *StringIntrinsic `json:"CustomerGatewayId,omitempty"`
 
 	// StaticRoutesOnly AWS CloudFormation Property
 	// Required: false
@@ -28,50 +28,17 @@ type AWSEC2VPNConnection struct {
 	// Type AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-type
-	Type string `json:"Type,omitempty"`
+	Type *StringIntrinsic `json:"Type,omitempty"`
 
 	// VpnGatewayId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-vpngatewayid
-	VpnGatewayId string `json:"VpnGatewayId,omitempty"`
+	VpnGatewayId *StringIntrinsic `json:"VpnGatewayId,omitempty"`
 
 	// VpnTunnelOptionsSpecifications AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-vpntunneloptionsspecifications
 	VpnTunnelOptionsSpecifications []AWSEC2VPNConnection_VpnTunnelOptionsSpecification `json:"VpnTunnelOptionsSpecifications,omitempty"`
-}
-
-type UntypedAWSEC2VPNConnection struct {
-
-	// CustomerGatewayId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-customergatewayid
-	CustomerGatewayId interface{} `json:"CustomerGatewayId,omitempty"`
-
-	// StaticRoutesOnly AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-StaticRoutesOnly
-	StaticRoutesOnly interface{} `json:"StaticRoutesOnly,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// Type AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-type
-	Type interface{} `json:"Type,omitempty"`
-
-	// VpnGatewayId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-vpngatewayid
-	VpnGatewayId interface{} `json:"VpnGatewayId,omitempty"`
-
-	// VpnTunnelOptionsSpecifications AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-connection.html#cfn-ec2-vpnconnection-vpntunneloptionsspecifications
-	VpnTunnelOptionsSpecifications []UntypedAWSEC2VPNConnection_VpnTunnelOptionsSpecification `json:"VpnTunnelOptionsSpecifications,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

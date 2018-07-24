@@ -13,12 +13,12 @@ type AWSGluePartition struct {
 	// CatalogId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-partition.html#cfn-glue-partition-catalogid
-	CatalogId string `json:"CatalogId,omitempty"`
+	CatalogId *StringIntrinsic `json:"CatalogId,omitempty"`
 
 	// DatabaseName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-partition.html#cfn-glue-partition-databasename
-	DatabaseName string `json:"DatabaseName,omitempty"`
+	DatabaseName *StringIntrinsic `json:"DatabaseName,omitempty"`
 
 	// PartitionInput AWS CloudFormation Property
 	// Required: true
@@ -28,30 +28,7 @@ type AWSGluePartition struct {
 	// TableName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-partition.html#cfn-glue-partition-tablename
-	TableName string `json:"TableName,omitempty"`
-}
-
-type UntypedAWSGluePartition struct {
-
-	// CatalogId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-partition.html#cfn-glue-partition-catalogid
-	CatalogId interface{} `json:"CatalogId,omitempty"`
-
-	// DatabaseName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-partition.html#cfn-glue-partition-databasename
-	DatabaseName interface{} `json:"DatabaseName,omitempty"`
-
-	// PartitionInput AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-partition.html#cfn-glue-partition-partitioninput
-	PartitionInput *UntypedAWSGluePartition_PartitionInput `json:"PartitionInput,omitempty"`
-
-	// TableName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-partition.html#cfn-glue-partition-tablename
-	TableName interface{} `json:"TableName,omitempty"`
+	TableName *StringIntrinsic `json:"TableName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

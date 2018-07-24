@@ -13,25 +13,12 @@ type AWSWAFSizeConstraintSet struct {
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sizeconstraintset.html#cfn-waf-sizeconstraintset-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// SizeConstraints AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sizeconstraintset.html#cfn-waf-sizeconstraintset-sizeconstraints
 	SizeConstraints []AWSWAFSizeConstraintSet_SizeConstraint `json:"SizeConstraints,omitempty"`
-}
-
-type UntypedAWSWAFSizeConstraintSet struct {
-
-	// Name AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sizeconstraintset.html#cfn-waf-sizeconstraintset-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// SizeConstraints AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-sizeconstraintset.html#cfn-waf-sizeconstraintset-sizeconstraints
-	SizeConstraints []UntypedAWSWAFSizeConstraintSet_SizeConstraint `json:"SizeConstraints,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

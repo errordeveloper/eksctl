@@ -13,7 +13,7 @@ type AWSServiceDiscoveryService struct {
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-description
-	Description string `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 
 	// DnsConfig AWS CloudFormation Property
 	// Required: true
@@ -33,35 +33,7 @@ type AWSServiceDiscoveryService struct {
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-name
-	Name string `json:"Name,omitempty"`
-}
-
-type UntypedAWSServiceDiscoveryService struct {
-
-	// Description AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-description
-	Description interface{} `json:"Description,omitempty"`
-
-	// DnsConfig AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-dnsconfig
-	DnsConfig *UntypedAWSServiceDiscoveryService_DnsConfig `json:"DnsConfig,omitempty"`
-
-	// HealthCheckConfig AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-healthcheckconfig
-	HealthCheckConfig *UntypedAWSServiceDiscoveryService_HealthCheckConfig `json:"HealthCheckConfig,omitempty"`
-
-	// HealthCheckCustomConfig AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-healthcheckcustomconfig
-	HealthCheckCustomConfig *UntypedAWSServiceDiscoveryService_HealthCheckCustomConfig `json:"HealthCheckCustomConfig,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-name
-	Name interface{} `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

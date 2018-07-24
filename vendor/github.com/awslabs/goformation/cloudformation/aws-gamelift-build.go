@@ -13,7 +13,7 @@ type AWSGameLiftBuild struct {
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// StorageLocation AWS CloudFormation Property
 	// Required: false
@@ -23,25 +23,7 @@ type AWSGameLiftBuild struct {
 	// Version AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-version
-	Version string `json:"Version,omitempty"`
-}
-
-type UntypedAWSGameLiftBuild struct {
-
-	// Name AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// StorageLocation AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-storagelocation
-	StorageLocation *UntypedAWSGameLiftBuild_S3Location `json:"StorageLocation,omitempty"`
-
-	// Version AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-build.html#cfn-gamelift-build-version
-	Version interface{} `json:"Version,omitempty"`
+	Version *StringIntrinsic `json:"Version,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

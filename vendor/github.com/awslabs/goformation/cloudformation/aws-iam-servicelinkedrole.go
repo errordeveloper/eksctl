@@ -13,35 +13,17 @@ type AWSIAMServiceLinkedRole struct {
 	// AWSServiceName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servicelinkedrole.html#cfn-iam-servicelinkedrole-awsservicename
-	AWSServiceName string `json:"AWSServiceName,omitempty"`
+	AWSServiceName *StringIntrinsic `json:"AWSServiceName,omitempty"`
 
 	// CustomSuffix AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servicelinkedrole.html#cfn-iam-servicelinkedrole-customsuffix
-	CustomSuffix string `json:"CustomSuffix,omitempty"`
+	CustomSuffix *StringIntrinsic `json:"CustomSuffix,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servicelinkedrole.html#cfn-iam-servicelinkedrole-description
-	Description string `json:"Description,omitempty"`
-}
-
-type UntypedAWSIAMServiceLinkedRole struct {
-
-	// AWSServiceName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servicelinkedrole.html#cfn-iam-servicelinkedrole-awsservicename
-	AWSServiceName interface{} `json:"AWSServiceName,omitempty"`
-
-	// CustomSuffix AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servicelinkedrole.html#cfn-iam-servicelinkedrole-customsuffix
-	CustomSuffix interface{} `json:"CustomSuffix,omitempty"`
-
-	// Description AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-servicelinkedrole.html#cfn-iam-servicelinkedrole-description
-	Description interface{} `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

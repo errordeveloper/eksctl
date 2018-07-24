@@ -13,25 +13,12 @@ type AWSLogsLogStream struct {
 	// LogGroupName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-logstream.html#cfn-logs-logstream-loggroupname
-	LogGroupName string `json:"LogGroupName,omitempty"`
+	LogGroupName *StringIntrinsic `json:"LogGroupName,omitempty"`
 
 	// LogStreamName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-logstream.html#cfn-logs-logstream-logstreamname
-	LogStreamName string `json:"LogStreamName,omitempty"`
-}
-
-type UntypedAWSLogsLogStream struct {
-
-	// LogGroupName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-logstream.html#cfn-logs-logstream-loggroupname
-	LogGroupName interface{} `json:"LogGroupName,omitempty"`
-
-	// LogStreamName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-logstream.html#cfn-logs-logstream-logstreamname
-	LogStreamName interface{} `json:"LogStreamName,omitempty"`
+	LogStreamName *StringIntrinsic `json:"LogStreamName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

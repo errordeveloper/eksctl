@@ -32,40 +32,7 @@ type AWSKinesisAnalyticsApplication_Input struct {
 	// NamePrefix AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-input.html#cfn-kinesisanalytics-application-input-nameprefix
-	NamePrefix string `json:"NamePrefix,omitempty"`
-}
-
-type UntypedAWSKinesisAnalyticsApplication_Input struct {
-
-	// InputParallelism AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-input.html#cfn-kinesisanalytics-application-input-inputparallelism
-	InputParallelism *UntypedAWSKinesisAnalyticsApplication_InputParallelism `json:"InputParallelism,omitempty"`
-
-	// InputProcessingConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-input.html#cfn-kinesisanalytics-application-input-inputprocessingconfiguration
-	InputProcessingConfiguration *UntypedAWSKinesisAnalyticsApplication_InputProcessingConfiguration `json:"InputProcessingConfiguration,omitempty"`
-
-	// InputSchema AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-input.html#cfn-kinesisanalytics-application-input-inputschema
-	InputSchema *UntypedAWSKinesisAnalyticsApplication_InputSchema `json:"InputSchema,omitempty"`
-
-	// KinesisFirehoseInput AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-input.html#cfn-kinesisanalytics-application-input-kinesisfirehoseinput
-	KinesisFirehoseInput *UntypedAWSKinesisAnalyticsApplication_KinesisFirehoseInput `json:"KinesisFirehoseInput,omitempty"`
-
-	// KinesisStreamsInput AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-input.html#cfn-kinesisanalytics-application-input-kinesisstreamsinput
-	KinesisStreamsInput *UntypedAWSKinesisAnalyticsApplication_KinesisStreamsInput `json:"KinesisStreamsInput,omitempty"`
-
-	// NamePrefix AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-input.html#cfn-kinesisanalytics-application-input-nameprefix
-	NamePrefix interface{} `json:"NamePrefix,omitempty"`
+	NamePrefix *StringIntrinsic `json:"NamePrefix,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

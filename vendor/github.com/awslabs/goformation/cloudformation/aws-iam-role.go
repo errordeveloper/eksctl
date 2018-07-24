@@ -18,7 +18,7 @@ type AWSIAMRole struct {
 	// ManagedPolicyArns AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-managepolicyarns
-	ManagedPolicyArns []string `json:"ManagedPolicyArns,omitempty"`
+	ManagedPolicyArns []*StringIntrinsic `json:"ManagedPolicyArns,omitempty"`
 
 	// MaxSessionDuration AWS CloudFormation Property
 	// Required: false
@@ -28,7 +28,7 @@ type AWSIAMRole struct {
 	// Path AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-path
-	Path string `json:"Path,omitempty"`
+	Path *StringIntrinsic `json:"Path,omitempty"`
 
 	// Policies AWS CloudFormation Property
 	// Required: false
@@ -38,40 +38,7 @@ type AWSIAMRole struct {
 	// RoleName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-rolename
-	RoleName string `json:"RoleName,omitempty"`
-}
-
-type UntypedAWSIAMRole struct {
-
-	// AssumeRolePolicyDocument AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-assumerolepolicydocument
-	AssumeRolePolicyDocument interface{} `json:"AssumeRolePolicyDocument,omitempty"`
-
-	// ManagedPolicyArns AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-managepolicyarns
-	ManagedPolicyArns []interface{} `json:"ManagedPolicyArns,omitempty"`
-
-	// MaxSessionDuration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-maxsessionduration
-	MaxSessionDuration interface{} `json:"MaxSessionDuration,omitempty"`
-
-	// Path AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-path
-	Path interface{} `json:"Path,omitempty"`
-
-	// Policies AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-policies
-	Policies []UntypedAWSIAMRole_Policy `json:"Policies,omitempty"`
-
-	// RoleName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-role.html#cfn-iam-role-rolename
-	RoleName interface{} `json:"RoleName,omitempty"`
+	RoleName *StringIntrinsic `json:"RoleName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -18,30 +18,12 @@ type AWSConfigConfigurationAggregator struct {
 	// ConfigurationAggregatorName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationaggregator.html#cfn-config-configurationaggregator-configurationaggregatorname
-	ConfigurationAggregatorName string `json:"ConfigurationAggregatorName,omitempty"`
+	ConfigurationAggregatorName *StringIntrinsic `json:"ConfigurationAggregatorName,omitempty"`
 
 	// OrganizationAggregationSource AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationaggregator.html#cfn-config-configurationaggregator-organizationaggregationsource
 	OrganizationAggregationSource *AWSConfigConfigurationAggregator_OrganizationAggregationSource `json:"OrganizationAggregationSource,omitempty"`
-}
-
-type UntypedAWSConfigConfigurationAggregator struct {
-
-	// AccountAggregationSources AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationaggregator.html#cfn-config-configurationaggregator-accountaggregationsources
-	AccountAggregationSources []UntypedAWSConfigConfigurationAggregator_AccountAggregationSource `json:"AccountAggregationSources,omitempty"`
-
-	// ConfigurationAggregatorName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationaggregator.html#cfn-config-configurationaggregator-configurationaggregatorname
-	ConfigurationAggregatorName interface{} `json:"ConfigurationAggregatorName,omitempty"`
-
-	// OrganizationAggregationSource AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationaggregator.html#cfn-config-configurationaggregator-organizationaggregationsource
-	OrganizationAggregationSource *UntypedAWSConfigConfigurationAggregator_OrganizationAggregationSource `json:"OrganizationAggregationSource,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -53,7 +53,7 @@ type AWSDynamoDBTable struct {
 	// TableName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-tablename
-	TableName string `json:"TableName,omitempty"`
+	TableName *StringIntrinsic `json:"TableName,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -64,64 +64,6 @@ type AWSDynamoDBTable struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-timetolivespecification
 	TimeToLiveSpecification *AWSDynamoDBTable_TimeToLiveSpecification `json:"TimeToLiveSpecification,omitempty"`
-}
-
-type UntypedAWSDynamoDBTable struct {
-
-	// AttributeDefinitions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-attributedef
-	AttributeDefinitions []UntypedAWSDynamoDBTable_AttributeDefinition `json:"AttributeDefinitions,omitempty"`
-
-	// GlobalSecondaryIndexes AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-gsi
-	GlobalSecondaryIndexes []UntypedAWSDynamoDBTable_GlobalSecondaryIndex `json:"GlobalSecondaryIndexes,omitempty"`
-
-	// KeySchema AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-keyschema
-	KeySchema []UntypedAWSDynamoDBTable_KeySchema `json:"KeySchema,omitempty"`
-
-	// LocalSecondaryIndexes AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-lsi
-	LocalSecondaryIndexes []UntypedAWSDynamoDBTable_LocalSecondaryIndex `json:"LocalSecondaryIndexes,omitempty"`
-
-	// PointInTimeRecoverySpecification AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-pointintimerecoveryspecification
-	PointInTimeRecoverySpecification *UntypedAWSDynamoDBTable_PointInTimeRecoverySpecification `json:"PointInTimeRecoverySpecification,omitempty"`
-
-	// ProvisionedThroughput AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-provisionedthroughput
-	ProvisionedThroughput *UntypedAWSDynamoDBTable_ProvisionedThroughput `json:"ProvisionedThroughput,omitempty"`
-
-	// SSESpecification AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-ssespecification
-	SSESpecification *UntypedAWSDynamoDBTable_SSESpecification `json:"SSESpecification,omitempty"`
-
-	// StreamSpecification AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-streamspecification
-	StreamSpecification *UntypedAWSDynamoDBTable_StreamSpecification `json:"StreamSpecification,omitempty"`
-
-	// TableName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-tablename
-	TableName interface{} `json:"TableName,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// TimeToLiveSpecification AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-timetolivespecification
-	TimeToLiveSpecification *UntypedAWSDynamoDBTable_TimeToLiveSpecification `json:"TimeToLiveSpecification,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

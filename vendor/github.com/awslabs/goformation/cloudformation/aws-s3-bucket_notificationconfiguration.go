@@ -20,24 +20,6 @@ type AWSS3Bucket_NotificationConfiguration struct {
 	TopicConfigurations []AWSS3Bucket_TopicConfiguration `json:"TopicConfigurations,omitempty"`
 }
 
-type UntypedAWSS3Bucket_NotificationConfiguration struct {
-
-	// LambdaConfigurations AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig.html#cfn-s3-bucket-notificationconfig-lambdaconfig
-	LambdaConfigurations []UntypedAWSS3Bucket_LambdaConfiguration `json:"LambdaConfigurations,omitempty"`
-
-	// QueueConfigurations AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig.html#cfn-s3-bucket-notificationconfig-queueconfig
-	QueueConfigurations []UntypedAWSS3Bucket_QueueConfiguration `json:"QueueConfigurations,omitempty"`
-
-	// TopicConfigurations AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig.html#cfn-s3-bucket-notificationconfig-topicconfig
-	TopicConfigurations []UntypedAWSS3Bucket_TopicConfiguration `json:"TopicConfigurations,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSS3Bucket_NotificationConfiguration) AWSCloudFormationType() string {
 	return "AWS::S3::Bucket.NotificationConfiguration"

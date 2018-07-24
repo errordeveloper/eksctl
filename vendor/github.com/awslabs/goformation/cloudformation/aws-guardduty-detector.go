@@ -16,14 +16,6 @@ type AWSGuardDutyDetector struct {
 	Enable bool `json:"Enable,omitempty"`
 }
 
-type UntypedAWSGuardDutyDetector struct {
-
-	// Enable AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-guardduty-detector.html#cfn-guardduty-detector-enable
-	Enable interface{} `json:"Enable,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSGuardDutyDetector) AWSCloudFormationType() string {
 	return "AWS::GuardDuty::Detector"

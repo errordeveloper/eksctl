@@ -7,25 +7,12 @@ type AWSSSMPatchBaseline_PatchFilter struct {
 	// Key AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchfilter.html#cfn-ssm-patchbaseline-patchfilter-key
-	Key string `json:"Key,omitempty"`
+	Key *StringIntrinsic `json:"Key,omitempty"`
 
 	// Values AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchfilter.html#cfn-ssm-patchbaseline-patchfilter-values
-	Values []string `json:"Values,omitempty"`
-}
-
-type UntypedAWSSSMPatchBaseline_PatchFilter struct {
-
-	// Key AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchfilter.html#cfn-ssm-patchbaseline-patchfilter-key
-	Key interface{} `json:"Key,omitempty"`
-
-	// Values AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-patchfilter.html#cfn-ssm-patchbaseline-patchfilter-values
-	Values []interface{} `json:"Values,omitempty"`
+	Values []*StringIntrinsic `json:"Values,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

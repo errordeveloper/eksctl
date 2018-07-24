@@ -18,7 +18,7 @@ type AWSApiGatewayUsagePlan struct {
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-description
-	Description string `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 
 	// Quota AWS CloudFormation Property
 	// Required: false
@@ -33,35 +33,7 @@ type AWSApiGatewayUsagePlan struct {
 	// UsagePlanName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-usageplanname
-	UsagePlanName string `json:"UsagePlanName,omitempty"`
-}
-
-type UntypedAWSApiGatewayUsagePlan struct {
-
-	// ApiStages AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-apistages
-	ApiStages []UntypedAWSApiGatewayUsagePlan_ApiStage `json:"ApiStages,omitempty"`
-
-	// Description AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-description
-	Description interface{} `json:"Description,omitempty"`
-
-	// Quota AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-quota
-	Quota *UntypedAWSApiGatewayUsagePlan_QuotaSettings `json:"Quota,omitempty"`
-
-	// Throttle AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-throttle
-	Throttle *UntypedAWSApiGatewayUsagePlan_ThrottleSettings `json:"Throttle,omitempty"`
-
-	// UsagePlanName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-usageplan.html#cfn-apigateway-usageplan-usageplanname
-	UsagePlanName interface{} `json:"UsagePlanName,omitempty"`
+	UsagePlanName *StringIntrinsic `json:"UsagePlanName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

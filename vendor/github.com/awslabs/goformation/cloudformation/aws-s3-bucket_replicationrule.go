@@ -12,12 +12,12 @@ type AWSS3Bucket_ReplicationRule struct {
 	// Id AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationconfiguration-rules-id
-	Id string `json:"Id,omitempty"`
+	Id *StringIntrinsic `json:"Id,omitempty"`
 
 	// Prefix AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationconfiguration-rules-prefix
-	Prefix string `json:"Prefix,omitempty"`
+	Prefix *StringIntrinsic `json:"Prefix,omitempty"`
 
 	// SourceSelectionCriteria AWS CloudFormation Property
 	// Required: false
@@ -27,35 +27,7 @@ type AWSS3Bucket_ReplicationRule struct {
 	// Status AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationconfiguration-rules-status
-	Status string `json:"Status,omitempty"`
-}
-
-type UntypedAWSS3Bucket_ReplicationRule struct {
-
-	// Destination AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationconfiguration-rules-destination
-	Destination *UntypedAWSS3Bucket_ReplicationDestination `json:"Destination,omitempty"`
-
-	// Id AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationconfiguration-rules-id
-	Id interface{} `json:"Id,omitempty"`
-
-	// Prefix AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationconfiguration-rules-prefix
-	Prefix interface{} `json:"Prefix,omitempty"`
-
-	// SourceSelectionCriteria AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationrule-sourceselectioncriteria
-	SourceSelectionCriteria *UntypedAWSS3Bucket_SourceSelectionCriteria `json:"SourceSelectionCriteria,omitempty"`
-
-	// Status AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration-rules.html#cfn-s3-bucket-replicationconfiguration-rules-status
-	Status interface{} `json:"Status,omitempty"`
+	Status *StringIntrinsic `json:"Status,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

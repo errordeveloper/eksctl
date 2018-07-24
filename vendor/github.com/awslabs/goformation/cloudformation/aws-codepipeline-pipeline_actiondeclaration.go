@@ -22,7 +22,7 @@ type AWSCodePipelinePipeline_ActionDeclaration struct {
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// OutputArtifacts AWS CloudFormation Property
 	// Required: false
@@ -32,50 +32,12 @@ type AWSCodePipelinePipeline_ActionDeclaration struct {
 	// RoleArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-rolearn
-	RoleArn string `json:"RoleArn,omitempty"`
+	RoleArn *StringIntrinsic `json:"RoleArn,omitempty"`
 
 	// RunOrder AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-runorder
 	RunOrder int `json:"RunOrder,omitempty"`
-}
-
-type UntypedAWSCodePipelinePipeline_ActionDeclaration struct {
-
-	// ActionTypeId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-actiontypeid
-	ActionTypeId *UntypedAWSCodePipelinePipeline_ActionTypeId `json:"ActionTypeId,omitempty"`
-
-	// Configuration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-configuration
-	Configuration interface{} `json:"Configuration,omitempty"`
-
-	// InputArtifacts AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-inputartifacts
-	InputArtifacts []UntypedAWSCodePipelinePipeline_InputArtifact `json:"InputArtifacts,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// OutputArtifacts AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-outputartifacts
-	OutputArtifacts []UntypedAWSCodePipelinePipeline_OutputArtifact `json:"OutputArtifacts,omitempty"`
-
-	// RoleArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-rolearn
-	RoleArn interface{} `json:"RoleArn,omitempty"`
-
-	// RunOrder AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-stages-actions.html#cfn-codepipeline-pipeline-stages-actions-runorder
-	RunOrder interface{} `json:"RunOrder,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

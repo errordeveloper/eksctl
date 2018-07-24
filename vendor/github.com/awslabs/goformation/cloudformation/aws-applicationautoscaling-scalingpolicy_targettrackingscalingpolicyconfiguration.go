@@ -35,39 +35,6 @@ type AWSApplicationAutoScalingScalingPolicy_TargetTrackingScalingPolicyConfigura
 	TargetValue float64 `json:"TargetValue,omitempty"`
 }
 
-type UntypedAWSApplicationAutoScalingScalingPolicy_TargetTrackingScalingPolicyConfiguration struct {
-
-	// CustomizedMetricSpecification AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.html#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration-customizedmetricspecification
-	CustomizedMetricSpecification *UntypedAWSApplicationAutoScalingScalingPolicy_CustomizedMetricSpecification `json:"CustomizedMetricSpecification,omitempty"`
-
-	// DisableScaleIn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.html#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration-disablescalein
-	DisableScaleIn interface{} `json:"DisableScaleIn,omitempty"`
-
-	// PredefinedMetricSpecification AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.html#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration-predefinedmetricspecification
-	PredefinedMetricSpecification *UntypedAWSApplicationAutoScalingScalingPolicy_PredefinedMetricSpecification `json:"PredefinedMetricSpecification,omitempty"`
-
-	// ScaleInCooldown AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.html#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration-scaleincooldown
-	ScaleInCooldown interface{} `json:"ScaleInCooldown,omitempty"`
-
-	// ScaleOutCooldown AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.html#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration-scaleoutcooldown
-	ScaleOutCooldown interface{} `json:"ScaleOutCooldown,omitempty"`
-
-	// TargetValue AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration.html#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration-targetvalue
-	TargetValue interface{} `json:"TargetValue,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSApplicationAutoScalingScalingPolicy_TargetTrackingScalingPolicyConfiguration) AWSCloudFormationType() string {
 	return "AWS::ApplicationAutoScaling::ScalingPolicy.TargetTrackingScalingPolicyConfiguration"

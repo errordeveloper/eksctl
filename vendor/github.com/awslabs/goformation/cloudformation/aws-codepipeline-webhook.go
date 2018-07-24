@@ -13,7 +13,7 @@ type AWSCodePipelineWebhook struct {
 	// Authentication AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-authentication
-	Authentication string `json:"Authentication,omitempty"`
+	Authentication *StringIntrinsic `json:"Authentication,omitempty"`
 
 	// AuthenticationConfiguration AWS CloudFormation Property
 	// Required: true
@@ -28,7 +28,7 @@ type AWSCodePipelineWebhook struct {
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// RegisterWithThirdParty AWS CloudFormation Property
 	// Required: false
@@ -38,60 +38,17 @@ type AWSCodePipelineWebhook struct {
 	// TargetAction AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-targetaction
-	TargetAction string `json:"TargetAction,omitempty"`
+	TargetAction *StringIntrinsic `json:"TargetAction,omitempty"`
 
 	// TargetPipeline AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-targetpipeline
-	TargetPipeline string `json:"TargetPipeline,omitempty"`
+	TargetPipeline *StringIntrinsic `json:"TargetPipeline,omitempty"`
 
 	// TargetPipelineVersion AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-targetpipelineversion
 	TargetPipelineVersion int `json:"TargetPipelineVersion,omitempty"`
-}
-
-type UntypedAWSCodePipelineWebhook struct {
-
-	// Authentication AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-authentication
-	Authentication interface{} `json:"Authentication,omitempty"`
-
-	// AuthenticationConfiguration AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-authenticationconfiguration
-	AuthenticationConfiguration *UntypedAWSCodePipelineWebhook_WebhookAuthConfiguration `json:"AuthenticationConfiguration,omitempty"`
-
-	// Filters AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-filters
-	Filters []UntypedAWSCodePipelineWebhook_WebhookFilterRule `json:"Filters,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// RegisterWithThirdParty AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-registerwiththirdparty
-	RegisterWithThirdParty interface{} `json:"RegisterWithThirdParty,omitempty"`
-
-	// TargetAction AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-targetaction
-	TargetAction interface{} `json:"TargetAction,omitempty"`
-
-	// TargetPipeline AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-targetpipeline
-	TargetPipeline interface{} `json:"TargetPipeline,omitempty"`
-
-	// TargetPipelineVersion AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-webhook.html#cfn-codepipeline-webhook-targetpipelineversion
-	TargetPipelineVersion interface{} `json:"TargetPipelineVersion,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

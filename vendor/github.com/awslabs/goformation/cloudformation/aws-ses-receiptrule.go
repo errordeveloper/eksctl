@@ -13,7 +13,7 @@ type AWSSESReceiptRule struct {
 	// After AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptrule.html#cfn-ses-receiptrule-after
-	After string `json:"After,omitempty"`
+	After *StringIntrinsic `json:"After,omitempty"`
 
 	// Rule AWS CloudFormation Property
 	// Required: true
@@ -23,25 +23,7 @@ type AWSSESReceiptRule struct {
 	// RuleSetName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptrule.html#cfn-ses-receiptrule-rulesetname
-	RuleSetName string `json:"RuleSetName,omitempty"`
-}
-
-type UntypedAWSSESReceiptRule struct {
-
-	// After AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptrule.html#cfn-ses-receiptrule-after
-	After interface{} `json:"After,omitempty"`
-
-	// Rule AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptrule.html#cfn-ses-receiptrule-rule
-	Rule *UntypedAWSSESReceiptRule_Rule `json:"Rule,omitempty"`
-
-	// RuleSetName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-receiptrule.html#cfn-ses-receiptrule-rulesetname
-	RuleSetName interface{} `json:"RuleSetName,omitempty"`
+	RuleSetName *StringIntrinsic `json:"RuleSetName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

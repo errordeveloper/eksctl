@@ -18,7 +18,7 @@ type AWSDirectoryServiceMicrosoftAD struct {
 	// Edition AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-edition
-	Edition string `json:"Edition,omitempty"`
+	Edition *StringIntrinsic `json:"Edition,omitempty"`
 
 	// EnableSso AWS CloudFormation Property
 	// Required: false
@@ -28,60 +28,22 @@ type AWSDirectoryServiceMicrosoftAD struct {
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// Password AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-password
-	Password string `json:"Password,omitempty"`
+	Password *StringIntrinsic `json:"Password,omitempty"`
 
 	// ShortName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-shortname
-	ShortName string `json:"ShortName,omitempty"`
+	ShortName *StringIntrinsic `json:"ShortName,omitempty"`
 
 	// VpcSettings AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-vpcsettings
 	VpcSettings *AWSDirectoryServiceMicrosoftAD_VpcSettings `json:"VpcSettings,omitempty"`
-}
-
-type UntypedAWSDirectoryServiceMicrosoftAD struct {
-
-	// CreateAlias AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-createalias
-	CreateAlias interface{} `json:"CreateAlias,omitempty"`
-
-	// Edition AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-edition
-	Edition interface{} `json:"Edition,omitempty"`
-
-	// EnableSso AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-enablesso
-	EnableSso interface{} `json:"EnableSso,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// Password AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-password
-	Password interface{} `json:"Password,omitempty"`
-
-	// ShortName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-shortname
-	ShortName interface{} `json:"ShortName,omitempty"`
-
-	// VpcSettings AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-directoryservice-microsoftad.html#cfn-directoryservice-microsoftad-vpcsettings
-	VpcSettings *UntypedAWSDirectoryServiceMicrosoftAD_VpcSettings `json:"VpcSettings,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

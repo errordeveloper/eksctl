@@ -13,17 +13,17 @@ type AWSAutoScalingScalingPolicy struct {
 	// AdjustmentType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-adjustmenttype
-	AdjustmentType string `json:"AdjustmentType,omitempty"`
+	AdjustmentType *StringIntrinsic `json:"AdjustmentType,omitempty"`
 
 	// AutoScalingGroupName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-autoscalinggroupname
-	AutoScalingGroupName string `json:"AutoScalingGroupName,omitempty"`
+	AutoScalingGroupName *StringIntrinsic `json:"AutoScalingGroupName,omitempty"`
 
 	// Cooldown AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-cooldown
-	Cooldown string `json:"Cooldown,omitempty"`
+	Cooldown *StringIntrinsic `json:"Cooldown,omitempty"`
 
 	// EstimatedInstanceWarmup AWS CloudFormation Property
 	// Required: false
@@ -33,7 +33,7 @@ type AWSAutoScalingScalingPolicy struct {
 	// MetricAggregationType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-metricaggregationtype
-	MetricAggregationType string `json:"MetricAggregationType,omitempty"`
+	MetricAggregationType *StringIntrinsic `json:"MetricAggregationType,omitempty"`
 
 	// MinAdjustmentMagnitude AWS CloudFormation Property
 	// Required: false
@@ -43,7 +43,7 @@ type AWSAutoScalingScalingPolicy struct {
 	// PolicyType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-policytype
-	PolicyType string `json:"PolicyType,omitempty"`
+	PolicyType *StringIntrinsic `json:"PolicyType,omitempty"`
 
 	// ScalingAdjustment AWS CloudFormation Property
 	// Required: false
@@ -59,59 +59,6 @@ type AWSAutoScalingScalingPolicy struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration
 	TargetTrackingConfiguration *AWSAutoScalingScalingPolicy_TargetTrackingConfiguration `json:"TargetTrackingConfiguration,omitempty"`
-}
-
-type UntypedAWSAutoScalingScalingPolicy struct {
-
-	// AdjustmentType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-adjustmenttype
-	AdjustmentType interface{} `json:"AdjustmentType,omitempty"`
-
-	// AutoScalingGroupName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-autoscalinggroupname
-	AutoScalingGroupName interface{} `json:"AutoScalingGroupName,omitempty"`
-
-	// Cooldown AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-cooldown
-	Cooldown interface{} `json:"Cooldown,omitempty"`
-
-	// EstimatedInstanceWarmup AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-estimatedinstancewarmup
-	EstimatedInstanceWarmup interface{} `json:"EstimatedInstanceWarmup,omitempty"`
-
-	// MetricAggregationType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-metricaggregationtype
-	MetricAggregationType interface{} `json:"MetricAggregationType,omitempty"`
-
-	// MinAdjustmentMagnitude AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-minadjustmentmagnitude
-	MinAdjustmentMagnitude interface{} `json:"MinAdjustmentMagnitude,omitempty"`
-
-	// PolicyType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-policytype
-	PolicyType interface{} `json:"PolicyType,omitempty"`
-
-	// ScalingAdjustment AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-scalingadjustment
-	ScalingAdjustment interface{} `json:"ScalingAdjustment,omitempty"`
-
-	// StepAdjustments AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-as-scalingpolicy-stepadjustments
-	StepAdjustments []UntypedAWSAutoScalingScalingPolicy_StepAdjustment `json:"StepAdjustments,omitempty"`
-
-	// TargetTrackingConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-policy.html#cfn-autoscaling-scalingpolicy-targettrackingconfiguration
-	TargetTrackingConfiguration *UntypedAWSAutoScalingScalingPolicy_TargetTrackingConfiguration `json:"TargetTrackingConfiguration,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

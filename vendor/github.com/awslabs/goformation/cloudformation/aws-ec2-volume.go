@@ -18,7 +18,7 @@ type AWSEC2Volume struct {
 	// AvailabilityZone AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-availabilityzone
-	AvailabilityZone string `json:"AvailabilityZone,omitempty"`
+	AvailabilityZone *StringIntrinsic `json:"AvailabilityZone,omitempty"`
 
 	// Encrypted AWS CloudFormation Property
 	// Required: false
@@ -33,7 +33,7 @@ type AWSEC2Volume struct {
 	// KmsKeyId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-kmskeyid
-	KmsKeyId string `json:"KmsKeyId,omitempty"`
+	KmsKeyId *StringIntrinsic `json:"KmsKeyId,omitempty"`
 
 	// Size AWS CloudFormation Property
 	// Required: false
@@ -43,7 +43,7 @@ type AWSEC2Volume struct {
 	// SnapshotId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-snapshotid
-	SnapshotId string `json:"SnapshotId,omitempty"`
+	SnapshotId *StringIntrinsic `json:"SnapshotId,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -53,55 +53,7 @@ type AWSEC2Volume struct {
 	// VolumeType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-volumetype
-	VolumeType string `json:"VolumeType,omitempty"`
-}
-
-type UntypedAWSEC2Volume struct {
-
-	// AutoEnableIO AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-autoenableio
-	AutoEnableIO interface{} `json:"AutoEnableIO,omitempty"`
-
-	// AvailabilityZone AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-availabilityzone
-	AvailabilityZone interface{} `json:"AvailabilityZone,omitempty"`
-
-	// Encrypted AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-encrypted
-	Encrypted interface{} `json:"Encrypted,omitempty"`
-
-	// Iops AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-iops
-	Iops interface{} `json:"Iops,omitempty"`
-
-	// KmsKeyId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-kmskeyid
-	KmsKeyId interface{} `json:"KmsKeyId,omitempty"`
-
-	// Size AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-size
-	Size interface{} `json:"Size,omitempty"`
-
-	// SnapshotId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-snapshotid
-	SnapshotId interface{} `json:"SnapshotId,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// VolumeType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volume.html#cfn-ec2-ebs-volume-volumetype
-	VolumeType interface{} `json:"VolumeType,omitempty"`
+	VolumeType *StringIntrinsic `json:"VolumeType,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

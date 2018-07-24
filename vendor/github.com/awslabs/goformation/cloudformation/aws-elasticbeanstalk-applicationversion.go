@@ -13,35 +13,17 @@ type AWSElasticBeanstalkApplicationVersion struct {
 	// ApplicationName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-version.html#cfn-elasticbeanstalk-applicationversion-applicationname
-	ApplicationName string `json:"ApplicationName,omitempty"`
+	ApplicationName *StringIntrinsic `json:"ApplicationName,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-version.html#cfn-elasticbeanstalk-applicationversion-description
-	Description string `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 
 	// SourceBundle AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-version.html#cfn-elasticbeanstalk-applicationversion-sourcebundle
 	SourceBundle *AWSElasticBeanstalkApplicationVersion_SourceBundle `json:"SourceBundle,omitempty"`
-}
-
-type UntypedAWSElasticBeanstalkApplicationVersion struct {
-
-	// ApplicationName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-version.html#cfn-elasticbeanstalk-applicationversion-applicationname
-	ApplicationName interface{} `json:"ApplicationName,omitempty"`
-
-	// Description AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-version.html#cfn-elasticbeanstalk-applicationversion-description
-	Description interface{} `json:"Description,omitempty"`
-
-	// SourceBundle AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-version.html#cfn-elasticbeanstalk-applicationversion-sourcebundle
-	SourceBundle *UntypedAWSElasticBeanstalkApplicationVersion_SourceBundle `json:"SourceBundle,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

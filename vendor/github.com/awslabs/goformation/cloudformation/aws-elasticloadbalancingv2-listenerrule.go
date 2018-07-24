@@ -23,35 +23,12 @@ type AWSElasticLoadBalancingV2ListenerRule struct {
 	// ListenerArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html#cfn-elasticloadbalancingv2-listenerrule-listenerarn
-	ListenerArn string `json:"ListenerArn,omitempty"`
+	ListenerArn *StringIntrinsic `json:"ListenerArn,omitempty"`
 
 	// Priority AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html#cfn-elasticloadbalancingv2-listenerrule-priority
 	Priority int `json:"Priority,omitempty"`
-}
-
-type UntypedAWSElasticLoadBalancingV2ListenerRule struct {
-
-	// Actions AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html#cfn-elasticloadbalancingv2-listenerrule-actions
-	Actions []UntypedAWSElasticLoadBalancingV2ListenerRule_Action `json:"Actions,omitempty"`
-
-	// Conditions AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html#cfn-elasticloadbalancingv2-listenerrule-conditions
-	Conditions []UntypedAWSElasticLoadBalancingV2ListenerRule_RuleCondition `json:"Conditions,omitempty"`
-
-	// ListenerArn AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html#cfn-elasticloadbalancingv2-listenerrule-listenerarn
-	ListenerArn interface{} `json:"ListenerArn,omitempty"`
-
-	// Priority AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listenerrule.html#cfn-elasticloadbalancingv2-listenerrule-priority
-	Priority interface{} `json:"Priority,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

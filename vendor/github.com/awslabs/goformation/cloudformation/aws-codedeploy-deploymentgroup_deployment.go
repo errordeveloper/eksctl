@@ -7,7 +7,7 @@ type AWSCodeDeployDeploymentGroup_Deployment struct {
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-properties-codedeploy-deploymentgroup-deployment-description
-	Description string `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 
 	// IgnoreApplicationStopFailures AWS CloudFormation Property
 	// Required: false
@@ -18,24 +18,6 @@ type AWSCodeDeployDeploymentGroup_Deployment struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision
 	Revision *AWSCodeDeployDeploymentGroup_RevisionLocation `json:"Revision,omitempty"`
-}
-
-type UntypedAWSCodeDeployDeploymentGroup_Deployment struct {
-
-	// Description AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-properties-codedeploy-deploymentgroup-deployment-description
-	Description interface{} `json:"Description,omitempty"`
-
-	// IgnoreApplicationStopFailures AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-properties-codedeploy-deploymentgroup-deployment-ignoreapplicationstopfailures
-	IgnoreApplicationStopFailures interface{} `json:"IgnoreApplicationStopFailures,omitempty"`
-
-	// Revision AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision
-	Revision *UntypedAWSCodeDeployDeploymentGroup_RevisionLocation `json:"Revision,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -13,35 +13,17 @@ type AWSEC2VolumeAttachment struct {
 	// Device AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html#cfn-ec2-ebs-volumeattachment-device
-	Device string `json:"Device,omitempty"`
+	Device *StringIntrinsic `json:"Device,omitempty"`
 
 	// InstanceId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html#cfn-ec2-ebs-volumeattachment-instanceid
-	InstanceId string `json:"InstanceId,omitempty"`
+	InstanceId *StringIntrinsic `json:"InstanceId,omitempty"`
 
 	// VolumeId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html#cfn-ec2-ebs-volumeattachment-volumeid
-	VolumeId string `json:"VolumeId,omitempty"`
-}
-
-type UntypedAWSEC2VolumeAttachment struct {
-
-	// Device AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html#cfn-ec2-ebs-volumeattachment-device
-	Device interface{} `json:"Device,omitempty"`
-
-	// InstanceId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html#cfn-ec2-ebs-volumeattachment-instanceid
-	InstanceId interface{} `json:"InstanceId,omitempty"`
-
-	// VolumeId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-ebs-volumeattachment.html#cfn-ec2-ebs-volumeattachment-volumeid
-	VolumeId interface{} `json:"VolumeId,omitempty"`
+	VolumeId *StringIntrinsic `json:"VolumeId,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

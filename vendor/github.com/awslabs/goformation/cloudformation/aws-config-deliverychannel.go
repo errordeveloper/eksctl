@@ -18,50 +18,22 @@ type AWSConfigDeliveryChannel struct {
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html#cfn-config-deliverychannel-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// S3BucketName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html#cfn-config-deliverychannel-s3bucketname
-	S3BucketName string `json:"S3BucketName,omitempty"`
+	S3BucketName *StringIntrinsic `json:"S3BucketName,omitempty"`
 
 	// S3KeyPrefix AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html#cfn-config-deliverychannel-s3keyprefix
-	S3KeyPrefix string `json:"S3KeyPrefix,omitempty"`
+	S3KeyPrefix *StringIntrinsic `json:"S3KeyPrefix,omitempty"`
 
 	// SnsTopicARN AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html#cfn-config-deliverychannel-snstopicarn
-	SnsTopicARN string `json:"SnsTopicARN,omitempty"`
-}
-
-type UntypedAWSConfigDeliveryChannel struct {
-
-	// ConfigSnapshotDeliveryProperties AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html#cfn-config-deliverychannel-configsnapshotdeliveryproperties
-	ConfigSnapshotDeliveryProperties *UntypedAWSConfigDeliveryChannel_ConfigSnapshotDeliveryProperties `json:"ConfigSnapshotDeliveryProperties,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html#cfn-config-deliverychannel-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// S3BucketName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html#cfn-config-deliverychannel-s3bucketname
-	S3BucketName interface{} `json:"S3BucketName,omitempty"`
-
-	// S3KeyPrefix AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html#cfn-config-deliverychannel-s3keyprefix
-	S3KeyPrefix interface{} `json:"S3KeyPrefix,omitempty"`
-
-	// SnsTopicARN AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-deliverychannel.html#cfn-config-deliverychannel-snstopicarn
-	SnsTopicARN interface{} `json:"SnsTopicARN,omitempty"`
+	SnsTopicARN *StringIntrinsic `json:"SnsTopicARN,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

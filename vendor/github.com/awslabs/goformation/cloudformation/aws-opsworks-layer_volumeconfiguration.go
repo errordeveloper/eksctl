@@ -12,7 +12,7 @@ type AWSOpsWorksLayer_VolumeConfiguration struct {
 	// MountPoint AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-mountpoint
-	MountPoint string `json:"MountPoint,omitempty"`
+	MountPoint *StringIntrinsic `json:"MountPoint,omitempty"`
 
 	// NumberOfDisks AWS CloudFormation Property
 	// Required: false
@@ -32,40 +32,7 @@ type AWSOpsWorksLayer_VolumeConfiguration struct {
 	// VolumeType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-volumetype
-	VolumeType string `json:"VolumeType,omitempty"`
-}
-
-type UntypedAWSOpsWorksLayer_VolumeConfiguration struct {
-
-	// Iops AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-iops
-	Iops interface{} `json:"Iops,omitempty"`
-
-	// MountPoint AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-mountpoint
-	MountPoint interface{} `json:"MountPoint,omitempty"`
-
-	// NumberOfDisks AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-numberofdisks
-	NumberOfDisks interface{} `json:"NumberOfDisks,omitempty"`
-
-	// RaidLevel AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-raidlevel
-	RaidLevel interface{} `json:"RaidLevel,omitempty"`
-
-	// Size AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-size
-	Size interface{} `json:"Size,omitempty"`
-
-	// VolumeType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-volumeconfiguration.html#cfn-opsworks-layer-volconfig-volumetype
-	VolumeType interface{} `json:"VolumeType,omitempty"`
+	VolumeType *StringIntrinsic `json:"VolumeType,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

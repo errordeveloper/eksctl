@@ -23,7 +23,7 @@ type AWSCodePipelinePipeline struct {
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// RestartExecutionOnUpdate AWS CloudFormation Property
 	// Required: false
@@ -33,45 +33,12 @@ type AWSCodePipelinePipeline struct {
 	// RoleArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-rolearn
-	RoleArn string `json:"RoleArn,omitempty"`
+	RoleArn *StringIntrinsic `json:"RoleArn,omitempty"`
 
 	// Stages AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-stages
 	Stages []AWSCodePipelinePipeline_StageDeclaration `json:"Stages,omitempty"`
-}
-
-type UntypedAWSCodePipelinePipeline struct {
-
-	// ArtifactStore AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-artifactstore
-	ArtifactStore *UntypedAWSCodePipelinePipeline_ArtifactStore `json:"ArtifactStore,omitempty"`
-
-	// DisableInboundStageTransitions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-disableinboundstagetransitions
-	DisableInboundStageTransitions []UntypedAWSCodePipelinePipeline_StageTransition `json:"DisableInboundStageTransitions,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// RestartExecutionOnUpdate AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-restartexecutiononupdate
-	RestartExecutionOnUpdate interface{} `json:"RestartExecutionOnUpdate,omitempty"`
-
-	// RoleArn AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-rolearn
-	RoleArn interface{} `json:"RoleArn,omitempty"`
-
-	// Stages AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codepipeline-pipeline.html#cfn-codepipeline-pipeline-stages
-	Stages []UntypedAWSCodePipelinePipeline_StageDeclaration `json:"Stages,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

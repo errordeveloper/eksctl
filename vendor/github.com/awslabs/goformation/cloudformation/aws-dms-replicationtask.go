@@ -18,32 +18,32 @@ type AWSDMSReplicationTask struct {
 	// MigrationType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-migrationtype
-	MigrationType string `json:"MigrationType,omitempty"`
+	MigrationType *StringIntrinsic `json:"MigrationType,omitempty"`
 
 	// ReplicationInstanceArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-replicationinstancearn
-	ReplicationInstanceArn string `json:"ReplicationInstanceArn,omitempty"`
+	ReplicationInstanceArn *StringIntrinsic `json:"ReplicationInstanceArn,omitempty"`
 
 	// ReplicationTaskIdentifier AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-replicationtaskidentifier
-	ReplicationTaskIdentifier string `json:"ReplicationTaskIdentifier,omitempty"`
+	ReplicationTaskIdentifier *StringIntrinsic `json:"ReplicationTaskIdentifier,omitempty"`
 
 	// ReplicationTaskSettings AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-replicationtasksettings
-	ReplicationTaskSettings string `json:"ReplicationTaskSettings,omitempty"`
+	ReplicationTaskSettings *StringIntrinsic `json:"ReplicationTaskSettings,omitempty"`
 
 	// SourceEndpointArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-sourceendpointarn
-	SourceEndpointArn string `json:"SourceEndpointArn,omitempty"`
+	SourceEndpointArn *StringIntrinsic `json:"SourceEndpointArn,omitempty"`
 
 	// TableMappings AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-tablemappings
-	TableMappings string `json:"TableMappings,omitempty"`
+	TableMappings *StringIntrinsic `json:"TableMappings,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -53,55 +53,7 @@ type AWSDMSReplicationTask struct {
 	// TargetEndpointArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-targetendpointarn
-	TargetEndpointArn string `json:"TargetEndpointArn,omitempty"`
-}
-
-type UntypedAWSDMSReplicationTask struct {
-
-	// CdcStartTime AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-cdcstarttime
-	CdcStartTime interface{} `json:"CdcStartTime,omitempty"`
-
-	// MigrationType AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-migrationtype
-	MigrationType interface{} `json:"MigrationType,omitempty"`
-
-	// ReplicationInstanceArn AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-replicationinstancearn
-	ReplicationInstanceArn interface{} `json:"ReplicationInstanceArn,omitempty"`
-
-	// ReplicationTaskIdentifier AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-replicationtaskidentifier
-	ReplicationTaskIdentifier interface{} `json:"ReplicationTaskIdentifier,omitempty"`
-
-	// ReplicationTaskSettings AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-replicationtasksettings
-	ReplicationTaskSettings interface{} `json:"ReplicationTaskSettings,omitempty"`
-
-	// SourceEndpointArn AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-sourceendpointarn
-	SourceEndpointArn interface{} `json:"SourceEndpointArn,omitempty"`
-
-	// TableMappings AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-tablemappings
-	TableMappings interface{} `json:"TableMappings,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// TargetEndpointArn AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationtask.html#cfn-dms-replicationtask-targetendpointarn
-	TargetEndpointArn interface{} `json:"TargetEndpointArn,omitempty"`
+	TargetEndpointArn *StringIntrinsic `json:"TargetEndpointArn,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

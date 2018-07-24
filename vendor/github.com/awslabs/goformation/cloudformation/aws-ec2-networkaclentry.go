@@ -13,7 +13,7 @@ type AWSEC2NetworkAclEntry struct {
 	// CidrBlock AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-cidrblock
-	CidrBlock string `json:"CidrBlock,omitempty"`
+	CidrBlock *StringIntrinsic `json:"CidrBlock,omitempty"`
 
 	// Egress AWS CloudFormation Property
 	// Required: false
@@ -28,12 +28,12 @@ type AWSEC2NetworkAclEntry struct {
 	// Ipv6CidrBlock AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-ipv6cidrblock
-	Ipv6CidrBlock string `json:"Ipv6CidrBlock,omitempty"`
+	Ipv6CidrBlock *StringIntrinsic `json:"Ipv6CidrBlock,omitempty"`
 
 	// NetworkAclId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-networkaclid
-	NetworkAclId string `json:"NetworkAclId,omitempty"`
+	NetworkAclId *StringIntrinsic `json:"NetworkAclId,omitempty"`
 
 	// PortRange AWS CloudFormation Property
 	// Required: false
@@ -48,60 +48,12 @@ type AWSEC2NetworkAclEntry struct {
 	// RuleAction AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-ruleaction
-	RuleAction string `json:"RuleAction,omitempty"`
+	RuleAction *StringIntrinsic `json:"RuleAction,omitempty"`
 
 	// RuleNumber AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-rulenumber
 	RuleNumber int `json:"RuleNumber,omitempty"`
-}
-
-type UntypedAWSEC2NetworkAclEntry struct {
-
-	// CidrBlock AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-cidrblock
-	CidrBlock interface{} `json:"CidrBlock,omitempty"`
-
-	// Egress AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-egress
-	Egress interface{} `json:"Egress,omitempty"`
-
-	// Icmp AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-icmp
-	Icmp *UntypedAWSEC2NetworkAclEntry_Icmp `json:"Icmp,omitempty"`
-
-	// Ipv6CidrBlock AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-ipv6cidrblock
-	Ipv6CidrBlock interface{} `json:"Ipv6CidrBlock,omitempty"`
-
-	// NetworkAclId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-networkaclid
-	NetworkAclId interface{} `json:"NetworkAclId,omitempty"`
-
-	// PortRange AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-portrange
-	PortRange *UntypedAWSEC2NetworkAclEntry_PortRange `json:"PortRange,omitempty"`
-
-	// Protocol AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-protocol
-	Protocol interface{} `json:"Protocol,omitempty"`
-
-	// RuleAction AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-ruleaction
-	RuleAction interface{} `json:"RuleAction,omitempty"`
-
-	// RuleNumber AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl-entry.html#cfn-ec2-networkaclentry-rulenumber
-	RuleNumber interface{} `json:"RuleNumber,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

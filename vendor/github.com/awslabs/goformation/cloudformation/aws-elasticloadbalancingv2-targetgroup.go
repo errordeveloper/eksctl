@@ -18,17 +18,17 @@ type AWSElasticLoadBalancingV2TargetGroup struct {
 	// HealthCheckPath AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthcheckpath
-	HealthCheckPath string `json:"HealthCheckPath,omitempty"`
+	HealthCheckPath *StringIntrinsic `json:"HealthCheckPath,omitempty"`
 
 	// HealthCheckPort AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthcheckport
-	HealthCheckPort string `json:"HealthCheckPort,omitempty"`
+	HealthCheckPort *StringIntrinsic `json:"HealthCheckPort,omitempty"`
 
 	// HealthCheckProtocol AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthcheckprotocol
-	HealthCheckProtocol string `json:"HealthCheckProtocol,omitempty"`
+	HealthCheckProtocol *StringIntrinsic `json:"HealthCheckProtocol,omitempty"`
 
 	// HealthCheckTimeoutSeconds AWS CloudFormation Property
 	// Required: false
@@ -48,7 +48,7 @@ type AWSElasticLoadBalancingV2TargetGroup struct {
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// Port AWS CloudFormation Property
 	// Required: true
@@ -58,7 +58,7 @@ type AWSElasticLoadBalancingV2TargetGroup struct {
 	// Protocol AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-protocol
-	Protocol string `json:"Protocol,omitempty"`
+	Protocol *StringIntrinsic `json:"Protocol,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -73,7 +73,7 @@ type AWSElasticLoadBalancingV2TargetGroup struct {
 	// TargetType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targettype
-	TargetType string `json:"TargetType,omitempty"`
+	TargetType *StringIntrinsic `json:"TargetType,omitempty"`
 
 	// Targets AWS CloudFormation Property
 	// Required: false
@@ -88,90 +88,7 @@ type AWSElasticLoadBalancingV2TargetGroup struct {
 	// VpcId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-vpcid
-	VpcId string `json:"VpcId,omitempty"`
-}
-
-type UntypedAWSElasticLoadBalancingV2TargetGroup struct {
-
-	// HealthCheckIntervalSeconds AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthcheckintervalseconds
-	HealthCheckIntervalSeconds interface{} `json:"HealthCheckIntervalSeconds,omitempty"`
-
-	// HealthCheckPath AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthcheckpath
-	HealthCheckPath interface{} `json:"HealthCheckPath,omitempty"`
-
-	// HealthCheckPort AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthcheckport
-	HealthCheckPort interface{} `json:"HealthCheckPort,omitempty"`
-
-	// HealthCheckProtocol AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthcheckprotocol
-	HealthCheckProtocol interface{} `json:"HealthCheckProtocol,omitempty"`
-
-	// HealthCheckTimeoutSeconds AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthchecktimeoutseconds
-	HealthCheckTimeoutSeconds interface{} `json:"HealthCheckTimeoutSeconds,omitempty"`
-
-	// HealthyThresholdCount AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthythresholdcount
-	HealthyThresholdCount interface{} `json:"HealthyThresholdCount,omitempty"`
-
-	// Matcher AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-matcher
-	Matcher *UntypedAWSElasticLoadBalancingV2TargetGroup_Matcher `json:"Matcher,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// Port AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-port
-	Port interface{} `json:"Port,omitempty"`
-
-	// Protocol AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-protocol
-	Protocol interface{} `json:"Protocol,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// TargetGroupAttributes AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattributes
-	TargetGroupAttributes []UntypedAWSElasticLoadBalancingV2TargetGroup_TargetGroupAttribute `json:"TargetGroupAttributes,omitempty"`
-
-	// TargetType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targettype
-	TargetType interface{} `json:"TargetType,omitempty"`
-
-	// Targets AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-targets
-	Targets []UntypedAWSElasticLoadBalancingV2TargetGroup_TargetDescription `json:"Targets,omitempty"`
-
-	// UnhealthyThresholdCount AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-unhealthythresholdcount
-	UnhealthyThresholdCount interface{} `json:"UnhealthyThresholdCount,omitempty"`
-
-	// VpcId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-vpcid
-	VpcId interface{} `json:"VpcId,omitempty"`
+	VpcId *StringIntrinsic `json:"VpcId,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

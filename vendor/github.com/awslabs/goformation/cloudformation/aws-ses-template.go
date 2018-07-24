@@ -16,14 +16,6 @@ type AWSSESTemplate struct {
 	Template *AWSSESTemplate_Template `json:"Template,omitempty"`
 }
 
-type UntypedAWSSESTemplate struct {
-
-	// Template AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-template.html#cfn-ses-template-template
-	Template *UntypedAWSSESTemplate_Template `json:"Template,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSSESTemplate) AWSCloudFormationType() string {
 	return "AWS::SES::Template"

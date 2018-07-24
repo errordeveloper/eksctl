@@ -13,35 +13,17 @@ type AWSApiGatewayDocumentationVersion struct {
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationversion.html#cfn-apigateway-documentationversion-description
-	Description string `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 
 	// DocumentationVersion AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationversion.html#cfn-apigateway-documentationversion-documentationversion
-	DocumentationVersion string `json:"DocumentationVersion,omitempty"`
+	DocumentationVersion *StringIntrinsic `json:"DocumentationVersion,omitempty"`
 
 	// RestApiId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationversion.html#cfn-apigateway-documentationversion-restapiid
-	RestApiId string `json:"RestApiId,omitempty"`
-}
-
-type UntypedAWSApiGatewayDocumentationVersion struct {
-
-	// Description AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationversion.html#cfn-apigateway-documentationversion-description
-	Description interface{} `json:"Description,omitempty"`
-
-	// DocumentationVersion AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationversion.html#cfn-apigateway-documentationversion-documentationversion
-	DocumentationVersion interface{} `json:"DocumentationVersion,omitempty"`
-
-	// RestApiId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-documentationversion.html#cfn-apigateway-documentationversion-restapiid
-	RestApiId interface{} `json:"RestApiId,omitempty"`
+	RestApiId *StringIntrinsic `json:"RestApiId,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

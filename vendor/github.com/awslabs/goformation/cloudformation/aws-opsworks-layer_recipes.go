@@ -7,55 +7,27 @@ type AWSOpsWorksLayer_Recipes struct {
 	// Configure AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-configure
-	Configure []string `json:"Configure,omitempty"`
+	Configure []*StringIntrinsic `json:"Configure,omitempty"`
 
 	// Deploy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-deploy
-	Deploy []string `json:"Deploy,omitempty"`
+	Deploy []*StringIntrinsic `json:"Deploy,omitempty"`
 
 	// Setup AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-setup
-	Setup []string `json:"Setup,omitempty"`
+	Setup []*StringIntrinsic `json:"Setup,omitempty"`
 
 	// Shutdown AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-shutdown
-	Shutdown []string `json:"Shutdown,omitempty"`
+	Shutdown []*StringIntrinsic `json:"Shutdown,omitempty"`
 
 	// Undeploy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-undeploy
-	Undeploy []string `json:"Undeploy,omitempty"`
-}
-
-type UntypedAWSOpsWorksLayer_Recipes struct {
-
-	// Configure AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-configure
-	Configure []interface{} `json:"Configure,omitempty"`
-
-	// Deploy AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-deploy
-	Deploy []interface{} `json:"Deploy,omitempty"`
-
-	// Setup AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-setup
-	Setup []interface{} `json:"Setup,omitempty"`
-
-	// Shutdown AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-shutdown
-	Shutdown []interface{} `json:"Shutdown,omitempty"`
-
-	// Undeploy AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opsworks-layer-recipes.html#cfn-opsworks-layer-customrecipes-undeploy
-	Undeploy []interface{} `json:"Undeploy,omitempty"`
+	Undeploy []*StringIntrinsic `json:"Undeploy,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

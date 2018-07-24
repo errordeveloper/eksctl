@@ -23,7 +23,7 @@ type AWSEMRCluster struct {
 	// AutoScalingRole AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-autoscalingrole
-	AutoScalingRole string `json:"AutoScalingRole,omitempty"`
+	AutoScalingRole *StringIntrinsic `json:"AutoScalingRole,omitempty"`
 
 	// BootstrapActions AWS CloudFormation Property
 	// Required: false
@@ -38,7 +38,7 @@ type AWSEMRCluster struct {
 	// CustomAmiId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-customamiid
-	CustomAmiId string `json:"CustomAmiId,omitempty"`
+	CustomAmiId *StringIntrinsic `json:"CustomAmiId,omitempty"`
 
 	// EbsRootVolumeSize AWS CloudFormation Property
 	// Required: false
@@ -53,37 +53,37 @@ type AWSEMRCluster struct {
 	// JobFlowRole AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-jobflowrole
-	JobFlowRole string `json:"JobFlowRole,omitempty"`
+	JobFlowRole *StringIntrinsic `json:"JobFlowRole,omitempty"`
 
 	// LogUri AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-loguri
-	LogUri string `json:"LogUri,omitempty"`
+	LogUri *StringIntrinsic `json:"LogUri,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// ReleaseLabel AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-releaselabel
-	ReleaseLabel string `json:"ReleaseLabel,omitempty"`
+	ReleaseLabel *StringIntrinsic `json:"ReleaseLabel,omitempty"`
 
 	// ScaleDownBehavior AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-scaledownbehavior
-	ScaleDownBehavior string `json:"ScaleDownBehavior,omitempty"`
+	ScaleDownBehavior *StringIntrinsic `json:"ScaleDownBehavior,omitempty"`
 
 	// SecurityConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-securityconfiguration
-	SecurityConfiguration string `json:"SecurityConfiguration,omitempty"`
+	SecurityConfiguration *StringIntrinsic `json:"SecurityConfiguration,omitempty"`
 
 	// ServiceRole AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-servicerole
-	ServiceRole string `json:"ServiceRole,omitempty"`
+	ServiceRole *StringIntrinsic `json:"ServiceRole,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -94,94 +94,6 @@ type AWSEMRCluster struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-visibletoallusers
 	VisibleToAllUsers bool `json:"VisibleToAllUsers,omitempty"`
-}
-
-type UntypedAWSEMRCluster struct {
-
-	// AdditionalInfo AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-additionalinfo
-	AdditionalInfo interface{} `json:"AdditionalInfo,omitempty"`
-
-	// Applications AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-applications
-	Applications []UntypedAWSEMRCluster_Application `json:"Applications,omitempty"`
-
-	// AutoScalingRole AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-autoscalingrole
-	AutoScalingRole interface{} `json:"AutoScalingRole,omitempty"`
-
-	// BootstrapActions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-bootstrapactions
-	BootstrapActions []UntypedAWSEMRCluster_BootstrapActionConfig `json:"BootstrapActions,omitempty"`
-
-	// Configurations AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-configurations
-	Configurations []UntypedAWSEMRCluster_Configuration `json:"Configurations,omitempty"`
-
-	// CustomAmiId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-customamiid
-	CustomAmiId interface{} `json:"CustomAmiId,omitempty"`
-
-	// EbsRootVolumeSize AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-ebsrootvolumesize
-	EbsRootVolumeSize interface{} `json:"EbsRootVolumeSize,omitempty"`
-
-	// Instances AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-instances
-	Instances *UntypedAWSEMRCluster_JobFlowInstancesConfig `json:"Instances,omitempty"`
-
-	// JobFlowRole AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-jobflowrole
-	JobFlowRole interface{} `json:"JobFlowRole,omitempty"`
-
-	// LogUri AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-loguri
-	LogUri interface{} `json:"LogUri,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// ReleaseLabel AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-releaselabel
-	ReleaseLabel interface{} `json:"ReleaseLabel,omitempty"`
-
-	// ScaleDownBehavior AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-scaledownbehavior
-	ScaleDownBehavior interface{} `json:"ScaleDownBehavior,omitempty"`
-
-	// SecurityConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-securityconfiguration
-	SecurityConfiguration interface{} `json:"SecurityConfiguration,omitempty"`
-
-	// ServiceRole AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-servicerole
-	ServiceRole interface{} `json:"ServiceRole,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// VisibleToAllUsers AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticmapreduce-cluster.html#cfn-elasticmapreduce-cluster-visibletoallusers
-	VisibleToAllUsers interface{} `json:"VisibleToAllUsers,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

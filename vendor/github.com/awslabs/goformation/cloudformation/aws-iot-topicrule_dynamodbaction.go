@@ -7,95 +7,47 @@ type AWSIoTTopicRule_DynamoDBAction struct {
 	// HashKeyField AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-hashkeyfield
-	HashKeyField string `json:"HashKeyField,omitempty"`
+	HashKeyField *StringIntrinsic `json:"HashKeyField,omitempty"`
 
 	// HashKeyType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-hashkeytype
-	HashKeyType string `json:"HashKeyType,omitempty"`
+	HashKeyType *StringIntrinsic `json:"HashKeyType,omitempty"`
 
 	// HashKeyValue AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-hashkeyvalue
-	HashKeyValue string `json:"HashKeyValue,omitempty"`
+	HashKeyValue *StringIntrinsic `json:"HashKeyValue,omitempty"`
 
 	// PayloadField AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-payloadfield
-	PayloadField string `json:"PayloadField,omitempty"`
+	PayloadField *StringIntrinsic `json:"PayloadField,omitempty"`
 
 	// RangeKeyField AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-rangekeyfield
-	RangeKeyField string `json:"RangeKeyField,omitempty"`
+	RangeKeyField *StringIntrinsic `json:"RangeKeyField,omitempty"`
 
 	// RangeKeyType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-rangekeytype
-	RangeKeyType string `json:"RangeKeyType,omitempty"`
+	RangeKeyType *StringIntrinsic `json:"RangeKeyType,omitempty"`
 
 	// RangeKeyValue AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-rangekeyvalue
-	RangeKeyValue string `json:"RangeKeyValue,omitempty"`
+	RangeKeyValue *StringIntrinsic `json:"RangeKeyValue,omitempty"`
 
 	// RoleArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-rolearn
-	RoleArn string `json:"RoleArn,omitempty"`
+	RoleArn *StringIntrinsic `json:"RoleArn,omitempty"`
 
 	// TableName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-tablename
-	TableName string `json:"TableName,omitempty"`
-}
-
-type UntypedAWSIoTTopicRule_DynamoDBAction struct {
-
-	// HashKeyField AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-hashkeyfield
-	HashKeyField interface{} `json:"HashKeyField,omitempty"`
-
-	// HashKeyType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-hashkeytype
-	HashKeyType interface{} `json:"HashKeyType,omitempty"`
-
-	// HashKeyValue AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-hashkeyvalue
-	HashKeyValue interface{} `json:"HashKeyValue,omitempty"`
-
-	// PayloadField AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-payloadfield
-	PayloadField interface{} `json:"PayloadField,omitempty"`
-
-	// RangeKeyField AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-rangekeyfield
-	RangeKeyField interface{} `json:"RangeKeyField,omitempty"`
-
-	// RangeKeyType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-rangekeytype
-	RangeKeyType interface{} `json:"RangeKeyType,omitempty"`
-
-	// RangeKeyValue AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-rangekeyvalue
-	RangeKeyValue interface{} `json:"RangeKeyValue,omitempty"`
-
-	// RoleArn AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-rolearn
-	RoleArn interface{} `json:"RoleArn,omitempty"`
-
-	// TableName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-dynamodbaction.html#cfn-iot-topicrule-dynamodbaction-tablename
-	TableName interface{} `json:"TableName,omitempty"`
+	TableName *StringIntrinsic `json:"TableName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

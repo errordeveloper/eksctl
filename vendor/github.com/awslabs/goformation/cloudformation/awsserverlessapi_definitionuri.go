@@ -10,7 +10,7 @@ import (
 
 // AWSServerlessApi_DefinitionUri is a helper struct that can hold either a String or S3Location value
 type AWSServerlessApi_DefinitionUri struct {
-	String *string
+	String **StringIntrinsic
 
 	S3Location *AWSServerlessApi_S3Location
 }
@@ -48,7 +48,7 @@ func (r *AWSServerlessApi_DefinitionUri) UnmarshalJSON(b []byte) error {
 
 	switch val := typecheck.(type) {
 
-	case string:
+	case *StringIntrinsic:
 		r.String = &val
 
 	case map[string]interface{}:

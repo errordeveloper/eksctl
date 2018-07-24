@@ -20,24 +20,6 @@ type AWSElasticBeanstalkApplication_MaxAgeRule struct {
 	MaxAgeInDays int `json:"MaxAgeInDays,omitempty"`
 }
 
-type UntypedAWSElasticBeanstalkApplication_MaxAgeRule struct {
-
-	// DeleteSourceFromS3 AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-deletesourcefroms3
-	DeleteSourceFromS3 interface{} `json:"DeleteSourceFromS3,omitempty"`
-
-	// Enabled AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-enabled
-	Enabled interface{} `json:"Enabled,omitempty"`
-
-	// MaxAgeInDays AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-maxagerule.html#cfn-elasticbeanstalk-application-maxagerule-maxageindays
-	MaxAgeInDays interface{} `json:"MaxAgeInDays,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSElasticBeanstalkApplication_MaxAgeRule) AWSCloudFormationType() string {
 	return "AWS::ElasticBeanstalk::Application.MaxAgeRule"

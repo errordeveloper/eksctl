@@ -7,55 +7,27 @@ type AWSS3Bucket_RedirectRule struct {
 	// HostName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-redirectrule.html#cfn-s3-websiteconfiguration-redirectrule-hostname
-	HostName string `json:"HostName,omitempty"`
+	HostName *StringIntrinsic `json:"HostName,omitempty"`
 
 	// HttpRedirectCode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-redirectrule.html#cfn-s3-websiteconfiguration-redirectrule-httpredirectcode
-	HttpRedirectCode string `json:"HttpRedirectCode,omitempty"`
+	HttpRedirectCode *StringIntrinsic `json:"HttpRedirectCode,omitempty"`
 
 	// Protocol AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-redirectrule.html#cfn-s3-websiteconfiguration-redirectrule-protocol
-	Protocol string `json:"Protocol,omitempty"`
+	Protocol *StringIntrinsic `json:"Protocol,omitempty"`
 
 	// ReplaceKeyPrefixWith AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-redirectrule.html#cfn-s3-websiteconfiguration-redirectrule-replacekeyprefixwith
-	ReplaceKeyPrefixWith string `json:"ReplaceKeyPrefixWith,omitempty"`
+	ReplaceKeyPrefixWith *StringIntrinsic `json:"ReplaceKeyPrefixWith,omitempty"`
 
 	// ReplaceKeyWith AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-redirectrule.html#cfn-s3-websiteconfiguration-redirectrule-replacekeywith
-	ReplaceKeyWith string `json:"ReplaceKeyWith,omitempty"`
-}
-
-type UntypedAWSS3Bucket_RedirectRule struct {
-
-	// HostName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-redirectrule.html#cfn-s3-websiteconfiguration-redirectrule-hostname
-	HostName interface{} `json:"HostName,omitempty"`
-
-	// HttpRedirectCode AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-redirectrule.html#cfn-s3-websiteconfiguration-redirectrule-httpredirectcode
-	HttpRedirectCode interface{} `json:"HttpRedirectCode,omitempty"`
-
-	// Protocol AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-redirectrule.html#cfn-s3-websiteconfiguration-redirectrule-protocol
-	Protocol interface{} `json:"Protocol,omitempty"`
-
-	// ReplaceKeyPrefixWith AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-redirectrule.html#cfn-s3-websiteconfiguration-redirectrule-replacekeyprefixwith
-	ReplaceKeyPrefixWith interface{} `json:"ReplaceKeyPrefixWith,omitempty"`
-
-	// ReplaceKeyWith AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-redirectrule.html#cfn-s3-websiteconfiguration-redirectrule-replacekeywith
-	ReplaceKeyWith interface{} `json:"ReplaceKeyWith,omitempty"`
+	ReplaceKeyWith *StringIntrinsic `json:"ReplaceKeyWith,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -10,14 +10,6 @@ type AWSKinesisFirehoseDeliveryStream_SplunkRetryOptions struct {
 	DurationInSeconds int `json:"DurationInSeconds,omitempty"`
 }
 
-type UntypedAWSKinesisFirehoseDeliveryStream_SplunkRetryOptions struct {
-
-	// DurationInSeconds AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkretryoptions.html#cfn-kinesisfirehose-deliverystream-splunkretryoptions-durationinseconds
-	DurationInSeconds interface{} `json:"DurationInSeconds,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSKinesisFirehoseDeliveryStream_SplunkRetryOptions) AWSCloudFormationType() string {
 	return "AWS::KinesisFirehose::DeliveryStream.SplunkRetryOptions"

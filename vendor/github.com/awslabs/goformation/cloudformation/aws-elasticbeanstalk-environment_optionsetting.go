@@ -7,45 +7,22 @@ type AWSElasticBeanstalkEnvironment_OptionSetting struct {
 	// Namespace AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-option-settings.html#cfn-beanstalk-optionsettings-namespace
-	Namespace string `json:"Namespace,omitempty"`
+	Namespace *StringIntrinsic `json:"Namespace,omitempty"`
 
 	// OptionName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-option-settings.html#cfn-beanstalk-optionsettings-optionname
-	OptionName string `json:"OptionName,omitempty"`
+	OptionName *StringIntrinsic `json:"OptionName,omitempty"`
 
 	// ResourceName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-option-settings.html#cfn-elasticbeanstalk-environment-optionsetting-resourcename
-	ResourceName string `json:"ResourceName,omitempty"`
+	ResourceName *StringIntrinsic `json:"ResourceName,omitempty"`
 
 	// Value AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-option-settings.html#cfn-beanstalk-optionsettings-value
-	Value string `json:"Value,omitempty"`
-}
-
-type UntypedAWSElasticBeanstalkEnvironment_OptionSetting struct {
-
-	// Namespace AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-option-settings.html#cfn-beanstalk-optionsettings-namespace
-	Namespace interface{} `json:"Namespace,omitempty"`
-
-	// OptionName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-option-settings.html#cfn-beanstalk-optionsettings-optionname
-	OptionName interface{} `json:"OptionName,omitempty"`
-
-	// ResourceName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-option-settings.html#cfn-elasticbeanstalk-environment-optionsetting-resourcename
-	ResourceName interface{} `json:"ResourceName,omitempty"`
-
-	// Value AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-beanstalk-option-settings.html#cfn-beanstalk-optionsettings-value
-	Value interface{} `json:"Value,omitempty"`
+	Value *StringIntrinsic `json:"Value,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

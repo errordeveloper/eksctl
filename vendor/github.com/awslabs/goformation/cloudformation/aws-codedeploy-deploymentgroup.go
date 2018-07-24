@@ -18,7 +18,7 @@ type AWSCodeDeployDeploymentGroup struct {
 	// ApplicationName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-applicationname
-	ApplicationName string `json:"ApplicationName,omitempty"`
+	ApplicationName *StringIntrinsic `json:"ApplicationName,omitempty"`
 
 	// AutoRollbackConfiguration AWS CloudFormation Property
 	// Required: false
@@ -28,7 +28,7 @@ type AWSCodeDeployDeploymentGroup struct {
 	// AutoScalingGroups AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-autoscalinggroups
-	AutoScalingGroups []string `json:"AutoScalingGroups,omitempty"`
+	AutoScalingGroups []*StringIntrinsic `json:"AutoScalingGroups,omitempty"`
 
 	// Deployment AWS CloudFormation Property
 	// Required: false
@@ -38,12 +38,12 @@ type AWSCodeDeployDeploymentGroup struct {
 	// DeploymentConfigName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-deploymentconfigname
-	DeploymentConfigName string `json:"DeploymentConfigName,omitempty"`
+	DeploymentConfigName *StringIntrinsic `json:"DeploymentConfigName,omitempty"`
 
 	// DeploymentGroupName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-deploymentgroupname
-	DeploymentGroupName string `json:"DeploymentGroupName,omitempty"`
+	DeploymentGroupName *StringIntrinsic `json:"DeploymentGroupName,omitempty"`
 
 	// DeploymentStyle AWS CloudFormation Property
 	// Required: false
@@ -68,80 +68,12 @@ type AWSCodeDeployDeploymentGroup struct {
 	// ServiceRoleArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-servicerolearn
-	ServiceRoleArn string `json:"ServiceRoleArn,omitempty"`
+	ServiceRoleArn *StringIntrinsic `json:"ServiceRoleArn,omitempty"`
 
 	// TriggerConfigurations AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-triggerconfigurations
 	TriggerConfigurations []AWSCodeDeployDeploymentGroup_TriggerConfig `json:"TriggerConfigurations,omitempty"`
-}
-
-type UntypedAWSCodeDeployDeploymentGroup struct {
-
-	// AlarmConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-alarmconfiguration
-	AlarmConfiguration *UntypedAWSCodeDeployDeploymentGroup_AlarmConfiguration `json:"AlarmConfiguration,omitempty"`
-
-	// ApplicationName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-applicationname
-	ApplicationName interface{} `json:"ApplicationName,omitempty"`
-
-	// AutoRollbackConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-autorollbackconfiguration
-	AutoRollbackConfiguration *UntypedAWSCodeDeployDeploymentGroup_AutoRollbackConfiguration `json:"AutoRollbackConfiguration,omitempty"`
-
-	// AutoScalingGroups AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-autoscalinggroups
-	AutoScalingGroups []interface{} `json:"AutoScalingGroups,omitempty"`
-
-	// Deployment AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-deployment
-	Deployment *UntypedAWSCodeDeployDeploymentGroup_Deployment `json:"Deployment,omitempty"`
-
-	// DeploymentConfigName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-deploymentconfigname
-	DeploymentConfigName interface{} `json:"DeploymentConfigName,omitempty"`
-
-	// DeploymentGroupName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-deploymentgroupname
-	DeploymentGroupName interface{} `json:"DeploymentGroupName,omitempty"`
-
-	// DeploymentStyle AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-deploymentstyle
-	DeploymentStyle *UntypedAWSCodeDeployDeploymentGroup_DeploymentStyle `json:"DeploymentStyle,omitempty"`
-
-	// Ec2TagFilters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-ec2tagfilters
-	Ec2TagFilters []UntypedAWSCodeDeployDeploymentGroup_EC2TagFilter `json:"Ec2TagFilters,omitempty"`
-
-	// LoadBalancerInfo AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-loadbalancerinfo
-	LoadBalancerInfo *UntypedAWSCodeDeployDeploymentGroup_LoadBalancerInfo `json:"LoadBalancerInfo,omitempty"`
-
-	// OnPremisesInstanceTagFilters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-onpremisesinstancetagfilters
-	OnPremisesInstanceTagFilters []UntypedAWSCodeDeployDeploymentGroup_TagFilter `json:"OnPremisesInstanceTagFilters,omitempty"`
-
-	// ServiceRoleArn AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-servicerolearn
-	ServiceRoleArn interface{} `json:"ServiceRoleArn,omitempty"`
-
-	// TriggerConfigurations AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codedeploy-deploymentgroup.html#cfn-codedeploy-deploymentgroup-triggerconfigurations
-	TriggerConfigurations []UntypedAWSCodeDeployDeploymentGroup_TriggerConfig `json:"TriggerConfigurations,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

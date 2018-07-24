@@ -12,20 +12,7 @@ type AWSS3Bucket_DataExport struct {
 	// OutputSchemaVersion AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-dataexport.html#cfn-s3-bucket-dataexport-outputschemaversion
-	OutputSchemaVersion string `json:"OutputSchemaVersion,omitempty"`
-}
-
-type UntypedAWSS3Bucket_DataExport struct {
-
-	// Destination AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-dataexport.html#cfn-s3-bucket-dataexport-destination
-	Destination *UntypedAWSS3Bucket_Destination `json:"Destination,omitempty"`
-
-	// OutputSchemaVersion AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-dataexport.html#cfn-s3-bucket-dataexport-outputschemaversion
-	OutputSchemaVersion interface{} `json:"OutputSchemaVersion,omitempty"`
+	OutputSchemaVersion *StringIntrinsic `json:"OutputSchemaVersion,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

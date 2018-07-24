@@ -7,15 +7,7 @@ type AWSRoute53HostedZone_QueryLoggingConfig struct {
 	// CloudWatchLogsLogGroupArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-queryloggingconfig.html#cfn-route53-hostedzone-queryloggingconfig-cloudwatchlogsloggrouparn
-	CloudWatchLogsLogGroupArn string `json:"CloudWatchLogsLogGroupArn,omitempty"`
-}
-
-type UntypedAWSRoute53HostedZone_QueryLoggingConfig struct {
-
-	// CloudWatchLogsLogGroupArn AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-hostedzone-queryloggingconfig.html#cfn-route53-hostedzone-queryloggingconfig-cloudwatchlogsloggrouparn
-	CloudWatchLogsLogGroupArn interface{} `json:"CloudWatchLogsLogGroupArn,omitempty"`
+	CloudWatchLogsLogGroupArn *StringIntrinsic `json:"CloudWatchLogsLogGroupArn,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

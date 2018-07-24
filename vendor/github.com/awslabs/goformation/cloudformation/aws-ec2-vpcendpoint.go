@@ -23,75 +23,32 @@ type AWSEC2VPCEndpoint struct {
 	// RouteTableIds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-routetableids
-	RouteTableIds []string `json:"RouteTableIds,omitempty"`
+	RouteTableIds []*StringIntrinsic `json:"RouteTableIds,omitempty"`
 
 	// SecurityGroupIds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-securitygroupids
-	SecurityGroupIds []string `json:"SecurityGroupIds,omitempty"`
+	SecurityGroupIds []*StringIntrinsic `json:"SecurityGroupIds,omitempty"`
 
 	// ServiceName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-servicename
-	ServiceName string `json:"ServiceName,omitempty"`
+	ServiceName *StringIntrinsic `json:"ServiceName,omitempty"`
 
 	// SubnetIds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-subnetids
-	SubnetIds []string `json:"SubnetIds,omitempty"`
+	SubnetIds []*StringIntrinsic `json:"SubnetIds,omitempty"`
 
 	// VPCEndpointType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-vpcendpointtype
-	VPCEndpointType string `json:"VPCEndpointType,omitempty"`
+	VPCEndpointType *StringIntrinsic `json:"VPCEndpointType,omitempty"`
 
 	// VpcId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-vpcid
-	VpcId string `json:"VpcId,omitempty"`
-}
-
-type UntypedAWSEC2VPCEndpoint struct {
-
-	// IsPrivateDnsEnabled AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-isprivatednsenabled
-	IsPrivateDnsEnabled interface{} `json:"IsPrivateDnsEnabled,omitempty"`
-
-	// PolicyDocument AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-policydocument
-	PolicyDocument interface{} `json:"PolicyDocument,omitempty"`
-
-	// RouteTableIds AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-routetableids
-	RouteTableIds []interface{} `json:"RouteTableIds,omitempty"`
-
-	// SecurityGroupIds AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-securitygroupids
-	SecurityGroupIds []interface{} `json:"SecurityGroupIds,omitempty"`
-
-	// ServiceName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-servicename
-	ServiceName interface{} `json:"ServiceName,omitempty"`
-
-	// SubnetIds AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-subnetids
-	SubnetIds []interface{} `json:"SubnetIds,omitempty"`
-
-	// VPCEndpointType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-vpcendpointtype
-	VPCEndpointType interface{} `json:"VPCEndpointType,omitempty"`
-
-	// VpcId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-vpcid
-	VpcId interface{} `json:"VpcId,omitempty"`
+	VpcId *StringIntrinsic `json:"VpcId,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

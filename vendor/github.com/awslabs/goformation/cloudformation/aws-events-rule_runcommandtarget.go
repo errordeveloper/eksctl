@@ -7,25 +7,12 @@ type AWSEventsRule_RunCommandTarget struct {
 	// Key AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html#cfn-events-rule-runcommandtarget-key
-	Key string `json:"Key,omitempty"`
+	Key *StringIntrinsic `json:"Key,omitempty"`
 
 	// Values AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html#cfn-events-rule-runcommandtarget-values
-	Values []string `json:"Values,omitempty"`
-}
-
-type UntypedAWSEventsRule_RunCommandTarget struct {
-
-	// Key AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html#cfn-events-rule-runcommandtarget-key
-	Key interface{} `json:"Key,omitempty"`
-
-	// Values AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-runcommandtarget.html#cfn-events-rule-runcommandtarget-values
-	Values []interface{} `json:"Values,omitempty"`
+	Values []*StringIntrinsic `json:"Values,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -7,45 +7,22 @@ type AWSCodePipelineCustomActionType_Settings struct {
 	// EntityUrlTemplate AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-entityurltemplate
-	EntityUrlTemplate string `json:"EntityUrlTemplate,omitempty"`
+	EntityUrlTemplate *StringIntrinsic `json:"EntityUrlTemplate,omitempty"`
 
 	// ExecutionUrlTemplate AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-executionurltemplate
-	ExecutionUrlTemplate string `json:"ExecutionUrlTemplate,omitempty"`
+	ExecutionUrlTemplate *StringIntrinsic `json:"ExecutionUrlTemplate,omitempty"`
 
 	// RevisionUrlTemplate AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-revisionurltemplate
-	RevisionUrlTemplate string `json:"RevisionUrlTemplate,omitempty"`
+	RevisionUrlTemplate *StringIntrinsic `json:"RevisionUrlTemplate,omitempty"`
 
 	// ThirdPartyConfigurationUrl AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-thirdpartyconfigurationurl
-	ThirdPartyConfigurationUrl string `json:"ThirdPartyConfigurationUrl,omitempty"`
-}
-
-type UntypedAWSCodePipelineCustomActionType_Settings struct {
-
-	// EntityUrlTemplate AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-entityurltemplate
-	EntityUrlTemplate interface{} `json:"EntityUrlTemplate,omitempty"`
-
-	// ExecutionUrlTemplate AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-executionurltemplate
-	ExecutionUrlTemplate interface{} `json:"ExecutionUrlTemplate,omitempty"`
-
-	// RevisionUrlTemplate AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-revisionurltemplate
-	RevisionUrlTemplate interface{} `json:"RevisionUrlTemplate,omitempty"`
-
-	// ThirdPartyConfigurationUrl AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-customactiontype-settings.html#cfn-codepipeline-customactiontype-settings-thirdpartyconfigurationurl
-	ThirdPartyConfigurationUrl interface{} `json:"ThirdPartyConfigurationUrl,omitempty"`
+	ThirdPartyConfigurationUrl *StringIntrinsic `json:"ThirdPartyConfigurationUrl,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

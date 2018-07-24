@@ -10,14 +10,6 @@ type AWSS3Bucket_AbortIncompleteMultipartUpload struct {
 	DaysAfterInitiation int `json:"DaysAfterInitiation,omitempty"`
 }
 
-type UntypedAWSS3Bucket_AbortIncompleteMultipartUpload struct {
-
-	// DaysAfterInitiation AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-abortincompletemultipartupload.html#cfn-s3-bucket-abortincompletemultipartupload-daysafterinitiation
-	DaysAfterInitiation interface{} `json:"DaysAfterInitiation,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSS3Bucket_AbortIncompleteMultipartUpload) AWSCloudFormationType() string {
 	return "AWS::S3::Bucket.AbortIncompleteMultipartUpload"

@@ -13,12 +13,12 @@ type AWSSageMakerModel struct {
 	// ExecutionRoleArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-executionrolearn
-	ExecutionRoleArn string `json:"ExecutionRoleArn,omitempty"`
+	ExecutionRoleArn *StringIntrinsic `json:"ExecutionRoleArn,omitempty"`
 
 	// ModelName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-modelname
-	ModelName string `json:"ModelName,omitempty"`
+	ModelName *StringIntrinsic `json:"ModelName,omitempty"`
 
 	// PrimaryContainer AWS CloudFormation Property
 	// Required: true
@@ -34,34 +34,6 @@ type AWSSageMakerModel struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-vpcconfig
 	VpcConfig *AWSSageMakerModel_VpcConfig `json:"VpcConfig,omitempty"`
-}
-
-type UntypedAWSSageMakerModel struct {
-
-	// ExecutionRoleArn AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-executionrolearn
-	ExecutionRoleArn interface{} `json:"ExecutionRoleArn,omitempty"`
-
-	// ModelName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-modelname
-	ModelName interface{} `json:"ModelName,omitempty"`
-
-	// PrimaryContainer AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-primarycontainer
-	PrimaryContainer *UntypedAWSSageMakerModel_ContainerDefinition `json:"PrimaryContainer,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// VpcConfig AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-model.html#cfn-sagemaker-model-vpcconfig
-	VpcConfig *UntypedAWSSageMakerModel_VpcConfig `json:"VpcConfig,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

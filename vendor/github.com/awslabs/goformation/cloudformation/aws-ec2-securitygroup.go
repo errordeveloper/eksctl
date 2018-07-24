@@ -13,12 +13,12 @@ type AWSEC2SecurityGroup struct {
 	// GroupDescription AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html#cfn-ec2-securitygroup-groupdescription
-	GroupDescription string `json:"GroupDescription,omitempty"`
+	GroupDescription *StringIntrinsic `json:"GroupDescription,omitempty"`
 
 	// GroupName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html#cfn-ec2-securitygroup-groupname
-	GroupName string `json:"GroupName,omitempty"`
+	GroupName *StringIntrinsic `json:"GroupName,omitempty"`
 
 	// SecurityGroupEgress AWS CloudFormation Property
 	// Required: false
@@ -38,40 +38,7 @@ type AWSEC2SecurityGroup struct {
 	// VpcId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html#cfn-ec2-securitygroup-vpcid
-	VpcId string `json:"VpcId,omitempty"`
-}
-
-type UntypedAWSEC2SecurityGroup struct {
-
-	// GroupDescription AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html#cfn-ec2-securitygroup-groupdescription
-	GroupDescription interface{} `json:"GroupDescription,omitempty"`
-
-	// GroupName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html#cfn-ec2-securitygroup-groupname
-	GroupName interface{} `json:"GroupName,omitempty"`
-
-	// SecurityGroupEgress AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html#cfn-ec2-securitygroup-securitygroupegress
-	SecurityGroupEgress []UntypedAWSEC2SecurityGroup_Egress `json:"SecurityGroupEgress,omitempty"`
-
-	// SecurityGroupIngress AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html#cfn-ec2-securitygroup-securitygroupingress
-	SecurityGroupIngress []UntypedAWSEC2SecurityGroup_Ingress `json:"SecurityGroupIngress,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html#cfn-ec2-securitygroup-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// VpcId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-security-group.html#cfn-ec2-securitygroup-vpcid
-	VpcId interface{} `json:"VpcId,omitempty"`
+	VpcId *StringIntrinsic `json:"VpcId,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

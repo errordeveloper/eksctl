@@ -15,19 +15,6 @@ type AWSKinesisFirehoseDeliveryStream_BufferingHints struct {
 	SizeInMBs int `json:"SizeInMBs,omitempty"`
 }
 
-type UntypedAWSKinesisFirehoseDeliveryStream_BufferingHints struct {
-
-	// IntervalInSeconds AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-bufferinghints.html#cfn-kinesisfirehose-deliverystream-bufferinghints-intervalinseconds
-	IntervalInSeconds interface{} `json:"IntervalInSeconds,omitempty"`
-
-	// SizeInMBs AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-bufferinghints.html#cfn-kinesisfirehose-deliverystream-bufferinghints-sizeinmbs
-	SizeInMBs interface{} `json:"SizeInMBs,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSKinesisFirehoseDeliveryStream_BufferingHints) AWSCloudFormationType() string {
 	return "AWS::KinesisFirehose::DeliveryStream.BufferingHints"

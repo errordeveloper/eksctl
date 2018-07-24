@@ -7,35 +7,17 @@ type AWSCognitoUserPool_InviteMessageTemplate struct {
 	// EmailMessage AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-emailmessage
-	EmailMessage string `json:"EmailMessage,omitempty"`
+	EmailMessage *StringIntrinsic `json:"EmailMessage,omitempty"`
 
 	// EmailSubject AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-emailsubject
-	EmailSubject string `json:"EmailSubject,omitempty"`
+	EmailSubject *StringIntrinsic `json:"EmailSubject,omitempty"`
 
 	// SMSMessage AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-smsmessage
-	SMSMessage string `json:"SMSMessage,omitempty"`
-}
-
-type UntypedAWSCognitoUserPool_InviteMessageTemplate struct {
-
-	// EmailMessage AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-emailmessage
-	EmailMessage interface{} `json:"EmailMessage,omitempty"`
-
-	// EmailSubject AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-emailsubject
-	EmailSubject interface{} `json:"EmailSubject,omitempty"`
-
-	// SMSMessage AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-invitemessagetemplate.html#cfn-cognito-userpool-invitemessagetemplate-smsmessage
-	SMSMessage interface{} `json:"SMSMessage,omitempty"`
+	SMSMessage *StringIntrinsic `json:"SMSMessage,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

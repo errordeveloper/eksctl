@@ -7,35 +7,17 @@ type AWSEMRCluster_Configuration struct {
 	// Classification AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-configuration.html#cfn-elasticmapreduce-cluster-configuration-classification
-	Classification string `json:"Classification,omitempty"`
+	Classification *StringIntrinsic `json:"Classification,omitempty"`
 
 	// ConfigurationProperties AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-configuration.html#cfn-elasticmapreduce-cluster-configuration-configurationproperties
-	ConfigurationProperties map[string]string `json:"ConfigurationProperties,omitempty"`
+	ConfigurationProperties map[string]*StringIntrinsic `json:"ConfigurationProperties,omitempty"`
 
 	// Configurations AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-configuration.html#cfn-elasticmapreduce-cluster-configuration-configurations
 	Configurations []AWSEMRCluster_Configuration `json:"Configurations,omitempty"`
-}
-
-type UntypedAWSEMRCluster_Configuration struct {
-
-	// Classification AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-configuration.html#cfn-elasticmapreduce-cluster-configuration-classification
-	Classification interface{} `json:"Classification,omitempty"`
-
-	// ConfigurationProperties AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-configuration.html#cfn-elasticmapreduce-cluster-configuration-configurationproperties
-	ConfigurationProperties map[string]interface{} `json:"ConfigurationProperties,omitempty"`
-
-	// Configurations AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-configuration.html#cfn-elasticmapreduce-cluster-configuration-configurations
-	Configurations []UntypedAWSEMRCluster_Configuration `json:"Configurations,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

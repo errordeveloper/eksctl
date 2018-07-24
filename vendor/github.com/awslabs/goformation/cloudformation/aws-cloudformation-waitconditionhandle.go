@@ -11,9 +11,6 @@ import (
 type AWSCloudFormationWaitConditionHandle struct {
 }
 
-type UntypedAWSCloudFormationWaitConditionHandle struct {
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSCloudFormationWaitConditionHandle) AWSCloudFormationType() string {
 	return "AWS::CloudFormation::WaitConditionHandle"

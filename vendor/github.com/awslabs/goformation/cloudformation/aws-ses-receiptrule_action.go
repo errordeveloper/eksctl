@@ -40,44 +40,6 @@ type AWSSESReceiptRule_Action struct {
 	WorkmailAction *AWSSESReceiptRule_WorkmailAction `json:"WorkmailAction,omitempty"`
 }
 
-type UntypedAWSSESReceiptRule_Action struct {
-
-	// AddHeaderAction AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-action.html#cfn-ses-receiptrule-action-addheaderaction
-	AddHeaderAction *UntypedAWSSESReceiptRule_AddHeaderAction `json:"AddHeaderAction,omitempty"`
-
-	// BounceAction AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-action.html#cfn-ses-receiptrule-action-bounceaction
-	BounceAction *UntypedAWSSESReceiptRule_BounceAction `json:"BounceAction,omitempty"`
-
-	// LambdaAction AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-action.html#cfn-ses-receiptrule-action-lambdaaction
-	LambdaAction *UntypedAWSSESReceiptRule_LambdaAction `json:"LambdaAction,omitempty"`
-
-	// S3Action AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-action.html#cfn-ses-receiptrule-action-s3action
-	S3Action *UntypedAWSSESReceiptRule_S3Action `json:"S3Action,omitempty"`
-
-	// SNSAction AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-action.html#cfn-ses-receiptrule-action-snsaction
-	SNSAction *UntypedAWSSESReceiptRule_SNSAction `json:"SNSAction,omitempty"`
-
-	// StopAction AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-action.html#cfn-ses-receiptrule-action-stopaction
-	StopAction *UntypedAWSSESReceiptRule_StopAction `json:"StopAction,omitempty"`
-
-	// WorkmailAction AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-action.html#cfn-ses-receiptrule-action-workmailaction
-	WorkmailAction *UntypedAWSSESReceiptRule_WorkmailAction `json:"WorkmailAction,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSSESReceiptRule_Action) AWSCloudFormationType() string {
 	return "AWS::SES::ReceiptRule.Action"

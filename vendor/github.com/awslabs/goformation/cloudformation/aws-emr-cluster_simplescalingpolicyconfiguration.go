@@ -7,7 +7,7 @@ type AWSEMRCluster_SimpleScalingPolicyConfiguration struct {
 	// AdjustmentType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-simplescalingpolicyconfiguration.html#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-adjustmenttype
-	AdjustmentType string `json:"AdjustmentType,omitempty"`
+	AdjustmentType *StringIntrinsic `json:"AdjustmentType,omitempty"`
 
 	// CoolDown AWS CloudFormation Property
 	// Required: false
@@ -18,24 +18,6 @@ type AWSEMRCluster_SimpleScalingPolicyConfiguration struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-simplescalingpolicyconfiguration.html#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-scalingadjustment
 	ScalingAdjustment int `json:"ScalingAdjustment,omitempty"`
-}
-
-type UntypedAWSEMRCluster_SimpleScalingPolicyConfiguration struct {
-
-	// AdjustmentType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-simplescalingpolicyconfiguration.html#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-adjustmenttype
-	AdjustmentType interface{} `json:"AdjustmentType,omitempty"`
-
-	// CoolDown AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-simplescalingpolicyconfiguration.html#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-cooldown
-	CoolDown interface{} `json:"CoolDown,omitempty"`
-
-	// ScalingAdjustment AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-cluster-simplescalingpolicyconfiguration.html#cfn-elasticmapreduce-cluster-simplescalingpolicyconfiguration-scalingadjustment
-	ScalingAdjustment interface{} `json:"ScalingAdjustment,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

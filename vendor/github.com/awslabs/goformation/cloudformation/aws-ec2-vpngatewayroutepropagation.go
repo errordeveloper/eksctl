@@ -13,25 +13,12 @@ type AWSEC2VPNGatewayRoutePropagation struct {
 	// RouteTableIds AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gatewayrouteprop.html#cfn-ec2-vpngatewayrouteprop-routetableids
-	RouteTableIds []string `json:"RouteTableIds,omitempty"`
+	RouteTableIds []*StringIntrinsic `json:"RouteTableIds,omitempty"`
 
 	// VpnGatewayId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gatewayrouteprop.html#cfn-ec2-vpngatewayrouteprop-vpngatewayid
-	VpnGatewayId string `json:"VpnGatewayId,omitempty"`
-}
-
-type UntypedAWSEC2VPNGatewayRoutePropagation struct {
-
-	// RouteTableIds AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gatewayrouteprop.html#cfn-ec2-vpngatewayrouteprop-routetableids
-	RouteTableIds []interface{} `json:"RouteTableIds,omitempty"`
-
-	// VpnGatewayId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpn-gatewayrouteprop.html#cfn-ec2-vpngatewayrouteprop-vpngatewayid
-	VpnGatewayId interface{} `json:"VpnGatewayId,omitempty"`
+	VpnGatewayId *StringIntrinsic `json:"VpnGatewayId,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

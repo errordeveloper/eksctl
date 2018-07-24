@@ -23,35 +23,12 @@ type AWSEFSFileSystem struct {
 	// KmsKeyId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-kmskeyid
-	KmsKeyId string `json:"KmsKeyId,omitempty"`
+	KmsKeyId *StringIntrinsic `json:"KmsKeyId,omitempty"`
 
 	// PerformanceMode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-performancemode
-	PerformanceMode string `json:"PerformanceMode,omitempty"`
-}
-
-type UntypedAWSEFSFileSystem struct {
-
-	// Encrypted AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-encrypted
-	Encrypted interface{} `json:"Encrypted,omitempty"`
-
-	// FileSystemTags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-filesystemtags
-	FileSystemTags []UntypedAWSEFSFileSystem_ElasticFileSystemTag `json:"FileSystemTags,omitempty"`
-
-	// KmsKeyId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-kmskeyid
-	KmsKeyId interface{} `json:"KmsKeyId,omitempty"`
-
-	// PerformanceMode AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-filesystem.html#cfn-efs-filesystem-performancemode
-	PerformanceMode interface{} `json:"PerformanceMode,omitempty"`
+	PerformanceMode *StringIntrinsic `json:"PerformanceMode,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

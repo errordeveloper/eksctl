@@ -7,25 +7,12 @@ type AWSGlueTable_Order struct {
 	// Column AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-order.html#cfn-glue-table-order-column
-	Column string `json:"Column,omitempty"`
+	Column *StringIntrinsic `json:"Column,omitempty"`
 
 	// SortOrder AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-order.html#cfn-glue-table-order-sortorder
 	SortOrder int `json:"SortOrder,omitempty"`
-}
-
-type UntypedAWSGlueTable_Order struct {
-
-	// Column AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-order.html#cfn-glue-table-order-column
-	Column interface{} `json:"Column,omitempty"`
-
-	// SortOrder AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-order.html#cfn-glue-table-order-sortorder
-	SortOrder interface{} `json:"SortOrder,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

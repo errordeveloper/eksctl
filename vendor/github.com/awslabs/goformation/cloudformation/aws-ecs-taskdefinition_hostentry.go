@@ -7,25 +7,12 @@ type AWSECSTaskDefinition_HostEntry struct {
 	// Hostname AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-hostentry.html#cfn-ecs-taskdefinition-containerdefinition-hostentry-hostname
-	Hostname string `json:"Hostname,omitempty"`
+	Hostname *StringIntrinsic `json:"Hostname,omitempty"`
 
 	// IpAddress AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-hostentry.html#cfn-ecs-taskdefinition-containerdefinition-hostentry-ipaddress
-	IpAddress string `json:"IpAddress,omitempty"`
-}
-
-type UntypedAWSECSTaskDefinition_HostEntry struct {
-
-	// Hostname AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-hostentry.html#cfn-ecs-taskdefinition-containerdefinition-hostentry-hostname
-	Hostname interface{} `json:"Hostname,omitempty"`
-
-	// IpAddress AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-containerdefinitions-hostentry.html#cfn-ecs-taskdefinition-containerdefinition-hostentry-ipaddress
-	IpAddress interface{} `json:"IpAddress,omitempty"`
+	IpAddress *StringIntrinsic `json:"IpAddress,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

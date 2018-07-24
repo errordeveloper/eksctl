@@ -13,12 +13,12 @@ type AWSCloudTrailTrail struct {
 	// CloudWatchLogsLogGroupArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn
-	CloudWatchLogsLogGroupArn string `json:"CloudWatchLogsLogGroupArn,omitempty"`
+	CloudWatchLogsLogGroupArn *StringIntrinsic `json:"CloudWatchLogsLogGroupArn,omitempty"`
 
 	// CloudWatchLogsRoleArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-cloudwatchlogsrolearn
-	CloudWatchLogsRoleArn string `json:"CloudWatchLogsRoleArn,omitempty"`
+	CloudWatchLogsRoleArn *StringIntrinsic `json:"CloudWatchLogsRoleArn,omitempty"`
 
 	// EnableLogFileValidation AWS CloudFormation Property
 	// Required: false
@@ -48,22 +48,22 @@ type AWSCloudTrailTrail struct {
 	// KMSKeyId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-kmskeyid
-	KMSKeyId string `json:"KMSKeyId,omitempty"`
+	KMSKeyId *StringIntrinsic `json:"KMSKeyId,omitempty"`
 
 	// S3BucketName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-s3bucketname
-	S3BucketName string `json:"S3BucketName,omitempty"`
+	S3BucketName *StringIntrinsic `json:"S3BucketName,omitempty"`
 
 	// S3KeyPrefix AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-s3keyprefix
-	S3KeyPrefix string `json:"S3KeyPrefix,omitempty"`
+	S3KeyPrefix *StringIntrinsic `json:"S3KeyPrefix,omitempty"`
 
 	// SnsTopicName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-snstopicname
-	SnsTopicName string `json:"SnsTopicName,omitempty"`
+	SnsTopicName *StringIntrinsic `json:"SnsTopicName,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -73,75 +73,7 @@ type AWSCloudTrailTrail struct {
 	// TrailName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-trailname
-	TrailName string `json:"TrailName,omitempty"`
-}
-
-type UntypedAWSCloudTrailTrail struct {
-
-	// CloudWatchLogsLogGroupArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-cloudwatchlogsloggrouparn
-	CloudWatchLogsLogGroupArn interface{} `json:"CloudWatchLogsLogGroupArn,omitempty"`
-
-	// CloudWatchLogsRoleArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-cloudwatchlogsrolearn
-	CloudWatchLogsRoleArn interface{} `json:"CloudWatchLogsRoleArn,omitempty"`
-
-	// EnableLogFileValidation AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-enablelogfilevalidation
-	EnableLogFileValidation interface{} `json:"EnableLogFileValidation,omitempty"`
-
-	// EventSelectors AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-eventselectors
-	EventSelectors []UntypedAWSCloudTrailTrail_EventSelector `json:"EventSelectors,omitempty"`
-
-	// IncludeGlobalServiceEvents AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-includeglobalserviceevents
-	IncludeGlobalServiceEvents interface{} `json:"IncludeGlobalServiceEvents,omitempty"`
-
-	// IsLogging AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-islogging
-	IsLogging interface{} `json:"IsLogging,omitempty"`
-
-	// IsMultiRegionTrail AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-ismultiregiontrail
-	IsMultiRegionTrail interface{} `json:"IsMultiRegionTrail,omitempty"`
-
-	// KMSKeyId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-kmskeyid
-	KMSKeyId interface{} `json:"KMSKeyId,omitempty"`
-
-	// S3BucketName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-s3bucketname
-	S3BucketName interface{} `json:"S3BucketName,omitempty"`
-
-	// S3KeyPrefix AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-s3keyprefix
-	S3KeyPrefix interface{} `json:"S3KeyPrefix,omitempty"`
-
-	// SnsTopicName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-snstopicname
-	SnsTopicName interface{} `json:"SnsTopicName,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// TrailName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-trailname
-	TrailName interface{} `json:"TrailName,omitempty"`
+	TrailName *StringIntrinsic `json:"TrailName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

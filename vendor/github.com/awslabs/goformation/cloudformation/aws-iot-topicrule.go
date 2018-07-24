@@ -13,25 +13,12 @@ type AWSIoTTopicRule struct {
 	// RuleName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html#cfn-iot-topicrule-rulename
-	RuleName string `json:"RuleName,omitempty"`
+	RuleName *StringIntrinsic `json:"RuleName,omitempty"`
 
 	// TopicRulePayload AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html#cfn-iot-topicrule-topicrulepayload
 	TopicRulePayload *AWSIoTTopicRule_TopicRulePayload `json:"TopicRulePayload,omitempty"`
-}
-
-type UntypedAWSIoTTopicRule struct {
-
-	// RuleName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html#cfn-iot-topicrule-rulename
-	RuleName interface{} `json:"RuleName,omitempty"`
-
-	// TopicRulePayload AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-topicrule.html#cfn-iot-topicrule-topicrulepayload
-	TopicRulePayload *UntypedAWSIoTTopicRule_TopicRulePayload `json:"TopicRulePayload,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

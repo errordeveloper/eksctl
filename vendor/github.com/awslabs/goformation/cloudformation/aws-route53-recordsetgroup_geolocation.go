@@ -7,35 +7,17 @@ type AWSRoute53RecordSetGroup_GeoLocation struct {
 	// ContinentCode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordsetgroup-geolocation-continentcode
-	ContinentCode string `json:"ContinentCode,omitempty"`
+	ContinentCode *StringIntrinsic `json:"ContinentCode,omitempty"`
 
 	// CountryCode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-countrycode
-	CountryCode string `json:"CountryCode,omitempty"`
+	CountryCode *StringIntrinsic `json:"CountryCode,omitempty"`
 
 	// SubdivisionCode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-subdivisioncode
-	SubdivisionCode string `json:"SubdivisionCode,omitempty"`
-}
-
-type UntypedAWSRoute53RecordSetGroup_GeoLocation struct {
-
-	// ContinentCode AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordsetgroup-geolocation-continentcode
-	ContinentCode interface{} `json:"ContinentCode,omitempty"`
-
-	// CountryCode AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-countrycode
-	CountryCode interface{} `json:"CountryCode,omitempty"`
-
-	// SubdivisionCode AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53-recordset-geolocation.html#cfn-route53-recordset-geolocation-subdivisioncode
-	SubdivisionCode interface{} `json:"SubdivisionCode,omitempty"`
+	SubdivisionCode *StringIntrinsic `json:"SubdivisionCode,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

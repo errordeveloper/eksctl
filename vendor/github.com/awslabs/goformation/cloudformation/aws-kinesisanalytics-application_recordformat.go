@@ -12,20 +12,7 @@ type AWSKinesisAnalyticsApplication_RecordFormat struct {
 	// RecordFormatType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-recordformat.html#cfn-kinesisanalytics-application-recordformat-recordformattype
-	RecordFormatType string `json:"RecordFormatType,omitempty"`
-}
-
-type UntypedAWSKinesisAnalyticsApplication_RecordFormat struct {
-
-	// MappingParameters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-recordformat.html#cfn-kinesisanalytics-application-recordformat-mappingparameters
-	MappingParameters *UntypedAWSKinesisAnalyticsApplication_MappingParameters `json:"MappingParameters,omitempty"`
-
-	// RecordFormatType AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-recordformat.html#cfn-kinesisanalytics-application-recordformat-recordformattype
-	RecordFormatType interface{} `json:"RecordFormatType,omitempty"`
+	RecordFormatType *StringIntrinsic `json:"RecordFormatType,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

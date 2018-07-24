@@ -18,22 +18,22 @@ type AWSCloudWatchAlarm struct {
 	// AlarmActions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-alarmactions
-	AlarmActions []string `json:"AlarmActions,omitempty"`
+	AlarmActions []*StringIntrinsic `json:"AlarmActions,omitempty"`
 
 	// AlarmDescription AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-alarmdescription
-	AlarmDescription string `json:"AlarmDescription,omitempty"`
+	AlarmDescription *StringIntrinsic `json:"AlarmDescription,omitempty"`
 
 	// AlarmName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-alarmname
-	AlarmName string `json:"AlarmName,omitempty"`
+	AlarmName *StringIntrinsic `json:"AlarmName,omitempty"`
 
 	// ComparisonOperator AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-comparisonoperator
-	ComparisonOperator string `json:"ComparisonOperator,omitempty"`
+	ComparisonOperator *StringIntrinsic `json:"ComparisonOperator,omitempty"`
 
 	// Dimensions AWS CloudFormation Property
 	// Required: false
@@ -43,7 +43,7 @@ type AWSCloudWatchAlarm struct {
 	// EvaluateLowSampleCountPercentile AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-evaluatelowsamplecountpercentile
-	EvaluateLowSampleCountPercentile string `json:"EvaluateLowSampleCountPercentile,omitempty"`
+	EvaluateLowSampleCountPercentile *StringIntrinsic `json:"EvaluateLowSampleCountPercentile,omitempty"`
 
 	// EvaluationPeriods AWS CloudFormation Property
 	// Required: true
@@ -53,27 +53,27 @@ type AWSCloudWatchAlarm struct {
 	// ExtendedStatistic AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-extendedstatistic
-	ExtendedStatistic string `json:"ExtendedStatistic,omitempty"`
+	ExtendedStatistic *StringIntrinsic `json:"ExtendedStatistic,omitempty"`
 
 	// InsufficientDataActions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-insufficientdataactions
-	InsufficientDataActions []string `json:"InsufficientDataActions,omitempty"`
+	InsufficientDataActions []*StringIntrinsic `json:"InsufficientDataActions,omitempty"`
 
 	// MetricName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-metricname
-	MetricName string `json:"MetricName,omitempty"`
+	MetricName *StringIntrinsic `json:"MetricName,omitempty"`
 
 	// Namespace AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-namespace
-	Namespace string `json:"Namespace,omitempty"`
+	Namespace *StringIntrinsic `json:"Namespace,omitempty"`
 
 	// OKActions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-okactions
-	OKActions []string `json:"OKActions,omitempty"`
+	OKActions []*StringIntrinsic `json:"OKActions,omitempty"`
 
 	// Period AWS CloudFormation Property
 	// Required: true
@@ -83,7 +83,7 @@ type AWSCloudWatchAlarm struct {
 	// Statistic AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-statistic
-	Statistic string `json:"Statistic,omitempty"`
+	Statistic *StringIntrinsic `json:"Statistic,omitempty"`
 
 	// Threshold AWS CloudFormation Property
 	// Required: true
@@ -93,105 +93,12 @@ type AWSCloudWatchAlarm struct {
 	// TreatMissingData AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-treatmissingdata
-	TreatMissingData string `json:"TreatMissingData,omitempty"`
+	TreatMissingData *StringIntrinsic `json:"TreatMissingData,omitempty"`
 
 	// Unit AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-unit
-	Unit string `json:"Unit,omitempty"`
-}
-
-type UntypedAWSCloudWatchAlarm struct {
-
-	// ActionsEnabled AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-actionsenabled
-	ActionsEnabled interface{} `json:"ActionsEnabled,omitempty"`
-
-	// AlarmActions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-alarmactions
-	AlarmActions []interface{} `json:"AlarmActions,omitempty"`
-
-	// AlarmDescription AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-alarmdescription
-	AlarmDescription interface{} `json:"AlarmDescription,omitempty"`
-
-	// AlarmName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-alarmname
-	AlarmName interface{} `json:"AlarmName,omitempty"`
-
-	// ComparisonOperator AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-comparisonoperator
-	ComparisonOperator interface{} `json:"ComparisonOperator,omitempty"`
-
-	// Dimensions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-dimension
-	Dimensions []UntypedAWSCloudWatchAlarm_Dimension `json:"Dimensions,omitempty"`
-
-	// EvaluateLowSampleCountPercentile AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-evaluatelowsamplecountpercentile
-	EvaluateLowSampleCountPercentile interface{} `json:"EvaluateLowSampleCountPercentile,omitempty"`
-
-	// EvaluationPeriods AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-evaluationperiods
-	EvaluationPeriods interface{} `json:"EvaluationPeriods,omitempty"`
-
-	// ExtendedStatistic AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-extendedstatistic
-	ExtendedStatistic interface{} `json:"ExtendedStatistic,omitempty"`
-
-	// InsufficientDataActions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-insufficientdataactions
-	InsufficientDataActions []interface{} `json:"InsufficientDataActions,omitempty"`
-
-	// MetricName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-metricname
-	MetricName interface{} `json:"MetricName,omitempty"`
-
-	// Namespace AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-namespace
-	Namespace interface{} `json:"Namespace,omitempty"`
-
-	// OKActions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-okactions
-	OKActions []interface{} `json:"OKActions,omitempty"`
-
-	// Period AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-period
-	Period interface{} `json:"Period,omitempty"`
-
-	// Statistic AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-statistic
-	Statistic interface{} `json:"Statistic,omitempty"`
-
-	// Threshold AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-threshold
-	Threshold interface{} `json:"Threshold,omitempty"`
-
-	// TreatMissingData AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-treatmissingdata
-	TreatMissingData interface{} `json:"TreatMissingData,omitempty"`
-
-	// Unit AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cw-alarm.html#cfn-cloudwatch-alarms-unit
-	Unit interface{} `json:"Unit,omitempty"`
+	Unit *StringIntrinsic `json:"Unit,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

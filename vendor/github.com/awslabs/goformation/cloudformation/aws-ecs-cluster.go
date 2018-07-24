@@ -13,15 +13,7 @@ type AWSECSCluster struct {
 	// ClusterName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html#cfn-ecs-cluster-clustername
-	ClusterName string `json:"ClusterName,omitempty"`
-}
-
-type UntypedAWSECSCluster struct {
-
-	// ClusterName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-cluster.html#cfn-ecs-cluster-clustername
-	ClusterName interface{} `json:"ClusterName,omitempty"`
+	ClusterName *StringIntrinsic `json:"ClusterName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

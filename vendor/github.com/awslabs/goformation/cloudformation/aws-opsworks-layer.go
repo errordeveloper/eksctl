@@ -13,7 +13,7 @@ type AWSOpsWorksLayer struct {
 	// Attributes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-attributes
-	Attributes map[string]string `json:"Attributes,omitempty"`
+	Attributes map[string]*StringIntrinsic `json:"Attributes,omitempty"`
 
 	// AutoAssignElasticIps AWS CloudFormation Property
 	// Required: true
@@ -28,7 +28,7 @@ type AWSOpsWorksLayer struct {
 	// CustomInstanceProfileArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-custominstanceprofilearn
-	CustomInstanceProfileArn string `json:"CustomInstanceProfileArn,omitempty"`
+	CustomInstanceProfileArn *StringIntrinsic `json:"CustomInstanceProfileArn,omitempty"`
 
 	// CustomJson AWS CloudFormation Property
 	// Required: false
@@ -43,7 +43,7 @@ type AWSOpsWorksLayer struct {
 	// CustomSecurityGroupIds AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-customsecuritygroupids
-	CustomSecurityGroupIds []string `json:"CustomSecurityGroupIds,omitempty"`
+	CustomSecurityGroupIds []*StringIntrinsic `json:"CustomSecurityGroupIds,omitempty"`
 
 	// EnableAutoHealing AWS CloudFormation Property
 	// Required: true
@@ -68,22 +68,22 @@ type AWSOpsWorksLayer struct {
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// Packages AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-packages
-	Packages []string `json:"Packages,omitempty"`
+	Packages []*StringIntrinsic `json:"Packages,omitempty"`
 
 	// Shortname AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-shortname
-	Shortname string `json:"Shortname,omitempty"`
+	Shortname *StringIntrinsic `json:"Shortname,omitempty"`
 
 	// StackId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-stackid
-	StackId string `json:"StackId,omitempty"`
+	StackId *StringIntrinsic `json:"StackId,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -93,7 +93,7 @@ type AWSOpsWorksLayer struct {
 	// Type AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-type
-	Type string `json:"Type,omitempty"`
+	Type *StringIntrinsic `json:"Type,omitempty"`
 
 	// UseEbsOptimizedInstances AWS CloudFormation Property
 	// Required: false
@@ -104,104 +104,6 @@ type AWSOpsWorksLayer struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-volumeconfigurations
 	VolumeConfigurations []AWSOpsWorksLayer_VolumeConfiguration `json:"VolumeConfigurations,omitempty"`
-}
-
-type UntypedAWSOpsWorksLayer struct {
-
-	// Attributes AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-attributes
-	Attributes map[string]interface{} `json:"Attributes,omitempty"`
-
-	// AutoAssignElasticIps AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-autoassignelasticips
-	AutoAssignElasticIps interface{} `json:"AutoAssignElasticIps,omitempty"`
-
-	// AutoAssignPublicIps AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-autoassignpublicips
-	AutoAssignPublicIps interface{} `json:"AutoAssignPublicIps,omitempty"`
-
-	// CustomInstanceProfileArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-custominstanceprofilearn
-	CustomInstanceProfileArn interface{} `json:"CustomInstanceProfileArn,omitempty"`
-
-	// CustomJson AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-customjson
-	CustomJson interface{} `json:"CustomJson,omitempty"`
-
-	// CustomRecipes AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-customrecipes
-	CustomRecipes *UntypedAWSOpsWorksLayer_Recipes `json:"CustomRecipes,omitempty"`
-
-	// CustomSecurityGroupIds AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-customsecuritygroupids
-	CustomSecurityGroupIds []interface{} `json:"CustomSecurityGroupIds,omitempty"`
-
-	// EnableAutoHealing AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-enableautohealing
-	EnableAutoHealing interface{} `json:"EnableAutoHealing,omitempty"`
-
-	// InstallUpdatesOnBoot AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-installupdatesonboot
-	InstallUpdatesOnBoot interface{} `json:"InstallUpdatesOnBoot,omitempty"`
-
-	// LifecycleEventConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-lifecycleeventconfiguration
-	LifecycleEventConfiguration *UntypedAWSOpsWorksLayer_LifecycleEventConfiguration `json:"LifecycleEventConfiguration,omitempty"`
-
-	// LoadBasedAutoScaling AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-loadbasedautoscaling
-	LoadBasedAutoScaling *UntypedAWSOpsWorksLayer_LoadBasedAutoScaling `json:"LoadBasedAutoScaling,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// Packages AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-packages
-	Packages []interface{} `json:"Packages,omitempty"`
-
-	// Shortname AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-shortname
-	Shortname interface{} `json:"Shortname,omitempty"`
-
-	// StackId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-stackid
-	StackId interface{} `json:"StackId,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// Type AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-type
-	Type interface{} `json:"Type,omitempty"`
-
-	// UseEbsOptimizedInstances AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-useebsoptimizedinstances
-	UseEbsOptimizedInstances interface{} `json:"UseEbsOptimizedInstances,omitempty"`
-
-	// VolumeConfigurations AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-layer.html#cfn-opsworks-layer-volumeconfigurations
-	VolumeConfigurations []UntypedAWSOpsWorksLayer_VolumeConfiguration `json:"VolumeConfigurations,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

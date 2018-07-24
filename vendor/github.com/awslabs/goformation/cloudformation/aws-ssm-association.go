@@ -13,22 +13,22 @@ type AWSSSMAssociation struct {
 	// AssociationName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-associationname
-	AssociationName string `json:"AssociationName,omitempty"`
+	AssociationName *StringIntrinsic `json:"AssociationName,omitempty"`
 
 	// DocumentVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-documentversion
-	DocumentVersion string `json:"DocumentVersion,omitempty"`
+	DocumentVersion *StringIntrinsic `json:"DocumentVersion,omitempty"`
 
 	// InstanceId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-instanceid
-	InstanceId string `json:"InstanceId,omitempty"`
+	InstanceId *StringIntrinsic `json:"InstanceId,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// OutputLocation AWS CloudFormation Property
 	// Required: false
@@ -43,55 +43,12 @@ type AWSSSMAssociation struct {
 	// ScheduleExpression AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-scheduleexpression
-	ScheduleExpression string `json:"ScheduleExpression,omitempty"`
+	ScheduleExpression *StringIntrinsic `json:"ScheduleExpression,omitempty"`
 
 	// Targets AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-targets
 	Targets []AWSSSMAssociation_Target `json:"Targets,omitempty"`
-}
-
-type UntypedAWSSSMAssociation struct {
-
-	// AssociationName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-associationname
-	AssociationName interface{} `json:"AssociationName,omitempty"`
-
-	// DocumentVersion AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-documentversion
-	DocumentVersion interface{} `json:"DocumentVersion,omitempty"`
-
-	// InstanceId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-instanceid
-	InstanceId interface{} `json:"InstanceId,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// OutputLocation AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-outputlocation
-	OutputLocation *UntypedAWSSSMAssociation_InstanceAssociationOutputLocation `json:"OutputLocation,omitempty"`
-
-	// Parameters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-parameters
-	Parameters map[string]UntypedAWSSSMAssociation_ParameterValues `json:"Parameters,omitempty"`
-
-	// ScheduleExpression AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-scheduleexpression
-	ScheduleExpression interface{} `json:"ScheduleExpression,omitempty"`
-
-	// Targets AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-association.html#cfn-ssm-association-targets
-	Targets []UntypedAWSSSMAssociation_Target `json:"Targets,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

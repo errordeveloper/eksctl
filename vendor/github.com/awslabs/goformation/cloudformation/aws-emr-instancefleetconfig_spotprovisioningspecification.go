@@ -12,30 +12,12 @@ type AWSEMRInstanceFleetConfig_SpotProvisioningSpecification struct {
 	// TimeoutAction AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-spotprovisioningspecification.html#cfn-elasticmapreduce-instancefleetconfig-spotprovisioningspecification-timeoutaction
-	TimeoutAction string `json:"TimeoutAction,omitempty"`
+	TimeoutAction *StringIntrinsic `json:"TimeoutAction,omitempty"`
 
 	// TimeoutDurationMinutes AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-spotprovisioningspecification.html#cfn-elasticmapreduce-instancefleetconfig-spotprovisioningspecification-timeoutdurationminutes
 	TimeoutDurationMinutes int `json:"TimeoutDurationMinutes,omitempty"`
-}
-
-type UntypedAWSEMRInstanceFleetConfig_SpotProvisioningSpecification struct {
-
-	// BlockDurationMinutes AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-spotprovisioningspecification.html#cfn-elasticmapreduce-instancefleetconfig-spotprovisioningspecification-blockdurationminutes
-	BlockDurationMinutes interface{} `json:"BlockDurationMinutes,omitempty"`
-
-	// TimeoutAction AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-spotprovisioningspecification.html#cfn-elasticmapreduce-instancefleetconfig-spotprovisioningspecification-timeoutaction
-	TimeoutAction interface{} `json:"TimeoutAction,omitempty"`
-
-	// TimeoutDurationMinutes AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-spotprovisioningspecification.html#cfn-elasticmapreduce-instancefleetconfig-spotprovisioningspecification-timeoutdurationminutes
-	TimeoutDurationMinutes interface{} `json:"TimeoutDurationMinutes,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

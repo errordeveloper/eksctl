@@ -13,12 +13,12 @@ type AWSApiGatewayDomainName struct {
 	// CertificateArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-certificatearn
-	CertificateArn string `json:"CertificateArn,omitempty"`
+	CertificateArn *StringIntrinsic `json:"CertificateArn,omitempty"`
 
 	// DomainName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-domainname
-	DomainName string `json:"DomainName,omitempty"`
+	DomainName *StringIntrinsic `json:"DomainName,omitempty"`
 
 	// EndpointConfiguration AWS CloudFormation Property
 	// Required: false
@@ -28,30 +28,7 @@ type AWSApiGatewayDomainName struct {
 	// RegionalCertificateArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-regionalcertificatearn
-	RegionalCertificateArn string `json:"RegionalCertificateArn,omitempty"`
-}
-
-type UntypedAWSApiGatewayDomainName struct {
-
-	// CertificateArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-certificatearn
-	CertificateArn interface{} `json:"CertificateArn,omitempty"`
-
-	// DomainName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-domainname
-	DomainName interface{} `json:"DomainName,omitempty"`
-
-	// EndpointConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-endpointconfiguration
-	EndpointConfiguration *UntypedAWSApiGatewayDomainName_EndpointConfiguration `json:"EndpointConfiguration,omitempty"`
-
-	// RegionalCertificateArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-regionalcertificatearn
-	RegionalCertificateArn interface{} `json:"RegionalCertificateArn,omitempty"`
+	RegionalCertificateArn *StringIntrinsic `json:"RegionalCertificateArn,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

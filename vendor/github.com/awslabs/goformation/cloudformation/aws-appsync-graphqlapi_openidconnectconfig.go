@@ -12,7 +12,7 @@ type AWSAppSyncGraphQLApi_OpenIDConnectConfig struct {
 	// ClientId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-clientid
-	ClientId string `json:"ClientId,omitempty"`
+	ClientId *StringIntrinsic `json:"ClientId,omitempty"`
 
 	// IatTTL AWS CloudFormation Property
 	// Required: false
@@ -22,30 +22,7 @@ type AWSAppSyncGraphQLApi_OpenIDConnectConfig struct {
 	// Issuer AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-issuer
-	Issuer string `json:"Issuer,omitempty"`
-}
-
-type UntypedAWSAppSyncGraphQLApi_OpenIDConnectConfig struct {
-
-	// AuthTTL AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-authttl
-	AuthTTL interface{} `json:"AuthTTL,omitempty"`
-
-	// ClientId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-clientid
-	ClientId interface{} `json:"ClientId,omitempty"`
-
-	// IatTTL AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-iatttl
-	IatTTL interface{} `json:"IatTTL,omitempty"`
-
-	// Issuer AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-graphqlapi-openidconnectconfig.html#cfn-appsync-graphqlapi-openidconnectconfig-issuer
-	Issuer interface{} `json:"Issuer,omitempty"`
+	Issuer *StringIntrinsic `json:"Issuer,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

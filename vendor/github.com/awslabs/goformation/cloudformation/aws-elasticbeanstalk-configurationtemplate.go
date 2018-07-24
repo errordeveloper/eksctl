@@ -13,17 +13,17 @@ type AWSElasticBeanstalkConfigurationTemplate struct {
 	// ApplicationName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-applicationname
-	ApplicationName string `json:"ApplicationName,omitempty"`
+	ApplicationName *StringIntrinsic `json:"ApplicationName,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-description
-	Description string `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 
 	// EnvironmentId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-environmentid
-	EnvironmentId string `json:"EnvironmentId,omitempty"`
+	EnvironmentId *StringIntrinsic `json:"EnvironmentId,omitempty"`
 
 	// OptionSettings AWS CloudFormation Property
 	// Required: false
@@ -33,55 +33,17 @@ type AWSElasticBeanstalkConfigurationTemplate struct {
 	// PlatformArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-platformarn
-	PlatformArn string `json:"PlatformArn,omitempty"`
+	PlatformArn *StringIntrinsic `json:"PlatformArn,omitempty"`
 
 	// SolutionStackName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-solutionstackname
-	SolutionStackName string `json:"SolutionStackName,omitempty"`
+	SolutionStackName *StringIntrinsic `json:"SolutionStackName,omitempty"`
 
 	// SourceConfiguration AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration
 	SourceConfiguration *AWSElasticBeanstalkConfigurationTemplate_SourceConfiguration `json:"SourceConfiguration,omitempty"`
-}
-
-type UntypedAWSElasticBeanstalkConfigurationTemplate struct {
-
-	// ApplicationName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-applicationname
-	ApplicationName interface{} `json:"ApplicationName,omitempty"`
-
-	// Description AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-description
-	Description interface{} `json:"Description,omitempty"`
-
-	// EnvironmentId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-environmentid
-	EnvironmentId interface{} `json:"EnvironmentId,omitempty"`
-
-	// OptionSettings AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-optionsettings
-	OptionSettings []UntypedAWSElasticBeanstalkConfigurationTemplate_ConfigurationOptionSetting `json:"OptionSettings,omitempty"`
-
-	// PlatformArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-platformarn
-	PlatformArn interface{} `json:"PlatformArn,omitempty"`
-
-	// SolutionStackName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-solutionstackname
-	SolutionStackName interface{} `json:"SolutionStackName,omitempty"`
-
-	// SourceConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticbeanstalk-configurationtemplate.html#cfn-elasticbeanstalk-configurationtemplate-sourceconfiguration
-	SourceConfiguration *UntypedAWSElasticBeanstalkConfigurationTemplate_SourceConfiguration `json:"SourceConfiguration,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

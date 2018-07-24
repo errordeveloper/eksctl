@@ -7,7 +7,7 @@ type AWSGluePartition_StorageDescriptor struct {
 	// BucketColumns AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-storagedescriptor.html#cfn-glue-partition-storagedescriptor-bucketcolumns
-	BucketColumns []string `json:"BucketColumns,omitempty"`
+	BucketColumns []*StringIntrinsic `json:"BucketColumns,omitempty"`
 
 	// Columns AWS CloudFormation Property
 	// Required: false
@@ -22,12 +22,12 @@ type AWSGluePartition_StorageDescriptor struct {
 	// InputFormat AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-storagedescriptor.html#cfn-glue-partition-storagedescriptor-inputformat
-	InputFormat string `json:"InputFormat,omitempty"`
+	InputFormat *StringIntrinsic `json:"InputFormat,omitempty"`
 
 	// Location AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-storagedescriptor.html#cfn-glue-partition-storagedescriptor-location
-	Location string `json:"Location,omitempty"`
+	Location *StringIntrinsic `json:"Location,omitempty"`
 
 	// NumberOfBuckets AWS CloudFormation Property
 	// Required: false
@@ -37,7 +37,7 @@ type AWSGluePartition_StorageDescriptor struct {
 	// OutputFormat AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-storagedescriptor.html#cfn-glue-partition-storagedescriptor-outputformat
-	OutputFormat string `json:"OutputFormat,omitempty"`
+	OutputFormat *StringIntrinsic `json:"OutputFormat,omitempty"`
 
 	// Parameters AWS CloudFormation Property
 	// Required: false
@@ -63,69 +63,6 @@ type AWSGluePartition_StorageDescriptor struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-storagedescriptor.html#cfn-glue-partition-storagedescriptor-storedassubdirectories
 	StoredAsSubDirectories bool `json:"StoredAsSubDirectories,omitempty"`
-}
-
-type UntypedAWSGluePartition_StorageDescriptor struct {
-
-	// BucketColumns AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-storagedescriptor.html#cfn-glue-partition-storagedescriptor-bucketcolumns
-	BucketColumns []interface{} `json:"BucketColumns,omitempty"`
-
-	// Columns AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-storagedescriptor.html#cfn-glue-partition-storagedescriptor-columns
-	Columns []UntypedAWSGluePartition_Column `json:"Columns,omitempty"`
-
-	// Compressed AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-storagedescriptor.html#cfn-glue-partition-storagedescriptor-compressed
-	Compressed interface{} `json:"Compressed,omitempty"`
-
-	// InputFormat AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-storagedescriptor.html#cfn-glue-partition-storagedescriptor-inputformat
-	InputFormat interface{} `json:"InputFormat,omitempty"`
-
-	// Location AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-storagedescriptor.html#cfn-glue-partition-storagedescriptor-location
-	Location interface{} `json:"Location,omitempty"`
-
-	// NumberOfBuckets AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-storagedescriptor.html#cfn-glue-partition-storagedescriptor-numberofbuckets
-	NumberOfBuckets interface{} `json:"NumberOfBuckets,omitempty"`
-
-	// OutputFormat AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-storagedescriptor.html#cfn-glue-partition-storagedescriptor-outputformat
-	OutputFormat interface{} `json:"OutputFormat,omitempty"`
-
-	// Parameters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-storagedescriptor.html#cfn-glue-partition-storagedescriptor-parameters
-	Parameters interface{} `json:"Parameters,omitempty"`
-
-	// SerdeInfo AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-storagedescriptor.html#cfn-glue-partition-storagedescriptor-serdeinfo
-	SerdeInfo *UntypedAWSGluePartition_SerdeInfo `json:"SerdeInfo,omitempty"`
-
-	// SkewedInfo AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-storagedescriptor.html#cfn-glue-partition-storagedescriptor-skewedinfo
-	SkewedInfo *UntypedAWSGluePartition_SkewedInfo `json:"SkewedInfo,omitempty"`
-
-	// SortColumns AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-storagedescriptor.html#cfn-glue-partition-storagedescriptor-sortcolumns
-	SortColumns []UntypedAWSGluePartition_Order `json:"SortColumns,omitempty"`
-
-	// StoredAsSubDirectories AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-partition-storagedescriptor.html#cfn-glue-partition-storagedescriptor-storedassubdirectories
-	StoredAsSubDirectories interface{} `json:"StoredAsSubDirectories,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

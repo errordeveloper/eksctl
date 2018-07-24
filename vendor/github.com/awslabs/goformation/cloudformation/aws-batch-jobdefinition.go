@@ -18,7 +18,7 @@ type AWSBatchJobDefinition struct {
 	// JobDefinitionName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-jobdefinitionname
-	JobDefinitionName string `json:"JobDefinitionName,omitempty"`
+	JobDefinitionName *StringIntrinsic `json:"JobDefinitionName,omitempty"`
 
 	// Parameters AWS CloudFormation Property
 	// Required: false
@@ -38,40 +38,7 @@ type AWSBatchJobDefinition struct {
 	// Type AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-type
-	Type string `json:"Type,omitempty"`
-}
-
-type UntypedAWSBatchJobDefinition struct {
-
-	// ContainerProperties AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-containerproperties
-	ContainerProperties *UntypedAWSBatchJobDefinition_ContainerProperties `json:"ContainerProperties,omitempty"`
-
-	// JobDefinitionName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-jobdefinitionname
-	JobDefinitionName interface{} `json:"JobDefinitionName,omitempty"`
-
-	// Parameters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-parameters
-	Parameters interface{} `json:"Parameters,omitempty"`
-
-	// RetryStrategy AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-retrystrategy
-	RetryStrategy *UntypedAWSBatchJobDefinition_RetryStrategy `json:"RetryStrategy,omitempty"`
-
-	// Timeout AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-timeout
-	Timeout *UntypedAWSBatchJobDefinition_Timeout `json:"Timeout,omitempty"`
-
-	// Type AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-batch-jobdefinition.html#cfn-batch-jobdefinition-type
-	Type interface{} `json:"Type,omitempty"`
+	Type *StringIntrinsic `json:"Type,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

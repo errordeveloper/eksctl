@@ -16,14 +16,6 @@ type AWSInspectorResourceGroup struct {
 	ResourceGroupTags []Tag `json:"ResourceGroupTags,omitempty"`
 }
 
-type UntypedAWSInspectorResourceGroup struct {
-
-	// ResourceGroupTags AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-inspector-resourcegroup.html#cfn-inspector-resourcegroup-resourcegrouptags
-	ResourceGroupTags []UntypedTag `json:"ResourceGroupTags,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSInspectorResourceGroup) AWSCloudFormationType() string {
 	return "AWS::Inspector::ResourceGroup"

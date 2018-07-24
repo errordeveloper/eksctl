@@ -15,19 +15,6 @@ type AWSKinesisFirehoseDeliveryStream_ElasticsearchBufferingHints struct {
 	SizeInMBs int `json:"SizeInMBs,omitempty"`
 }
 
-type UntypedAWSKinesisFirehoseDeliveryStream_ElasticsearchBufferingHints struct {
-
-	// IntervalInSeconds AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchbufferinghints.html#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-intervalinseconds
-	IntervalInSeconds interface{} `json:"IntervalInSeconds,omitempty"`
-
-	// SizeInMBs AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-elasticsearchbufferinghints.html#cfn-kinesisfirehose-deliverystream-elasticsearchbufferinghints-sizeinmbs
-	SizeInMBs interface{} `json:"SizeInMBs,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSKinesisFirehoseDeliveryStream_ElasticsearchBufferingHints) AWSCloudFormationType() string {
 	return "AWS::KinesisFirehose::DeliveryStream.ElasticsearchBufferingHints"

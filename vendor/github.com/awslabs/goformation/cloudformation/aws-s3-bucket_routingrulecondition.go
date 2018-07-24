@@ -7,25 +7,12 @@ type AWSS3Bucket_RoutingRuleCondition struct {
 	// HttpErrorCodeReturnedEquals AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-routingrulecondition.html#cfn-s3-websiteconfiguration-routingrules-routingrulecondition-httperrorcodereturnedequals
-	HttpErrorCodeReturnedEquals string `json:"HttpErrorCodeReturnedEquals,omitempty"`
+	HttpErrorCodeReturnedEquals *StringIntrinsic `json:"HttpErrorCodeReturnedEquals,omitempty"`
 
 	// KeyPrefixEquals AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-routingrulecondition.html#cfn-s3-websiteconfiguration-routingrules-routingrulecondition-keyprefixequals
-	KeyPrefixEquals string `json:"KeyPrefixEquals,omitempty"`
-}
-
-type UntypedAWSS3Bucket_RoutingRuleCondition struct {
-
-	// HttpErrorCodeReturnedEquals AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-routingrulecondition.html#cfn-s3-websiteconfiguration-routingrules-routingrulecondition-httperrorcodereturnedequals
-	HttpErrorCodeReturnedEquals interface{} `json:"HttpErrorCodeReturnedEquals,omitempty"`
-
-	// KeyPrefixEquals AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-websiteconfiguration-routingrules-routingrulecondition.html#cfn-s3-websiteconfiguration-routingrules-routingrulecondition-keyprefixequals
-	KeyPrefixEquals interface{} `json:"KeyPrefixEquals,omitempty"`
+	KeyPrefixEquals *StringIntrinsic `json:"KeyPrefixEquals,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

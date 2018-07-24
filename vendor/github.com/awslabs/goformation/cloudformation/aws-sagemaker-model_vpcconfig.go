@@ -7,25 +7,12 @@ type AWSSageMakerModel_VpcConfig struct {
 	// SecurityGroupIds AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-vpcconfig.html#cfn-sagemaker-model-vpcconfig-securitygroupids
-	SecurityGroupIds []string `json:"SecurityGroupIds,omitempty"`
+	SecurityGroupIds []*StringIntrinsic `json:"SecurityGroupIds,omitempty"`
 
 	// Subnets AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-vpcconfig.html#cfn-sagemaker-model-vpcconfig-subnets
-	Subnets []string `json:"Subnets,omitempty"`
-}
-
-type UntypedAWSSageMakerModel_VpcConfig struct {
-
-	// SecurityGroupIds AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-vpcconfig.html#cfn-sagemaker-model-vpcconfig-securitygroupids
-	SecurityGroupIds []interface{} `json:"SecurityGroupIds,omitempty"`
-
-	// Subnets AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-model-vpcconfig.html#cfn-sagemaker-model-vpcconfig-subnets
-	Subnets []interface{} `json:"Subnets,omitempty"`
+	Subnets []*StringIntrinsic `json:"Subnets,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -7,35 +7,17 @@ type AWSSSMMaintenanceWindowTask_LoggingInfo struct {
 	// Region AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-region
-	Region string `json:"Region,omitempty"`
+	Region *StringIntrinsic `json:"Region,omitempty"`
 
 	// S3Bucket AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3bucket
-	S3Bucket string `json:"S3Bucket,omitempty"`
+	S3Bucket *StringIntrinsic `json:"S3Bucket,omitempty"`
 
 	// S3Prefix AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3prefix
-	S3Prefix string `json:"S3Prefix,omitempty"`
-}
-
-type UntypedAWSSSMMaintenanceWindowTask_LoggingInfo struct {
-
-	// Region AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-region
-	Region interface{} `json:"Region,omitempty"`
-
-	// S3Bucket AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3bucket
-	S3Bucket interface{} `json:"S3Bucket,omitempty"`
-
-	// S3Prefix AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-logginginfo.html#cfn-ssm-maintenancewindowtask-logginginfo-s3prefix
-	S3Prefix interface{} `json:"S3Prefix,omitempty"`
+	S3Prefix *StringIntrinsic `json:"S3Prefix,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

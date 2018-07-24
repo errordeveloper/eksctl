@@ -12,7 +12,7 @@ type AWSSSMPatchBaseline_Rule struct {
 	// ComplianceLevel AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html#cfn-ssm-patchbaseline-rule-compliancelevel
-	ComplianceLevel string `json:"ComplianceLevel,omitempty"`
+	ComplianceLevel *StringIntrinsic `json:"ComplianceLevel,omitempty"`
 
 	// EnableNonSecurity AWS CloudFormation Property
 	// Required: false
@@ -23,29 +23,6 @@ type AWSSSMPatchBaseline_Rule struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html#cfn-ssm-patchbaseline-rule-patchfiltergroup
 	PatchFilterGroup *AWSSSMPatchBaseline_PatchFilterGroup `json:"PatchFilterGroup,omitempty"`
-}
-
-type UntypedAWSSSMPatchBaseline_Rule struct {
-
-	// ApproveAfterDays AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html#cfn-ssm-patchbaseline-rule-approveafterdays
-	ApproveAfterDays interface{} `json:"ApproveAfterDays,omitempty"`
-
-	// ComplianceLevel AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html#cfn-ssm-patchbaseline-rule-compliancelevel
-	ComplianceLevel interface{} `json:"ComplianceLevel,omitempty"`
-
-	// EnableNonSecurity AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html#cfn-ssm-patchbaseline-rule-enablenonsecurity
-	EnableNonSecurity interface{} `json:"EnableNonSecurity,omitempty"`
-
-	// PatchFilterGroup AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-patchbaseline-rule.html#cfn-ssm-patchbaseline-rule-patchfiltergroup
-	PatchFilterGroup *UntypedAWSSSMPatchBaseline_PatchFilterGroup `json:"PatchFilterGroup,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

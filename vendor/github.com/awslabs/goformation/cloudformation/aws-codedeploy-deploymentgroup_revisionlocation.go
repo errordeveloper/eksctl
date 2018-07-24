@@ -12,30 +12,12 @@ type AWSCodeDeployDeploymentGroup_RevisionLocation struct {
 	// RevisionType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-revisiontype
-	RevisionType string `json:"RevisionType,omitempty"`
+	RevisionType *StringIntrinsic `json:"RevisionType,omitempty"`
 
 	// S3Location AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location
 	S3Location *AWSCodeDeployDeploymentGroup_S3Location `json:"S3Location,omitempty"`
-}
-
-type UntypedAWSCodeDeployDeploymentGroup_RevisionLocation struct {
-
-	// GitHubLocation AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-githublocation
-	GitHubLocation *UntypedAWSCodeDeployDeploymentGroup_GitHubLocation `json:"GitHubLocation,omitempty"`
-
-	// RevisionType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-revisiontype
-	RevisionType interface{} `json:"RevisionType,omitempty"`
-
-	// S3Location AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-deployment-revision.html#cfn-properties-codedeploy-deploymentgroup-deployment-revision-s3location
-	S3Location *UntypedAWSCodeDeployDeploymentGroup_S3Location `json:"S3Location,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

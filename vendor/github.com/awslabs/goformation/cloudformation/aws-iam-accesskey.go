@@ -18,30 +18,12 @@ type AWSIAMAccessKey struct {
 	// Status AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html#cfn-iam-accesskey-status
-	Status string `json:"Status,omitempty"`
+	Status *StringIntrinsic `json:"Status,omitempty"`
 
 	// UserName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html#cfn-iam-accesskey-username
-	UserName string `json:"UserName,omitempty"`
-}
-
-type UntypedAWSIAMAccessKey struct {
-
-	// Serial AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html#cfn-iam-accesskey-serial
-	Serial interface{} `json:"Serial,omitempty"`
-
-	// Status AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html#cfn-iam-accesskey-status
-	Status interface{} `json:"Status,omitempty"`
-
-	// UserName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-accesskey.html#cfn-iam-accesskey-username
-	UserName interface{} `json:"UserName,omitempty"`
+	UserName *StringIntrinsic `json:"UserName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

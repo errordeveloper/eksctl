@@ -7,7 +7,7 @@ type AWSS3Bucket_Transition struct {
 	// StorageClass AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-transition.html#cfn-s3-bucket-lifecycleconfig-rule-transition-storageclass
-	StorageClass string `json:"StorageClass,omitempty"`
+	StorageClass *StringIntrinsic `json:"StorageClass,omitempty"`
 
 	// TransitionDate AWS CloudFormation Property
 	// Required: false
@@ -18,24 +18,6 @@ type AWSS3Bucket_Transition struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-transition.html#cfn-s3-bucket-lifecycleconfig-rule-transition-transitionindays
 	TransitionInDays int `json:"TransitionInDays,omitempty"`
-}
-
-type UntypedAWSS3Bucket_Transition struct {
-
-	// StorageClass AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-transition.html#cfn-s3-bucket-lifecycleconfig-rule-transition-storageclass
-	StorageClass interface{} `json:"StorageClass,omitempty"`
-
-	// TransitionDate AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-transition.html#cfn-s3-bucket-lifecycleconfig-rule-transition-transitiondate
-	TransitionDate interface{} `json:"TransitionDate,omitempty"`
-
-	// TransitionInDays AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule-transition.html#cfn-s3-bucket-lifecycleconfig-rule-transition-transitionindays
-	TransitionInDays interface{} `json:"TransitionInDays,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

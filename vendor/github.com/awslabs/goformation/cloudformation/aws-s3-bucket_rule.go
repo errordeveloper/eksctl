@@ -22,7 +22,7 @@ type AWSS3Bucket_Rule struct {
 	// Id AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-id
-	Id string `json:"Id,omitempty"`
+	Id *StringIntrinsic `json:"Id,omitempty"`
 
 	// NoncurrentVersionExpirationInDays AWS CloudFormation Property
 	// Required: false
@@ -42,12 +42,12 @@ type AWSS3Bucket_Rule struct {
 	// Prefix AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-prefix
-	Prefix string `json:"Prefix,omitempty"`
+	Prefix *StringIntrinsic `json:"Prefix,omitempty"`
 
 	// Status AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-status
-	Status string `json:"Status,omitempty"`
+	Status *StringIntrinsic `json:"Status,omitempty"`
 
 	// TagFilters AWS CloudFormation Property
 	// Required: false
@@ -63,69 +63,6 @@ type AWSS3Bucket_Rule struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-transitions
 	Transitions []AWSS3Bucket_Transition `json:"Transitions,omitempty"`
-}
-
-type UntypedAWSS3Bucket_Rule struct {
-
-	// AbortIncompleteMultipartUpload AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-rule-abortincompletemultipartupload
-	AbortIncompleteMultipartUpload *UntypedAWSS3Bucket_AbortIncompleteMultipartUpload `json:"AbortIncompleteMultipartUpload,omitempty"`
-
-	// ExpirationDate AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-expirationdate
-	ExpirationDate interface{} `json:"ExpirationDate,omitempty"`
-
-	// ExpirationInDays AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-expirationindays
-	ExpirationInDays interface{} `json:"ExpirationInDays,omitempty"`
-
-	// Id AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-id
-	Id interface{} `json:"Id,omitempty"`
-
-	// NoncurrentVersionExpirationInDays AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversionexpirationindays
-	NoncurrentVersionExpirationInDays interface{} `json:"NoncurrentVersionExpirationInDays,omitempty"`
-
-	// NoncurrentVersionTransition AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransition
-	NoncurrentVersionTransition *UntypedAWSS3Bucket_NoncurrentVersionTransition `json:"NoncurrentVersionTransition,omitempty"`
-
-	// NoncurrentVersionTransitions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-noncurrentversiontransitions
-	NoncurrentVersionTransitions []UntypedAWSS3Bucket_NoncurrentVersionTransition `json:"NoncurrentVersionTransitions,omitempty"`
-
-	// Prefix AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-prefix
-	Prefix interface{} `json:"Prefix,omitempty"`
-
-	// Status AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-status
-	Status interface{} `json:"Status,omitempty"`
-
-	// TagFilters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-rule-tagfilters
-	TagFilters []UntypedAWSS3Bucket_TagFilter `json:"TagFilters,omitempty"`
-
-	// Transition AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-transition
-	Transition *UntypedAWSS3Bucket_Transition `json:"Transition,omitempty"`
-
-	// Transitions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig-rule.html#cfn-s3-bucket-lifecycleconfig-rule-transitions
-	Transitions []UntypedAWSS3Bucket_Transition `json:"Transitions,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

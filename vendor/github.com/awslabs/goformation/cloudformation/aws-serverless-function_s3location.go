@@ -7,35 +7,17 @@ type AWSServerlessFunction_S3Location struct {
 	// Bucket AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	Bucket string `json:"Bucket,omitempty"`
+	Bucket *StringIntrinsic `json:"Bucket,omitempty"`
 
 	// Key AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	Key string `json:"Key,omitempty"`
+	Key *StringIntrinsic `json:"Key,omitempty"`
 
 	// Version AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
 	Version int `json:"Version,omitempty"`
-}
-
-type UntypedAWSServerlessFunction_S3Location struct {
-
-	// Bucket AWS CloudFormation Property
-	// Required: true
-	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	Bucket interface{} `json:"Bucket,omitempty"`
-
-	// Key AWS CloudFormation Property
-	// Required: true
-	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	Key interface{} `json:"Key,omitempty"`
-
-	// Version AWS CloudFormation Property
-	// Required: true
-	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-	Version interface{} `json:"Version,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

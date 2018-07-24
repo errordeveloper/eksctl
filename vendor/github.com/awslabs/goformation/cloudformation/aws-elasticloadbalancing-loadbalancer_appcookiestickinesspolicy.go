@@ -7,25 +7,12 @@ type AWSElasticLoadBalancingLoadBalancer_AppCookieStickinessPolicy struct {
 	// CookieName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-AppCookieStickinessPolicy.html#cfn-elb-appcookiestickinesspolicy-cookiename
-	CookieName string `json:"CookieName,omitempty"`
+	CookieName *StringIntrinsic `json:"CookieName,omitempty"`
 
 	// PolicyName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-AppCookieStickinessPolicy.html#cfn-elb-appcookiestickinesspolicy-policyname
-	PolicyName string `json:"PolicyName,omitempty"`
-}
-
-type UntypedAWSElasticLoadBalancingLoadBalancer_AppCookieStickinessPolicy struct {
-
-	// CookieName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-AppCookieStickinessPolicy.html#cfn-elb-appcookiestickinesspolicy-cookiename
-	CookieName interface{} `json:"CookieName,omitempty"`
-
-	// PolicyName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-AppCookieStickinessPolicy.html#cfn-elb-appcookiestickinesspolicy-policyname
-	PolicyName interface{} `json:"PolicyName,omitempty"`
+	PolicyName *StringIntrinsic `json:"PolicyName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

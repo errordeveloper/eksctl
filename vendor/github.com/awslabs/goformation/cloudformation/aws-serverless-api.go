@@ -18,7 +18,7 @@ type AWSServerlessApi struct {
 	// CacheClusterSize AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	CacheClusterSize string `json:"CacheClusterSize,omitempty"`
+	CacheClusterSize *StringIntrinsic `json:"CacheClusterSize,omitempty"`
 
 	// DefinitionBody AWS CloudFormation Property
 	// Required: false
@@ -33,55 +33,17 @@ type AWSServerlessApi struct {
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// StageName AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	StageName string `json:"StageName,omitempty"`
+	StageName *StringIntrinsic `json:"StageName,omitempty"`
 
 	// Variables AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	Variables map[string]string `json:"Variables,omitempty"`
-}
-
-type UntypedAWSServerlessApi struct {
-
-	// CacheClusterEnabled AWS CloudFormation Property
-	// Required: false
-	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	CacheClusterEnabled interface{} `json:"CacheClusterEnabled,omitempty"`
-
-	// CacheClusterSize AWS CloudFormation Property
-	// Required: false
-	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	CacheClusterSize interface{} `json:"CacheClusterSize,omitempty"`
-
-	// DefinitionBody AWS CloudFormation Property
-	// Required: false
-	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	DefinitionBody interface{} `json:"DefinitionBody,omitempty"`
-
-	// DefinitionUri AWS CloudFormation Property
-	// Required: false
-	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	DefinitionUri *UntypedAWSServerlessApi_DefinitionUri `json:"DefinitionUri,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: false
-	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	Name interface{} `json:"Name,omitempty"`
-
-	// StageName AWS CloudFormation Property
-	// Required: true
-	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	StageName interface{} `json:"StageName,omitempty"`
-
-	// Variables AWS CloudFormation Property
-	// Required: false
-	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessapi
-	Variables map[string]interface{} `json:"Variables,omitempty"`
+	Variables map[string]*StringIntrinsic `json:"Variables,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

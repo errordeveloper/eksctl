@@ -13,7 +13,7 @@ type AWSIAMPolicy struct {
 	// Groups AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-groups
-	Groups []string `json:"Groups,omitempty"`
+	Groups []*StringIntrinsic `json:"Groups,omitempty"`
 
 	// PolicyDocument AWS CloudFormation Property
 	// Required: true
@@ -23,45 +23,17 @@ type AWSIAMPolicy struct {
 	// PolicyName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-policyname
-	PolicyName string `json:"PolicyName,omitempty"`
+	PolicyName *StringIntrinsic `json:"PolicyName,omitempty"`
 
 	// Roles AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-roles
-	Roles []string `json:"Roles,omitempty"`
+	Roles []*StringIntrinsic `json:"Roles,omitempty"`
 
 	// Users AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-users
-	Users []string `json:"Users,omitempty"`
-}
-
-type UntypedAWSIAMPolicy struct {
-
-	// Groups AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-groups
-	Groups []interface{} `json:"Groups,omitempty"`
-
-	// PolicyDocument AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-policydocument
-	PolicyDocument interface{} `json:"PolicyDocument,omitempty"`
-
-	// PolicyName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-policyname
-	PolicyName interface{} `json:"PolicyName,omitempty"`
-
-	// Roles AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-roles
-	Roles []interface{} `json:"Roles,omitempty"`
-
-	// Users AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-policy.html#cfn-iam-policy-users
-	Users []interface{} `json:"Users,omitempty"`
+	Users []*StringIntrinsic `json:"Users,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

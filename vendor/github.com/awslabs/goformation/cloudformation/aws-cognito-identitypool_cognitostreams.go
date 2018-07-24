@@ -7,35 +7,17 @@ type AWSCognitoIdentityPool_CognitoStreams struct {
 	// RoleArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-rolearn
-	RoleArn string `json:"RoleArn,omitempty"`
+	RoleArn *StringIntrinsic `json:"RoleArn,omitempty"`
 
 	// StreamName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamname
-	StreamName string `json:"StreamName,omitempty"`
+	StreamName *StringIntrinsic `json:"StreamName,omitempty"`
 
 	// StreamingStatus AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamingstatus
-	StreamingStatus string `json:"StreamingStatus,omitempty"`
-}
-
-type UntypedAWSCognitoIdentityPool_CognitoStreams struct {
-
-	// RoleArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-rolearn
-	RoleArn interface{} `json:"RoleArn,omitempty"`
-
-	// StreamName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamname
-	StreamName interface{} `json:"StreamName,omitempty"`
-
-	// StreamingStatus AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypool-cognitostreams.html#cfn-cognito-identitypool-cognitostreams-streamingstatus
-	StreamingStatus interface{} `json:"StreamingStatus,omitempty"`
+	StreamingStatus *StringIntrinsic `json:"StreamingStatus,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

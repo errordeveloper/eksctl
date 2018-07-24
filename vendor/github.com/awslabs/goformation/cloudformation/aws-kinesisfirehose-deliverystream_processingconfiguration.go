@@ -15,19 +15,6 @@ type AWSKinesisFirehoseDeliveryStream_ProcessingConfiguration struct {
 	Processors []AWSKinesisFirehoseDeliveryStream_Processor `json:"Processors,omitempty"`
 }
 
-type UntypedAWSKinesisFirehoseDeliveryStream_ProcessingConfiguration struct {
-
-	// Enabled AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-processingconfiguration.html#cfn-kinesisfirehose-deliverystream-processingconfiguration-enabled
-	Enabled interface{} `json:"Enabled,omitempty"`
-
-	// Processors AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-processingconfiguration.html#cfn-kinesisfirehose-deliverystream-processingconfiguration-processors
-	Processors []UntypedAWSKinesisFirehoseDeliveryStream_Processor `json:"Processors,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSKinesisFirehoseDeliveryStream_ProcessingConfiguration) AWSCloudFormationType() string {
 	return "AWS::KinesisFirehose::DeliveryStream.ProcessingConfiguration"

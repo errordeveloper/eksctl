@@ -17,25 +17,7 @@ type AWSWAFRegionalWebACL_Rule struct {
 	// RuleId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-ruleid
-	RuleId string `json:"RuleId,omitempty"`
-}
-
-type UntypedAWSWAFRegionalWebACL_Rule struct {
-
-	// Action AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-action
-	Action *UntypedAWSWAFRegionalWebACL_Action `json:"Action,omitempty"`
-
-	// Priority AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-priority
-	Priority interface{} `json:"Priority,omitempty"`
-
-	// RuleId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-wafregional-webacl-rule.html#cfn-wafregional-webacl-rule-ruleid
-	RuleId interface{} `json:"RuleId,omitempty"`
+	RuleId *StringIntrinsic `json:"RuleId,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

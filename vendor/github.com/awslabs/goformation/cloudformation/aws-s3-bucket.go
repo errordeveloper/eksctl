@@ -18,7 +18,7 @@ type AWSS3Bucket struct {
 	// AccessControl AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-accesscontrol
-	AccessControl string `json:"AccessControl,omitempty"`
+	AccessControl *StringIntrinsic `json:"AccessControl,omitempty"`
 
 	// AnalyticsConfigurations AWS CloudFormation Property
 	// Required: false
@@ -33,7 +33,7 @@ type AWSS3Bucket struct {
 	// BucketName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-name
-	BucketName string `json:"BucketName,omitempty"`
+	BucketName *StringIntrinsic `json:"BucketName,omitempty"`
 
 	// CorsConfiguration AWS CloudFormation Property
 	// Required: false
@@ -84,84 +84,6 @@ type AWSS3Bucket struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-websiteconfiguration
 	WebsiteConfiguration *AWSS3Bucket_WebsiteConfiguration `json:"WebsiteConfiguration,omitempty"`
-}
-
-type UntypedAWSS3Bucket struct {
-
-	// AccelerateConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-accelerateconfiguration
-	AccelerateConfiguration *UntypedAWSS3Bucket_AccelerateConfiguration `json:"AccelerateConfiguration,omitempty"`
-
-	// AccessControl AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-accesscontrol
-	AccessControl interface{} `json:"AccessControl,omitempty"`
-
-	// AnalyticsConfigurations AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-analyticsconfigurations
-	AnalyticsConfigurations []UntypedAWSS3Bucket_AnalyticsConfiguration `json:"AnalyticsConfigurations,omitempty"`
-
-	// BucketEncryption AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-bucketencryption
-	BucketEncryption *UntypedAWSS3Bucket_BucketEncryption `json:"BucketEncryption,omitempty"`
-
-	// BucketName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-name
-	BucketName interface{} `json:"BucketName,omitempty"`
-
-	// CorsConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-crossoriginconfig
-	CorsConfiguration *UntypedAWSS3Bucket_CorsConfiguration `json:"CorsConfiguration,omitempty"`
-
-	// InventoryConfigurations AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-inventoryconfigurations
-	InventoryConfigurations []UntypedAWSS3Bucket_InventoryConfiguration `json:"InventoryConfigurations,omitempty"`
-
-	// LifecycleConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-lifecycleconfig
-	LifecycleConfiguration *UntypedAWSS3Bucket_LifecycleConfiguration `json:"LifecycleConfiguration,omitempty"`
-
-	// LoggingConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-loggingconfig
-	LoggingConfiguration *UntypedAWSS3Bucket_LoggingConfiguration `json:"LoggingConfiguration,omitempty"`
-
-	// MetricsConfigurations AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-metricsconfigurations
-	MetricsConfigurations []UntypedAWSS3Bucket_MetricsConfiguration `json:"MetricsConfigurations,omitempty"`
-
-	// NotificationConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-notification
-	NotificationConfiguration *UntypedAWSS3Bucket_NotificationConfiguration `json:"NotificationConfiguration,omitempty"`
-
-	// ReplicationConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-replicationconfiguration
-	ReplicationConfiguration *UntypedAWSS3Bucket_ReplicationConfiguration `json:"ReplicationConfiguration,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// VersioningConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-versioning
-	VersioningConfiguration *UntypedAWSS3Bucket_VersioningConfiguration `json:"VersioningConfiguration,omitempty"`
-
-	// WebsiteConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket.html#cfn-s3-bucket-websiteconfiguration
-	WebsiteConfiguration *UntypedAWSS3Bucket_WebsiteConfiguration `json:"WebsiteConfiguration,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

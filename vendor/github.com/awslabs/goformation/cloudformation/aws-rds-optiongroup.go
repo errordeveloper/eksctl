@@ -13,12 +13,12 @@ type AWSRDSOptionGroup struct {
 	// EngineName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-enginename
-	EngineName string `json:"EngineName,omitempty"`
+	EngineName *StringIntrinsic `json:"EngineName,omitempty"`
 
 	// MajorEngineVersion AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-majorengineversion
-	MajorEngineVersion string `json:"MajorEngineVersion,omitempty"`
+	MajorEngineVersion *StringIntrinsic `json:"MajorEngineVersion,omitempty"`
 
 	// OptionConfigurations AWS CloudFormation Property
 	// Required: true
@@ -28,40 +28,12 @@ type AWSRDSOptionGroup struct {
 	// OptionGroupDescription AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-optiongroupdescription
-	OptionGroupDescription string `json:"OptionGroupDescription,omitempty"`
+	OptionGroupDescription *StringIntrinsic `json:"OptionGroupDescription,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-tags
 	Tags []Tag `json:"Tags,omitempty"`
-}
-
-type UntypedAWSRDSOptionGroup struct {
-
-	// EngineName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-enginename
-	EngineName interface{} `json:"EngineName,omitempty"`
-
-	// MajorEngineVersion AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-majorengineversion
-	MajorEngineVersion interface{} `json:"MajorEngineVersion,omitempty"`
-
-	// OptionConfigurations AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-optionconfigurations
-	OptionConfigurations []UntypedAWSRDSOptionGroup_OptionConfiguration `json:"OptionConfigurations,omitempty"`
-
-	// OptionGroupDescription AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-optiongroupdescription
-	OptionGroupDescription interface{} `json:"OptionGroupDescription,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-optiongroup.html#cfn-rds-optiongroup-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

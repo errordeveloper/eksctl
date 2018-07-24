@@ -13,15 +13,7 @@ type AWSSDBDomain struct {
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-simpledb.html#cfn-sdb-domain-description
-	Description string `json:"Description,omitempty"`
-}
-
-type UntypedAWSSDBDomain struct {
-
-	// Description AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-simpledb.html#cfn-sdb-domain-description
-	Description interface{} `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

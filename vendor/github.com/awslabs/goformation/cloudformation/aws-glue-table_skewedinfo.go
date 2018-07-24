@@ -7,7 +7,7 @@ type AWSGlueTable_SkewedInfo struct {
 	// SkewedColumnNames AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-skewedinfo.html#cfn-glue-table-skewedinfo-skewedcolumnnames
-	SkewedColumnNames []string `json:"SkewedColumnNames,omitempty"`
+	SkewedColumnNames []*StringIntrinsic `json:"SkewedColumnNames,omitempty"`
 
 	// SkewedColumnValueLocationMaps AWS CloudFormation Property
 	// Required: false
@@ -17,25 +17,7 @@ type AWSGlueTable_SkewedInfo struct {
 	// SkewedColumnValues AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-skewedinfo.html#cfn-glue-table-skewedinfo-skewedcolumnvalues
-	SkewedColumnValues []string `json:"SkewedColumnValues,omitempty"`
-}
-
-type UntypedAWSGlueTable_SkewedInfo struct {
-
-	// SkewedColumnNames AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-skewedinfo.html#cfn-glue-table-skewedinfo-skewedcolumnnames
-	SkewedColumnNames []interface{} `json:"SkewedColumnNames,omitempty"`
-
-	// SkewedColumnValueLocationMaps AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-skewedinfo.html#cfn-glue-table-skewedinfo-skewedcolumnvaluelocationmaps
-	SkewedColumnValueLocationMaps interface{} `json:"SkewedColumnValueLocationMaps,omitempty"`
-
-	// SkewedColumnValues AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-skewedinfo.html#cfn-glue-table-skewedinfo-skewedcolumnvalues
-	SkewedColumnValues []interface{} `json:"SkewedColumnValues,omitempty"`
+	SkewedColumnValues []*StringIntrinsic `json:"SkewedColumnValues,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

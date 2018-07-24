@@ -13,25 +13,12 @@ type AWSSESConfigurationSetEventDestination struct {
 	// ConfigurationSetName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-configurationsetname
-	ConfigurationSetName string `json:"ConfigurationSetName,omitempty"`
+	ConfigurationSetName *StringIntrinsic `json:"ConfigurationSetName,omitempty"`
 
 	// EventDestination AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-eventdestination
 	EventDestination *AWSSESConfigurationSetEventDestination_EventDestination `json:"EventDestination,omitempty"`
-}
-
-type UntypedAWSSESConfigurationSetEventDestination struct {
-
-	// ConfigurationSetName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-configurationsetname
-	ConfigurationSetName interface{} `json:"ConfigurationSetName,omitempty"`
-
-	// EventDestination AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ses-configurationseteventdestination.html#cfn-ses-configurationseteventdestination-eventdestination
-	EventDestination *UntypedAWSSESConfigurationSetEventDestination_EventDestination `json:"EventDestination,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -7,35 +7,17 @@ type AWSEC2LaunchTemplate_SpotOptions struct {
 	// InstanceInterruptionBehavior AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions.html#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-instanceinterruptionbehavior
-	InstanceInterruptionBehavior string `json:"InstanceInterruptionBehavior,omitempty"`
+	InstanceInterruptionBehavior *StringIntrinsic `json:"InstanceInterruptionBehavior,omitempty"`
 
 	// MaxPrice AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions.html#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-maxprice
-	MaxPrice string `json:"MaxPrice,omitempty"`
+	MaxPrice *StringIntrinsic `json:"MaxPrice,omitempty"`
 
 	// SpotInstanceType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions.html#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-spotinstancetype
-	SpotInstanceType string `json:"SpotInstanceType,omitempty"`
-}
-
-type UntypedAWSEC2LaunchTemplate_SpotOptions struct {
-
-	// InstanceInterruptionBehavior AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions.html#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-instanceinterruptionbehavior
-	InstanceInterruptionBehavior interface{} `json:"InstanceInterruptionBehavior,omitempty"`
-
-	// MaxPrice AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions.html#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-maxprice
-	MaxPrice interface{} `json:"MaxPrice,omitempty"`
-
-	// SpotInstanceType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions.html#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions-spotinstancetype
-	SpotInstanceType interface{} `json:"SpotInstanceType,omitempty"`
+	SpotInstanceType *StringIntrinsic `json:"SpotInstanceType,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

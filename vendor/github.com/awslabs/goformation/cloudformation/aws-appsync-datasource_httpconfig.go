@@ -7,15 +7,7 @@ type AWSAppSyncDataSource_HttpConfig struct {
 	// Endpoint AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html#cfn-appsync-datasource-httpconfig-endpoint
-	Endpoint string `json:"Endpoint,omitempty"`
-}
-
-type UntypedAWSAppSyncDataSource_HttpConfig struct {
-
-	// Endpoint AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-httpconfig.html#cfn-appsync-datasource-httpconfig-endpoint
-	Endpoint interface{} `json:"Endpoint,omitempty"`
+	Endpoint *StringIntrinsic `json:"Endpoint,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

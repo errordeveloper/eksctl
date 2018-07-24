@@ -13,15 +13,7 @@ type AWSEC2PlacementGroup struct {
 	// Strategy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-placementgroup.html#cfn-ec2-placementgroup-strategy
-	Strategy string `json:"Strategy,omitempty"`
-}
-
-type UntypedAWSEC2PlacementGroup struct {
-
-	// Strategy AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-placementgroup.html#cfn-ec2-placementgroup-strategy
-	Strategy interface{} `json:"Strategy,omitempty"`
+	Strategy *StringIntrinsic `json:"Strategy,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

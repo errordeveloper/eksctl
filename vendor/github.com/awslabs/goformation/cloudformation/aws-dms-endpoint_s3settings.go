@@ -7,75 +7,37 @@ type AWSDMSEndpoint_S3Settings struct {
 	// BucketFolder AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-bucketfolder
-	BucketFolder string `json:"BucketFolder,omitempty"`
+	BucketFolder *StringIntrinsic `json:"BucketFolder,omitempty"`
 
 	// BucketName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-bucketname
-	BucketName string `json:"BucketName,omitempty"`
+	BucketName *StringIntrinsic `json:"BucketName,omitempty"`
 
 	// CompressionType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-compressiontype
-	CompressionType string `json:"CompressionType,omitempty"`
+	CompressionType *StringIntrinsic `json:"CompressionType,omitempty"`
 
 	// CsvDelimiter AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-csvdelimiter
-	CsvDelimiter string `json:"CsvDelimiter,omitempty"`
+	CsvDelimiter *StringIntrinsic `json:"CsvDelimiter,omitempty"`
 
 	// CsvRowDelimiter AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-csvrowdelimiter
-	CsvRowDelimiter string `json:"CsvRowDelimiter,omitempty"`
+	CsvRowDelimiter *StringIntrinsic `json:"CsvRowDelimiter,omitempty"`
 
 	// ExternalTableDefinition AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-externaltabledefinition
-	ExternalTableDefinition string `json:"ExternalTableDefinition,omitempty"`
+	ExternalTableDefinition *StringIntrinsic `json:"ExternalTableDefinition,omitempty"`
 
 	// ServiceAccessRoleArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-serviceaccessrolearn
-	ServiceAccessRoleArn string `json:"ServiceAccessRoleArn,omitempty"`
-}
-
-type UntypedAWSDMSEndpoint_S3Settings struct {
-
-	// BucketFolder AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-bucketfolder
-	BucketFolder interface{} `json:"BucketFolder,omitempty"`
-
-	// BucketName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-bucketname
-	BucketName interface{} `json:"BucketName,omitempty"`
-
-	// CompressionType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-compressiontype
-	CompressionType interface{} `json:"CompressionType,omitempty"`
-
-	// CsvDelimiter AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-csvdelimiter
-	CsvDelimiter interface{} `json:"CsvDelimiter,omitempty"`
-
-	// CsvRowDelimiter AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-csvrowdelimiter
-	CsvRowDelimiter interface{} `json:"CsvRowDelimiter,omitempty"`
-
-	// ExternalTableDefinition AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-externaltabledefinition
-	ExternalTableDefinition interface{} `json:"ExternalTableDefinition,omitempty"`
-
-	// ServiceAccessRoleArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dms-endpoint-s3settings.html#cfn-dms-endpoint-s3settings-serviceaccessrolearn
-	ServiceAccessRoleArn interface{} `json:"ServiceAccessRoleArn,omitempty"`
+	ServiceAccessRoleArn *StringIntrinsic `json:"ServiceAccessRoleArn,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

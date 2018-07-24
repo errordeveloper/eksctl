@@ -13,7 +13,7 @@ type AWSECSService struct {
 	// Cluster AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-cluster
-	Cluster string `json:"Cluster,omitempty"`
+	Cluster *StringIntrinsic `json:"Cluster,omitempty"`
 
 	// DeploymentConfiguration AWS CloudFormation Property
 	// Required: false
@@ -33,7 +33,7 @@ type AWSECSService struct {
 	// LaunchType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-launchtype
-	LaunchType string `json:"LaunchType,omitempty"`
+	LaunchType *StringIntrinsic `json:"LaunchType,omitempty"`
 
 	// LoadBalancers AWS CloudFormation Property
 	// Required: false
@@ -58,17 +58,17 @@ type AWSECSService struct {
 	// PlatformVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-platformversion
-	PlatformVersion string `json:"PlatformVersion,omitempty"`
+	PlatformVersion *StringIntrinsic `json:"PlatformVersion,omitempty"`
 
 	// Role AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-role
-	Role string `json:"Role,omitempty"`
+	Role *StringIntrinsic `json:"Role,omitempty"`
 
 	// ServiceName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-servicename
-	ServiceName string `json:"ServiceName,omitempty"`
+	ServiceName *StringIntrinsic `json:"ServiceName,omitempty"`
 
 	// ServiceRegistries AWS CloudFormation Property
 	// Required: false
@@ -78,80 +78,7 @@ type AWSECSService struct {
 	// TaskDefinition AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-taskdefinition
-	TaskDefinition string `json:"TaskDefinition,omitempty"`
-}
-
-type UntypedAWSECSService struct {
-
-	// Cluster AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-cluster
-	Cluster interface{} `json:"Cluster,omitempty"`
-
-	// DeploymentConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-deploymentconfiguration
-	DeploymentConfiguration *UntypedAWSECSService_DeploymentConfiguration `json:"DeploymentConfiguration,omitempty"`
-
-	// DesiredCount AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-desiredcount
-	DesiredCount interface{} `json:"DesiredCount,omitempty"`
-
-	// HealthCheckGracePeriodSeconds AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-healthcheckgraceperiodseconds
-	HealthCheckGracePeriodSeconds interface{} `json:"HealthCheckGracePeriodSeconds,omitempty"`
-
-	// LaunchType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-launchtype
-	LaunchType interface{} `json:"LaunchType,omitempty"`
-
-	// LoadBalancers AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-loadbalancers
-	LoadBalancers []UntypedAWSECSService_LoadBalancer `json:"LoadBalancers,omitempty"`
-
-	// NetworkConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-networkconfiguration
-	NetworkConfiguration *UntypedAWSECSService_NetworkConfiguration `json:"NetworkConfiguration,omitempty"`
-
-	// PlacementConstraints AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementconstraints
-	PlacementConstraints []UntypedAWSECSService_PlacementConstraint `json:"PlacementConstraints,omitempty"`
-
-	// PlacementStrategies AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-placementstrategies
-	PlacementStrategies []UntypedAWSECSService_PlacementStrategy `json:"PlacementStrategies,omitempty"`
-
-	// PlatformVersion AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-platformversion
-	PlatformVersion interface{} `json:"PlatformVersion,omitempty"`
-
-	// Role AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-role
-	Role interface{} `json:"Role,omitempty"`
-
-	// ServiceName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-servicename
-	ServiceName interface{} `json:"ServiceName,omitempty"`
-
-	// ServiceRegistries AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-serviceregistries
-	ServiceRegistries []UntypedAWSECSService_ServiceRegistry `json:"ServiceRegistries,omitempty"`
-
-	// TaskDefinition AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-taskdefinition
-	TaskDefinition interface{} `json:"TaskDefinition,omitempty"`
+	TaskDefinition *StringIntrinsic `json:"TaskDefinition,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

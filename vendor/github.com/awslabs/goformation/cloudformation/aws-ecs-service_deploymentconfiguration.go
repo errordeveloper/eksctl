@@ -15,19 +15,6 @@ type AWSECSService_DeploymentConfiguration struct {
 	MinimumHealthyPercent int `json:"MinimumHealthyPercent,omitempty"`
 }
 
-type UntypedAWSECSService_DeploymentConfiguration struct {
-
-	// MaximumPercent AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-maximumpercent
-	MaximumPercent interface{} `json:"MaximumPercent,omitempty"`
-
-	// MinimumHealthyPercent AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-deploymentconfiguration.html#cfn-ecs-service-deploymentconfiguration-minimumhealthypercent
-	MinimumHealthyPercent interface{} `json:"MinimumHealthyPercent,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSECSService_DeploymentConfiguration) AWSCloudFormationType() string {
 	return "AWS::ECS::Service.DeploymentConfiguration"

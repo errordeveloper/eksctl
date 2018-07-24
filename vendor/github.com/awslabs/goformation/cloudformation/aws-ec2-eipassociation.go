@@ -13,55 +13,27 @@ type AWSEC2EIPAssociation struct {
 	// AllocationId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html#cfn-ec2-eipassociation-allocationid
-	AllocationId string `json:"AllocationId,omitempty"`
+	AllocationId *StringIntrinsic `json:"AllocationId,omitempty"`
 
 	// EIP AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html#cfn-ec2-eipassociation-eip
-	EIP string `json:"EIP,omitempty"`
+	EIP *StringIntrinsic `json:"EIP,omitempty"`
 
 	// InstanceId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html#cfn-ec2-eipassociation-instanceid
-	InstanceId string `json:"InstanceId,omitempty"`
+	InstanceId *StringIntrinsic `json:"InstanceId,omitempty"`
 
 	// NetworkInterfaceId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html#cfn-ec2-eipassociation-networkinterfaceid
-	NetworkInterfaceId string `json:"NetworkInterfaceId,omitempty"`
+	NetworkInterfaceId *StringIntrinsic `json:"NetworkInterfaceId,omitempty"`
 
 	// PrivateIpAddress AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html#cfn-ec2-eipassociation-PrivateIpAddress
-	PrivateIpAddress string `json:"PrivateIpAddress,omitempty"`
-}
-
-type UntypedAWSEC2EIPAssociation struct {
-
-	// AllocationId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html#cfn-ec2-eipassociation-allocationid
-	AllocationId interface{} `json:"AllocationId,omitempty"`
-
-	// EIP AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html#cfn-ec2-eipassociation-eip
-	EIP interface{} `json:"EIP,omitempty"`
-
-	// InstanceId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html#cfn-ec2-eipassociation-instanceid
-	InstanceId interface{} `json:"InstanceId,omitempty"`
-
-	// NetworkInterfaceId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html#cfn-ec2-eipassociation-networkinterfaceid
-	NetworkInterfaceId interface{} `json:"NetworkInterfaceId,omitempty"`
-
-	// PrivateIpAddress AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-eip-association.html#cfn-ec2-eipassociation-PrivateIpAddress
-	PrivateIpAddress interface{} `json:"PrivateIpAddress,omitempty"`
+	PrivateIpAddress *StringIntrinsic `json:"PrivateIpAddress,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

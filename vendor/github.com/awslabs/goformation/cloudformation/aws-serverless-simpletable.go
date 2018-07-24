@@ -21,19 +21,6 @@ type AWSServerlessSimpleTable struct {
 	ProvisionedThroughput *AWSServerlessSimpleTable_ProvisionedThroughput `json:"ProvisionedThroughput,omitempty"`
 }
 
-type UntypedAWSServerlessSimpleTable struct {
-
-	// PrimaryKey AWS CloudFormation Property
-	// Required: false
-	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#primary-key-object
-	PrimaryKey *UntypedAWSServerlessSimpleTable_PrimaryKey `json:"PrimaryKey,omitempty"`
-
-	// ProvisionedThroughput AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html
-	ProvisionedThroughput *UntypedAWSServerlessSimpleTable_ProvisionedThroughput `json:"ProvisionedThroughput,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSServerlessSimpleTable) AWSCloudFormationType() string {
 	return "AWS::Serverless::SimpleTable"

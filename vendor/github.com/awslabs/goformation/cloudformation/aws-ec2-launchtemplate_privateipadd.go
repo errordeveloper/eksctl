@@ -12,20 +12,7 @@ type AWSEC2LaunchTemplate_PrivateIpAdd struct {
 	// PrivateIpAddress AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privateipadd.html#cfn-ec2-launchtemplate-privateipadd-privateipaddress
-	PrivateIpAddress string `json:"PrivateIpAddress,omitempty"`
-}
-
-type UntypedAWSEC2LaunchTemplate_PrivateIpAdd struct {
-
-	// Primary AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privateipadd.html#cfn-ec2-launchtemplate-privateipadd-primary
-	Primary interface{} `json:"Primary,omitempty"`
-
-	// PrivateIpAddress AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-privateipadd.html#cfn-ec2-launchtemplate-privateipadd-privateipaddress
-	PrivateIpAddress interface{} `json:"PrivateIpAddress,omitempty"`
+	PrivateIpAddress *StringIntrinsic `json:"PrivateIpAddress,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

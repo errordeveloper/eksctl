@@ -7,15 +7,7 @@ type AWSLambdaFunction_Environment struct {
 	// Variables AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-environment.html#cfn-lambda-function-environment-variables
-	Variables map[string]string `json:"Variables,omitempty"`
-}
-
-type UntypedAWSLambdaFunction_Environment struct {
-
-	// Variables AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-environment.html#cfn-lambda-function-environment-variables
-	Variables map[string]interface{} `json:"Variables,omitempty"`
+	Variables map[string]*StringIntrinsic `json:"Variables,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

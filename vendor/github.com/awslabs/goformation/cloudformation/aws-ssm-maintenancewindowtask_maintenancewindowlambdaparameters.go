@@ -7,35 +7,17 @@ type AWSSSMMaintenanceWindowTask_MaintenanceWindowLambdaParameters struct {
 	// ClientContext AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-clientcontext
-	ClientContext string `json:"ClientContext,omitempty"`
+	ClientContext *StringIntrinsic `json:"ClientContext,omitempty"`
 
 	// Payload AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-payload
-	Payload string `json:"Payload,omitempty"`
+	Payload *StringIntrinsic `json:"Payload,omitempty"`
 
 	// Qualifier AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-qualifier
-	Qualifier string `json:"Qualifier,omitempty"`
-}
-
-type UntypedAWSSSMMaintenanceWindowTask_MaintenanceWindowLambdaParameters struct {
-
-	// ClientContext AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-clientcontext
-	ClientContext interface{} `json:"ClientContext,omitempty"`
-
-	// Payload AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-payload
-	Payload interface{} `json:"Payload,omitempty"`
-
-	// Qualifier AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-maintenancewindowlambdaparameters.html#cfn-ssm-maintenancewindowtask-maintenancewindowlambdaparameters-qualifier
-	Qualifier interface{} `json:"Qualifier,omitempty"`
+	Qualifier *StringIntrinsic `json:"Qualifier,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

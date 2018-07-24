@@ -16,14 +16,6 @@ type AWSGlueClassifier struct {
 	GrokClassifier *AWSGlueClassifier_GrokClassifier `json:"GrokClassifier,omitempty"`
 }
 
-type UntypedAWSGlueClassifier struct {
-
-	// GrokClassifier AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-classifier.html#cfn-glue-classifier-grokclassifier
-	GrokClassifier *UntypedAWSGlueClassifier_GrokClassifier `json:"GrokClassifier,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSGlueClassifier) AWSCloudFormationType() string {
 	return "AWS::Glue::Classifier"

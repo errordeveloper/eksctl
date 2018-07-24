@@ -13,35 +13,17 @@ type AWSWAFRegionalRule struct {
 	// MetricName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-rule.html#cfn-wafregional-rule-metricname
-	MetricName string `json:"MetricName,omitempty"`
+	MetricName *StringIntrinsic `json:"MetricName,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-rule.html#cfn-wafregional-rule-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// Predicates AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-rule.html#cfn-wafregional-rule-predicates
 	Predicates []AWSWAFRegionalRule_Predicate `json:"Predicates,omitempty"`
-}
-
-type UntypedAWSWAFRegionalRule struct {
-
-	// MetricName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-rule.html#cfn-wafregional-rule-metricname
-	MetricName interface{} `json:"MetricName,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-rule.html#cfn-wafregional-rule-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// Predicates AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wafregional-rule.html#cfn-wafregional-rule-predicates
-	Predicates []UntypedAWSWAFRegionalRule_Predicate `json:"Predicates,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -18,20 +18,7 @@ type AWSIoTThing struct {
 	// ThingName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thing.html#cfn-iot-thing-thingname
-	ThingName string `json:"ThingName,omitempty"`
-}
-
-type UntypedAWSIoTThing struct {
-
-	// AttributePayload AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thing.html#cfn-iot-thing-attributepayload
-	AttributePayload *UntypedAWSIoTThing_AttributePayload `json:"AttributePayload,omitempty"`
-
-	// ThingName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thing.html#cfn-iot-thing-thingname
-	ThingName interface{} `json:"ThingName,omitempty"`
+	ThingName *StringIntrinsic `json:"ThingName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

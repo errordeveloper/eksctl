@@ -7,35 +7,17 @@ type AWSAmazonMQBroker_MaintenanceWindow struct {
 	// DayOfWeek AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-dayofweek
-	DayOfWeek string `json:"DayOfWeek,omitempty"`
+	DayOfWeek *StringIntrinsic `json:"DayOfWeek,omitempty"`
 
 	// TimeOfDay AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timeofday
-	TimeOfDay string `json:"TimeOfDay,omitempty"`
+	TimeOfDay *StringIntrinsic `json:"TimeOfDay,omitempty"`
 
 	// TimeZone AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timezone
-	TimeZone string `json:"TimeZone,omitempty"`
-}
-
-type UntypedAWSAmazonMQBroker_MaintenanceWindow struct {
-
-	// DayOfWeek AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-dayofweek
-	DayOfWeek interface{} `json:"DayOfWeek,omitempty"`
-
-	// TimeOfDay AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timeofday
-	TimeOfDay interface{} `json:"TimeOfDay,omitempty"`
-
-	// TimeZone AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-amazonmq-broker-maintenancewindow.html#cfn-amazonmq-broker-maintenancewindow-timezone
-	TimeZone interface{} `json:"TimeZone,omitempty"`
+	TimeZone *StringIntrinsic `json:"TimeZone,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -12,30 +12,12 @@ type AWSKinesisAnalyticsApplicationReferenceDataSource_ReferenceSchema struct {
 	// RecordEncoding AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordencoding
-	RecordEncoding string `json:"RecordEncoding,omitempty"`
+	RecordEncoding *StringIntrinsic `json:"RecordEncoding,omitempty"`
 
 	// RecordFormat AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordformat
 	RecordFormat *AWSKinesisAnalyticsApplicationReferenceDataSource_RecordFormat `json:"RecordFormat,omitempty"`
-}
-
-type UntypedAWSKinesisAnalyticsApplicationReferenceDataSource_ReferenceSchema struct {
-
-	// RecordColumns AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordcolumns
-	RecordColumns []UntypedAWSKinesisAnalyticsApplicationReferenceDataSource_RecordColumn `json:"RecordColumns,omitempty"`
-
-	// RecordEncoding AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordencoding
-	RecordEncoding interface{} `json:"RecordEncoding,omitempty"`
-
-	// RecordFormat AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-referenceschema.html#cfn-kinesisanalytics-applicationreferencedatasource-referenceschema-recordformat
-	RecordFormat *UntypedAWSKinesisAnalyticsApplicationReferenceDataSource_RecordFormat `json:"RecordFormat,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

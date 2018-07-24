@@ -13,45 +13,22 @@ type AWSServiceCatalogPortfolioPrincipalAssociation struct {
 	// AcceptLanguage AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html#cfn-servicecatalog-portfolioprincipalassociation-acceptlanguage
-	AcceptLanguage string `json:"AcceptLanguage,omitempty"`
+	AcceptLanguage *StringIntrinsic `json:"AcceptLanguage,omitempty"`
 
 	// PortfolioId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html#cfn-servicecatalog-portfolioprincipalassociation-portfolioid
-	PortfolioId string `json:"PortfolioId,omitempty"`
+	PortfolioId *StringIntrinsic `json:"PortfolioId,omitempty"`
 
 	// PrincipalARN AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html#cfn-servicecatalog-portfolioprincipalassociation-principalarn
-	PrincipalARN string `json:"PrincipalARN,omitempty"`
+	PrincipalARN *StringIntrinsic `json:"PrincipalARN,omitempty"`
 
 	// PrincipalType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html#cfn-servicecatalog-portfolioprincipalassociation-principaltype
-	PrincipalType string `json:"PrincipalType,omitempty"`
-}
-
-type UntypedAWSServiceCatalogPortfolioPrincipalAssociation struct {
-
-	// AcceptLanguage AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html#cfn-servicecatalog-portfolioprincipalassociation-acceptlanguage
-	AcceptLanguage interface{} `json:"AcceptLanguage,omitempty"`
-
-	// PortfolioId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html#cfn-servicecatalog-portfolioprincipalassociation-portfolioid
-	PortfolioId interface{} `json:"PortfolioId,omitempty"`
-
-	// PrincipalARN AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html#cfn-servicecatalog-portfolioprincipalassociation-principalarn
-	PrincipalARN interface{} `json:"PrincipalARN,omitempty"`
-
-	// PrincipalType AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicecatalog-portfolioprincipalassociation.html#cfn-servicecatalog-portfolioprincipalassociation-principaltype
-	PrincipalType interface{} `json:"PrincipalType,omitempty"`
+	PrincipalType *StringIntrinsic `json:"PrincipalType,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

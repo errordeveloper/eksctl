@@ -7,7 +7,7 @@ type AWSCognitoIdentityPoolRoleAttachment_RoleMapping struct {
 	// AmbiguousRoleResolution AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-ambiguousroleresolution
-	AmbiguousRoleResolution string `json:"AmbiguousRoleResolution,omitempty"`
+	AmbiguousRoleResolution *StringIntrinsic `json:"AmbiguousRoleResolution,omitempty"`
 
 	// RulesConfiguration AWS CloudFormation Property
 	// Required: false
@@ -17,25 +17,7 @@ type AWSCognitoIdentityPoolRoleAttachment_RoleMapping struct {
 	// Type AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-type
-	Type string `json:"Type,omitempty"`
-}
-
-type UntypedAWSCognitoIdentityPoolRoleAttachment_RoleMapping struct {
-
-	// AmbiguousRoleResolution AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-ambiguousroleresolution
-	AmbiguousRoleResolution interface{} `json:"AmbiguousRoleResolution,omitempty"`
-
-	// RulesConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-rulesconfiguration
-	RulesConfiguration *UntypedAWSCognitoIdentityPoolRoleAttachment_RulesConfigurationType `json:"RulesConfiguration,omitempty"`
-
-	// Type AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-identitypoolroleattachment-rolemapping.html#cfn-cognito-identitypoolroleattachment-rolemapping-type
-	Type interface{} `json:"Type,omitempty"`
+	Type *StringIntrinsic `json:"Type,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

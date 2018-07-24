@@ -13,35 +13,17 @@ type AWSCognitoUserPoolUserToGroupAttachment struct {
 	// GroupName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-groupname
-	GroupName string `json:"GroupName,omitempty"`
+	GroupName *StringIntrinsic `json:"GroupName,omitempty"`
 
 	// UserPoolId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-userpoolid
-	UserPoolId string `json:"UserPoolId,omitempty"`
+	UserPoolId *StringIntrinsic `json:"UserPoolId,omitempty"`
 
 	// Username AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-username
-	Username string `json:"Username,omitempty"`
-}
-
-type UntypedAWSCognitoUserPoolUserToGroupAttachment struct {
-
-	// GroupName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-groupname
-	GroupName interface{} `json:"GroupName,omitempty"`
-
-	// UserPoolId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-userpoolid
-	UserPoolId interface{} `json:"UserPoolId,omitempty"`
-
-	// Username AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-username
-	Username interface{} `json:"Username,omitempty"`
+	Username *StringIntrinsic `json:"Username,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

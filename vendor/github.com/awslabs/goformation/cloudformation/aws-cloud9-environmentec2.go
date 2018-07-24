@@ -18,22 +18,22 @@ type AWSCloud9EnvironmentEC2 struct {
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-description
-	Description string `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 
 	// InstanceType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-instancetype
-	InstanceType string `json:"InstanceType,omitempty"`
+	InstanceType *StringIntrinsic `json:"InstanceType,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// OwnerArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-ownerarn
-	OwnerArn string `json:"OwnerArn,omitempty"`
+	OwnerArn *StringIntrinsic `json:"OwnerArn,omitempty"`
 
 	// Repositories AWS CloudFormation Property
 	// Required: false
@@ -43,45 +43,7 @@ type AWSCloud9EnvironmentEC2 struct {
 	// SubnetId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-subnetid
-	SubnetId string `json:"SubnetId,omitempty"`
-}
-
-type UntypedAWSCloud9EnvironmentEC2 struct {
-
-	// AutomaticStopTimeMinutes AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-automaticstoptimeminutes
-	AutomaticStopTimeMinutes interface{} `json:"AutomaticStopTimeMinutes,omitempty"`
-
-	// Description AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-description
-	Description interface{} `json:"Description,omitempty"`
-
-	// InstanceType AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-instancetype
-	InstanceType interface{} `json:"InstanceType,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// OwnerArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-ownerarn
-	OwnerArn interface{} `json:"OwnerArn,omitempty"`
-
-	// Repositories AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-repositories
-	Repositories []UntypedAWSCloud9EnvironmentEC2_Repository `json:"Repositories,omitempty"`
-
-	// SubnetId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloud9-environmentec2.html#cfn-cloud9-environmentec2-subnetid
-	SubnetId interface{} `json:"SubnetId,omitempty"`
+	SubnetId *StringIntrinsic `json:"SubnetId,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

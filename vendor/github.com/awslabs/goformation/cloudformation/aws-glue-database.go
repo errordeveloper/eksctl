@@ -13,25 +13,12 @@ type AWSGlueDatabase struct {
 	// CatalogId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html#cfn-glue-database-catalogid
-	CatalogId string `json:"CatalogId,omitempty"`
+	CatalogId *StringIntrinsic `json:"CatalogId,omitempty"`
 
 	// DatabaseInput AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html#cfn-glue-database-databaseinput
 	DatabaseInput *AWSGlueDatabase_DatabaseInput `json:"DatabaseInput,omitempty"`
-}
-
-type UntypedAWSGlueDatabase struct {
-
-	// CatalogId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html#cfn-glue-database-catalogid
-	CatalogId interface{} `json:"CatalogId,omitempty"`
-
-	// DatabaseInput AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-database.html#cfn-glue-database-databaseinput
-	DatabaseInput *UntypedAWSGlueDatabase_DatabaseInput `json:"DatabaseInput,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

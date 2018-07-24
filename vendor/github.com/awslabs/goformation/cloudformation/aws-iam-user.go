@@ -13,7 +13,7 @@ type AWSIAMUser struct {
 	// Groups AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-groups
-	Groups []string `json:"Groups,omitempty"`
+	Groups []*StringIntrinsic `json:"Groups,omitempty"`
 
 	// LoginProfile AWS CloudFormation Property
 	// Required: false
@@ -23,12 +23,12 @@ type AWSIAMUser struct {
 	// ManagedPolicyArns AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-managepolicyarns
-	ManagedPolicyArns []string `json:"ManagedPolicyArns,omitempty"`
+	ManagedPolicyArns []*StringIntrinsic `json:"ManagedPolicyArns,omitempty"`
 
 	// Path AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-path
-	Path string `json:"Path,omitempty"`
+	Path *StringIntrinsic `json:"Path,omitempty"`
 
 	// Policies AWS CloudFormation Property
 	// Required: false
@@ -38,40 +38,7 @@ type AWSIAMUser struct {
 	// UserName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-username
-	UserName string `json:"UserName,omitempty"`
-}
-
-type UntypedAWSIAMUser struct {
-
-	// Groups AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-groups
-	Groups []interface{} `json:"Groups,omitempty"`
-
-	// LoginProfile AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-loginprofile
-	LoginProfile *UntypedAWSIAMUser_LoginProfile `json:"LoginProfile,omitempty"`
-
-	// ManagedPolicyArns AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-managepolicyarns
-	ManagedPolicyArns []interface{} `json:"ManagedPolicyArns,omitempty"`
-
-	// Path AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-path
-	Path interface{} `json:"Path,omitempty"`
-
-	// Policies AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-policies
-	Policies []UntypedAWSIAMUser_Policy `json:"Policies,omitempty"`
-
-	// UserName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iam-user.html#cfn-iam-user-username
-	UserName interface{} `json:"UserName,omitempty"`
+	UserName *StringIntrinsic `json:"UserName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

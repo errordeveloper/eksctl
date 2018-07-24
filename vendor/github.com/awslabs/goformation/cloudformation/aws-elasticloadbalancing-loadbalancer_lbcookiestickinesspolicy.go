@@ -7,25 +7,12 @@ type AWSElasticLoadBalancingLoadBalancer_LBCookieStickinessPolicy struct {
 	// CookieExpirationPeriod AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-LBCookieStickinessPolicy.html#cfn-elb-lbcookiestickinesspolicy-cookieexpirationperiod
-	CookieExpirationPeriod string `json:"CookieExpirationPeriod,omitempty"`
+	CookieExpirationPeriod *StringIntrinsic `json:"CookieExpirationPeriod,omitempty"`
 
 	// PolicyName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-LBCookieStickinessPolicy.html#cfn-elb-lbcookiestickinesspolicy-policyname
-	PolicyName string `json:"PolicyName,omitempty"`
-}
-
-type UntypedAWSElasticLoadBalancingLoadBalancer_LBCookieStickinessPolicy struct {
-
-	// CookieExpirationPeriod AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-LBCookieStickinessPolicy.html#cfn-elb-lbcookiestickinesspolicy-cookieexpirationperiod
-	CookieExpirationPeriod interface{} `json:"CookieExpirationPeriod,omitempty"`
-
-	// PolicyName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-elb-LBCookieStickinessPolicy.html#cfn-elb-lbcookiestickinesspolicy-policyname
-	PolicyName interface{} `json:"PolicyName,omitempty"`
+	PolicyName *StringIntrinsic `json:"PolicyName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

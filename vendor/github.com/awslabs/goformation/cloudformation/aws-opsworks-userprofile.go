@@ -18,40 +18,17 @@ type AWSOpsWorksUserProfile struct {
 	// IamUserArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-iamuserarn
-	IamUserArn string `json:"IamUserArn,omitempty"`
+	IamUserArn *StringIntrinsic `json:"IamUserArn,omitempty"`
 
 	// SshPublicKey AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-sshpublickey
-	SshPublicKey string `json:"SshPublicKey,omitempty"`
+	SshPublicKey *StringIntrinsic `json:"SshPublicKey,omitempty"`
 
 	// SshUsername AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-sshusername
-	SshUsername string `json:"SshUsername,omitempty"`
-}
-
-type UntypedAWSOpsWorksUserProfile struct {
-
-	// AllowSelfManagement AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-allowselfmanagement
-	AllowSelfManagement interface{} `json:"AllowSelfManagement,omitempty"`
-
-	// IamUserArn AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-iamuserarn
-	IamUserArn interface{} `json:"IamUserArn,omitempty"`
-
-	// SshPublicKey AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-sshpublickey
-	SshPublicKey interface{} `json:"SshPublicKey,omitempty"`
-
-	// SshUsername AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opsworks-userprofile.html#cfn-opsworks-userprofile-sshusername
-	SshUsername interface{} `json:"SshUsername,omitempty"`
+	SshUsername *StringIntrinsic `json:"SshUsername,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

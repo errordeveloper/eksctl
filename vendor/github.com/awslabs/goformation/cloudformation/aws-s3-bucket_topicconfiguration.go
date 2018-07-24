@@ -7,7 +7,7 @@ type AWSS3Bucket_TopicConfiguration struct {
 	// Event AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-topicconfig.html#cfn-s3-bucket-notificationconfig-topicconfig-event
-	Event string `json:"Event,omitempty"`
+	Event *StringIntrinsic `json:"Event,omitempty"`
 
 	// Filter AWS CloudFormation Property
 	// Required: false
@@ -17,25 +17,7 @@ type AWSS3Bucket_TopicConfiguration struct {
 	// Topic AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-topicconfig.html#cfn-s3-bucket-notificationconfig-topicconfig-topic
-	Topic string `json:"Topic,omitempty"`
-}
-
-type UntypedAWSS3Bucket_TopicConfiguration struct {
-
-	// Event AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-topicconfig.html#cfn-s3-bucket-notificationconfig-topicconfig-event
-	Event interface{} `json:"Event,omitempty"`
-
-	// Filter AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-topicconfig.html#cfn-s3-bucket-notificationconfig-topicconfig-filter
-	Filter *UntypedAWSS3Bucket_NotificationFilter `json:"Filter,omitempty"`
-
-	// Topic AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-notificationconfig-topicconfig.html#cfn-s3-bucket-notificationconfig-topicconfig-topic
-	Topic interface{} `json:"Topic,omitempty"`
+	Topic *StringIntrinsic `json:"Topic,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

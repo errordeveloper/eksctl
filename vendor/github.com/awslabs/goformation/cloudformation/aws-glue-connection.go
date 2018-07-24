@@ -13,25 +13,12 @@ type AWSGlueConnection struct {
 	// CatalogId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-connection.html#cfn-glue-connection-catalogid
-	CatalogId string `json:"CatalogId,omitempty"`
+	CatalogId *StringIntrinsic `json:"CatalogId,omitempty"`
 
 	// ConnectionInput AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-connection.html#cfn-glue-connection-connectioninput
 	ConnectionInput *AWSGlueConnection_ConnectionInput `json:"ConnectionInput,omitempty"`
-}
-
-type UntypedAWSGlueConnection struct {
-
-	// CatalogId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-connection.html#cfn-glue-connection-catalogid
-	CatalogId interface{} `json:"CatalogId,omitempty"`
-
-	// ConnectionInput AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-connection.html#cfn-glue-connection-connectioninput
-	ConnectionInput *UntypedAWSGlueConnection_ConnectionInput `json:"ConnectionInput,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

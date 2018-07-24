@@ -7,7 +7,7 @@ type AWSECSTaskDefinition_HealthCheck struct {
 	// Command AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-command
-	Command []string `json:"Command,omitempty"`
+	Command []*StringIntrinsic `json:"Command,omitempty"`
 
 	// Interval AWS CloudFormation Property
 	// Required: false
@@ -28,34 +28,6 @@ type AWSECSTaskDefinition_HealthCheck struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-timeout
 	Timeout int `json:"Timeout,omitempty"`
-}
-
-type UntypedAWSECSTaskDefinition_HealthCheck struct {
-
-	// Command AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-command
-	Command []interface{} `json:"Command,omitempty"`
-
-	// Interval AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-interval
-	Interval interface{} `json:"Interval,omitempty"`
-
-	// Retries AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-retries
-	Retries interface{} `json:"Retries,omitempty"`
-
-	// StartPeriod AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-startperiod
-	StartPeriod interface{} `json:"StartPeriod,omitempty"`
-
-	// Timeout AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskdefinition-healthcheck.html#cfn-ecs-taskdefinition-healthcheck-timeout
-	Timeout interface{} `json:"Timeout,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

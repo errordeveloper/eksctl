@@ -18,20 +18,7 @@ type AWSSNSTopicPolicy struct {
 	// Topics AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-policy.html#cfn-sns-topicpolicy-topics
-	Topics []string `json:"Topics,omitempty"`
-}
-
-type UntypedAWSSNSTopicPolicy struct {
-
-	// PolicyDocument AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-policy.html#cfn-sns-topicpolicy-policydocument
-	PolicyDocument interface{} `json:"PolicyDocument,omitempty"`
-
-	// Topics AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-policy.html#cfn-sns-topicpolicy-topics
-	Topics []interface{} `json:"Topics,omitempty"`
+	Topics []*StringIntrinsic `json:"Topics,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

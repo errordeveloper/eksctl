@@ -13,35 +13,17 @@ type AWSElastiCacheParameterGroup struct {
 	// CacheParameterGroupFamily AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-parameter-group.html#cfn-elasticache-parametergroup-cacheparametergroupfamily
-	CacheParameterGroupFamily string `json:"CacheParameterGroupFamily,omitempty"`
+	CacheParameterGroupFamily *StringIntrinsic `json:"CacheParameterGroupFamily,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-parameter-group.html#cfn-elasticache-parametergroup-description
-	Description string `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 
 	// Properties AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-parameter-group.html#cfn-elasticache-parametergroup-properties
-	Properties map[string]string `json:"Properties,omitempty"`
-}
-
-type UntypedAWSElastiCacheParameterGroup struct {
-
-	// CacheParameterGroupFamily AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-parameter-group.html#cfn-elasticache-parametergroup-cacheparametergroupfamily
-	CacheParameterGroupFamily interface{} `json:"CacheParameterGroupFamily,omitempty"`
-
-	// Description AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-parameter-group.html#cfn-elasticache-parametergroup-description
-	Description interface{} `json:"Description,omitempty"`
-
-	// Properties AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-parameter-group.html#cfn-elasticache-parametergroup-properties
-	Properties map[string]interface{} `json:"Properties,omitempty"`
+	Properties map[string]*StringIntrinsic `json:"Properties,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

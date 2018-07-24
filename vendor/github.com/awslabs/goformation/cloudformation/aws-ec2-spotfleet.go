@@ -16,14 +16,6 @@ type AWSEC2SpotFleet struct {
 	SpotFleetRequestConfigData *AWSEC2SpotFleet_SpotFleetRequestConfigData `json:"SpotFleetRequestConfigData,omitempty"`
 }
 
-type UntypedAWSEC2SpotFleet struct {
-
-	// SpotFleetRequestConfigData AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-spotfleet.html#cfn-ec2-spotfleet-spotfleetrequestconfigdata
-	SpotFleetRequestConfigData *UntypedAWSEC2SpotFleet_SpotFleetRequestConfigData `json:"SpotFleetRequestConfigData,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSEC2SpotFleet) AWSCloudFormationType() string {
 	return "AWS::EC2::SpotFleet"

@@ -21,19 +21,6 @@ type AWSAutoScalingPlansScalingPlan struct {
 	ScalingInstructions []AWSAutoScalingPlansScalingPlan_ScalingInstruction `json:"ScalingInstructions,omitempty"`
 }
 
-type UntypedAWSAutoScalingPlansScalingPlan struct {
-
-	// ApplicationSource AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html#cfn-autoscalingplans-scalingplan-applicationsource
-	ApplicationSource *UntypedAWSAutoScalingPlansScalingPlan_ApplicationSource `json:"ApplicationSource,omitempty"`
-
-	// ScalingInstructions AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscalingplans-scalingplan.html#cfn-autoscalingplans-scalingplan-scalinginstructions
-	ScalingInstructions []UntypedAWSAutoScalingPlansScalingPlan_ScalingInstruction `json:"ScalingInstructions,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSAutoScalingPlansScalingPlan) AWSCloudFormationType() string {
 	return "AWS::AutoScalingPlans::ScalingPlan"

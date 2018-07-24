@@ -12,12 +12,12 @@ type AWSBudgetsBudget_BudgetData struct {
 	// BudgetName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-budgetdata.html#cfn-budgets-budget-budgetdata-budgetname
-	BudgetName string `json:"BudgetName,omitempty"`
+	BudgetName *StringIntrinsic `json:"BudgetName,omitempty"`
 
 	// BudgetType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-budgetdata.html#cfn-budgets-budget-budgetdata-budgettype
-	BudgetType string `json:"BudgetType,omitempty"`
+	BudgetType *StringIntrinsic `json:"BudgetType,omitempty"`
 
 	// CostFilters AWS CloudFormation Property
 	// Required: false
@@ -37,45 +37,7 @@ type AWSBudgetsBudget_BudgetData struct {
 	// TimeUnit AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-budgetdata.html#cfn-budgets-budget-budgetdata-timeunit
-	TimeUnit string `json:"TimeUnit,omitempty"`
-}
-
-type UntypedAWSBudgetsBudget_BudgetData struct {
-
-	// BudgetLimit AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-budgetdata.html#cfn-budgets-budget-budgetdata-budgetlimit
-	BudgetLimit *UntypedAWSBudgetsBudget_Spend `json:"BudgetLimit,omitempty"`
-
-	// BudgetName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-budgetdata.html#cfn-budgets-budget-budgetdata-budgetname
-	BudgetName interface{} `json:"BudgetName,omitempty"`
-
-	// BudgetType AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-budgetdata.html#cfn-budgets-budget-budgetdata-budgettype
-	BudgetType interface{} `json:"BudgetType,omitempty"`
-
-	// CostFilters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-budgetdata.html#cfn-budgets-budget-budgetdata-costfilters
-	CostFilters interface{} `json:"CostFilters,omitempty"`
-
-	// CostTypes AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-budgetdata.html#cfn-budgets-budget-budgetdata-costtypes
-	CostTypes *UntypedAWSBudgetsBudget_CostTypes `json:"CostTypes,omitempty"`
-
-	// TimePeriod AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-budgetdata.html#cfn-budgets-budget-budgetdata-timeperiod
-	TimePeriod *UntypedAWSBudgetsBudget_TimePeriod `json:"TimePeriod,omitempty"`
-
-	// TimeUnit AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-budgetdata.html#cfn-budgets-budget-budgetdata-timeunit
-	TimeUnit interface{} `json:"TimeUnit,omitempty"`
+	TimeUnit *StringIntrinsic `json:"TimeUnit,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

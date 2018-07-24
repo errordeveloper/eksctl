@@ -21,19 +21,6 @@ type AWSCloudFrontDistribution struct {
 	Tags []Tag `json:"Tags,omitempty"`
 }
 
-type UntypedAWSCloudFrontDistribution struct {
-
-	// DistributionConfig AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html#cfn-cloudfront-distribution-distributionconfig
-	DistributionConfig *UntypedAWSCloudFrontDistribution_DistributionConfig `json:"DistributionConfig,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-distribution.html#cfn-cloudfront-distribution-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSCloudFrontDistribution) AWSCloudFormationType() string {
 	return "AWS::CloudFront::Distribution"

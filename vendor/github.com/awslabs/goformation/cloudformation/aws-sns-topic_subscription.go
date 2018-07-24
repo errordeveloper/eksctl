@@ -7,25 +7,12 @@ type AWSSNSTopic_Subscription struct {
 	// Endpoint AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-subscription.html#cfn-sns-topic-subscription-endpoint
-	Endpoint string `json:"Endpoint,omitempty"`
+	Endpoint *StringIntrinsic `json:"Endpoint,omitempty"`
 
 	// Protocol AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-subscription.html#cfn-sns-topic-subscription-protocol
-	Protocol string `json:"Protocol,omitempty"`
-}
-
-type UntypedAWSSNSTopic_Subscription struct {
-
-	// Endpoint AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-subscription.html#cfn-sns-topic-subscription-endpoint
-	Endpoint interface{} `json:"Endpoint,omitempty"`
-
-	// Protocol AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sns-subscription.html#cfn-sns-topic-subscription-protocol
-	Protocol interface{} `json:"Protocol,omitempty"`
+	Protocol *StringIntrinsic `json:"Protocol,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

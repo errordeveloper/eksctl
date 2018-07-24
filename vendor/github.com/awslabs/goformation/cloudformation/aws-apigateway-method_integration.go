@@ -7,27 +7,27 @@ type AWSApiGatewayMethod_Integration struct {
 	// CacheKeyParameters AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-cachekeyparameters
-	CacheKeyParameters []string `json:"CacheKeyParameters,omitempty"`
+	CacheKeyParameters []*StringIntrinsic `json:"CacheKeyParameters,omitempty"`
 
 	// CacheNamespace AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-cachenamespace
-	CacheNamespace string `json:"CacheNamespace,omitempty"`
+	CacheNamespace *StringIntrinsic `json:"CacheNamespace,omitempty"`
 
 	// ContentHandling AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-contenthandling
-	ContentHandling string `json:"ContentHandling,omitempty"`
+	ContentHandling *StringIntrinsic `json:"ContentHandling,omitempty"`
 
 	// Credentials AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-credentials
-	Credentials string `json:"Credentials,omitempty"`
+	Credentials *StringIntrinsic `json:"Credentials,omitempty"`
 
 	// IntegrationHttpMethod AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-integrationhttpmethod
-	IntegrationHttpMethod string `json:"IntegrationHttpMethod,omitempty"`
+	IntegrationHttpMethod *StringIntrinsic `json:"IntegrationHttpMethod,omitempty"`
 
 	// IntegrationResponses AWS CloudFormation Property
 	// Required: false
@@ -37,85 +37,27 @@ type AWSApiGatewayMethod_Integration struct {
 	// PassthroughBehavior AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-passthroughbehavior
-	PassthroughBehavior string `json:"PassthroughBehavior,omitempty"`
+	PassthroughBehavior *StringIntrinsic `json:"PassthroughBehavior,omitempty"`
 
 	// RequestParameters AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-requestparameters
-	RequestParameters map[string]string `json:"RequestParameters,omitempty"`
+	RequestParameters map[string]*StringIntrinsic `json:"RequestParameters,omitempty"`
 
 	// RequestTemplates AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-requesttemplates
-	RequestTemplates map[string]string `json:"RequestTemplates,omitempty"`
+	RequestTemplates map[string]*StringIntrinsic `json:"RequestTemplates,omitempty"`
 
 	// Type AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-type
-	Type string `json:"Type,omitempty"`
+	Type *StringIntrinsic `json:"Type,omitempty"`
 
 	// Uri AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-uri
-	Uri string `json:"Uri,omitempty"`
-}
-
-type UntypedAWSApiGatewayMethod_Integration struct {
-
-	// CacheKeyParameters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-cachekeyparameters
-	CacheKeyParameters []interface{} `json:"CacheKeyParameters,omitempty"`
-
-	// CacheNamespace AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-cachenamespace
-	CacheNamespace interface{} `json:"CacheNamespace,omitempty"`
-
-	// ContentHandling AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-contenthandling
-	ContentHandling interface{} `json:"ContentHandling,omitempty"`
-
-	// Credentials AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-credentials
-	Credentials interface{} `json:"Credentials,omitempty"`
-
-	// IntegrationHttpMethod AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-integrationhttpmethod
-	IntegrationHttpMethod interface{} `json:"IntegrationHttpMethod,omitempty"`
-
-	// IntegrationResponses AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-integrationresponses
-	IntegrationResponses []UntypedAWSApiGatewayMethod_IntegrationResponse `json:"IntegrationResponses,omitempty"`
-
-	// PassthroughBehavior AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-passthroughbehavior
-	PassthroughBehavior interface{} `json:"PassthroughBehavior,omitempty"`
-
-	// RequestParameters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-requestparameters
-	RequestParameters map[string]interface{} `json:"RequestParameters,omitempty"`
-
-	// RequestTemplates AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-requesttemplates
-	RequestTemplates map[string]interface{} `json:"RequestTemplates,omitempty"`
-
-	// Type AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-type
-	Type interface{} `json:"Type,omitempty"`
-
-	// Uri AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apitgateway-method-integration.html#cfn-apigateway-method-integration-uri
-	Uri interface{} `json:"Uri,omitempty"`
+	Uri *StringIntrinsic `json:"Uri,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

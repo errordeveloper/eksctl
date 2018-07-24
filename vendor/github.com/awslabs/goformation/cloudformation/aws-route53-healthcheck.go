@@ -21,19 +21,6 @@ type AWSRoute53HealthCheck struct {
 	HealthCheckTags []AWSRoute53HealthCheck_HealthCheckTag `json:"HealthCheckTags,omitempty"`
 }
 
-type UntypedAWSRoute53HealthCheck struct {
-
-	// HealthCheckConfig AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html#cfn-route53-healthcheck-healthcheckconfig
-	HealthCheckConfig *UntypedAWSRoute53HealthCheck_HealthCheckConfig `json:"HealthCheckConfig,omitempty"`
-
-	// HealthCheckTags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-healthcheck.html#cfn-route53-healthcheck-healthchecktags
-	HealthCheckTags []UntypedAWSRoute53HealthCheck_HealthCheckTag `json:"HealthCheckTags,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSRoute53HealthCheck) AWSCloudFormationType() string {
 	return "AWS::Route53::HealthCheck"

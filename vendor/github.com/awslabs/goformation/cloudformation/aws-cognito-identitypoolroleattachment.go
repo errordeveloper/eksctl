@@ -13,25 +13,7 @@ type AWSCognitoIdentityPoolRoleAttachment struct {
 	// IdentityPoolId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html#cfn-cognito-identitypoolroleattachment-identitypoolid
-	IdentityPoolId string `json:"IdentityPoolId,omitempty"`
-
-	// RoleMappings AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html#cfn-cognito-identitypoolroleattachment-rolemappings
-	RoleMappings interface{} `json:"RoleMappings,omitempty"`
-
-	// Roles AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html#cfn-cognito-identitypoolroleattachment-roles
-	Roles interface{} `json:"Roles,omitempty"`
-}
-
-type UntypedAWSCognitoIdentityPoolRoleAttachment struct {
-
-	// IdentityPoolId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-identitypoolroleattachment.html#cfn-cognito-identitypoolroleattachment-identitypoolid
-	IdentityPoolId interface{} `json:"IdentityPoolId,omitempty"`
+	IdentityPoolId *StringIntrinsic `json:"IdentityPoolId,omitempty"`
 
 	// RoleMappings AWS CloudFormation Property
 	// Required: false

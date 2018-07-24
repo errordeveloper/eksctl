@@ -23,7 +23,7 @@ type AWSLambdaFunction struct {
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-description
-	Description string `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 
 	// Environment AWS CloudFormation Property
 	// Required: false
@@ -33,17 +33,17 @@ type AWSLambdaFunction struct {
 	// FunctionName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-functionname
-	FunctionName string `json:"FunctionName,omitempty"`
+	FunctionName *StringIntrinsic `json:"FunctionName,omitempty"`
 
 	// Handler AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-handler
-	Handler string `json:"Handler,omitempty"`
+	Handler *StringIntrinsic `json:"Handler,omitempty"`
 
 	// KmsKeyArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-kmskeyarn
-	KmsKeyArn string `json:"KmsKeyArn,omitempty"`
+	KmsKeyArn *StringIntrinsic `json:"KmsKeyArn,omitempty"`
 
 	// MemorySize AWS CloudFormation Property
 	// Required: false
@@ -58,12 +58,12 @@ type AWSLambdaFunction struct {
 	// Role AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-role
-	Role string `json:"Role,omitempty"`
+	Role *StringIntrinsic `json:"Role,omitempty"`
 
 	// Runtime AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-runtime
-	Runtime string `json:"Runtime,omitempty"`
+	Runtime *StringIntrinsic `json:"Runtime,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -84,84 +84,6 @@ type AWSLambdaFunction struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-vpcconfig
 	VpcConfig *AWSLambdaFunction_VpcConfig `json:"VpcConfig,omitempty"`
-}
-
-type UntypedAWSLambdaFunction struct {
-
-	// Code AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-code
-	Code *UntypedAWSLambdaFunction_Code `json:"Code,omitempty"`
-
-	// DeadLetterConfig AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-deadletterconfig
-	DeadLetterConfig *UntypedAWSLambdaFunction_DeadLetterConfig `json:"DeadLetterConfig,omitempty"`
-
-	// Description AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-description
-	Description interface{} `json:"Description,omitempty"`
-
-	// Environment AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-environment
-	Environment *UntypedAWSLambdaFunction_Environment `json:"Environment,omitempty"`
-
-	// FunctionName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-functionname
-	FunctionName interface{} `json:"FunctionName,omitempty"`
-
-	// Handler AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-handler
-	Handler interface{} `json:"Handler,omitempty"`
-
-	// KmsKeyArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-kmskeyarn
-	KmsKeyArn interface{} `json:"KmsKeyArn,omitempty"`
-
-	// MemorySize AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-memorysize
-	MemorySize interface{} `json:"MemorySize,omitempty"`
-
-	// ReservedConcurrentExecutions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-reservedconcurrentexecutions
-	ReservedConcurrentExecutions interface{} `json:"ReservedConcurrentExecutions,omitempty"`
-
-	// Role AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-role
-	Role interface{} `json:"Role,omitempty"`
-
-	// Runtime AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-runtime
-	Runtime interface{} `json:"Runtime,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// Timeout AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-timeout
-	Timeout interface{} `json:"Timeout,omitempty"`
-
-	// TracingConfig AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-tracingconfig
-	TracingConfig *UntypedAWSLambdaFunction_TracingConfig `json:"TracingConfig,omitempty"`
-
-	// VpcConfig AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-function.html#cfn-lambda-function-vpcconfig
-	VpcConfig *UntypedAWSLambdaFunction_VpcConfig `json:"VpcConfig,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

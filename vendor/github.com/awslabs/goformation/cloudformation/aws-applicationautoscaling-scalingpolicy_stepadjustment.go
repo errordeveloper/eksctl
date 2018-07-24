@@ -20,24 +20,6 @@ type AWSApplicationAutoScalingScalingPolicy_StepAdjustment struct {
 	ScalingAdjustment int `json:"ScalingAdjustment,omitempty"`
 }
 
-type UntypedAWSApplicationAutoScalingScalingPolicy_StepAdjustment struct {
-
-	// MetricIntervalLowerBound AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment.html#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment-metricintervallowerbound
-	MetricIntervalLowerBound interface{} `json:"MetricIntervalLowerBound,omitempty"`
-
-	// MetricIntervalUpperBound AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment.html#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment-metricintervalupperbound
-	MetricIntervalUpperBound interface{} `json:"MetricIntervalUpperBound,omitempty"`
-
-	// ScalingAdjustment AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment.html#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration-stepadjustment-scalingadjustment
-	ScalingAdjustment interface{} `json:"ScalingAdjustment,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSApplicationAutoScalingScalingPolicy_StepAdjustment) AWSCloudFormationType() string {
 	return "AWS::ApplicationAutoScaling::ScalingPolicy.StepAdjustment"

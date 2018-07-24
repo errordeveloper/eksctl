@@ -23,7 +23,7 @@ type AWSRoute53HostedZone struct {
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// QueryLoggingConfig AWS CloudFormation Property
 	// Required: false
@@ -34,34 +34,6 @@ type AWSRoute53HostedZone struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-vpcs
 	VPCs []AWSRoute53HostedZone_VPC `json:"VPCs,omitempty"`
-}
-
-type UntypedAWSRoute53HostedZone struct {
-
-	// HostedZoneConfig AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-hostedzoneconfig
-	HostedZoneConfig *UntypedAWSRoute53HostedZone_HostedZoneConfig `json:"HostedZoneConfig,omitempty"`
-
-	// HostedZoneTags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-hostedzonetags
-	HostedZoneTags []UntypedAWSRoute53HostedZone_HostedZoneTag `json:"HostedZoneTags,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// QueryLoggingConfig AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-queryloggingconfig
-	QueryLoggingConfig *UntypedAWSRoute53HostedZone_QueryLoggingConfig `json:"QueryLoggingConfig,omitempty"`
-
-	// VPCs AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53-hostedzone.html#cfn-route53-hostedzone-vpcs
-	VPCs []UntypedAWSRoute53HostedZone_VPC `json:"VPCs,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

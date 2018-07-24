@@ -7,7 +7,7 @@ type AWSEC2LaunchTemplate_BlockDeviceMapping struct {
 	// DeviceName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-devicename
-	DeviceName string `json:"DeviceName,omitempty"`
+	DeviceName *StringIntrinsic `json:"DeviceName,omitempty"`
 
 	// Ebs AWS CloudFormation Property
 	// Required: false
@@ -17,35 +17,12 @@ type AWSEC2LaunchTemplate_BlockDeviceMapping struct {
 	// NoDevice AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-nodevice
-	NoDevice string `json:"NoDevice,omitempty"`
+	NoDevice *StringIntrinsic `json:"NoDevice,omitempty"`
 
 	// VirtualName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-virtualname
-	VirtualName string `json:"VirtualName,omitempty"`
-}
-
-type UntypedAWSEC2LaunchTemplate_BlockDeviceMapping struct {
-
-	// DeviceName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-devicename
-	DeviceName interface{} `json:"DeviceName,omitempty"`
-
-	// Ebs AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-ebs
-	Ebs *UntypedAWSEC2LaunchTemplate_Ebs `json:"Ebs,omitempty"`
-
-	// NoDevice AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-nodevice
-	NoDevice interface{} `json:"NoDevice,omitempty"`
-
-	// VirtualName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-blockdevicemapping.html#cfn-ec2-launchtemplate-blockdevicemapping-virtualname
-	VirtualName interface{} `json:"VirtualName,omitempty"`
+	VirtualName *StringIntrinsic `json:"VirtualName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

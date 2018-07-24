@@ -16,14 +16,6 @@ type AWSCloudFrontCloudFrontOriginAccessIdentity struct {
 	CloudFrontOriginAccessIdentityConfig *AWSCloudFrontCloudFrontOriginAccessIdentity_CloudFrontOriginAccessIdentityConfig `json:"CloudFrontOriginAccessIdentityConfig,omitempty"`
 }
 
-type UntypedAWSCloudFrontCloudFrontOriginAccessIdentity struct {
-
-	// CloudFrontOriginAccessIdentityConfig AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudfront-cloudfrontoriginaccessidentity.html#cfn-cloudfront-cloudfrontoriginaccessidentity-cloudfrontoriginaccessidentityconfig
-	CloudFrontOriginAccessIdentityConfig *UntypedAWSCloudFrontCloudFrontOriginAccessIdentity_CloudFrontOriginAccessIdentityConfig `json:"CloudFrontOriginAccessIdentityConfig,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSCloudFrontCloudFrontOriginAccessIdentity) AWSCloudFormationType() string {
 	return "AWS::CloudFront::CloudFrontOriginAccessIdentity"

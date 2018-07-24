@@ -17,55 +17,22 @@ type AWSAutoScalingPlansScalingPlan_ScalingInstruction struct {
 	// ResourceId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html#cfn-autoscalingplans-scalingplan-scalinginstruction-resourceid
-	ResourceId string `json:"ResourceId,omitempty"`
+	ResourceId *StringIntrinsic `json:"ResourceId,omitempty"`
 
 	// ScalableDimension AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html#cfn-autoscalingplans-scalingplan-scalinginstruction-scalabledimension
-	ScalableDimension string `json:"ScalableDimension,omitempty"`
+	ScalableDimension *StringIntrinsic `json:"ScalableDimension,omitempty"`
 
 	// ServiceNamespace AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html#cfn-autoscalingplans-scalingplan-scalinginstruction-servicenamespace
-	ServiceNamespace string `json:"ServiceNamespace,omitempty"`
+	ServiceNamespace *StringIntrinsic `json:"ServiceNamespace,omitempty"`
 
 	// TargetTrackingConfigurations AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html#cfn-autoscalingplans-scalingplan-scalinginstruction-targettrackingconfigurations
 	TargetTrackingConfigurations []AWSAutoScalingPlansScalingPlan_TargetTrackingConfiguration `json:"TargetTrackingConfigurations,omitempty"`
-}
-
-type UntypedAWSAutoScalingPlansScalingPlan_ScalingInstruction struct {
-
-	// MaxCapacity AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html#cfn-autoscalingplans-scalingplan-scalinginstruction-maxcapacity
-	MaxCapacity interface{} `json:"MaxCapacity,omitempty"`
-
-	// MinCapacity AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html#cfn-autoscalingplans-scalingplan-scalinginstruction-mincapacity
-	MinCapacity interface{} `json:"MinCapacity,omitempty"`
-
-	// ResourceId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html#cfn-autoscalingplans-scalingplan-scalinginstruction-resourceid
-	ResourceId interface{} `json:"ResourceId,omitempty"`
-
-	// ScalableDimension AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html#cfn-autoscalingplans-scalingplan-scalinginstruction-scalabledimension
-	ScalableDimension interface{} `json:"ScalableDimension,omitempty"`
-
-	// ServiceNamespace AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html#cfn-autoscalingplans-scalingplan-scalinginstruction-servicenamespace
-	ServiceNamespace interface{} `json:"ServiceNamespace,omitempty"`
-
-	// TargetTrackingConfigurations AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscalingplans-scalingplan-scalinginstruction.html#cfn-autoscalingplans-scalingplan-scalinginstruction-targettrackingconfigurations
-	TargetTrackingConfigurations []UntypedAWSAutoScalingPlansScalingPlan_TargetTrackingConfiguration `json:"TargetTrackingConfigurations,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -18,25 +18,7 @@ type AWSECRRepository struct {
 	// RepositoryName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-repositoryname
-	RepositoryName string `json:"RepositoryName,omitempty"`
-
-	// RepositoryPolicyText AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-repositorypolicytext
-	RepositoryPolicyText interface{} `json:"RepositoryPolicyText,omitempty"`
-}
-
-type UntypedAWSECRRepository struct {
-
-	// LifecyclePolicy AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-lifecyclepolicy
-	LifecyclePolicy *UntypedAWSECRRepository_LifecyclePolicy `json:"LifecyclePolicy,omitempty"`
-
-	// RepositoryName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecr-repository.html#cfn-ecr-repository-repositoryname
-	RepositoryName interface{} `json:"RepositoryName,omitempty"`
+	RepositoryName *StringIntrinsic `json:"RepositoryName,omitempty"`
 
 	// RepositoryPolicyText AWS CloudFormation Property
 	// Required: false

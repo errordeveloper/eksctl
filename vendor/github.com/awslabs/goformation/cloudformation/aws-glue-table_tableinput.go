@@ -7,17 +7,17 @@ type AWSGlueTable_TableInput struct {
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-description
-	Description string `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// Owner AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-owner
-	Owner string `json:"Owner,omitempty"`
+	Owner *StringIntrinsic `json:"Owner,omitempty"`
 
 	// Parameters AWS CloudFormation Property
 	// Required: false
@@ -42,70 +42,17 @@ type AWSGlueTable_TableInput struct {
 	// TableType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-tabletype
-	TableType string `json:"TableType,omitempty"`
+	TableType *StringIntrinsic `json:"TableType,omitempty"`
 
 	// ViewExpandedText AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-viewexpandedtext
-	ViewExpandedText string `json:"ViewExpandedText,omitempty"`
+	ViewExpandedText *StringIntrinsic `json:"ViewExpandedText,omitempty"`
 
 	// ViewOriginalText AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-vieworiginaltext
-	ViewOriginalText string `json:"ViewOriginalText,omitempty"`
-}
-
-type UntypedAWSGlueTable_TableInput struct {
-
-	// Description AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-description
-	Description interface{} `json:"Description,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// Owner AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-owner
-	Owner interface{} `json:"Owner,omitempty"`
-
-	// Parameters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-parameters
-	Parameters interface{} `json:"Parameters,omitempty"`
-
-	// PartitionKeys AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-partitionkeys
-	PartitionKeys []UntypedAWSGlueTable_Column `json:"PartitionKeys,omitempty"`
-
-	// Retention AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-retention
-	Retention interface{} `json:"Retention,omitempty"`
-
-	// StorageDescriptor AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-storagedescriptor
-	StorageDescriptor *UntypedAWSGlueTable_StorageDescriptor `json:"StorageDescriptor,omitempty"`
-
-	// TableType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-tabletype
-	TableType interface{} `json:"TableType,omitempty"`
-
-	// ViewExpandedText AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-viewexpandedtext
-	ViewExpandedText interface{} `json:"ViewExpandedText,omitempty"`
-
-	// ViewOriginalText AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-table-tableinput.html#cfn-glue-table-tableinput-vieworiginaltext
-	ViewOriginalText interface{} `json:"ViewOriginalText,omitempty"`
+	ViewOriginalText *StringIntrinsic `json:"ViewOriginalText,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

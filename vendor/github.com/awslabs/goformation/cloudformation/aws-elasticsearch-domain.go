@@ -18,12 +18,12 @@ type AWSElasticsearchDomain struct {
 	// AdvancedOptions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-advancedoptions
-	AdvancedOptions map[string]string `json:"AdvancedOptions,omitempty"`
+	AdvancedOptions map[string]*StringIntrinsic `json:"AdvancedOptions,omitempty"`
 
 	// DomainName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-domainname
-	DomainName string `json:"DomainName,omitempty"`
+	DomainName *StringIntrinsic `json:"DomainName,omitempty"`
 
 	// EBSOptions AWS CloudFormation Property
 	// Required: false
@@ -38,7 +38,7 @@ type AWSElasticsearchDomain struct {
 	// ElasticsearchVersion AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-elasticsearchversion
-	ElasticsearchVersion string `json:"ElasticsearchVersion,omitempty"`
+	ElasticsearchVersion *StringIntrinsic `json:"ElasticsearchVersion,omitempty"`
 
 	// EncryptionAtRestOptions AWS CloudFormation Property
 	// Required: false
@@ -59,59 +59,6 @@ type AWSElasticsearchDomain struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-vpcoptions
 	VPCOptions *AWSElasticsearchDomain_VPCOptions `json:"VPCOptions,omitempty"`
-}
-
-type UntypedAWSElasticsearchDomain struct {
-
-	// AccessPolicies AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-accesspolicies
-	AccessPolicies interface{} `json:"AccessPolicies,omitempty"`
-
-	// AdvancedOptions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-advancedoptions
-	AdvancedOptions map[string]interface{} `json:"AdvancedOptions,omitempty"`
-
-	// DomainName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-domainname
-	DomainName interface{} `json:"DomainName,omitempty"`
-
-	// EBSOptions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-ebsoptions
-	EBSOptions *UntypedAWSElasticsearchDomain_EBSOptions `json:"EBSOptions,omitempty"`
-
-	// ElasticsearchClusterConfig AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-elasticsearchclusterconfig
-	ElasticsearchClusterConfig *UntypedAWSElasticsearchDomain_ElasticsearchClusterConfig `json:"ElasticsearchClusterConfig,omitempty"`
-
-	// ElasticsearchVersion AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-elasticsearchversion
-	ElasticsearchVersion interface{} `json:"ElasticsearchVersion,omitempty"`
-
-	// EncryptionAtRestOptions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-encryptionatrestoptions
-	EncryptionAtRestOptions *UntypedAWSElasticsearchDomain_EncryptionAtRestOptions `json:"EncryptionAtRestOptions,omitempty"`
-
-	// SnapshotOptions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-snapshotoptions
-	SnapshotOptions *UntypedAWSElasticsearchDomain_SnapshotOptions `json:"SnapshotOptions,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// VPCOptions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticsearch-domain.html#cfn-elasticsearch-domain-vpcoptions
-	VPCOptions *UntypedAWSElasticsearchDomain_VPCOptions `json:"VPCOptions,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

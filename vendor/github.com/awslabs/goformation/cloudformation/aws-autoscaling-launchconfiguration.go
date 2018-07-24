@@ -23,12 +23,12 @@ type AWSAutoScalingLaunchConfiguration struct {
 	// ClassicLinkVPCId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-classiclinkvpcid
-	ClassicLinkVPCId string `json:"ClassicLinkVPCId,omitempty"`
+	ClassicLinkVPCId *StringIntrinsic `json:"ClassicLinkVPCId,omitempty"`
 
 	// ClassicLinkVPCSecurityGroups AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-classiclinkvpcsecuritygroups
-	ClassicLinkVPCSecurityGroups []string `json:"ClassicLinkVPCSecurityGroups,omitempty"`
+	ClassicLinkVPCSecurityGroups []*StringIntrinsic `json:"ClassicLinkVPCSecurityGroups,omitempty"`
 
 	// EbsOptimized AWS CloudFormation Property
 	// Required: false
@@ -38,17 +38,17 @@ type AWSAutoScalingLaunchConfiguration struct {
 	// IamInstanceProfile AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-iaminstanceprofile
-	IamInstanceProfile string `json:"IamInstanceProfile,omitempty"`
+	IamInstanceProfile *StringIntrinsic `json:"IamInstanceProfile,omitempty"`
 
 	// ImageId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-imageid
-	ImageId string `json:"ImageId,omitempty"`
+	ImageId *StringIntrinsic `json:"ImageId,omitempty"`
 
 	// InstanceId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-instanceid
-	InstanceId string `json:"InstanceId,omitempty"`
+	InstanceId *StringIntrinsic `json:"InstanceId,omitempty"`
 
 	// InstanceMonitoring AWS CloudFormation Property
 	// Required: false
@@ -58,140 +58,47 @@ type AWSAutoScalingLaunchConfiguration struct {
 	// InstanceType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-instancetype
-	InstanceType string `json:"InstanceType,omitempty"`
+	InstanceType *StringIntrinsic `json:"InstanceType,omitempty"`
 
 	// KernelId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-kernelid
-	KernelId string `json:"KernelId,omitempty"`
+	KernelId *StringIntrinsic `json:"KernelId,omitempty"`
 
 	// KeyName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-keyname
-	KeyName string `json:"KeyName,omitempty"`
+	KeyName *StringIntrinsic `json:"KeyName,omitempty"`
 
 	// LaunchConfigurationName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-autoscaling-launchconfig-launchconfigurationname
-	LaunchConfigurationName string `json:"LaunchConfigurationName,omitempty"`
+	LaunchConfigurationName *StringIntrinsic `json:"LaunchConfigurationName,omitempty"`
 
 	// PlacementTenancy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-placementtenancy
-	PlacementTenancy string `json:"PlacementTenancy,omitempty"`
+	PlacementTenancy *StringIntrinsic `json:"PlacementTenancy,omitempty"`
 
 	// RamDiskId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-ramdiskid
-	RamDiskId string `json:"RamDiskId,omitempty"`
+	RamDiskId *StringIntrinsic `json:"RamDiskId,omitempty"`
 
 	// SecurityGroups AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-securitygroups
-	SecurityGroups []string `json:"SecurityGroups,omitempty"`
+	SecurityGroups []*StringIntrinsic `json:"SecurityGroups,omitempty"`
 
 	// SpotPrice AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-spotprice
-	SpotPrice string `json:"SpotPrice,omitempty"`
+	SpotPrice *StringIntrinsic `json:"SpotPrice,omitempty"`
 
 	// UserData AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-userdata
-	UserData string `json:"UserData,omitempty"`
-}
-
-type UntypedAWSAutoScalingLaunchConfiguration struct {
-
-	// AssociatePublicIpAddress AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cf-as-launchconfig-associatepubip
-	AssociatePublicIpAddress interface{} `json:"AssociatePublicIpAddress,omitempty"`
-
-	// BlockDeviceMappings AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-blockdevicemappings
-	BlockDeviceMappings []UntypedAWSAutoScalingLaunchConfiguration_BlockDeviceMapping `json:"BlockDeviceMappings,omitempty"`
-
-	// ClassicLinkVPCId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-classiclinkvpcid
-	ClassicLinkVPCId interface{} `json:"ClassicLinkVPCId,omitempty"`
-
-	// ClassicLinkVPCSecurityGroups AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-classiclinkvpcsecuritygroups
-	ClassicLinkVPCSecurityGroups []interface{} `json:"ClassicLinkVPCSecurityGroups,omitempty"`
-
-	// EbsOptimized AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-ebsoptimized
-	EbsOptimized interface{} `json:"EbsOptimized,omitempty"`
-
-	// IamInstanceProfile AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-iaminstanceprofile
-	IamInstanceProfile interface{} `json:"IamInstanceProfile,omitempty"`
-
-	// ImageId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-imageid
-	ImageId interface{} `json:"ImageId,omitempty"`
-
-	// InstanceId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-instanceid
-	InstanceId interface{} `json:"InstanceId,omitempty"`
-
-	// InstanceMonitoring AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-instancemonitoring
-	InstanceMonitoring interface{} `json:"InstanceMonitoring,omitempty"`
-
-	// InstanceType AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-instancetype
-	InstanceType interface{} `json:"InstanceType,omitempty"`
-
-	// KernelId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-kernelid
-	KernelId interface{} `json:"KernelId,omitempty"`
-
-	// KeyName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-keyname
-	KeyName interface{} `json:"KeyName,omitempty"`
-
-	// LaunchConfigurationName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-autoscaling-launchconfig-launchconfigurationname
-	LaunchConfigurationName interface{} `json:"LaunchConfigurationName,omitempty"`
-
-	// PlacementTenancy AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-placementtenancy
-	PlacementTenancy interface{} `json:"PlacementTenancy,omitempty"`
-
-	// RamDiskId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-ramdiskid
-	RamDiskId interface{} `json:"RamDiskId,omitempty"`
-
-	// SecurityGroups AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-securitygroups
-	SecurityGroups []interface{} `json:"SecurityGroups,omitempty"`
-
-	// SpotPrice AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-spotprice
-	SpotPrice interface{} `json:"SpotPrice,omitempty"`
-
-	// UserData AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-as-launchconfig.html#cfn-as-launchconfig-userdata
-	UserData interface{} `json:"UserData,omitempty"`
+	UserData *StringIntrinsic `json:"UserData,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

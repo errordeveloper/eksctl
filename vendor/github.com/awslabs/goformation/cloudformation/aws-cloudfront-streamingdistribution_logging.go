@@ -7,7 +7,7 @@ type AWSCloudFrontStreamingDistribution_Logging struct {
 	// Bucket AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-bucket
-	Bucket string `json:"Bucket,omitempty"`
+	Bucket *StringIntrinsic `json:"Bucket,omitempty"`
 
 	// Enabled AWS CloudFormation Property
 	// Required: true
@@ -17,25 +17,7 @@ type AWSCloudFrontStreamingDistribution_Logging struct {
 	// Prefix AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-prefix
-	Prefix string `json:"Prefix,omitempty"`
-}
-
-type UntypedAWSCloudFrontStreamingDistribution_Logging struct {
-
-	// Bucket AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-bucket
-	Bucket interface{} `json:"Bucket,omitempty"`
-
-	// Enabled AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-enabled
-	Enabled interface{} `json:"Enabled,omitempty"`
-
-	// Prefix AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-prefix
-	Prefix interface{} `json:"Prefix,omitempty"`
+	Prefix *StringIntrinsic `json:"Prefix,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

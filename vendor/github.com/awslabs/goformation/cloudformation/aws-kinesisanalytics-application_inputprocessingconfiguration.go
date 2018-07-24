@@ -10,14 +10,6 @@ type AWSKinesisAnalyticsApplication_InputProcessingConfiguration struct {
 	InputLambdaProcessor *AWSKinesisAnalyticsApplication_InputLambdaProcessor `json:"InputLambdaProcessor,omitempty"`
 }
 
-type UntypedAWSKinesisAnalyticsApplication_InputProcessingConfiguration struct {
-
-	// InputLambdaProcessor AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-application-inputprocessingconfiguration.html#cfn-kinesisanalytics-application-inputprocessingconfiguration-inputlambdaprocessor
-	InputLambdaProcessor *UntypedAWSKinesisAnalyticsApplication_InputLambdaProcessor `json:"InputLambdaProcessor,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSKinesisAnalyticsApplication_InputProcessingConfiguration) AWSCloudFormationType() string {
 	return "AWS::KinesisAnalytics::Application.InputProcessingConfiguration"

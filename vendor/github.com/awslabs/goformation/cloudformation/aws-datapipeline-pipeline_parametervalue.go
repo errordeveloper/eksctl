@@ -7,25 +7,12 @@ type AWSDataPipelinePipeline_ParameterValue struct {
 	// Id AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalues.html#cfn-datapipeline-pipeline-parametervalues-id
-	Id string `json:"Id,omitempty"`
+	Id *StringIntrinsic `json:"Id,omitempty"`
 
 	// StringValue AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalues.html#cfn-datapipeline-pipeline-parametervalues-stringvalue
-	StringValue string `json:"StringValue,omitempty"`
-}
-
-type UntypedAWSDataPipelinePipeline_ParameterValue struct {
-
-	// Id AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalues.html#cfn-datapipeline-pipeline-parametervalues-id
-	Id interface{} `json:"Id,omitempty"`
-
-	// StringValue AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-datapipeline-pipeline-parametervalues.html#cfn-datapipeline-pipeline-parametervalues-stringvalue
-	StringValue interface{} `json:"StringValue,omitempty"`
+	StringValue *StringIntrinsic `json:"StringValue,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

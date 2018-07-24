@@ -13,12 +13,12 @@ type AWSApiGatewayRestApi struct {
 	// ApiKeySourceType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-apikeysourcetype
-	ApiKeySourceType string `json:"ApiKeySourceType,omitempty"`
+	ApiKeySourceType *StringIntrinsic `json:"ApiKeySourceType,omitempty"`
 
 	// BinaryMediaTypes AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-binarymediatypes
-	BinaryMediaTypes []string `json:"BinaryMediaTypes,omitempty"`
+	BinaryMediaTypes []*StringIntrinsic `json:"BinaryMediaTypes,omitempty"`
 
 	// Body AWS CloudFormation Property
 	// Required: false
@@ -33,12 +33,12 @@ type AWSApiGatewayRestApi struct {
 	// CloneFrom AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-clonefrom
-	CloneFrom string `json:"CloneFrom,omitempty"`
+	CloneFrom *StringIntrinsic `json:"CloneFrom,omitempty"`
 
 	// Description AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-description
-	Description string `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 
 	// EndpointConfiguration AWS CloudFormation Property
 	// Required: false
@@ -58,75 +58,12 @@ type AWSApiGatewayRestApi struct {
 	// Name AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// Parameters AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-parameters
-	Parameters map[string]string `json:"Parameters,omitempty"`
-
-	// Policy AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-policy
-	Policy interface{} `json:"Policy,omitempty"`
-}
-
-type UntypedAWSApiGatewayRestApi struct {
-
-	// ApiKeySourceType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-apikeysourcetype
-	ApiKeySourceType interface{} `json:"ApiKeySourceType,omitempty"`
-
-	// BinaryMediaTypes AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-binarymediatypes
-	BinaryMediaTypes []interface{} `json:"BinaryMediaTypes,omitempty"`
-
-	// Body AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-body
-	Body interface{} `json:"Body,omitempty"`
-
-	// BodyS3Location AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-bodys3location
-	BodyS3Location *UntypedAWSApiGatewayRestApi_S3Location `json:"BodyS3Location,omitempty"`
-
-	// CloneFrom AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-clonefrom
-	CloneFrom interface{} `json:"CloneFrom,omitempty"`
-
-	// Description AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-description
-	Description interface{} `json:"Description,omitempty"`
-
-	// EndpointConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-endpointconfiguration
-	EndpointConfiguration *UntypedAWSApiGatewayRestApi_EndpointConfiguration `json:"EndpointConfiguration,omitempty"`
-
-	// FailOnWarnings AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-failonwarnings
-	FailOnWarnings interface{} `json:"FailOnWarnings,omitempty"`
-
-	// MinimumCompressionSize AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-minimumcompressionsize
-	MinimumCompressionSize interface{} `json:"MinimumCompressionSize,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// Parameters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-restapi.html#cfn-apigateway-restapi-parameters
-	Parameters map[string]interface{} `json:"Parameters,omitempty"`
+	Parameters map[string]*StringIntrinsic `json:"Parameters,omitempty"`
 
 	// Policy AWS CloudFormation Property
 	// Required: false

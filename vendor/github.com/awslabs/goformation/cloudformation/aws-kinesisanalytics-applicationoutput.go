@@ -13,25 +13,12 @@ type AWSKinesisAnalyticsApplicationOutput struct {
 	// ApplicationName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-applicationoutput.html#cfn-kinesisanalytics-applicationoutput-applicationname
-	ApplicationName string `json:"ApplicationName,omitempty"`
+	ApplicationName *StringIntrinsic `json:"ApplicationName,omitempty"`
 
 	// Output AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-applicationoutput.html#cfn-kinesisanalytics-applicationoutput-output
 	Output *AWSKinesisAnalyticsApplicationOutput_Output `json:"Output,omitempty"`
-}
-
-type UntypedAWSKinesisAnalyticsApplicationOutput struct {
-
-	// ApplicationName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-applicationoutput.html#cfn-kinesisanalytics-applicationoutput-applicationname
-	ApplicationName interface{} `json:"ApplicationName,omitempty"`
-
-	// Output AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-applicationoutput.html#cfn-kinesisanalytics-applicationoutput-output
-	Output *UntypedAWSKinesisAnalyticsApplicationOutput_Output `json:"Output,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

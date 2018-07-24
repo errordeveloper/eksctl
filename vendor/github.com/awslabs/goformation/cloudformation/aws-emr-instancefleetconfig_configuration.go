@@ -7,35 +7,17 @@ type AWSEMRInstanceFleetConfig_Configuration struct {
 	// Classification AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-configuration.html#cfn-elasticmapreduce-instancefleetconfig-configuration-classification
-	Classification string `json:"Classification,omitempty"`
+	Classification *StringIntrinsic `json:"Classification,omitempty"`
 
 	// ConfigurationProperties AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-configuration.html#cfn-elasticmapreduce-instancefleetconfig-configuration-configurationproperties
-	ConfigurationProperties map[string]string `json:"ConfigurationProperties,omitempty"`
+	ConfigurationProperties map[string]*StringIntrinsic `json:"ConfigurationProperties,omitempty"`
 
 	// Configurations AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-configuration.html#cfn-elasticmapreduce-instancefleetconfig-configuration-configurations
 	Configurations []AWSEMRInstanceFleetConfig_Configuration `json:"Configurations,omitempty"`
-}
-
-type UntypedAWSEMRInstanceFleetConfig_Configuration struct {
-
-	// Classification AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-configuration.html#cfn-elasticmapreduce-instancefleetconfig-configuration-classification
-	Classification interface{} `json:"Classification,omitempty"`
-
-	// ConfigurationProperties AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-configuration.html#cfn-elasticmapreduce-instancefleetconfig-configuration-configurationproperties
-	ConfigurationProperties map[string]interface{} `json:"ConfigurationProperties,omitempty"`
-
-	// Configurations AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticmapreduce-instancefleetconfig-configuration.html#cfn-elasticmapreduce-instancefleetconfig-configuration-configurations
-	Configurations []UntypedAWSEMRInstanceFleetConfig_Configuration `json:"Configurations,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

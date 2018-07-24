@@ -13,7 +13,7 @@ type AWSCertificateManagerCertificate struct {
 	// DomainName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-domainname
-	DomainName string `json:"DomainName,omitempty"`
+	DomainName *StringIntrinsic `json:"DomainName,omitempty"`
 
 	// DomainValidationOptions AWS CloudFormation Property
 	// Required: false
@@ -23,7 +23,7 @@ type AWSCertificateManagerCertificate struct {
 	// SubjectAlternativeNames AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-subjectalternativenames
-	SubjectAlternativeNames []string `json:"SubjectAlternativeNames,omitempty"`
+	SubjectAlternativeNames []*StringIntrinsic `json:"SubjectAlternativeNames,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
@@ -33,35 +33,7 @@ type AWSCertificateManagerCertificate struct {
 	// ValidationMethod AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-validationmethod
-	ValidationMethod string `json:"ValidationMethod,omitempty"`
-}
-
-type UntypedAWSCertificateManagerCertificate struct {
-
-	// DomainName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-domainname
-	DomainName interface{} `json:"DomainName,omitempty"`
-
-	// DomainValidationOptions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-domainvalidationoptions
-	DomainValidationOptions []UntypedAWSCertificateManagerCertificate_DomainValidationOption `json:"DomainValidationOptions,omitempty"`
-
-	// SubjectAlternativeNames AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-subjectalternativenames
-	SubjectAlternativeNames []interface{} `json:"SubjectAlternativeNames,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// ValidationMethod AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-certificatemanager-certificate.html#cfn-certificatemanager-certificate-validationmethod
-	ValidationMethod interface{} `json:"ValidationMethod,omitempty"`
+	ValidationMethod *StringIntrinsic `json:"ValidationMethod,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -13,45 +13,22 @@ type AWSApiGatewayBasePathMapping struct {
 	// BasePath AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html#cfn-apigateway-basepathmapping-basepath
-	BasePath string `json:"BasePath,omitempty"`
+	BasePath *StringIntrinsic `json:"BasePath,omitempty"`
 
 	// DomainName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html#cfn-apigateway-basepathmapping-domainname
-	DomainName string `json:"DomainName,omitempty"`
+	DomainName *StringIntrinsic `json:"DomainName,omitempty"`
 
 	// RestApiId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html#cfn-apigateway-basepathmapping-restapiid
-	RestApiId string `json:"RestApiId,omitempty"`
+	RestApiId *StringIntrinsic `json:"RestApiId,omitempty"`
 
 	// Stage AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html#cfn-apigateway-basepathmapping-stage
-	Stage string `json:"Stage,omitempty"`
-}
-
-type UntypedAWSApiGatewayBasePathMapping struct {
-
-	// BasePath AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html#cfn-apigateway-basepathmapping-basepath
-	BasePath interface{} `json:"BasePath,omitempty"`
-
-	// DomainName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html#cfn-apigateway-basepathmapping-domainname
-	DomainName interface{} `json:"DomainName,omitempty"`
-
-	// RestApiId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html#cfn-apigateway-basepathmapping-restapiid
-	RestApiId interface{} `json:"RestApiId,omitempty"`
-
-	// Stage AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-basepathmapping.html#cfn-apigateway-basepathmapping-stage
-	Stage interface{} `json:"Stage,omitempty"`
+	Stage *StringIntrinsic `json:"Stage,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

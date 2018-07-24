@@ -18,40 +18,17 @@ type AWSEC2NetworkInterfaceAttachment struct {
 	// DeviceIndex AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface-attachment.html#cfn-ec2-network-interface-attachment-deviceindex
-	DeviceIndex string `json:"DeviceIndex,omitempty"`
+	DeviceIndex *StringIntrinsic `json:"DeviceIndex,omitempty"`
 
 	// InstanceId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface-attachment.html#cfn-ec2-network-interface-attachment-instanceid
-	InstanceId string `json:"InstanceId,omitempty"`
+	InstanceId *StringIntrinsic `json:"InstanceId,omitempty"`
 
 	// NetworkInterfaceId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface-attachment.html#cfn-ec2-network-interface-attachment-networkinterfaceid
-	NetworkInterfaceId string `json:"NetworkInterfaceId,omitempty"`
-}
-
-type UntypedAWSEC2NetworkInterfaceAttachment struct {
-
-	// DeleteOnTermination AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface-attachment.html#cfn-ec2-network-interface-attachment-deleteonterm
-	DeleteOnTermination interface{} `json:"DeleteOnTermination,omitempty"`
-
-	// DeviceIndex AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface-attachment.html#cfn-ec2-network-interface-attachment-deviceindex
-	DeviceIndex interface{} `json:"DeviceIndex,omitempty"`
-
-	// InstanceId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface-attachment.html#cfn-ec2-network-interface-attachment-instanceid
-	InstanceId interface{} `json:"InstanceId,omitempty"`
-
-	// NetworkInterfaceId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-interface-attachment.html#cfn-ec2-network-interface-attachment-networkinterfaceid
-	NetworkInterfaceId interface{} `json:"NetworkInterfaceId,omitempty"`
+	NetworkInterfaceId *StringIntrinsic `json:"NetworkInterfaceId,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

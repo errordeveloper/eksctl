@@ -7,12 +7,12 @@ type AWSCloudFrontStreamingDistribution_StreamingDistributionConfig struct {
 	// Aliases AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-aliases
-	Aliases []string `json:"Aliases,omitempty"`
+	Aliases []*StringIntrinsic `json:"Aliases,omitempty"`
 
 	// Comment AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-comment
-	Comment string `json:"Comment,omitempty"`
+	Comment *StringIntrinsic `json:"Comment,omitempty"`
 
 	// Enabled AWS CloudFormation Property
 	// Required: true
@@ -27,7 +27,7 @@ type AWSCloudFrontStreamingDistribution_StreamingDistributionConfig struct {
 	// PriceClass AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-priceclass
-	PriceClass string `json:"PriceClass,omitempty"`
+	PriceClass *StringIntrinsic `json:"PriceClass,omitempty"`
 
 	// S3Origin AWS CloudFormation Property
 	// Required: true
@@ -38,44 +38,6 @@ type AWSCloudFrontStreamingDistribution_StreamingDistributionConfig struct {
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-trustedsigners
 	TrustedSigners *AWSCloudFrontStreamingDistribution_TrustedSigners `json:"TrustedSigners,omitempty"`
-}
-
-type UntypedAWSCloudFrontStreamingDistribution_StreamingDistributionConfig struct {
-
-	// Aliases AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-aliases
-	Aliases []interface{} `json:"Aliases,omitempty"`
-
-	// Comment AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-comment
-	Comment interface{} `json:"Comment,omitempty"`
-
-	// Enabled AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-enabled
-	Enabled interface{} `json:"Enabled,omitempty"`
-
-	// Logging AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-logging
-	Logging *UntypedAWSCloudFrontStreamingDistribution_Logging `json:"Logging,omitempty"`
-
-	// PriceClass AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-priceclass
-	PriceClass interface{} `json:"PriceClass,omitempty"`
-
-	// S3Origin AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-s3origin
-	S3Origin *UntypedAWSCloudFrontStreamingDistribution_S3Origin `json:"S3Origin,omitempty"`
-
-	// TrustedSigners AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-streamingdistributionconfig.html#cfn-cloudfront-streamingdistribution-streamingdistributionconfig-trustedsigners
-	TrustedSigners *UntypedAWSCloudFrontStreamingDistribution_TrustedSigners `json:"TrustedSigners,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

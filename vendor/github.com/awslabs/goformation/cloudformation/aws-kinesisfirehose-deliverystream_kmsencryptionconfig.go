@@ -7,15 +7,7 @@ type AWSKinesisFirehoseDeliveryStream_KMSEncryptionConfig struct {
 	// AWSKMSKeyARN AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-kmsencryptionconfig.html#cfn-kinesisfirehose-deliverystream-kmsencryptionconfig-awskmskeyarn
-	AWSKMSKeyARN string `json:"AWSKMSKeyARN,omitempty"`
-}
-
-type UntypedAWSKinesisFirehoseDeliveryStream_KMSEncryptionConfig struct {
-
-	// AWSKMSKeyARN AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-kmsencryptionconfig.html#cfn-kinesisfirehose-deliverystream-kmsencryptionconfig-awskmskeyarn
-	AWSKMSKeyARN interface{} `json:"AWSKMSKeyARN,omitempty"`
+	AWSKMSKeyARN *StringIntrinsic `json:"AWSKMSKeyARN,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

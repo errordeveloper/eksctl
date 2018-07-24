@@ -13,45 +13,22 @@ type AWSKinesisAnalyticsApplication struct {
 	// ApplicationCode AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-application.html#cfn-kinesisanalytics-application-applicationcode
-	ApplicationCode string `json:"ApplicationCode,omitempty"`
+	ApplicationCode *StringIntrinsic `json:"ApplicationCode,omitempty"`
 
 	// ApplicationDescription AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-application.html#cfn-kinesisanalytics-application-applicationdescription
-	ApplicationDescription string `json:"ApplicationDescription,omitempty"`
+	ApplicationDescription *StringIntrinsic `json:"ApplicationDescription,omitempty"`
 
 	// ApplicationName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-application.html#cfn-kinesisanalytics-application-applicationname
-	ApplicationName string `json:"ApplicationName,omitempty"`
+	ApplicationName *StringIntrinsic `json:"ApplicationName,omitempty"`
 
 	// Inputs AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-application.html#cfn-kinesisanalytics-application-inputs
 	Inputs []AWSKinesisAnalyticsApplication_Input `json:"Inputs,omitempty"`
-}
-
-type UntypedAWSKinesisAnalyticsApplication struct {
-
-	// ApplicationCode AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-application.html#cfn-kinesisanalytics-application-applicationcode
-	ApplicationCode interface{} `json:"ApplicationCode,omitempty"`
-
-	// ApplicationDescription AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-application.html#cfn-kinesisanalytics-application-applicationdescription
-	ApplicationDescription interface{} `json:"ApplicationDescription,omitempty"`
-
-	// ApplicationName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-application.html#cfn-kinesisanalytics-application-applicationname
-	ApplicationName interface{} `json:"ApplicationName,omitempty"`
-
-	// Inputs AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisanalytics-application.html#cfn-kinesisanalytics-application-inputs
-	Inputs []UntypedAWSKinesisAnalyticsApplication_Input `json:"Inputs,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

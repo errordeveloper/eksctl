@@ -7,25 +7,12 @@ type AWSSESConfigurationSetEventDestination_KinesisFirehoseDestination struct {
 	// DeliveryStreamARN AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.html#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-deliverystreamarn
-	DeliveryStreamARN string `json:"DeliveryStreamARN,omitempty"`
+	DeliveryStreamARN *StringIntrinsic `json:"DeliveryStreamARN,omitempty"`
 
 	// IAMRoleARN AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.html#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-iamrolearn
-	IAMRoleARN string `json:"IAMRoleARN,omitempty"`
-}
-
-type UntypedAWSSESConfigurationSetEventDestination_KinesisFirehoseDestination struct {
-
-	// DeliveryStreamARN AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.html#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-deliverystreamarn
-	DeliveryStreamARN interface{} `json:"DeliveryStreamARN,omitempty"`
-
-	// IAMRoleARN AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationseteventdestination-kinesisfirehosedestination.html#cfn-ses-configurationseteventdestination-kinesisfirehosedestination-iamrolearn
-	IAMRoleARN interface{} `json:"IAMRoleARN,omitempty"`
+	IAMRoleARN *StringIntrinsic `json:"IAMRoleARN,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -22,30 +22,7 @@ type AWSCloudFrontDistribution_CustomErrorResponse struct {
 	// ResponsePagePath AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customerrorresponse.html#cfn-cloudfront-distribution-customerrorresponse-responsepagepath
-	ResponsePagePath string `json:"ResponsePagePath,omitempty"`
-}
-
-type UntypedAWSCloudFrontDistribution_CustomErrorResponse struct {
-
-	// ErrorCachingMinTTL AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customerrorresponse.html#cfn-cloudfront-distribution-customerrorresponse-errorcachingminttl
-	ErrorCachingMinTTL interface{} `json:"ErrorCachingMinTTL,omitempty"`
-
-	// ErrorCode AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customerrorresponse.html#cfn-cloudfront-distribution-customerrorresponse-errorcode
-	ErrorCode interface{} `json:"ErrorCode,omitempty"`
-
-	// ResponseCode AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customerrorresponse.html#cfn-cloudfront-distribution-customerrorresponse-responsecode
-	ResponseCode interface{} `json:"ResponseCode,omitempty"`
-
-	// ResponsePagePath AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-customerrorresponse.html#cfn-cloudfront-distribution-customerrorresponse-responsepagepath
-	ResponsePagePath interface{} `json:"ResponsePagePath,omitempty"`
+	ResponsePagePath *StringIntrinsic `json:"ResponsePagePath,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

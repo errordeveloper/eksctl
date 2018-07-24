@@ -15,19 +15,6 @@ type AWSDynamoDBTable_ProvisionedThroughput struct {
 	WriteCapacityUnits int64 `json:"WriteCapacityUnits,omitempty"`
 }
 
-type UntypedAWSDynamoDBTable_ProvisionedThroughput struct {
-
-	// ReadCapacityUnits AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html#cfn-dynamodb-provisionedthroughput-readcapacityunits
-	ReadCapacityUnits interface{} `json:"ReadCapacityUnits,omitempty"`
-
-	// WriteCapacityUnits AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-provisionedthroughput.html#cfn-dynamodb-provisionedthroughput-writecapacityunits
-	WriteCapacityUnits interface{} `json:"WriteCapacityUnits,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSDynamoDBTable_ProvisionedThroughput) AWSCloudFormationType() string {
 	return "AWS::DynamoDB::Table.ProvisionedThroughput"

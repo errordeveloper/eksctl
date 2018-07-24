@@ -18,20 +18,7 @@ type AWSEC2NetworkAcl struct {
 	// VpcId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl.html#cfn-ec2-networkacl-vpcid
-	VpcId string `json:"VpcId,omitempty"`
-}
-
-type UntypedAWSEC2NetworkAcl struct {
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl.html#cfn-ec2-networkacl-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
-
-	// VpcId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-network-acl.html#cfn-ec2-networkacl-vpcid
-	VpcId interface{} `json:"VpcId,omitempty"`
+	VpcId *StringIntrinsic `json:"VpcId,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

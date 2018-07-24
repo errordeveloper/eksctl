@@ -15,19 +15,6 @@ type AWSElasticBeanstalkApplication_ApplicationVersionLifecycleConfig struct {
 	MaxCountRule *AWSElasticBeanstalkApplication_MaxCountRule `json:"MaxCountRule,omitempty"`
 }
 
-type UntypedAWSElasticBeanstalkApplication_ApplicationVersionLifecycleConfig struct {
-
-	// MaxAgeRule AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.html#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxagerule
-	MaxAgeRule *UntypedAWSElasticBeanstalkApplication_MaxAgeRule `json:"MaxAgeRule,omitempty"`
-
-	// MaxCountRule AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticbeanstalk-application-applicationversionlifecycleconfig.html#cfn-elasticbeanstalk-application-applicationversionlifecycleconfig-maxcountrule
-	MaxCountRule *UntypedAWSElasticBeanstalkApplication_MaxCountRule `json:"MaxCountRule,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSElasticBeanstalkApplication_ApplicationVersionLifecycleConfig) AWSCloudFormationType() string {
 	return "AWS::ElasticBeanstalk::Application.ApplicationVersionLifecycleConfig"

@@ -7,25 +7,12 @@ type AWSEC2LaunchTemplate_InstanceMarketOptions struct {
 	// MarketType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions.html#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-markettype
-	MarketType string `json:"MarketType,omitempty"`
+	MarketType *StringIntrinsic `json:"MarketType,omitempty"`
 
 	// SpotOptions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions.html#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions
 	SpotOptions *AWSEC2LaunchTemplate_SpotOptions `json:"SpotOptions,omitempty"`
-}
-
-type UntypedAWSEC2LaunchTemplate_InstanceMarketOptions struct {
-
-	// MarketType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions.html#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-markettype
-	MarketType interface{} `json:"MarketType,omitempty"`
-
-	// SpotOptions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-launchtemplatedata-instancemarketoptions.html#cfn-ec2-launchtemplate-launchtemplatedata-instancemarketoptions-spotoptions
-	SpotOptions *UntypedAWSEC2LaunchTemplate_SpotOptions `json:"SpotOptions,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

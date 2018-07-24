@@ -7,25 +7,12 @@ type AWSS3Bucket_ReplicationConfiguration struct {
 	// Role AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration.html#cfn-s3-bucket-replicationconfiguration-role
-	Role string `json:"Role,omitempty"`
+	Role *StringIntrinsic `json:"Role,omitempty"`
 
 	// Rules AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration.html#cfn-s3-bucket-replicationconfiguration-rules
 	Rules []AWSS3Bucket_ReplicationRule `json:"Rules,omitempty"`
-}
-
-type UntypedAWSS3Bucket_ReplicationConfiguration struct {
-
-	// Role AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration.html#cfn-s3-bucket-replicationconfiguration-role
-	Role interface{} `json:"Role,omitempty"`
-
-	// Rules AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-replicationconfiguration.html#cfn-s3-bucket-replicationconfiguration-rules
-	Rules []UntypedAWSS3Bucket_ReplicationRule `json:"Rules,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

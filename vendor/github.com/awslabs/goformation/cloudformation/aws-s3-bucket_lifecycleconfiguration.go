@@ -10,14 +10,6 @@ type AWSS3Bucket_LifecycleConfiguration struct {
 	Rules []AWSS3Bucket_Rule `json:"Rules,omitempty"`
 }
 
-type UntypedAWSS3Bucket_LifecycleConfiguration struct {
-
-	// Rules AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-bucket-lifecycleconfig.html#cfn-s3-bucket-lifecycleconfig-rules
-	Rules []UntypedAWSS3Bucket_Rule `json:"Rules,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSS3Bucket_LifecycleConfiguration) AWSCloudFormationType() string {
 	return "AWS::S3::Bucket.LifecycleConfiguration"

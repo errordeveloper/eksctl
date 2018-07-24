@@ -7,15 +7,7 @@ type AWSDynamoDBTable_StreamSpecification struct {
 	// StreamViewType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-streamspecification.html#cfn-dynamodb-streamspecification-streamviewtype
-	StreamViewType string `json:"StreamViewType,omitempty"`
-}
-
-type UntypedAWSDynamoDBTable_StreamSpecification struct {
-
-	// StreamViewType AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-streamspecification.html#cfn-dynamodb-streamspecification-streamviewtype
-	StreamViewType interface{} `json:"StreamViewType,omitempty"`
+	StreamViewType *StringIntrinsic `json:"StreamViewType,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

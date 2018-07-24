@@ -18,20 +18,7 @@ type AWSEC2LaunchTemplate struct {
 	// LaunchTemplateName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-launchtemplatename
-	LaunchTemplateName string `json:"LaunchTemplateName,omitempty"`
-}
-
-type UntypedAWSEC2LaunchTemplate struct {
-
-	// LaunchTemplateData AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-launchtemplatedata
-	LaunchTemplateData *UntypedAWSEC2LaunchTemplate_LaunchTemplateData `json:"LaunchTemplateData,omitempty"`
-
-	// LaunchTemplateName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-launchtemplate.html#cfn-ec2-launchtemplate-launchtemplatename
-	LaunchTemplateName interface{} `json:"LaunchTemplateName,omitempty"`
+	LaunchTemplateName *StringIntrinsic `json:"LaunchTemplateName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

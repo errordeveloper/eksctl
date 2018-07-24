@@ -17,7 +17,7 @@ type AWSElasticsearchDomain_ElasticsearchClusterConfig struct {
 	// DedicatedMasterType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastertype
-	DedicatedMasterType string `json:"DedicatedMasterType,omitempty"`
+	DedicatedMasterType *StringIntrinsic `json:"DedicatedMasterType,omitempty"`
 
 	// InstanceCount AWS CloudFormation Property
 	// Required: false
@@ -27,45 +27,12 @@ type AWSElasticsearchDomain_ElasticsearchClusterConfig struct {
 	// InstanceType AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticseachclusterconfig-instnacetype
-	InstanceType string `json:"InstanceType,omitempty"`
+	InstanceType *StringIntrinsic `json:"InstanceType,omitempty"`
 
 	// ZoneAwarenessEnabled AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticseachclusterconfig-zoneawarenessenabled
 	ZoneAwarenessEnabled bool `json:"ZoneAwarenessEnabled,omitempty"`
-}
-
-type UntypedAWSElasticsearchDomain_ElasticsearchClusterConfig struct {
-
-	// DedicatedMasterCount AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastercount
-	DedicatedMasterCount interface{} `json:"DedicatedMasterCount,omitempty"`
-
-	// DedicatedMasterEnabled AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmasterenabled
-	DedicatedMasterEnabled interface{} `json:"DedicatedMasterEnabled,omitempty"`
-
-	// DedicatedMasterType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticseachclusterconfig-dedicatedmastertype
-	DedicatedMasterType interface{} `json:"DedicatedMasterType,omitempty"`
-
-	// InstanceCount AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticseachclusterconfig-instancecount
-	InstanceCount interface{} `json:"InstanceCount,omitempty"`
-
-	// InstanceType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticseachclusterconfig-instnacetype
-	InstanceType interface{} `json:"InstanceType,omitempty"`
-
-	// ZoneAwarenessEnabled AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticsearch-domain-elasticsearchclusterconfig.html#cfn-elasticsearch-domain-elasticseachclusterconfig-zoneawarenessenabled
-	ZoneAwarenessEnabled interface{} `json:"ZoneAwarenessEnabled,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -7,35 +7,17 @@ type AWSAppSyncDataSource_DynamoDBConfig struct {
 	// AwsRegion AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-awsregion
-	AwsRegion string `json:"AwsRegion,omitempty"`
+	AwsRegion *StringIntrinsic `json:"AwsRegion,omitempty"`
 
 	// TableName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-tablename
-	TableName string `json:"TableName,omitempty"`
+	TableName *StringIntrinsic `json:"TableName,omitempty"`
 
 	// UseCallerCredentials AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-usecallercredentials
 	UseCallerCredentials bool `json:"UseCallerCredentials,omitempty"`
-}
-
-type UntypedAWSAppSyncDataSource_DynamoDBConfig struct {
-
-	// AwsRegion AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-awsregion
-	AwsRegion interface{} `json:"AwsRegion,omitempty"`
-
-	// TableName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-tablename
-	TableName interface{} `json:"TableName,omitempty"`
-
-	// UseCallerCredentials AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appsync-datasource-dynamodbconfig.html#cfn-appsync-datasource-dynamodbconfig-usecallercredentials
-	UseCallerCredentials interface{} `json:"UseCallerCredentials,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

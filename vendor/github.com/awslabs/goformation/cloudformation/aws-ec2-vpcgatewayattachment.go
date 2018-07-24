@@ -13,35 +13,17 @@ type AWSEC2VPCGatewayAttachment struct {
 	// InternetGatewayId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html#cfn-ec2-vpcgatewayattachment-internetgatewayid
-	InternetGatewayId string `json:"InternetGatewayId,omitempty"`
+	InternetGatewayId *StringIntrinsic `json:"InternetGatewayId,omitempty"`
 
 	// VpcId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html#cfn-ec2-vpcgatewayattachment-vpcid
-	VpcId string `json:"VpcId,omitempty"`
+	VpcId *StringIntrinsic `json:"VpcId,omitempty"`
 
 	// VpnGatewayId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html#cfn-ec2-vpcgatewayattachment-vpngatewayid
-	VpnGatewayId string `json:"VpnGatewayId,omitempty"`
-}
-
-type UntypedAWSEC2VPCGatewayAttachment struct {
-
-	// InternetGatewayId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html#cfn-ec2-vpcgatewayattachment-internetgatewayid
-	InternetGatewayId interface{} `json:"InternetGatewayId,omitempty"`
-
-	// VpcId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html#cfn-ec2-vpcgatewayattachment-vpcid
-	VpcId interface{} `json:"VpcId,omitempty"`
-
-	// VpnGatewayId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc-gateway-attachment.html#cfn-ec2-vpcgatewayattachment-vpngatewayid
-	VpnGatewayId interface{} `json:"VpnGatewayId,omitempty"`
+	VpnGatewayId *StringIntrinsic `json:"VpnGatewayId,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

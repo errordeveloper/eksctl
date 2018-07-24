@@ -13,15 +13,7 @@ type AWSElastiCacheSecurityGroup struct {
 	// Description AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group.html#cfn-elasticache-securitygroup-description
-	Description string `json:"Description,omitempty"`
-}
-
-type UntypedAWSElastiCacheSecurityGroup struct {
-
-	// Description AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-security-group.html#cfn-elasticache-securitygroup-description
-	Description interface{} `json:"Description,omitempty"`
+	Description *StringIntrinsic `json:"Description,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

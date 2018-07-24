@@ -13,7 +13,7 @@ type AWSEC2VPC struct {
 	// CidrBlock AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-aws-ec2-vpc-cidrblock
-	CidrBlock string `json:"CidrBlock,omitempty"`
+	CidrBlock *StringIntrinsic `json:"CidrBlock,omitempty"`
 
 	// EnableDnsHostnames AWS CloudFormation Property
 	// Required: false
@@ -28,40 +28,12 @@ type AWSEC2VPC struct {
 	// InstanceTenancy AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-aws-ec2-vpc-instancetenancy
-	InstanceTenancy string `json:"InstanceTenancy,omitempty"`
+	InstanceTenancy *StringIntrinsic `json:"InstanceTenancy,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-aws-ec2-vpc-tags
 	Tags []Tag `json:"Tags,omitempty"`
-}
-
-type UntypedAWSEC2VPC struct {
-
-	// CidrBlock AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-aws-ec2-vpc-cidrblock
-	CidrBlock interface{} `json:"CidrBlock,omitempty"`
-
-	// EnableDnsHostnames AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-aws-ec2-vpc-EnableDnsHostnames
-	EnableDnsHostnames interface{} `json:"EnableDnsHostnames,omitempty"`
-
-	// EnableDnsSupport AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-aws-ec2-vpc-EnableDnsSupport
-	EnableDnsSupport interface{} `json:"EnableDnsSupport,omitempty"`
-
-	// InstanceTenancy AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-aws-ec2-vpc-instancetenancy
-	InstanceTenancy interface{} `json:"InstanceTenancy,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpc.html#cfn-aws-ec2-vpc-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

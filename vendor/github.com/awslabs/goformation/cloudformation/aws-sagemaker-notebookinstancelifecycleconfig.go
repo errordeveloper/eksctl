@@ -13,7 +13,7 @@ type AWSSageMakerNotebookInstanceLifecycleConfig struct {
 	// NotebookInstanceLifecycleConfigName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecycleconfigname
-	NotebookInstanceLifecycleConfigName string `json:"NotebookInstanceLifecycleConfigName,omitempty"`
+	NotebookInstanceLifecycleConfigName *StringIntrinsic `json:"NotebookInstanceLifecycleConfigName,omitempty"`
 
 	// OnCreate AWS CloudFormation Property
 	// Required: false
@@ -24,24 +24,6 @@ type AWSSageMakerNotebookInstanceLifecycleConfig struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-onstart
 	OnStart []AWSSageMakerNotebookInstanceLifecycleConfig_NotebookInstanceLifecycleHook `json:"OnStart,omitempty"`
-}
-
-type UntypedAWSSageMakerNotebookInstanceLifecycleConfig struct {
-
-	// NotebookInstanceLifecycleConfigName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-notebookinstancelifecycleconfigname
-	NotebookInstanceLifecycleConfigName interface{} `json:"NotebookInstanceLifecycleConfigName,omitempty"`
-
-	// OnCreate AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-oncreate
-	OnCreate []UntypedAWSSageMakerNotebookInstanceLifecycleConfig_NotebookInstanceLifecycleHook `json:"OnCreate,omitempty"`
-
-	// OnStart AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-notebookinstancelifecycleconfig.html#cfn-sagemaker-notebookinstancelifecycleconfig-onstart
-	OnStart []UntypedAWSSageMakerNotebookInstanceLifecycleConfig_NotebookInstanceLifecycleHook `json:"OnStart,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

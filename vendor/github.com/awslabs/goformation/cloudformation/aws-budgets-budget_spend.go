@@ -12,20 +12,7 @@ type AWSBudgetsBudget_Spend struct {
 	// Unit AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-spend.html#cfn-budgets-budget-spend-unit
-	Unit string `json:"Unit,omitempty"`
-}
-
-type UntypedAWSBudgetsBudget_Spend struct {
-
-	// Amount AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-spend.html#cfn-budgets-budget-spend-amount
-	Amount interface{} `json:"Amount,omitempty"`
-
-	// Unit AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-budgets-budget-spend.html#cfn-budgets-budget-spend-unit
-	Unit interface{} `json:"Unit,omitempty"`
+	Unit *StringIntrinsic `json:"Unit,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

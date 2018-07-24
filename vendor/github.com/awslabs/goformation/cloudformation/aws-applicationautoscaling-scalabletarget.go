@@ -23,17 +23,17 @@ type AWSApplicationAutoScalingScalableTarget struct {
 	// ResourceId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-resourceid
-	ResourceId string `json:"ResourceId,omitempty"`
+	ResourceId *StringIntrinsic `json:"ResourceId,omitempty"`
 
 	// RoleARN AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-rolearn
-	RoleARN string `json:"RoleARN,omitempty"`
+	RoleARN *StringIntrinsic `json:"RoleARN,omitempty"`
 
 	// ScalableDimension AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-scalabledimension
-	ScalableDimension string `json:"ScalableDimension,omitempty"`
+	ScalableDimension *StringIntrinsic `json:"ScalableDimension,omitempty"`
 
 	// ScheduledActions AWS CloudFormation Property
 	// Required: false
@@ -43,45 +43,7 @@ type AWSApplicationAutoScalingScalableTarget struct {
 	// ServiceNamespace AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-servicenamespace
-	ServiceNamespace string `json:"ServiceNamespace,omitempty"`
-}
-
-type UntypedAWSApplicationAutoScalingScalableTarget struct {
-
-	// MaxCapacity AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-maxcapacity
-	MaxCapacity interface{} `json:"MaxCapacity,omitempty"`
-
-	// MinCapacity AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-mincapacity
-	MinCapacity interface{} `json:"MinCapacity,omitempty"`
-
-	// ResourceId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-resourceid
-	ResourceId interface{} `json:"ResourceId,omitempty"`
-
-	// RoleARN AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-rolearn
-	RoleARN interface{} `json:"RoleARN,omitempty"`
-
-	// ScalableDimension AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-scalabledimension
-	ScalableDimension interface{} `json:"ScalableDimension,omitempty"`
-
-	// ScheduledActions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-scheduledactions
-	ScheduledActions []UntypedAWSApplicationAutoScalingScalableTarget_ScheduledAction `json:"ScheduledActions,omitempty"`
-
-	// ServiceNamespace AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalabletarget.html#cfn-applicationautoscaling-scalabletarget-servicenamespace
-	ServiceNamespace interface{} `json:"ServiceNamespace,omitempty"`
+	ServiceNamespace *StringIntrinsic `json:"ServiceNamespace,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

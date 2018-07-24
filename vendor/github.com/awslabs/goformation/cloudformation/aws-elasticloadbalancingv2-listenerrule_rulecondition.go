@@ -7,25 +7,12 @@ type AWSElasticLoadBalancingV2ListenerRule_RuleCondition struct {
 	// Field AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-conditions.html#cfn-elasticloadbalancingv2-listenerrule-conditions-field
-	Field string `json:"Field,omitempty"`
+	Field *StringIntrinsic `json:"Field,omitempty"`
 
 	// Values AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-conditions.html#cfn-elasticloadbalancingv2-listenerrule-conditions-values
-	Values []string `json:"Values,omitempty"`
-}
-
-type UntypedAWSElasticLoadBalancingV2ListenerRule_RuleCondition struct {
-
-	// Field AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-conditions.html#cfn-elasticloadbalancingv2-listenerrule-conditions-field
-	Field interface{} `json:"Field,omitempty"`
-
-	// Values AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-conditions.html#cfn-elasticloadbalancingv2-listenerrule-conditions-values
-	Values []interface{} `json:"Values,omitempty"`
+	Values []*StringIntrinsic `json:"Values,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

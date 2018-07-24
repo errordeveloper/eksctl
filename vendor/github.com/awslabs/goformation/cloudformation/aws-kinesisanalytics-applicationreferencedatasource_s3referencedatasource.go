@@ -7,35 +7,17 @@ type AWSKinesisAnalyticsApplicationReferenceDataSource_S3ReferenceDataSource str
 	// BucketARN AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-s3referencedatasource.html#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-bucketarn
-	BucketARN string `json:"BucketARN,omitempty"`
+	BucketARN *StringIntrinsic `json:"BucketARN,omitempty"`
 
 	// FileKey AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-s3referencedatasource.html#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-filekey
-	FileKey string `json:"FileKey,omitempty"`
+	FileKey *StringIntrinsic `json:"FileKey,omitempty"`
 
 	// ReferenceRoleARN AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-s3referencedatasource.html#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-referencerolearn
-	ReferenceRoleARN string `json:"ReferenceRoleARN,omitempty"`
-}
-
-type UntypedAWSKinesisAnalyticsApplicationReferenceDataSource_S3ReferenceDataSource struct {
-
-	// BucketARN AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-s3referencedatasource.html#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-bucketarn
-	BucketARN interface{} `json:"BucketARN,omitempty"`
-
-	// FileKey AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-s3referencedatasource.html#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-filekey
-	FileKey interface{} `json:"FileKey,omitempty"`
-
-	// ReferenceRoleARN AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisanalytics-applicationreferencedatasource-s3referencedatasource.html#cfn-kinesisanalytics-applicationreferencedatasource-s3referencedatasource-referencerolearn
-	ReferenceRoleARN interface{} `json:"ReferenceRoleARN,omitempty"`
+	ReferenceRoleARN *StringIntrinsic `json:"ReferenceRoleARN,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -7,7 +7,7 @@ type AWSGuardDutyFilter_Condition struct {
 	// Eq AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-eq
-	Eq []string `json:"Eq,omitempty"`
+	Eq []*StringIntrinsic `json:"Eq,omitempty"`
 
 	// Gte AWS CloudFormation Property
 	// Required: false
@@ -27,35 +27,7 @@ type AWSGuardDutyFilter_Condition struct {
 	// Neq AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-neq
-	Neq []string `json:"Neq,omitempty"`
-}
-
-type UntypedAWSGuardDutyFilter_Condition struct {
-
-	// Eq AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-eq
-	Eq []interface{} `json:"Eq,omitempty"`
-
-	// Gte AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-gte
-	Gte interface{} `json:"Gte,omitempty"`
-
-	// Lt AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-lt
-	Lt interface{} `json:"Lt,omitempty"`
-
-	// Lte AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-lte
-	Lte interface{} `json:"Lte,omitempty"`
-
-	// Neq AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-condition.html#cfn-guardduty-filter-condition-neq
-	Neq []interface{} `json:"Neq,omitempty"`
+	Neq []*StringIntrinsic `json:"Neq,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

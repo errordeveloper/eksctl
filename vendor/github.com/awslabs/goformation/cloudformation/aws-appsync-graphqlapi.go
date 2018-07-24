@@ -13,7 +13,7 @@ type AWSAppSyncGraphQLApi struct {
 	// AuthenticationType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-authenticationtype
-	AuthenticationType string `json:"AuthenticationType,omitempty"`
+	AuthenticationType *StringIntrinsic `json:"AuthenticationType,omitempty"`
 
 	// LogConfig AWS CloudFormation Property
 	// Required: false
@@ -23,7 +23,7 @@ type AWSAppSyncGraphQLApi struct {
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// OpenIDConnectConfig AWS CloudFormation Property
 	// Required: false
@@ -34,34 +34,6 @@ type AWSAppSyncGraphQLApi struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-userpoolconfig
 	UserPoolConfig *AWSAppSyncGraphQLApi_UserPoolConfig `json:"UserPoolConfig,omitempty"`
-}
-
-type UntypedAWSAppSyncGraphQLApi struct {
-
-	// AuthenticationType AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-authenticationtype
-	AuthenticationType interface{} `json:"AuthenticationType,omitempty"`
-
-	// LogConfig AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-logconfig
-	LogConfig *UntypedAWSAppSyncGraphQLApi_LogConfig `json:"LogConfig,omitempty"`
-
-	// Name AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// OpenIDConnectConfig AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-openidconnectconfig
-	OpenIDConnectConfig *UntypedAWSAppSyncGraphQLApi_OpenIDConnectConfig `json:"OpenIDConnectConfig,omitempty"`
-
-	// UserPoolConfig AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-userpoolconfig
-	UserPoolConfig *UntypedAWSAppSyncGraphQLApi_UserPoolConfig `json:"UserPoolConfig,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

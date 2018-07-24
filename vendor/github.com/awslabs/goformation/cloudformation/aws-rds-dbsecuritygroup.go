@@ -18,40 +18,17 @@ type AWSRDSDBSecurityGroup struct {
 	// EC2VpcId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-security-group.html#cfn-rds-dbsecuritygroup-ec2vpcid
-	EC2VpcId string `json:"EC2VpcId,omitempty"`
+	EC2VpcId *StringIntrinsic `json:"EC2VpcId,omitempty"`
 
 	// GroupDescription AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-security-group.html#cfn-rds-dbsecuritygroup-groupdescription
-	GroupDescription string `json:"GroupDescription,omitempty"`
+	GroupDescription *StringIntrinsic `json:"GroupDescription,omitempty"`
 
 	// Tags AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-security-group.html#cfn-rds-dbsecuritygroup-tags
 	Tags []Tag `json:"Tags,omitempty"`
-}
-
-type UntypedAWSRDSDBSecurityGroup struct {
-
-	// DBSecurityGroupIngress AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-security-group.html#cfn-rds-dbsecuritygroup-dbsecuritygroupingress
-	DBSecurityGroupIngress []UntypedAWSRDSDBSecurityGroup_Ingress `json:"DBSecurityGroupIngress,omitempty"`
-
-	// EC2VpcId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-security-group.html#cfn-rds-dbsecuritygroup-ec2vpcid
-	EC2VpcId interface{} `json:"EC2VpcId,omitempty"`
-
-	// GroupDescription AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-security-group.html#cfn-rds-dbsecuritygroup-groupdescription
-	GroupDescription interface{} `json:"GroupDescription,omitempty"`
-
-	// Tags AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-security-group.html#cfn-rds-dbsecuritygroup-tags
-	Tags []UntypedTag `json:"Tags,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

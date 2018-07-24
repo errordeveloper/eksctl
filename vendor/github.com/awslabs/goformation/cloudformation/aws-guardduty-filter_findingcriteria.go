@@ -15,19 +15,6 @@ type AWSGuardDutyFilter_FindingCriteria struct {
 	ItemType *AWSGuardDutyFilter_Condition `json:"ItemType,omitempty"`
 }
 
-type UntypedAWSGuardDutyFilter_FindingCriteria struct {
-
-	// Criterion AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-findingcriteria.html#cfn-guardduty-filter-findingcriteria-criterion
-	Criterion interface{} `json:"Criterion,omitempty"`
-
-	// ItemType AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-guardduty-filter-findingcriteria.html#cfn-guardduty-filter-findingcriteria-itemtype
-	ItemType *UntypedAWSGuardDutyFilter_Condition `json:"ItemType,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSGuardDutyFilter_FindingCriteria) AWSCloudFormationType() string {
 	return "AWS::GuardDuty::Filter.FindingCriteria"

@@ -13,25 +13,12 @@ type AWSWAFXssMatchSet struct {
 	// Name AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-xssmatchset.html#cfn-waf-xssmatchset-name
-	Name string `json:"Name,omitempty"`
+	Name *StringIntrinsic `json:"Name,omitempty"`
 
 	// XssMatchTuples AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-xssmatchset.html#cfn-waf-xssmatchset-xssmatchtuples
 	XssMatchTuples []AWSWAFXssMatchSet_XssMatchTuple `json:"XssMatchTuples,omitempty"`
-}
-
-type UntypedAWSWAFXssMatchSet struct {
-
-	// Name AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-xssmatchset.html#cfn-waf-xssmatchset-name
-	Name interface{} `json:"Name,omitempty"`
-
-	// XssMatchTuples AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-waf-xssmatchset.html#cfn-waf-xssmatchset-xssmatchtuples
-	XssMatchTuples []UntypedAWSWAFXssMatchSet_XssMatchTuple `json:"XssMatchTuples,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

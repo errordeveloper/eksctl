@@ -5,9 +5,6 @@ package cloudformation
 type AWSEC2Instance_NoDevice struct {
 }
 
-type UntypedAWSEC2Instance_NoDevice struct {
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSEC2Instance_NoDevice) AWSCloudFormationType() string {
 	return "AWS::EC2::Instance.NoDevice"

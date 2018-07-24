@@ -13,32 +13,32 @@ type AWSApplicationAutoScalingScalingPolicy struct {
 	// PolicyName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-policyname
-	PolicyName string `json:"PolicyName,omitempty"`
+	PolicyName *StringIntrinsic `json:"PolicyName,omitempty"`
 
 	// PolicyType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-policytype
-	PolicyType string `json:"PolicyType,omitempty"`
+	PolicyType *StringIntrinsic `json:"PolicyType,omitempty"`
 
 	// ResourceId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-resourceid
-	ResourceId string `json:"ResourceId,omitempty"`
+	ResourceId *StringIntrinsic `json:"ResourceId,omitempty"`
 
 	// ScalableDimension AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-scalabledimension
-	ScalableDimension string `json:"ScalableDimension,omitempty"`
+	ScalableDimension *StringIntrinsic `json:"ScalableDimension,omitempty"`
 
 	// ScalingTargetId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-scalingtargetid
-	ScalingTargetId string `json:"ScalingTargetId,omitempty"`
+	ScalingTargetId *StringIntrinsic `json:"ScalingTargetId,omitempty"`
 
 	// ServiceNamespace AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-servicenamespace
-	ServiceNamespace string `json:"ServiceNamespace,omitempty"`
+	ServiceNamespace *StringIntrinsic `json:"ServiceNamespace,omitempty"`
 
 	// StepScalingPolicyConfiguration AWS CloudFormation Property
 	// Required: false
@@ -49,49 +49,6 @@ type AWSApplicationAutoScalingScalingPolicy struct {
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration
 	TargetTrackingScalingPolicyConfiguration *AWSApplicationAutoScalingScalingPolicy_TargetTrackingScalingPolicyConfiguration `json:"TargetTrackingScalingPolicyConfiguration,omitempty"`
-}
-
-type UntypedAWSApplicationAutoScalingScalingPolicy struct {
-
-	// PolicyName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-policyname
-	PolicyName interface{} `json:"PolicyName,omitempty"`
-
-	// PolicyType AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-policytype
-	PolicyType interface{} `json:"PolicyType,omitempty"`
-
-	// ResourceId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-resourceid
-	ResourceId interface{} `json:"ResourceId,omitempty"`
-
-	// ScalableDimension AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-scalabledimension
-	ScalableDimension interface{} `json:"ScalableDimension,omitempty"`
-
-	// ScalingTargetId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-scalingtargetid
-	ScalingTargetId interface{} `json:"ScalingTargetId,omitempty"`
-
-	// ServiceNamespace AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-servicenamespace
-	ServiceNamespace interface{} `json:"ServiceNamespace,omitempty"`
-
-	// StepScalingPolicyConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-stepscalingpolicyconfiguration
-	StepScalingPolicyConfiguration *UntypedAWSApplicationAutoScalingScalingPolicy_StepScalingPolicyConfiguration `json:"StepScalingPolicyConfiguration,omitempty"`
-
-	// TargetTrackingScalingPolicyConfiguration AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-targettrackingscalingpolicyconfiguration
-	TargetTrackingScalingPolicyConfiguration *UntypedAWSApplicationAutoScalingScalingPolicy_TargetTrackingScalingPolicyConfiguration `json:"TargetTrackingScalingPolicyConfiguration,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -13,35 +13,17 @@ type AWSLogsMetricFilter struct {
 	// FilterPattern AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-cwl-metricfilter-filterpattern
-	FilterPattern string `json:"FilterPattern,omitempty"`
+	FilterPattern *StringIntrinsic `json:"FilterPattern,omitempty"`
 
 	// LogGroupName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-cwl-metricfilter-loggroupname
-	LogGroupName string `json:"LogGroupName,omitempty"`
+	LogGroupName *StringIntrinsic `json:"LogGroupName,omitempty"`
 
 	// MetricTransformations AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-cwl-metricfilter-metrictransformations
 	MetricTransformations []AWSLogsMetricFilter_MetricTransformation `json:"MetricTransformations,omitempty"`
-}
-
-type UntypedAWSLogsMetricFilter struct {
-
-	// FilterPattern AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-cwl-metricfilter-filterpattern
-	FilterPattern interface{} `json:"FilterPattern,omitempty"`
-
-	// LogGroupName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-cwl-metricfilter-loggroupname
-	LogGroupName interface{} `json:"LogGroupName,omitempty"`
-
-	// MetricTransformations AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-metricfilter.html#cfn-cwl-metricfilter-metrictransformations
-	MetricTransformations []UntypedAWSLogsMetricFilter_MetricTransformation `json:"MetricTransformations,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

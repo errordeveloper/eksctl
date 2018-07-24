@@ -13,55 +13,27 @@ type AWSRDSDBSecurityGroupIngress struct {
 	// CIDRIP AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-cidrip
-	CIDRIP string `json:"CIDRIP,omitempty"`
+	CIDRIP *StringIntrinsic `json:"CIDRIP,omitempty"`
 
 	// DBSecurityGroupName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-dbsecuritygroupname
-	DBSecurityGroupName string `json:"DBSecurityGroupName,omitempty"`
+	DBSecurityGroupName *StringIntrinsic `json:"DBSecurityGroupName,omitempty"`
 
 	// EC2SecurityGroupId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-ec2securitygroupid
-	EC2SecurityGroupId string `json:"EC2SecurityGroupId,omitempty"`
+	EC2SecurityGroupId *StringIntrinsic `json:"EC2SecurityGroupId,omitempty"`
 
 	// EC2SecurityGroupName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-ec2securitygroupname
-	EC2SecurityGroupName string `json:"EC2SecurityGroupName,omitempty"`
+	EC2SecurityGroupName *StringIntrinsic `json:"EC2SecurityGroupName,omitempty"`
 
 	// EC2SecurityGroupOwnerId AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-ec2securitygroupownerid
-	EC2SecurityGroupOwnerId string `json:"EC2SecurityGroupOwnerId,omitempty"`
-}
-
-type UntypedAWSRDSDBSecurityGroupIngress struct {
-
-	// CIDRIP AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-cidrip
-	CIDRIP interface{} `json:"CIDRIP,omitempty"`
-
-	// DBSecurityGroupName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-dbsecuritygroupname
-	DBSecurityGroupName interface{} `json:"DBSecurityGroupName,omitempty"`
-
-	// EC2SecurityGroupId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-ec2securitygroupid
-	EC2SecurityGroupId interface{} `json:"EC2SecurityGroupId,omitempty"`
-
-	// EC2SecurityGroupName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-ec2securitygroupname
-	EC2SecurityGroupName interface{} `json:"EC2SecurityGroupName,omitempty"`
-
-	// EC2SecurityGroupOwnerId AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-security-group-ingress.html#cfn-rds-securitygroup-ingress-ec2securitygroupownerid
-	EC2SecurityGroupOwnerId interface{} `json:"EC2SecurityGroupOwnerId,omitempty"`
+	EC2SecurityGroupOwnerId *StringIntrinsic `json:"EC2SecurityGroupOwnerId,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

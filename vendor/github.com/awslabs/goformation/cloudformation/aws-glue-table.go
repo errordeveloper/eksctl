@@ -13,35 +13,17 @@ type AWSGlueTable struct {
 	// CatalogId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-catalogid
-	CatalogId string `json:"CatalogId,omitempty"`
+	CatalogId *StringIntrinsic `json:"CatalogId,omitempty"`
 
 	// DatabaseName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-databasename
-	DatabaseName string `json:"DatabaseName,omitempty"`
+	DatabaseName *StringIntrinsic `json:"DatabaseName,omitempty"`
 
 	// TableInput AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-tableinput
 	TableInput *AWSGlueTable_TableInput `json:"TableInput,omitempty"`
-}
-
-type UntypedAWSGlueTable struct {
-
-	// CatalogId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-catalogid
-	CatalogId interface{} `json:"CatalogId,omitempty"`
-
-	// DatabaseName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-databasename
-	DatabaseName interface{} `json:"DatabaseName,omitempty"`
-
-	// TableInput AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-table.html#cfn-glue-table-tableinput
-	TableInput *UntypedAWSGlueTable_TableInput `json:"TableInput,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

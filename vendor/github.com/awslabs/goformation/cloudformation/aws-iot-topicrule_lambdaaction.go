@@ -7,15 +7,7 @@ type AWSIoTTopicRule_LambdaAction struct {
 	// FunctionArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-lambdaaction.html#cfn-iot-topicrule-lambdaaction-functionarn
-	FunctionArn string `json:"FunctionArn,omitempty"`
-}
-
-type UntypedAWSIoTTopicRule_LambdaAction struct {
-
-	// FunctionArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-topicrule-lambdaaction.html#cfn-iot-topicrule-lambdaaction-functionarn
-	FunctionArn interface{} `json:"FunctionArn,omitempty"`
+	FunctionArn *StringIntrinsic `json:"FunctionArn,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

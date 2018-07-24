@@ -12,20 +12,7 @@ type AWSGlueTrigger_Action struct {
 	// JobName AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-action.html#cfn-glue-trigger-action-jobname
-	JobName string `json:"JobName,omitempty"`
-}
-
-type UntypedAWSGlueTrigger_Action struct {
-
-	// Arguments AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-action.html#cfn-glue-trigger-action-arguments
-	Arguments interface{} `json:"Arguments,omitempty"`
-
-	// JobName AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-glue-trigger-action.html#cfn-glue-trigger-action-jobname
-	JobName interface{} `json:"JobName,omitempty"`
+	JobName *StringIntrinsic `json:"JobName,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

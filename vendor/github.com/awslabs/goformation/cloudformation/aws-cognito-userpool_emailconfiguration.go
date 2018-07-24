@@ -7,25 +7,12 @@ type AWSCognitoUserPool_EmailConfiguration struct {
 	// ReplyToEmailAddress AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-emailconfiguration.html#cfn-cognito-userpool-emailconfiguration-replytoemailaddress
-	ReplyToEmailAddress string `json:"ReplyToEmailAddress,omitempty"`
+	ReplyToEmailAddress *StringIntrinsic `json:"ReplyToEmailAddress,omitempty"`
 
 	// SourceArn AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-emailconfiguration.html#cfn-cognito-userpool-emailconfiguration-sourcearn
-	SourceArn string `json:"SourceArn,omitempty"`
-}
-
-type UntypedAWSCognitoUserPool_EmailConfiguration struct {
-
-	// ReplyToEmailAddress AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-emailconfiguration.html#cfn-cognito-userpool-emailconfiguration-replytoemailaddress
-	ReplyToEmailAddress interface{} `json:"ReplyToEmailAddress,omitempty"`
-
-	// SourceArn AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpool-emailconfiguration.html#cfn-cognito-userpool-emailconfiguration-sourcearn
-	SourceArn interface{} `json:"SourceArn,omitempty"`
+	SourceArn *StringIntrinsic `json:"SourceArn,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

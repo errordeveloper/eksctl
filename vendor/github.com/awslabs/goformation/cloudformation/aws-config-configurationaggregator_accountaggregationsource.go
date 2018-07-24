@@ -7,7 +7,7 @@ type AWSConfigConfigurationAggregator_AccountAggregationSource struct {
 	// AccountIds AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-accountaggregationsource.html#cfn-config-configurationaggregator-accountaggregationsource-accountids
-	AccountIds []string `json:"AccountIds,omitempty"`
+	AccountIds []*StringIntrinsic `json:"AccountIds,omitempty"`
 
 	// AllAwsRegions AWS CloudFormation Property
 	// Required: false
@@ -17,25 +17,7 @@ type AWSConfigConfigurationAggregator_AccountAggregationSource struct {
 	// AwsRegions AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-accountaggregationsource.html#cfn-config-configurationaggregator-accountaggregationsource-awsregions
-	AwsRegions []string `json:"AwsRegions,omitempty"`
-}
-
-type UntypedAWSConfigConfigurationAggregator_AccountAggregationSource struct {
-
-	// AccountIds AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-accountaggregationsource.html#cfn-config-configurationaggregator-accountaggregationsource-accountids
-	AccountIds []interface{} `json:"AccountIds,omitempty"`
-
-	// AllAwsRegions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-accountaggregationsource.html#cfn-config-configurationaggregator-accountaggregationsource-allawsregions
-	AllAwsRegions interface{} `json:"AllAwsRegions,omitempty"`
-
-	// AwsRegions AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-config-configurationaggregator-accountaggregationsource.html#cfn-config-configurationaggregator-accountaggregationsource-awsregions
-	AwsRegions []interface{} `json:"AwsRegions,omitempty"`
+	AwsRegions []*StringIntrinsic `json:"AwsRegions,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

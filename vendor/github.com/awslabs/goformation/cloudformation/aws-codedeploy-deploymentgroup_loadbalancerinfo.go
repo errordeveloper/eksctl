@@ -15,19 +15,6 @@ type AWSCodeDeployDeploymentGroup_LoadBalancerInfo struct {
 	TargetGroupInfoList []AWSCodeDeployDeploymentGroup_TargetGroupInfo `json:"TargetGroupInfoList,omitempty"`
 }
 
-type UntypedAWSCodeDeployDeploymentGroup_LoadBalancerInfo struct {
-
-	// ElbInfoList AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.html#cfn-codedeploy-deploymentgroup-loadbalancerinfo-elbinfolist
-	ElbInfoList []UntypedAWSCodeDeployDeploymentGroup_ELBInfo `json:"ElbInfoList,omitempty"`
-
-	// TargetGroupInfoList AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codedeploy-deploymentgroup-loadbalancerinfo.html#cfn-codedeploy-deploymentgroup-loadbalancerinfo-targetgroupinfolist
-	TargetGroupInfoList []UntypedAWSCodeDeployDeploymentGroup_TargetGroupInfo `json:"TargetGroupInfoList,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSCodeDeployDeploymentGroup_LoadBalancerInfo) AWSCloudFormationType() string {
 	return "AWS::CodeDeploy::DeploymentGroup.LoadBalancerInfo"

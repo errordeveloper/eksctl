@@ -12,20 +12,7 @@ type AWSWAFXssMatchSet_XssMatchTuple struct {
 	// TextTransformation AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-xssmatchset-xssmatchtuple.html#cfn-waf-xssmatchset-xssmatchtuple-texttransformation
-	TextTransformation string `json:"TextTransformation,omitempty"`
-}
-
-type UntypedAWSWAFXssMatchSet_XssMatchTuple struct {
-
-	// FieldToMatch AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-xssmatchset-xssmatchtuple.html#cfn-waf-xssmatchset-xssmatchtuple-fieldtomatch
-	FieldToMatch *UntypedAWSWAFXssMatchSet_FieldToMatch `json:"FieldToMatch,omitempty"`
-
-	// TextTransformation AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-xssmatchset-xssmatchtuple.html#cfn-waf-xssmatchset-xssmatchtuple-texttransformation
-	TextTransformation interface{} `json:"TextTransformation,omitempty"`
+	TextTransformation *StringIntrinsic `json:"TextTransformation,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

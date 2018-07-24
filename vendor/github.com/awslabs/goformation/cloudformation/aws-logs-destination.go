@@ -13,45 +13,22 @@ type AWSLogsDestination struct {
 	// DestinationName AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-destination.html#cfn-logs-destination-destinationname
-	DestinationName string `json:"DestinationName,omitempty"`
+	DestinationName *StringIntrinsic `json:"DestinationName,omitempty"`
 
 	// DestinationPolicy AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-destination.html#cfn-logs-destination-destinationpolicy
-	DestinationPolicy string `json:"DestinationPolicy,omitempty"`
+	DestinationPolicy *StringIntrinsic `json:"DestinationPolicy,omitempty"`
 
 	// RoleArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-destination.html#cfn-logs-destination-rolearn
-	RoleArn string `json:"RoleArn,omitempty"`
+	RoleArn *StringIntrinsic `json:"RoleArn,omitempty"`
 
 	// TargetArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-destination.html#cfn-logs-destination-targetarn
-	TargetArn string `json:"TargetArn,omitempty"`
-}
-
-type UntypedAWSLogsDestination struct {
-
-	// DestinationName AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-destination.html#cfn-logs-destination-destinationname
-	DestinationName interface{} `json:"DestinationName,omitempty"`
-
-	// DestinationPolicy AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-destination.html#cfn-logs-destination-destinationpolicy
-	DestinationPolicy interface{} `json:"DestinationPolicy,omitempty"`
-
-	// RoleArn AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-destination.html#cfn-logs-destination-rolearn
-	RoleArn interface{} `json:"RoleArn,omitempty"`
-
-	// TargetArn AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-destination.html#cfn-logs-destination-targetarn
-	TargetArn interface{} `json:"TargetArn,omitempty"`
+	TargetArn *StringIntrinsic `json:"TargetArn,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

@@ -25,29 +25,6 @@ type AWSSSMMaintenanceWindowTask_TaskInvocationParameters struct {
 	MaintenanceWindowStepFunctionsParameters *AWSSSMMaintenanceWindowTask_MaintenanceWindowStepFunctionsParameters `json:"MaintenanceWindowStepFunctionsParameters,omitempty"`
 }
 
-type UntypedAWSSSMMaintenanceWindowTask_TaskInvocationParameters struct {
-
-	// MaintenanceWindowAutomationParameters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowautomationparameters
-	MaintenanceWindowAutomationParameters *UntypedAWSSSMMaintenanceWindowTask_MaintenanceWindowAutomationParameters `json:"MaintenanceWindowAutomationParameters,omitempty"`
-
-	// MaintenanceWindowLambdaParameters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowlambdaparameters
-	MaintenanceWindowLambdaParameters *UntypedAWSSSMMaintenanceWindowTask_MaintenanceWindowLambdaParameters `json:"MaintenanceWindowLambdaParameters,omitempty"`
-
-	// MaintenanceWindowRunCommandParameters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowruncommandparameters
-	MaintenanceWindowRunCommandParameters *UntypedAWSSSMMaintenanceWindowTask_MaintenanceWindowRunCommandParameters `json:"MaintenanceWindowRunCommandParameters,omitempty"`
-
-	// MaintenanceWindowStepFunctionsParameters AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ssm-maintenancewindowtask-taskinvocationparameters.html#cfn-ssm-maintenancewindowtask-taskinvocationparameters-maintenancewindowstepfunctionsparameters
-	MaintenanceWindowStepFunctionsParameters *UntypedAWSSSMMaintenanceWindowTask_MaintenanceWindowStepFunctionsParameters `json:"MaintenanceWindowStepFunctionsParameters,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSSSMMaintenanceWindowTask_TaskInvocationParameters) AWSCloudFormationType() string {
 	return "AWS::SSM::MaintenanceWindowTask.TaskInvocationParameters"

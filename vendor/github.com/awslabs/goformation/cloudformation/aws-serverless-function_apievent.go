@@ -7,35 +7,17 @@ type AWSServerlessFunction_ApiEvent struct {
 	// Method AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
-	Method string `json:"Method,omitempty"`
+	Method *StringIntrinsic `json:"Method,omitempty"`
 
 	// Path AWS CloudFormation Property
 	// Required: true
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
-	Path string `json:"Path,omitempty"`
+	Path *StringIntrinsic `json:"Path,omitempty"`
 
 	// RestApiId AWS CloudFormation Property
 	// Required: false
 	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
-	RestApiId string `json:"RestApiId,omitempty"`
-}
-
-type UntypedAWSServerlessFunction_ApiEvent struct {
-
-	// Method AWS CloudFormation Property
-	// Required: true
-	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
-	Method interface{} `json:"Method,omitempty"`
-
-	// Path AWS CloudFormation Property
-	// Required: true
-	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
-	Path interface{} `json:"Path,omitempty"`
-
-	// RestApiId AWS CloudFormation Property
-	// Required: false
-	// See: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
-	RestApiId interface{} `json:"RestApiId,omitempty"`
+	RestApiId *StringIntrinsic `json:"RestApiId,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

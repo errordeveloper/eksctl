@@ -7,25 +7,12 @@ type AWSCloudFrontDistribution_GeoRestriction struct {
 	// Locations AWS CloudFormation Property
 	// Required: false
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-georestriction.html#cfn-cloudfront-distribution-georestriction-locations
-	Locations []string `json:"Locations,omitempty"`
+	Locations []*StringIntrinsic `json:"Locations,omitempty"`
 
 	// RestrictionType AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-georestriction.html#cfn-cloudfront-distribution-georestriction-restrictiontype
-	RestrictionType string `json:"RestrictionType,omitempty"`
-}
-
-type UntypedAWSCloudFrontDistribution_GeoRestriction struct {
-
-	// Locations AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-georestriction.html#cfn-cloudfront-distribution-georestriction-locations
-	Locations []interface{} `json:"Locations,omitempty"`
-
-	// RestrictionType AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-georestriction.html#cfn-cloudfront-distribution-georestriction-restrictiontype
-	RestrictionType interface{} `json:"RestrictionType,omitempty"`
+	RestrictionType *StringIntrinsic `json:"RestrictionType,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

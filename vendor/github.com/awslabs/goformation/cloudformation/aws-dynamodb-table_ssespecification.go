@@ -10,14 +10,6 @@ type AWSDynamoDBTable_SSESpecification struct {
 	SSEEnabled bool `json:"SSEEnabled,omitempty"`
 }
 
-type UntypedAWSDynamoDBTable_SSESpecification struct {
-
-	// SSEEnabled AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-ssespecification.html#cfn-dynamodb-table-ssespecification-sseenabled
-	SSEEnabled interface{} `json:"SSEEnabled,omitempty"`
-}
-
 // AWSCloudFormationType returns the AWS CloudFormation resource type
 func (r *AWSDynamoDBTable_SSESpecification) AWSCloudFormationType() string {
 	return "AWS::DynamoDB::Table.SSESpecification"

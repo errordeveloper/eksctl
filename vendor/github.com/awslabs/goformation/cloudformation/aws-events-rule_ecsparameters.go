@@ -12,20 +12,7 @@ type AWSEventsRule_EcsParameters struct {
 	// TaskDefinitionArn AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-ecsparameters.html#cfn-events-rule-ecsparameters-taskdefinitionarn
-	TaskDefinitionArn string `json:"TaskDefinitionArn,omitempty"`
-}
-
-type UntypedAWSEventsRule_EcsParameters struct {
-
-	// TaskCount AWS CloudFormation Property
-	// Required: false
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-ecsparameters.html#cfn-events-rule-ecsparameters-taskcount
-	TaskCount interface{} `json:"TaskCount,omitempty"`
-
-	// TaskDefinitionArn AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-ecsparameters.html#cfn-events-rule-ecsparameters-taskdefinitionarn
-	TaskDefinitionArn interface{} `json:"TaskDefinitionArn,omitempty"`
+	TaskDefinitionArn *StringIntrinsic `json:"TaskDefinitionArn,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type

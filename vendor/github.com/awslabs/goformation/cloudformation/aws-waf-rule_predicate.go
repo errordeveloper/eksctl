@@ -7,7 +7,7 @@ type AWSWAFRule_Predicate struct {
 	// DataId AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-rule-predicates.html#cfn-waf-rule-predicates-dataid
-	DataId string `json:"DataId,omitempty"`
+	DataId *StringIntrinsic `json:"DataId,omitempty"`
 
 	// Negated AWS CloudFormation Property
 	// Required: true
@@ -17,25 +17,7 @@ type AWSWAFRule_Predicate struct {
 	// Type AWS CloudFormation Property
 	// Required: true
 	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-rule-predicates.html#cfn-waf-rule-predicates-type
-	Type string `json:"Type,omitempty"`
-}
-
-type UntypedAWSWAFRule_Predicate struct {
-
-	// DataId AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-rule-predicates.html#cfn-waf-rule-predicates-dataid
-	DataId interface{} `json:"DataId,omitempty"`
-
-	// Negated AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-rule-predicates.html#cfn-waf-rule-predicates-negated
-	Negated interface{} `json:"Negated,omitempty"`
-
-	// Type AWS CloudFormation Property
-	// Required: true
-	// See: http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-waf-rule-predicates.html#cfn-waf-rule-predicates-type
-	Type interface{} `json:"Type,omitempty"`
+	Type *StringIntrinsic `json:"Type,omitempty"`
 }
 
 // AWSCloudFormationType returns the AWS CloudFormation resource type
