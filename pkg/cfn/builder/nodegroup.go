@@ -1,4 +1,4 @@
-package cfn
+package builder
 
 import "github.com/awslabs/goformation/cloudformation"
 
