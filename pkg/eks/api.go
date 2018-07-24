@@ -228,16 +228,19 @@ func (c *ClusterProvider) runCreateTask(tasks map[string]func(chan error) error,
 }
 
 func (c *ClusterProvider) CreateCluster(taskErrs chan error) {
+	// c.runCreateTask(map[string]func(chan error) error{
+	// 	"createStackServiceRole": func(errs chan error) error { return c.createStackServiceRole(errs) },
+	// 	"createStackVPC":         func(errs chan error) error { return c.createStackVPC(errs) },
+	// }, taskErrs)
+	// c.runCreateTask(map[string]func(chan error) error{
+	// 	"createControlPlane": func(errs chan error) error { return c.createControlPlane(errs) },
+	// }, taskErrs)
 	c.runCreateTask(map[string]func(chan error) error{
-		"createStackServiceRole": func(errs chan error) error { return c.createStackServiceRole(errs) },
-		"createStackVPC":         func(errs chan error) error { return c.createStackVPC(errs) },
+		"createStackCluster": func(errs chan error) error { return c.createStackCluster(errs) },
 	}, taskErrs)
-	c.runCreateTask(map[string]func(chan error) error{
-		"createControlPlane": func(errs chan error) error { return c.createControlPlane(errs) },
-	}, taskErrs)
-	c.runCreateTask(map[string]func(chan error) error{
-		"createStackDefaultNodeGroup": func(errs chan error) error { return c.createStackDefaultNodeGroup(errs) },
-	}, taskErrs)
+	// c.runCreateTask(map[string]func(chan error) error{
+	// 	"createStackDefaultNodeGroup": func(errs chan error) error { return c.createStackDefaultNodeGroup(errs) },
+	// }, taskErrs)
 	close(taskErrs)
 }
 

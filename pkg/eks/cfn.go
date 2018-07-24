@@ -8,6 +8,8 @@ import (
 
 	"github.com/pkg/errors"
 
+	"github.com/weaveworks/eksctl/pkg/cfn"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/cloudformation"
 
@@ -468,6 +470,90 @@ func GetOutput(stack *Stack, key string) *string {
 		if *x.OutputKey == key {
 			return x.OutputValue
 		}
+	}
+	return nil
+}
+
+func (c *ClusterProvider) stackNameCluster() string {
+	return "eksctl-" + c.Spec.ClusterName + "-cluster"
+}
+
+func (c *ClusterProvider) createStackCluster(errs chan error) error {
+	name := c.stackNameCluster()
+	logger.Info("creating cluster stack %q", name)
+
+	stack := cfn.NewClusterResourceSet()
+	stack.AddAllResources(c.Status.availabilityZones)
+
+	templateBody, err := stack.RenderJSON()
+	if err != nil {
+		return errors.Wrap(err, "rendering template for cluster stack")
+	}
+
+	logger.Debug("templateBody = %s", string(templateBody))
+
+	stackChan := make(chan Stack)
+	taskErrs := make(chan error)
+
+	if err := c.CreateStack(name, templateBody, nil, false, stackChan, taskErrs); err != nil {
+		return err
+	}
+
+	go func() {
+		defer close(errs)
+		defer close(stackChan)
+
+		if err := <-taskErrs; err != nil {
+			errs <- err
+			return
+		}
+
+		s := <-stackChan
+
+		logger.Debug("created cluster stack %q – processing outputs", name)
+
+		securityGroup := GetOutput(&s, cfn.OutputClusterControlPlaneSecurityGroup)
+		if securityGroup == nil {
+			errs <- fmt.Errorf("%s is nil", cfn.OutputClusterControlPlaneSecurityGroup)
+			return
+		}
+		c.Spec.securityGroup = *securityGroup
+
+		subnetsList := GetOutput(&s, cfn.OutputClusterSubnets)
+		if subnetsList == nil {
+			errs <- fmt.Errorf("%s is nil", cfn.OutputClusterSubnets)
+			return
+		}
+		c.Spec.subnetsList = *subnetsList
+
+		clusterVPC := GetOutput(&s, cfn.OutputClusterVPC)
+		if clusterVPC == nil {
+			errs <- fmt.Errorf("%s is nil", cfn.OutputClusterVPC)
+			return
+		}
+		c.Spec.clusterVPC = *clusterVPC
+
+		logger.Debug("clusterConfig = %#v", c.Spec)
+		logger.Success("created cluster stack %q", name)
+
+		errs <- nil
+	}()
+	return nil
+}
+
+func (c *ClusterProvider) DeleteStackCluster() error {
+	name := c.stackNameCluster()
+	s, err := c.describeStack(&name)
+	if err != nil {
+		return errors.Wrap(err, "not able to get cluster stack for deletion")
+	}
+
+	input := &cloudformation.DeleteStackInput{
+		StackName: s.StackName,
+	}
+
+	if _, err := c.Provider.CloudFormation().DeleteStack(input); err != nil {
+		return errors.Wrap(err, "not able to delete cluster stack")
 	}
 	return nil
 }

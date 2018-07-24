@@ -29,9 +29,15 @@ func makeRef(refName string) interface{} {
 	return map[string]string{"Ref": refName}
 }
 
+var refStackName = makeRef("AWS::StackName")
+
 func (r *resourceSet) newResource(name string, resource interface{}) interface{} {
 	r.template.Resources[name] = resource
 	return makeRef(name)
+}
+
+func (r *resourceSet) renderJSON() ([]byte, error) {
+	return r.template.JSON()
 }
 
 func (r *resourceSet) newOutput(name string, value interface{}, export bool) {

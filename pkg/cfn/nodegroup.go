@@ -107,7 +107,7 @@ func (n *nodeGroupResourceSet) addResourcesForNodeGroup() {
 		},
 	})
 
-	refSG := n.newResource("NodeSecurityGroup", &cloudformation.UntypedAWSEC2SecurityGroup{
+	n.newResource("NodeSecurityGroup", &cloudformation.UntypedAWSEC2SecurityGroup{
 		VpcId: n.vpc.vpc,
 	})
 

@@ -7,12 +7,12 @@ import (
 )
 
 const (
-	cfnOutputClusterCertificateAuthorityData  = "Cluster.CertificateAuthorityData"
-	cfnOutputClusterEndpoint                  = "Cluster.Endpoint"
-	cfnOutputClusterARN                       = "Cluster.ARN"
-	cfnOutputClusterVPC                       = "Cluster.VPC"
-	cfnOutputClusterSubnets                   = "Cluster.Subnets"
-	cfnOutputClusterControlPlaneSecurityGroup = "Cluster.ControlPlaneSecurityGroup"
+	OutputClusterCertificateAuthorityData  = "Cluster.CertificateAuthorityData"
+	OutputClusterEndpoint                  = "Cluster.Endpoint"
+	OutputClusterARN                       = "Cluster.ARN"
+	OutputClusterVPC                       = "Cluster.VPC"
+	OutputClusterSubnets                   = "Cluster.Subnets"
+	OutputClusterControlPlaneSecurityGroup = "Cluster.ControlPlaneSecurityGroup"
 
 	iamAmazonEKSServicePolicyARN = "arn:aws:iam::aws:policy/AmazonEKSServicePolicy"
 	iamAmazonEKSClusterPolicyARN = "arn:aws:iam::aws:policy/AmazonEKSClusterPolicy"
@@ -33,10 +33,26 @@ type resourceRefsForVPC struct {
 type resourceRefsForControlPlane struct {
 }
 
-func newClusterResourceSet() *clusterResourceSet {
+func NewClusterResourceSet() *clusterResourceSet {
 	return &clusterResourceSet{
 		resourceSet: newResourceSet(),
 	}
+}
+
+func (c *clusterResourceSet) AddAllResources(availabilityZones []string) {
+	_, globalCIDR, _ := net.ParseCIDR("192.168.0.0/16")
+
+	subnets := map[string]*net.IPNet{}
+	_, subnets[availabilityZones[0]], _ = net.ParseCIDR("192.168.64.0/18")
+	_, subnets[availabilityZones[1]], _ = net.ParseCIDR("192.168.128.0/18")
+	_, subnets[availabilityZones[2]], _ = net.ParseCIDR("192.168.192.0/18")
+
+	c.addResourcesForVPC(globalCIDR, subnets)
+	c.addResourcesForControlPlane("1.10")
+}
+
+func (c *clusterResourceSet) RenderJSON() ([]byte, error) {
+	return c.resourceSet.renderJSON()
 }
 
 func (c *clusterResourceSet) newResource(name string, resource interface{}) interface{} {
@@ -100,14 +116,14 @@ func (c *clusterResourceSet) addResourcesForVPC(globalCIDR *net.IPNet, subnets m
 
 	c.vpcRefs = refs
 
-	c.newOutput(cfnOutputClusterVPC, refs.vpc)
-	c.newJoinedOutput(cfnOutputClusterControlPlaneSecurityGroup, refs.securityGroups)
-	c.newJoinedOutput(cfnOutputClusterSubnets, refs.subnets)
+	c.newOutput(OutputClusterVPC, refs.vpc)
+	c.newJoinedOutput(OutputClusterControlPlaneSecurityGroup, refs.securityGroups)
+	c.newJoinedOutput(OutputClusterSubnets, refs.subnets)
 }
 
-func (c *clusterResourceSet) addResourcesForControlPlane(name, version string) {
+func (c *clusterResourceSet) addResourcesForControlPlane(version string) {
 	c.newResource("ControlPlane", &cloudformation.UntypedAWSEKSCluster{
-		Name: name,
+		Name: refStackName,
 		RoleArn: c.newResource("ServiceRole", &cloudformation.AWSIAMRole{
 			AssumeRolePolicyDocument: makeAssumeRolePolicyDocument("eks.amazonaws.com"),
 			ManagedPolicyArns: []string{
@@ -122,7 +138,7 @@ func (c *clusterResourceSet) addResourcesForControlPlane(name, version string) {
 		},
 	})
 
-	c.newOutputFromAtt(cfnOutputClusterCertificateAuthorityData, "ControlPlane.CertificateAuthorityData")
-	c.newOutputFromAtt(cfnOutputClusterEndpoint, "ControlPlane.Endpoint")
-	c.newOutputFromAtt(cfnOutputClusterARN, "ControlPlane.Arn")
+	c.newOutputFromAtt(OutputClusterCertificateAuthorityData, "ControlPlane.CertificateAuthorityData")
+	c.newOutputFromAtt(OutputClusterEndpoint, "ControlPlane.Endpoint")
+	c.newOutputFromAtt(OutputClusterARN, "ControlPlane.Arn")
 }
