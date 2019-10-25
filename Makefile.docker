@@ -58,7 +58,8 @@ build-image: check-build-image-manifest-up-to-date ## Build the build image that
 
 .PHONY: push-build-image
 push-build-image: build-image ## Push the build image to the registry
-	docker push $(build_image_name)
+	docker tag $(build_image_name) docker.pkg.github.com/errordeveloper/eksctl/build:$(build_image_tag)
+	docker push docker.pkg.github.com/errordeveloper/eksctl/build:$(build_image_tag)
 
 .PHONY: intermediate-image
 intermediate-image: build-image ## Build the intermediate image that has all artefacts
